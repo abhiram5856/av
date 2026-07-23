@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+:root {
+  /* LIGHT MODE - Crisp, clean, with subtle green tints */
+  --background: oklch(0.99 0.01 150);
+  --foreground: oklch(0.2 0.05 150);
+  
+  --card: oklch(1 0 150);
+  --card-foreground: oklch(0.2 0.05 150);
+  
+  --popover: oklch(1 0 150);
+  --popover-foreground: oklch(0.2 0.05 150);
+  
+  /* NOVA GREEN - Vibrant, modern Emerald */
+  --primary: oklch(0.65 0.20 150);
+  --primary-foreground: oklch(0.98 0.01 150);
+  
+  --secondary: oklch(0.94 0.03 150);
+  --secondary-foreground: oklch(0.3 0.1 150);
+  
+  --muted: oklch(0.95 0.02 150);
+  --muted-foreground: oklch(0.5 0.05 150);
+  
+  --accent: oklch(0.90 0.05 150);
+  --accent-foreground: oklch(0.2 0.05 150);
+  
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  --border: oklch(0.9 0.03 150);
+  --input: oklch(0.9 0.03 150);
+  --ring: oklch(0.65 0.20 150);
+  
+  --radius: 1rem;
+}
+
+.dark {
+  /* DARK MODE - Deep Forest/Midnight instead of flat gray */
+  --background: oklch(0.18 0.03 150);
+  --foreground: oklch(0.98 0.01 150);
+  
+  --card: oklch(0.22 0.04 150);
+  --card-foreground: oklch(0.98 0.01 150);
+  
+  --popover: oklch(0.22 0.04 150);
+  --popover-foreground: oklch(0.98 0.01 150);
+  
+  /* GLOWING NEON GREEN */
+  --primary: oklch(0.75 0.20 150);
+  --primary-foreground: oklch(0.15 0.05 150);
+  
+  --secondary: oklch(0.28 0.05 150);
+  --secondary-foreground: oklch(0.95 0.02 150);
+  
+  --muted: oklch(0.25 0.04 150);
+  --muted-foreground: oklch(0.7 0.05 150);
+  
+  --accent: oklch(0.30 0.05 150);
+  --accent-foreground: oklch(0.95 0.02 150);
+  
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  --border: oklch(0.3 0.05 150);
+  --input: oklch(0.3 0.05 150);
+  --ring: oklch(0.75 0.20 150);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-primary/20 selection:text-primary;
+    background-image: radial-gradient(circle at top center, var(--primary) 0%, transparent 15%);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* Custom Glassmorphism Utilities */
+@layer utilities {
+  .glass-panel {
+    @apply bg-background/60 backdrop-blur-xl border border-border/50 shadow-lg shadow-black/5;
+  }
+  
+  .glass-panel-hover {
+    @apply transition-all duration-300 hover:bg-background/80 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400;
+  }
+}

@@ -1,0 +1,159 @@
+{
+    "pepper_bell_bacterial_spot": {
+        "plantvillagedataset.zip": 1994
+    },
+    "pepper_bell_healthy": {
+        "plantvillagedataset.zip": 2956
+    },
+    "potato_early_blight": {
+        "plantvillagedataset.zip": 2000,
+        "potato.zip": 1000
+    },
+    "potato_late_blight": {
+        "plantvillagedataset.zip": 2000,
+        "potato.zip": 1000
+    },
+    "potato_healthy": {
+        "plantvillagedataset.zip": 304,
+        "potato.zip": 152
+    },
+    "tomato_bacterial_spot": {
+        "plantvillagedataset.zip": 4254
+    },
+    "tomato_early_blight": {
+        "plantvillagedataset.zip": 2000
+    },
+    "tomato_late_blight": {
+        "plantvillagedataset.zip": 3818
+    },
+    "tomato_leaf_mold": {
+        "plantvillagedataset.zip": 1904
+    },
+    "tomato_septoria_leaf_spot": {
+        "plantvillagedataset.zip": 3542,
+        "plantdoc.zip": 148
+    },
+    "tomato_spider_mites_two_spotted_spider_mite": {
+        "plantvillagedataset.zip": 3352
+    },
+    "tomato_target_spot": {
+        "plantvillagedataset.zip": 2808
+    },
+    "tomato_tomato_yellowleaf_curl_virus": {
+        "plantvillagedataset.zip": 6416
+    },
+    "tomato_tomato_mosaic_virus": {
+        "plantvillagedataset.zip": 746
+    },
+    "tomato_healthy": {
+        "plantvillagedataset.zip": 3182
+    },
+    "apple_scab_leaf": {
+        "plantdoc.zip": 87
+    },
+    "apple_leaf": {
+        "plantdoc.zip": 91
+    },
+    "apple_rust_leaf": {
+        "plantdoc.zip": 89
+    },
+    "bell_pepper_leaf_spot": {
+        "plantdoc.zip": 71
+    },
+    "bell_pepper_leaf": {
+        "plantdoc.zip": 61
+    },
+    "blueberry_leaf": {
+        "plantdoc.zip": 116
+    },
+    "cherry_leaf": {
+        "plantdoc.zip": 57
+    },
+    "corn_gray_leaf_spot": {
+        "plantdoc.zip": 68
+    },
+    "corn_leaf_blight": {
+        "plantdoc.zip": 192
+    },
+    "corn_rust_leaf": {
+        "plantdoc.zip": 116
+    },
+    "peach_leaf": {
+        "plantdoc.zip": 112
+    },
+    "potato_leaf_early_blight": {
+        "plantdoc.zip": 117
+    },
+    "potato_leaf_late_blight": {
+        "plantdoc.zip": 105
+    },
+    "raspberry_leaf": {
+        "plantdoc.zip": 116
+    },
+    "soyabean_leaf": {
+        "plantdoc.zip": 65
+    },
+    "squash_powdery_mildew_leaf": {
+        "plantdoc.zip": 129
+    },
+    "strawberry_leaf": {
+        "plantdoc.zip": 96
+    },
+    "tomato_early_blight_leaf": {
+        "plantdoc.zip": 83
+    },
+    "tomato_leaf_bacterial_spot": {
+        "plantdoc.zip": 107
+    },
+    "tomato_leaf_late_blight": {
+        "plantdoc.zip": 111
+    },
+    "tomato_leaf_mosaic_virus": {
+        "plantdoc.zip": 54
+    },
+    "tomato_leaf_yellow_virus": {
+        "plantdoc.zip": 75
+    },
+    "tomato_leaf": {
+        "plantdoc.zip": 62
+    },
+    "tomato_mold_leaf": {
+        "plantdoc.zip": 91
+    },
+    "grape_leaf_black_rot": {
+        "plantdoc.zip": 64
+    },
+    "grape_leaf": {
+        "plantdoc.zip": 69
+    },
+    "bacterial_leaf_blight": {
+        "ricedisease.zip": 636
+    },
+    "brown_spot": {
+        "ricedisease.zip": 646
+    },
+    "healthy_rice_leaf": {
+        "ricedisease.zip": 653
+    },
+    "leaf_blast": {
+        "ricedisease.zip": 634
+    },
+    "leaf_scald": {
+        "ricedisease.zip": 628
+    },
+    "sheath_blight": {
+        "ricedisease.zip": 632
+    },
+    "damaged": {
+        "tomato.zip": 1055
+    },
+    "old": {
+        "tomato.zip": 2214
+    },
+    "ripe": {
+        "tomato.zip": 2195
+    },
+    "unripe": {
+        "tomato.zip": 1760
+    }
+}
