@@ -58,12 +58,12 @@ All production API routes are versioned and exposed under `/api/v1/`. Standard l
       "confidence": 94.5,
       "tta_enabled": true
     },
-    "severity_assessment": {
+    "concern_assessment": {
       "base_vision_score": 40.0,
       "environmental_risk_factor": 1.2,
       "soil_stress_factor": 1.0,
-      "final_severity_score": 48.0,
-      "urgency": "High"
+      "concern_score": 48.0,
+      "concern_level": "High"
     },
     "root_cause_placeholder": {
       "status": "INTERFACE_PLACEHOLDER"
@@ -81,8 +81,8 @@ All production API routes are versioned and exposed under `/api/v1/`. Standard l
   * `heatmap_b64`: str (base64 encoded GradCAM image)
   * `disease`: str
   * `confidence`: float
-  * `severity_score`: float
-  * `urgency`: str
+  * `concern_score`: float
+  * `concern_level`: str
   * `weather_summary`: str
   * `rag_recommendations`: str
   * `context_hash`: str

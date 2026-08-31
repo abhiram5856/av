@@ -7,8 +7,8 @@ NOVA is an enterprise-grade, end-to-end explainable crop disease diagnosis and d
 ## 🚀 Key Features
 
 * **Visual Explainability (Grad-CAM)**: MobileNetV3-Small vision pipeline backed by test-time augmentation (TTA) and Grad-CAM heatmaps overlaying diagnostic visual attention.
-* **Retrieval-Augmented Generation (RAG)**: Conversational assistant backed by FAISS vector index retrieval and Ollama (Llama 3) language generation.
-* **Soil & Climate Severity Engine**: Computes urgency indexes dynamically factoring environmental metrics (temperature, humidity, pH).
+* **Retrieval-Augmented Generation (RAG)**: Conversational assistant backed by FAISS vector index retrieval and ultra-fast Groq LPU (Llama 3) language generation (with local Ollama fallback).
+* **Multimodal Concern Scorer**: Computes holistic concern scores and categorical concern levels dynamically factoring in vision confidence, environmental metrics, and growth stages.
 * **Automated Production Logging**: Tracks request IDs, latency profiling, context hashes, and device utilization tags.
 * **On-Demand Backend Reports**: Compiles ReportLab PDFs natively incorporating crop leaf snapshots, GradCAM visuals, weather details, and agronomist tips.
 * **Docker Containerization**: Standard Docker Compose recipes supporting CPU execution and GPU (CUDA) hardware-mount scaling.
@@ -24,7 +24,7 @@ NOVA is an enterprise-grade, end-to-end explainable crop disease diagnosis and d
 │   ├── models/                # PyTorch classifier & Grad-CAM layers
 │   ├── retrieval/             # FAISS document search algorithms
 │   ├── schemas/               # Frozen AIContext JSON contracts
-│   └── services/              # AIContext Builders & Scorer Engines
+│   └── services/              # AIContext Builders & Concern Scorer Engines
 ├── frontend/                  # Next.js Dashboard UI features
 │   └── src/                   # React app page contexts
 ├── docs/                      # Architectural & usage documentation

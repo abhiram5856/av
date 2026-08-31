@@ -18,14 +18,14 @@ flowchart TD
         API -->|1. Image Quality Assessment| IQA[IQA Engine]
         API -->|2. Crop Disease Classification| CNN[MobileNetV3 small Classifier]
         API -->|3. Feature Attribution| CAM[Grad-CAM Generator]
-        API -->|4. Risk Scorer| Severity[Severity Engine]
+        API -->|4. Risk Scorer| Severity[Multimodal Concern Scorer]
     end
     
     %% AIContext composition
     subgraph Context Integration
         CNN -->|Disease & Confidence| Builder[AIContext Builder]
         CAM -->|Lesion Ratios & Heatmaps| Builder
-        Severity -->|Final Severity Score & Urgency| Builder
+        Severity -->|Final Concern Score & Level| Builder
         API -->|Weather Temp/Humidity/Soil pH| Builder
     end
     
@@ -38,7 +38,7 @@ flowchart TD
     %% LLM Response Compile
     subgraph LLM Generation & Output
         Builder -->|Aggregated AIContext| Prompt[Prompt Builder]
-        Prompt -->|Context-Aware Instruction| LLM[Ollama Llama3]
+        Prompt -->|Context-Aware Instruction| LLM[Groq Llama3 / Ollama]
         LLM -->|Agronomist Recommendations| Output[JSON / PDF Report]
     end
     
@@ -59,7 +59,7 @@ flowchart TD
    * The image is routed to the MobileNetV3 small neural network.
    * Test-Time Augmentation (TTA) computes averaged class logits.
    * Grad-CAM intercepts the final convolutional layer (`features.7`) to produce heatmaps highlighting visual attention.
-3. **Soil & Micro-Climate Severity Scoring**: The `SeverityScoringEngine` computes a final score combining classification confidence, lesion area ratios, humidity, pH, and temperature.
+3. **Multimodal Concern Scoring**: The `MultimodalConcernScorer` computes a final score combining classification confidence, lesion area ratios, humidity, pH, temperature, and specific growth stages.
 4. **Context Construction**: The `AIContextBuilder` aggregates vision outputs, GradCAM coordinates, weather parameters, and RAG knowledge.
 5. **Report Compilation**: The PDF report endpoint `/api/v1/report` compiles a highly structured ReportLab document embedding the leaf image, GradCAM visual heatmap overlay, and RAG recommendations.
 6. **Structured Production Logging**: Every request is monitored, logging execution latencies, device tags, and transaction identifiers.
