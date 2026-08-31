@@ -1,5 +1,6 @@
 import { AppNavbar } from "@/components/app-navbar";
 import { BottomNav } from "@/components/bottom-nav";
+import { RegionalAlert } from "@/components/regional-alert";
 
 export default function DashboardLayout({
   children,
@@ -7,14 +8,13 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen bg-muted/20 pb-20">
-      <div className="flex flex-1 flex-col mx-auto w-full max-w-md bg-background shadow-2xl relative min-h-screen">
-        <AppNavbar />
-        <main className="flex-1 overflow-y-auto p-4 md:p-6">
-          {children}
-        </main>
-        <BottomNav />
-      </div>
+    <div className="flex min-h-screen flex-col bg-muted/20">
+      <AppNavbar />
+      <main className="flex-1 w-full max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-6 pb-24 lg:pb-8">
+        {children}
+      </main>
+      <BottomNav />
+      <RegionalAlert />
     </div>
   );
 }

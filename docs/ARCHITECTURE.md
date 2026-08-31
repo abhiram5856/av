@@ -1,84 +1,65 @@
-# Zenith AgriBot - Architecture Design
+# NOVA System Architecture Blueprint
 
-## Overview
-Zenith AgriBot is an enterprise-grade, multilingual Retrieval-Augmented Generation (RAG) chatbot designed to run locally using open-source models, avoiding reliance on paid external APIs.
+This document details the architectural layers and data flow patterns of the **Neural Optimized Vision Assistant (NOVA)**.
 
-## Architecture Diagram
+---
+
+## 🏗️ Structural Overview
+
+NOVA is structured around a decoupled, local-first multi-modal processing pipeline.
 
 ```mermaid
 flowchart TD
-    %% User Input
-    User((User)) -->|Sends Query| LangDetect[Language Detection]
+    %% User Input & Image Ingestion
+    User((User / Farmer)) -->|Uploads Leaf Image + Context| API[FastAPI Gateway]
     
-    %% Multilingual Pre-processing
-    LangDetect -->|Detects Non-English| PreTranslate[Translation to EN]
-    LangDetect -->|Detects English| Retriever
-    PreTranslate --> Retriever
-    
-    %% Retrieval Pipeline
-    subgraph RAG Pipeline
-        Retriever[Retriever Engine] -->|Embeds Query| EmbeddingModel[Sentence Transformers]
-        EmbeddingModel -->|Vector Search| FAISS[(FAISS Vector Store)]
-        FAISS -->|Returns top-k Chunks| Retriever
-        Retriever --> PromptBuilder[Prompt Builder]
+    %% API router layers
+    subgraph Multi-Modal Processing
+        API -->|1. Image Quality Assessment| IQA[IQA Engine]
+        API -->|2. Crop Disease Classification| CNN[MobileNetV3 small Classifier]
+        API -->|3. Feature Attribution| CAM[Grad-CAM Generator]
+        API -->|4. Risk Scorer| Severity[Severity Engine]
     end
     
-    %% Context Enhancement (Future)
-    subgraph Future Context
-        CNN[CNN Disease Prediction Model] -.->|Predicted Disease Context| PromptBuilder
+    %% AIContext composition
+    subgraph Context Integration
+        CNN -->|Disease & Confidence| Builder[AIContext Builder]
+        CAM -->|Lesion Ratios & Heatmaps| Builder
+        Severity -->|Final Severity Score & Urgency| Builder
+        API -->|Weather Temp/Humidity/Soil pH| Builder
     end
     
-    %% Generation
-    PromptBuilder -->|Injects Context + Query| LocalLLM[Local LLM / Ollama]
-    LocalLLM -->|Generates English Response| PostTranslate[Translation to Original Lang]
+    %% RAG Retrieval
+    subgraph RAG Knowledge Ingestion
+        Builder -->|Queries vector DB| VectorDB[(FAISS Vector Store)]
+        VectorDB -->|Retrieves ICAR manual chunks| Builder
+    end
     
-    %% Output
-    PostTranslate -->|Returns Response| User
+    %% LLM Response Compile
+    subgraph LLM Generation & Output
+        Builder -->|Aggregated AIContext| Prompt[Prompt Builder]
+        Prompt -->|Context-Aware Instruction| LLM[Ollama Llama3]
+        LLM -->|Agronomist Recommendations| Output[JSON / PDF Report]
+    end
+    
+    %% Root Cause Placeholder
+    subgraph Future Expansion
+        Output -.->|Abstract Payload| RootCause[Root Cause Engine Placeholder]
+    end
+    
+    Output -->|Download / Render| User
 ```
 
-## Data Flow Diagram
+---
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant API as FastAPI Router
-    participant Engine as Chat Engine
-    participant Trans as Translation Module
-    participant Memory as Conversation Memory
-    participant Retr as Retrieval Engine
-    participant VS as Vector Store
-    participant Prompt as Prompt Builder
-    participant LLM as Local LLM
-    
-    User->>API: POST /api/chat {query, lang}
-    API->>Engine: process_chat()
-    
-    Engine->>Memory: Fetch History
-    
-    Engine->>Trans: Detect & Translate to EN
-    Trans-->>Engine: EN Query
-    
-    Engine->>Retr: Retrieve Context (EN Query)
-    Retr->>VS: search(embedded_query)
-    VS-->>Retr: top_k Chunks
-    Retr-->>Engine: SearchResults
-    
-    Engine->>Prompt: build_prompt(EN Query, Context, History)
-    Prompt-->>Engine: Final Prompt String
-    
-    Engine->>LLM: generate(Prompt)
-    LLM-->>Engine: EN Response String
-    
-    Engine->>Trans: Translate to original lang
-    Trans-->>Engine: Final Localized Response
-    
-    Engine->>Memory: Save Q & A
-    
-    Engine-->>API: ChatResponse
-    API-->>User: JSON Output
-```
+## 🔄 Multi-Modal Data Flow Sequence
 
-## Core Principles
-1. **Clean Architecture**: Separation of concerns. The API layer knows nothing about how FAISS works.
-2. **SOLID**: Abstract base classes define behavior; specific implementations handle exact technologies.
-3. **Local First**: Prioritizing offline, secure inference to respect data privacy and bandwidth constraints.
+1. **Leaf Image Ingestion**: The FastAPI router `/api/v1/diagnose/` accepts a multipart form containing the leaf image, current average temperature, humidity, soil pH, GPS coordinates, and user identifier.
+2. **Vision Prediction & Feature Map Extraction**:
+   * The image is routed to the MobileNetV3 small neural network.
+   * Test-Time Augmentation (TTA) computes averaged class logits.
+   * Grad-CAM intercepts the final convolutional layer (`features.7`) to produce heatmaps highlighting visual attention.
+3. **Soil & Micro-Climate Severity Scoring**: The `SeverityScoringEngine` computes a final score combining classification confidence, lesion area ratios, humidity, pH, and temperature.
+4. **Context Construction**: The `AIContextBuilder` aggregates vision outputs, GradCAM coordinates, weather parameters, and RAG knowledge.
+5. **Report Compilation**: The PDF report endpoint `/api/v1/report` compiles a highly structured ReportLab document embedding the leaf image, GradCAM visual heatmap overlay, and RAG recommendations.
+6. **Structured Production Logging**: Every request is monitored, logging execution latencies, device tags, and transaction identifiers.

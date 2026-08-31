@@ -1,0 +1,10 @@
+{
+  "Accuracy": 0.8197009674582234,
+  "Top-3 Accuracy": 0.9727352682497801,
+  "Macro F1": 0.8686541996203561,
+  "Weighted F1": 0.8247929019303898,
+  "Macro Precision": 0.8749981652234596,
+  "Macro Recall": 0.8689257588223365,
+  "Inference Latency ms": 25.943540331556175,
+  "Model Size MB": 6.05107307434082
+}

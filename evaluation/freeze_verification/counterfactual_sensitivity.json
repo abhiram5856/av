@@ -1,0 +1,45 @@
+{
+  "baseline": {
+    "precision_at_1": 1.0,
+    "ndcg_at_3": 1.0,
+    "mrr": 1.0,
+    "expected_calibration_error": 0.3295
+  },
+  "visual_interventions": {
+    "zeroed_visual": {
+      "delta_p1": -0.0994,
+      "delta_ndcg": -0.0732,
+      "delta_mrr": -0.0631
+    },
+    "noise_visual": {
+      "delta_p1": -0.1118,
+      "delta_ndcg": -0.0948,
+      "delta_mrr": -0.0707
+    },
+    "shuffled_visual": {
+      "delta_p1": -0.0435,
+      "delta_ndcg": -0.0282,
+      "delta_mrr": -0.0254
+    }
+  },
+  "env_interventions": {
+    "zeroed_env": {
+      "delta_p1": -0.1304,
+      "delta_ndcg": -0.1134,
+      "delta_mrr": -0.0861
+    },
+    "noise_env": {
+      "delta_p1": -0.0683,
+      "delta_ndcg": -0.0824,
+      "delta_mrr": -0.0542
+    },
+    "shuffled_env": {
+      "delta_p1": -0.1118,
+      "delta_ndcg": -0.1192,
+      "delta_mrr": -0.0801
+    }
+  },
+  "visual_p1_max_delta": 0.1118,
+  "env_p1_max_delta": 0.1304,
+  "verdict_visual": "Visual modality shows sensitivity: max P@1 delta = 0.1118"
+}

@@ -1,0 +1,82 @@
+{
+  "CaseA_strong_visual_supportive_env": {
+    "top3_causes": [
+      "excessive_leaf_wetness",
+      "soil_borne_pathogen_carryover",
+      "rainfall_splash_dispersal"
+    ],
+    "top3_scores": [
+      26.3902,
+      19.065,
+      14.7145
+    ],
+    "top3_confs": [
+      1.0,
+      0.9996,
+      0.9977
+    ],
+    "visual_conf": 0.93,
+    "env_humidity": 88.0,
+    "severity": 75.0
+  },
+  "CaseB_strong_visual_nonsupportive_env": {
+    "top3_causes": [
+      "drought_stress_susceptibility",
+      "nutrient_deficiency",
+      "temperature_optimal_for_fungus"
+    ],
+    "top3_scores": [
+      45.0988,
+      35.0921,
+      22.4377
+    ],
+    "top3_confs": [
+      1.0,
+      1.0,
+      0.9999
+    ],
+    "visual_conf": 0.91,
+    "env_humidity": 22.0,
+    "severity": 55.0
+  },
+  "CaseC_healthy_visual_high_env_risk": {
+    "top3_causes": [
+      "excessive_leaf_wetness",
+      "soil_borne_pathogen_carryover",
+      "rainfall_splash_dispersal"
+    ],
+    "top3_scores": [
+      34.9447,
+      25.8153,
+      17.4326
+    ],
+    "top3_confs": [
+      1.0,
+      1.0,
+      0.9992
+    ],
+    "visual_conf": 0.88,
+    "env_humidity": 89.0,
+    "severity": 20.0
+  },
+  "CaseD_healthy_visual_low_env_risk": {
+    "top3_causes": [
+      "drought_stress_susceptibility",
+      "nutrient_deficiency",
+      "temperature_optimal_for_fungus"
+    ],
+    "top3_scores": [
+      48.5819,
+      37.3141,
+      21.9977
+    ],
+    "top3_confs": [
+      1.0,
+      1.0,
+      0.9999
+    ],
+    "visual_conf": 0.92,
+    "env_humidity": 35.0,
+    "severity": 10.0
+  }
+}

@@ -12,7 +12,7 @@ def test_load_txt_file_success(loader):
     mock_content = "This is a test document."
     mock_file_path = "test.txt"
     
-    with patch("os.path.exists", return_value=True), \\
+    with patch("os.path.exists", return_value=True), \
          patch("builtins.open", mock_open(read_data=mock_content)):
         docs = loader.load(mock_file_path)
         
@@ -37,7 +37,7 @@ def test_load_pdf_success(mock_pdf_reader, loader):
     mock_page.extract_text.return_value = "PDF text"
     mock_pdf_reader.return_value.pages = [mock_page]
     
-    with patch("os.path.exists", return_value=True), \\
+    with patch("os.path.exists", return_value=True), \
          patch("builtins.open", mock_open()):
         docs = loader.load("test.pdf")
         

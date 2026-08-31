@@ -53,6 +53,7 @@ class UserQuery(BaseModel):
     language: Optional[str] = None
     conversation_id: Optional[UUID] = None
     disease_context: Optional[DiseasePrediction] = None
+    iot_context: Optional[Dict[str, Any]] = None
 
 class ChatResponse(BaseModel):
     response: str

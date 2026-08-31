@@ -1,0 +1,4106 @@
+[
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_65.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 71
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_21.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 23
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_59.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 64
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_8.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 75
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_10.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 11
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_35.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 38
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_45.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 49
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_14.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 15
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_gray_leaf_spot\\plantdoc_42.jpg",
+    "class_idx": 0,
+    "class_name": "corn_gray_leaf_spot",
+    "group_id": 46
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_12.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 101
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_105.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 85
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_115.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 96
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_39.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 197
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_42.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 201
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_55.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 214
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_72.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 232
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_178.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 1
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_182.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 1
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_87.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 247
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_22.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 180
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_56.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 215
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_5.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 208
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_151.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 136
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_126.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 108
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_155.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 140
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_127.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 109
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_30.jpeg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 188
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_187.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 172
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_4.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 198
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_63.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 223
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_67.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 227
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_57.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 216
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_143.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 127
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_109.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 89
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_86.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 246
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_188.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 173
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_167.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 153
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_leaf_blight\\plantdoc_101.jpg",
+    "class_idx": 1,
+    "class_name": "corn_leaf_blight",
+    "group_id": 81
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_5.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 320
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_50.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 321
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_41.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 311
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_13.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 280
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_21.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 289
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_108.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 270
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_1.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 260
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_57.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 328
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_98.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 372
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_103.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 265
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_95.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 370
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_58.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 329
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_45.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 315
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_106.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 268
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_89.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 363
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_48.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 318
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\corn_rust_leaf\\plantdoc_26.jpg",
+    "class_idx": 2,
+    "class_name": "corn_rust_leaf",
+    "group_id": 294
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_107.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 384
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_125.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 384
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_129.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 406
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_20.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 483
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_133.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 411
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_185.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 467
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_106.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 383
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_97.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 562
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_134.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 412
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_115.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 393
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_124.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 402
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_93.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 402
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_90.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 556
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_53.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 516
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_2.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 482
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_81.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 546
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_23.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 486
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_137.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 415
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_73.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 537
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_13.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 407
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_177.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 458
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_0.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 374
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_108.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 385
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_163.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 443
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_198.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 481
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_50.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 481
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_119.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 397
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_11.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 387
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_158.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 437
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_bacterial_spot\\plantvillagedataset_199.JPG",
+    "class_idx": 3,
+    "class_name": "pepper_bell_bacterial_spot",
+    "group_id": 437
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_35.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 689
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_163.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 635
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_6.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 714
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_16.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 631
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_27.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 680
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_8.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 736
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_135.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 605
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_58.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 605
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_26.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 679
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_20.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 674
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_4.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 694
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_25.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 678
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_173.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 646
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_53.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 708
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_45.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 700
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_62.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 717
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_13.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 599
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_98.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 754
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_127.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 596
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_157.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 628
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_52.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 707
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_109.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 577
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_3.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 683
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_42.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 697
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_14.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 610
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_150.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 621
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_2.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 673
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_123.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 592
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\pepper_bell_healthy\\plantvillagedataset_1.JPG",
+    "class_idx": 4,
+    "class_name": "pepper_bell_healthy",
+    "group_id": 566
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_10.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 757
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_161.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 825
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_98.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 944
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_87.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 932
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_158.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 821
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_180.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 845
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_147.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 809
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_35.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 879
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_14.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 801
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_83.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 801
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_174.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 838
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_37.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 881
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_104.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 762
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_177.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 841
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_187.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 852
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_55.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 900
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_28.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 873
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_65.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 910
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_25.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 870
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_162.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 826
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_199.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 826
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_118.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 777
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_154.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 817
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_173.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 837
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_16.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 823
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_61.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 906
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_77.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 922
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_29.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 874
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_34.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 878
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_early_blight\\plantvillagedataset_59.JPG",
+    "class_idx": 5,
+    "class_name": "potato_early_blight",
+    "group_id": 878
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_198.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1035
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_35.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1035
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_134.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 984
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_92.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 984
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_99.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1077
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_111.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 961
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_163.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 961
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_154.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1002
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_132.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 982
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_97.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1075
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_24.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1041
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_182.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1022
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_136.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 985
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_185.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 985
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_75.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1067
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_117.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 967
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_158.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 967
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_104.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 953
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_192.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 953
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_106.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 955
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_90.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1073
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_44.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1051
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_80.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1051
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_130.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 980
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_115.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 965
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_171.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 965
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_19.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1028
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_79.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 1028
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_124.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 974
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_healthy\\plantvillagedataset_129.JPG",
+    "class_idx": 6,
+    "class_name": "potato_healthy",
+    "group_id": 974
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_4.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1206
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_127.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1110
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_106.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1087
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_38.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1204
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_66.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1232
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_68.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1234
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_19.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1175
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_33.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1199
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_173.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1159
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_108.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1089
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_199.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1183
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_153.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1137
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_83.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1249
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_155.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1139
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_82.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1248
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_174.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1160
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_175.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1160
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_87.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1252
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_189.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1174
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_51.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1217
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_86.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1251
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_178.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1163
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_180.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1166
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_70.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1166
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_9.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1255
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_49.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1215
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_27.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1192
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_132.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1116
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_37.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1203
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_60.JPG",
+    "class_idx": 7,
+    "class_name": "potato_late_blight",
+    "group_id": 1226
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_192.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1369
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_168.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1342
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_25.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1383
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_112.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1281
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_149.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1321
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_86.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1450
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_48.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1408
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_103.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1271
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_27.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1385
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_151.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1324
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_122.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1292
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_184.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1360
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_186.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1362
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_53.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1414
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_62.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1424
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_183.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1359
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_23.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1381
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_126.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1296
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_42.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1402
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_159.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1332
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_100.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1268
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_96.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1461
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_9.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1454
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_80.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1444
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_47.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1407
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_19.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1366
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_15.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1322
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_130.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1301
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_115.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1284
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_bacterial_leaf_blight\\ricedisease_26.jpg",
+    "class_idx": 8,
+    "class_name": "rice_bacterial_leaf_blight",
+    "group_id": 1384
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_122.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1492
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_15.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1522
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_30.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1587
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_73.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1633
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_147.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1519
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_98.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1659
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_121.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1491
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_57.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1615
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_17.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1544
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_164.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1538
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_11.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1478
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_197.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1572
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_180.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1554
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_85.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1645
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_126.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1496
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_175.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1548
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_61.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1620
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_5.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1607
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_56.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1614
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_111.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1480
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_49.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1606
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_128.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1498
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_76.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1636
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_80.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1640
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_9.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1650
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_91.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1652
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_117.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1486
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_119.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1488
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_113.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1482
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_brown_spot\\ricedisease_29.jpg",
+    "class_idx": 9,
+    "class_name": "rice_brown_spot",
+    "group_id": 1585
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_107.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1671
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_47.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1802
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_57.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1813
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_187.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1759
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_6.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1816
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_119.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1684
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_83.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1842
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_164.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1734
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_183.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1755
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_61.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1818
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_106.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1670
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_22.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1776
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_8.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1838
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_17.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1740
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_114.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1679
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_35.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1790
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_18.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1751
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_110.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1675
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_56.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1812
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_161.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1731
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_168.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1738
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_65.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1822
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_20.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1774
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_27.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1781
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_113.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1678
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_2.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1773
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_132.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1699
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_170.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1741
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_81.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1840
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_healthy\\ricedisease_172.jpg",
+    "class_idx": 10,
+    "class_name": "rice_healthy",
+    "group_id": 1743
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_112.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1876
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_24.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1975
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_195.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1965
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_153.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1920
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_109.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1872
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_97.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2051
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_168.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1936
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_78.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2032
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_66.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2019
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_123.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 5
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_32.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 5
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_196.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1966
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_42.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1993
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_47.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1998
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_132.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1897
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_148.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1914
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_157.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1924
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_101.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1864
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_76.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2030
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_1.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1861
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_21.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1972
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_65.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2018
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_68.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2021
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_27.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1978
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_164.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1932
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_106.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1869
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_13.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1894
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_9.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2044
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_175.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 1943
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_70.jpg",
+    "class_idx": 11,
+    "class_name": "rice_leaf_blast",
+    "group_id": 2024
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_150.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2110
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_4.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2183
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_95.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2244
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_58.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2203
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_135.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2093
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_169.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2129
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_167.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2127
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_47.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2191
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_49.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2193
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_112.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2069
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_180.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2141
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_173.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2134
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_118.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2075
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_86.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2234
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_139.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2097
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_89.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2237
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_114.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2071
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_13.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2087
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_127.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2084
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_145.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2104
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_35.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2178
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_165.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2126
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_63.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2209
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_148.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2107
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_25.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2167
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_159.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2119
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_16.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2120
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_125.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2083
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_51.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2196
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_scald\\ricedisease_190.jpg",
+    "class_idx": 12,
+    "class_name": "rice_leaf_scald",
+    "group_id": 2152
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_84.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2430
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_12.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2272
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_127.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2280
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_125.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2278
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_162.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2319
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_46.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2388
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_23.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2363
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_83.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2429
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_188.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2346
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_114.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2266
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_71.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2416
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_47.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2389
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_182.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2340
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_142.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2297
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_49.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2391
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_50.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2393
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_11.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2261
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_191.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2350
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_108.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2259
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_65.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2409
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_192.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2351
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_183.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2341
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_159.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2315
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_129.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2282
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_199.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2358
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_122.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2275
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_10.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2251
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_43.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2385
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_164.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2321
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_sheath_blight\\ricedisease_28.jpg",
+    "class_idx": 13,
+    "class_name": "rice_sheath_blight",
+    "group_id": 2368
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_88.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2629
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_167.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2523
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_10.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2449
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_51.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2592
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_165.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2521
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_140.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2494
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_34.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2573
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_19.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2548
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_55.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2596
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_139.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2492
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_194.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2553
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_138.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2491
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_106.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2456
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_43.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2583
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_77.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2619
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_52.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2593
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_118.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2469
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_111.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2462
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_87.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2628
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_172.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2529
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_164.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2520
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_94.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2636
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_97.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2639
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_28.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2568
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_192.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2551
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_134.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2487
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_47.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2587
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_1.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2448
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_89.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2630
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_bacterial_spot\\plantvillagedataset_74.JPG",
+    "class_idx": 14,
+    "class_name": "tomato_bacterial_spot",
+    "group_id": 2617
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_154.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2704
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_109.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2654
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_82.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2817
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_51.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2785
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_120.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2667
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_94.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2829
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_145.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2694
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_153.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2703
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_101.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2646
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_85.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2820
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_92.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2827
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_123.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2670
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_141.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2690
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_161.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2712
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_133.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2681
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_99.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2834
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_25.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2759
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_155.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2705
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_150.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2700
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_83.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2818
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_44.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2778
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_197.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2750
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_48.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2781
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_26.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2760
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_167.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2718
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_102.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2647
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_0.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2642
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_15.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2699
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_127.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2674
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_early_blight\\plantvillagedataset_43.JPG",
+    "class_idx": 15,
+    "class_name": "tomato_early_blight",
+    "group_id": 2777
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_94.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 3026
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_100.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2838
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_6.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2989
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_42.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2971
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_60.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2990
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_96.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 3028
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_31.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2959
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_30.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2958
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_65.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2995
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_185.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2930
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_24.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2951
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_36.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2964
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_149.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2890
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_10.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2837
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_132.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2873
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_113.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2852
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_152.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2894
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_70.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 3000
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_194.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2940
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_1.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2836
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_109.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2847
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_115.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2854
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_105.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2843
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_40.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2969
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_111.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2850
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_44.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2973
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_141.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2882
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_75.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 3005
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_45.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2974
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_healthy\\plantvillagedataset_13.JPG",
+    "class_idx": 16,
+    "class_name": "tomato_healthy",
+    "group_id": 2870
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_192.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3132
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_1.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3032
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_66.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3189
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_13.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3065
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_123.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3058
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_27.jpg",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3148
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_145.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3081
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_64.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3187
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_157.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3094
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_3.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3094
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_158.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3095
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_99.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3225
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_116.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3050
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_33.jpg",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3154
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_17.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3107
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_198.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3138
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_164.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3101
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_21.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3142
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_137.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3073
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_113.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3047
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_132.jpg",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3068
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_36.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3157
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_67.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3190
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_170.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3108
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_162.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3099
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_130.jpg",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3066
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_70.jpg",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3194
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_189.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3128
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_138.JPG",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3074
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_late_blight\\plantvillagedataset_42.jpg",
+    "class_idx": 17,
+    "class_name": "tomato_late_blight",
+    "group_id": 3164
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_125.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3256
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_143.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3256
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_129.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3260
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_117.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3247
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_168.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3302
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_94.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3412
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_74.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3392
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_180.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3316
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_18.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3315
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_59.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3376
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_190.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3326
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_71.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3390
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_171.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3306
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_44.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3361
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_34.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3351
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_16.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3293
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_124.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3255
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_27.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3343
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_99.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3416
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_174.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3309
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_183.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3319
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_83.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3401
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_46.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3363
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_121.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3252
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_55.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3373
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_97.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3373
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_112.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3242
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_163.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3297
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_146.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3278
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_leaf_mold\\plantvillagedataset_148.JPG",
+    "class_idx": 18,
+    "class_name": "tomato_leaf_mold",
+    "group_id": 3280
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_18.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3502
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_141.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3464
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_54.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3464
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_107.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3427
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_127.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3449
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_159.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3449
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_186.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3509
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_89.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3582
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_164.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3487
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_52.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3555
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_172.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3494
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_90.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3584
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_145.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3468
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_78.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3574
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_9.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3583
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_93.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3587
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_26.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3529
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_134.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3457
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_126.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3448
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_101.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3421
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_88.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3581
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_120.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3442
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_108.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3428
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_109.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3429
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_69.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3429
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_181.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3504
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_92.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3586
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_61.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3561
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_128.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3450
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_mosaic_virus\\plantvillagedataset_75.JPG",
+    "class_idx": 19,
+    "class_name": "tomato_mosaic_virus",
+    "group_id": 3450
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_127.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3624
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_187.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3687
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_137.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3634
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_16.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3658
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_29.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3658
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_42.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3724
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_43.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3725
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_180.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3680
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_38.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3719
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_136.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3633
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_10.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3594
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_133.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3594
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_13.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3627
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_98.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3783
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_125.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3622
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_139.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3636
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_68.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3751
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_65.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3748
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_26.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3708
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_124.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3621
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_67.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3750
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_118.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3614
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_156.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3654
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_110.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3606
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_155.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3653
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_21.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3703
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_77.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3761
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_112.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3608
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_6.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3742
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_septoria_leaf_spot\\plantvillagedataset_191.JPG",
+    "class_idx": 20,
+    "class_name": "tomato_septoria_leaf_spot",
+    "group_id": 3692
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_111.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3799
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_100.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3787
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_126.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3815
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_13.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3819
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_121.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3810
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_74.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3953
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_12.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3808
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_62.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3941
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_47.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3924
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_49.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3926
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_76.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3955
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_193.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3887
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_104.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3791
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_138.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3828
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_159.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3850
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_168.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3860
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_109.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3796
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_39.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3915
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_191.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3885
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_78.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3957
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_156.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3847
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_71.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3950
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_131.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3821
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_95.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3976
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_148.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3839
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_107.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3794
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_6.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3938
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_169.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3861
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_134.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3824
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_119.JPG",
+    "class_idx": 21,
+    "class_name": "tomato_spider_mites_two_spotted_spider_mite",
+    "group_id": 3807
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_179.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4069
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_152.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4041
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_115.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4000
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_174.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4065
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_89.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4162
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_37.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4108
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_121.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4007
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_149.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4037
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_72.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4146
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_14.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4027
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_105.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 3989
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_53.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4126
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_191.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4081
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_81.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4081
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_54.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4127
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_0.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 3981
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_96.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4169
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_127.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4013
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_166.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4056
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_169.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4059
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_188.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4077
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_69.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4143
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_8.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4154
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_15.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4038
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_181.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4072
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_64.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4138
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_51.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4124
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_138.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4025
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_171.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4062
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_target_spot\\plantvillagedataset_9.JPG",
+    "class_idx": 22,
+    "class_name": "tomato_target_spot",
+    "group_id": 4062
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_96.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4366
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_164.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4246
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_59.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4326
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_122.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4200
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_120.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4198
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_68.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4335
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_132.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4211
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_194.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4279
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_123.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4201
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_97.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4367
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_56.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4323
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_100.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4176
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_24.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4290
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_98.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4368
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_161.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4243
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_173.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4256
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_47.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4314
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_89.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4358
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_48.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4315
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_99.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4369
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_118.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4195
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_113.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4190
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_171.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4254
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_158.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4239
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_58.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4325
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_80.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4349
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_65.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4333
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_144.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4224
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_199.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4284
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_yellow_leaf_curl_virus\\plantvillagedataset_9.JPG",
+    "class_idx": 23,
+    "class_name": "tomato_yellow_leaf_curl_virus",
+    "group_id": 4359
+  }
+]

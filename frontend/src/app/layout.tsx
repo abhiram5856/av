@@ -1,31 +1,54 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { AppProviders } from "@/components/app-providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "AgriVision AI - Precision Agriculture Platform",
-  description: "AI-Driven Precision Agriculture Platform with Disease Detection and IoT Monitoring.",
+  title: "NOVA — AI Crop Disease Diagnosis",
+  description:
+    "Instantly diagnose plant diseases with AI. Upload a photo of your crop and get disease identification, severity assessment, root cause analysis, and treatment recommendations.",
   manifest: "/manifest.json",
-  themeColor: "#0f5132",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "AgriVision AI",
+    title: "NOVA",
+  },
+  openGraph: {
+    title: "NOVA — AI Crop Disease Diagnosis",
+    description: "Instantly diagnose plant diseases with AI. Upload a photo of your crop and get disease identification, severity assessment, root cause analysis, and treatment recommendations.",
+    url: "https://nova-agrivision.app",
+    siteName: "NOVA",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NOVA AI Crop Disease Diagnosis",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NOVA — AI Crop Disease Diagnosis",
+    description: "Instantly diagnose plant diseases with AI. Upload a photo of your crop and get disease identification, severity assessment, root cause analysis, and treatment recommendations.",
+    images: ["/og-image.jpg"],
   },
 };
 
-import { AppProviders } from "@/components/app-providers";
+export const viewport: Viewport = {
+  themeColor: "#16a34a",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export default function RootLayout({
   children,
@@ -35,10 +58,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col relative overflow-x-hidden">
+        
+        {/* Animated Background Orbs */}
+        <div className="fixed top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-primary/10 shape-blob-1 mix-blend-multiply blur-3xl opacity-60 z-[-1] pointer-events-none" />
+        <div className="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-emerald-400/10 shape-blob-2 mix-blend-multiply blur-3xl opacity-60 z-[-1] pointer-events-none animate-float" />
+        <div className="fixed top-[40%] left-[60%] w-[25vw] h-[25vw] bg-teal-400/5 shape-blob-1 mix-blend-multiply blur-3xl opacity-50 z-[-1] pointer-events-none" style={{ animationDelay: '2s' }} />
+
         <AppProviders>
           {children}
         </AppProviders>
@@ -46,4 +75,3 @@ export default function RootLayout({
     </html>
   );
 }
-

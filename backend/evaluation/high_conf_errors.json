@@ -1,0 +1,20 @@
+[
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\potato_late_blight\\plantvillagedataset_65.JPG",
+    "true_class": "potato_late_blight",
+    "predicted_class": "tomato_late_blight",
+    "confidence": 0.876475989818573
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\rice_leaf_blast\\ricedisease_119.jpg",
+    "true_class": "rice_leaf_blast",
+    "predicted_class": "rice_bacterial_leaf_blight",
+    "confidence": 0.8999484181404114
+  },
+  {
+    "path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_dataset\\tomato_spider_mites_two_spotted_spider_mite\\plantvillagedataset_144.JPG",
+    "true_class": "tomato_spider_mites_two_spotted_spider_mite",
+    "predicted_class": "tomato_target_spot",
+    "confidence": 0.833879292011261
+  }
+]

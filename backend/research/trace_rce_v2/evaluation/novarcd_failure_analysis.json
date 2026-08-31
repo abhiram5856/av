@@ -1,0 +1,1096 @@
+{
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      73,
+      0,
+      0,
+      0,
+      60,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      217,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      40,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "cause_ids": [
+    "drought_stress_susceptibility",
+    "excessive_leaf_wetness",
+    "high_humidity_conduciveness",
+    "high_temperature_stress_bacterial",
+    "insect_vector_proliferation",
+    "mechanical_damage_entry_point",
+    "nutrient_deficiency",
+    "poor_air_circulation",
+    "rainfall_splash_dispersal",
+    "soil_borne_pathogen_carryover",
+    "soil_pH_imbalance",
+    "temperature_optimal_for_fungus",
+    "water_stress_overwatering"
+  ],
+  "top_20_failures": [
+    {
+      "rank": 1,
+      "case_id": "NOVA-RCD-00010",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.1128753125667572,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4169338047504425
+        ],
+        [
+          "env_humidity_norm",
+          -0.23369164764881134
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.19645285606384277
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.048116691410541534,
+        "visual_gradcam_coverage": 0.024274997413158417,
+        "visual_gradcam_peak": 0.10374768078327179,
+        "visual_topk_entropy": 0.04021185263991356,
+        "env_humidity_norm": -0.23369164764881134,
+        "env_temperature_norm": 0.4169338047504425,
+        "env_rainfall_norm": -0.0053551518358290195,
+        "env_wetness_norm": 0.001522479928098619,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.06366251409053802,
+        "severity_soil_stress_factor_norm": -0.19645285606384277,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05412876605987549,
+        "knowledge_text_length_norm": -0.014119855128228664,
+        "knowledge_source_count_norm": 0.012771859765052795,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026472387835383415
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 2,
+      "case_id": "NOVA-RCD-00285",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11284561455249786,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.37113723158836365
+        ],
+        [
+          "env_humidity_norm",
+          -0.18855978548526764
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.1675851196050644
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04550158232450485,
+        "visual_gradcam_coverage": 0.023574966937303543,
+        "visual_gradcam_peak": 0.0995185598731041,
+        "visual_topk_entropy": 0.04259228706359863,
+        "env_humidity_norm": -0.18855978548526764,
+        "env_temperature_norm": 0.37113723158836365,
+        "env_rainfall_norm": -0.0070625231601297855,
+        "env_wetness_norm": 0.0015055733965709805,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.0337124839425087,
+        "severity_soil_stress_factor_norm": -0.1675851196050644,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05536980181932449,
+        "knowledge_text_length_norm": -0.013907366432249546,
+        "knowledge_source_count_norm": 0.014411257579922676,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.02667640708386898
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 3,
+      "case_id": "NOVA-RCD-04171",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11258411407470703,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.44686758518218994
+        ],
+        [
+          "env_humidity_norm",
+          -0.26298677921295166
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.21853198111057281
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04903089255094528,
+        "visual_gradcam_coverage": 0.02453438937664032,
+        "visual_gradcam_peak": 0.10461181402206421,
+        "visual_topk_entropy": 0.03992891311645508,
+        "env_humidity_norm": -0.26298677921295166,
+        "env_temperature_norm": 0.44686758518218994,
+        "env_rainfall_norm": -0.0024916252586990595,
+        "env_wetness_norm": 0.0010976414196193218,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.07995827496051788,
+        "severity_soil_stress_factor_norm": -0.21853198111057281,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05526936799287796,
+        "knowledge_text_length_norm": -0.014517868869006634,
+        "knowledge_source_count_norm": 0.013753138482570648,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.02646399661898613
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 4,
+      "case_id": "NOVA-RCD-01039",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11255713552236557,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4253186881542206
+        ],
+        [
+          "env_humidity_norm",
+          -0.2395859807729721
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.20641018450260162
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04808155074715614,
+        "visual_gradcam_coverage": 0.024248111993074417,
+        "visual_gradcam_peak": 0.1026524230837822,
+        "visual_topk_entropy": 0.042276885360479355,
+        "env_humidity_norm": -0.2395859807729721,
+        "env_temperature_norm": 0.4253186881542206,
+        "env_rainfall_norm": -0.0052184234373271465,
+        "env_wetness_norm": 0.0014851021114736795,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.06738030165433884,
+        "severity_soil_stress_factor_norm": -0.20641018450260162,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05487466976046562,
+        "knowledge_text_length_norm": -0.014986047521233559,
+        "knowledge_source_count_norm": 0.014474003575742245,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026451682671904564
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 5,
+      "case_id": "NOVA-RCD-01322",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11218930780887604,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.42141371965408325
+        ],
+        [
+          "env_humidity_norm",
+          -0.23099766671657562
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.19128383696079254
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.03726799041032791,
+        "visual_gradcam_coverage": 0.02344466932117939,
+        "visual_gradcam_peak": 0.099332794547081,
+        "visual_topk_entropy": 0.031260836869478226,
+        "env_humidity_norm": -0.23099766671657562,
+        "env_temperature_norm": 0.42141371965408325,
+        "env_rainfall_norm": -0.00586192961782217,
+        "env_wetness_norm": 0.002310265554115176,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.0476599782705307,
+        "severity_soil_stress_factor_norm": -0.19128383696079254,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.055682726204395294,
+        "knowledge_text_length_norm": -0.014840036630630493,
+        "knowledge_source_count_norm": 0.01633431576192379,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026135394349694252
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 6,
+      "case_id": "NOVA-RCD-00298",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11146226525306702,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.40509170293807983
+        ],
+        [
+          "env_humidity_norm",
+          -0.23082245886325836
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.19566448032855988
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04971172660589218,
+        "visual_gradcam_coverage": 0.02437729761004448,
+        "visual_gradcam_peak": 0.10447901487350464,
+        "visual_topk_entropy": 0.04096412658691406,
+        "env_humidity_norm": -0.23082245886325836,
+        "env_temperature_norm": 0.40509170293807983,
+        "env_rainfall_norm": -0.004274682141840458,
+        "env_wetness_norm": 0.0005732551799155772,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.06593284755945206,
+        "severity_soil_stress_factor_norm": -0.19566448032855988,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05434110760688782,
+        "knowledge_text_length_norm": -0.013557193800807,
+        "knowledge_source_count_norm": 0.012037836946547031,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026401514187455177
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 7,
+      "case_id": "NOVA-RCD-02746",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11109662801027298,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.42868465185165405
+        ],
+        [
+          "env_humidity_norm",
+          -0.2508101165294647
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.21675865352153778
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04795026034116745,
+        "visual_gradcam_coverage": 0.02455863170325756,
+        "visual_gradcam_peak": 0.1045897975564003,
+        "visual_topk_entropy": 0.03970419242978096,
+        "env_humidity_norm": -0.2508101165294647,
+        "env_temperature_norm": 0.42868465185165405,
+        "env_rainfall_norm": -0.0023771149571985006,
+        "env_wetness_norm": 0.0007935313042253256,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.07907045632600784,
+        "severity_soil_stress_factor_norm": -0.21675865352153778,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05441443249583244,
+        "knowledge_text_length_norm": -0.015114914625883102,
+        "knowledge_source_count_norm": 0.013815212063491344,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026283979415893555
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 8,
+      "case_id": "NOVA-RCD-02122",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11108870804309845,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.42455098032951355
+        ],
+        [
+          "env_humidity_norm",
+          -0.2363332062959671
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.19548648595809937
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.03930938243865967,
+        "visual_gradcam_coverage": 0.023597070947289467,
+        "visual_gradcam_peak": 0.09968959540128708,
+        "visual_topk_entropy": 0.03437159210443497,
+        "env_humidity_norm": -0.2363332062959671,
+        "env_temperature_norm": 0.42455098032951355,
+        "env_rainfall_norm": -0.006706214509904385,
+        "env_wetness_norm": 0.0010768180945888162,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.05080532282590866,
+        "severity_soil_stress_factor_norm": -0.19548648595809937,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05532419681549072,
+        "knowledge_text_length_norm": -0.015324538573622704,
+        "knowledge_source_count_norm": 0.016576360911130905,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026096954941749573
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 9,
+      "case_id": "NOVA-RCD-00407",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11105433106422424,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.48307642340660095
+        ],
+        [
+          "env_humidity_norm",
+          -0.2981700599193573
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.23642535507678986
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04838700219988823,
+        "visual_gradcam_coverage": 0.024707579985260963,
+        "visual_gradcam_peak": 0.10604601353406906,
+        "visual_topk_entropy": 0.03659061715006828,
+        "env_humidity_norm": -0.2981700599193573,
+        "env_temperature_norm": 0.48307642340660095,
+        "env_rainfall_norm": -0.003417650004848838,
+        "env_wetness_norm": 0.0006760471733286977,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.09403752535581589,
+        "severity_soil_stress_factor_norm": -0.23642535507678986,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.054954614490270615,
+        "knowledge_text_length_norm": -0.014705409295856953,
+        "knowledge_source_count_norm": 0.013473360799252987,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.02622990496456623
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 10,
+      "case_id": "NOVA-RCD-04183",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11094006896018982,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.36925405263900757
+        ],
+        [
+          "env_humidity_norm",
+          -0.17936952412128448
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.15865613520145416
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.026087025180459023,
+        "visual_gradcam_coverage": 0.022302361205220222,
+        "visual_gradcam_peak": 0.09375236928462982,
+        "visual_topk_entropy": 0.023121537640690804,
+        "env_humidity_norm": -0.17936952412128448,
+        "env_temperature_norm": 0.36925405263900757,
+        "env_rainfall_norm": -0.007326857652515173,
+        "env_wetness_norm": 0.001331825158558786,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.013304291293025017,
+        "severity_soil_stress_factor_norm": -0.15865613520145416,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.056668903678655624,
+        "knowledge_text_length_norm": -0.014583203941583633,
+        "knowledge_source_count_norm": 0.01852536015212536,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.02584977075457573
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 11,
+      "case_id": "NOVA-RCD-02133",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11083919554948807,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.406438410282135
+        ],
+        [
+          "env_humidity_norm",
+          -0.22807742655277252
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.19775916635990143
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.0478341169655323,
+        "visual_gradcam_coverage": 0.024224312976002693,
+        "visual_gradcam_peak": 0.1034829393029213,
+        "visual_topk_entropy": 0.040212277323007584,
+        "env_humidity_norm": -0.22807742655277252,
+        "env_temperature_norm": 0.406438410282135,
+        "env_rainfall_norm": -0.0070429034531116486,
+        "env_wetness_norm": 0.0006888320785947144,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.0649384930729866,
+        "severity_soil_stress_factor_norm": -0.19775916635990143,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05397162586450577,
+        "knowledge_text_length_norm": -0.014249991625547409,
+        "knowledge_source_count_norm": 0.012401653453707695,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026226751506328583
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 12,
+      "case_id": "NOVA-RCD-00066",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11069667339324951,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.42931321263313293
+        ],
+        [
+          "env_humidity_norm",
+          -0.2509487569332123
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.214919775724411
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04918275773525238,
+        "visual_gradcam_coverage": 0.024512961506843567,
+        "visual_gradcam_peak": 0.10478276014328003,
+        "visual_topk_entropy": 0.04021995887160301,
+        "env_humidity_norm": -0.2509487569332123,
+        "env_temperature_norm": 0.42931321263313293,
+        "env_rainfall_norm": -0.0051726084202528,
+        "env_wetness_norm": 0.0006351571646519005,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.0794258639216423,
+        "severity_soil_stress_factor_norm": -0.214919775724411,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05421459302306175,
+        "knowledge_text_length_norm": -0.014563183300197124,
+        "knowledge_source_count_norm": 0.012581913731992245,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026206349954009056
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 13,
+      "case_id": "NOVA-RCD-01036",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.110675148665905,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4948306977748871
+        ],
+        [
+          "env_humidity_norm",
+          -0.30981501936912537
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.24342696368694305
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.05169197916984558,
+        "visual_gradcam_coverage": 0.024959415197372437,
+        "visual_gradcam_peak": 0.10714210569858551,
+        "visual_topk_entropy": 0.04013262689113617,
+        "env_humidity_norm": -0.30981501936912537,
+        "env_temperature_norm": 0.4948306977748871,
+        "env_rainfall_norm": -0.005644637625664473,
+        "env_wetness_norm": 0.000693968147970736,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.10162544995546341,
+        "severity_soil_stress_factor_norm": -0.24342696368694305,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05418681725859642,
+        "knowledge_text_length_norm": -0.015030089765787125,
+        "knowledge_source_count_norm": 0.012993695214390755,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.0262162983417511
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 14,
+      "case_id": "NOVA-RCD-00398",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11049860715866089,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.36851009726524353
+        ],
+        [
+          "env_humidity_norm",
+          -0.1918940395116806
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.16794538497924805
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.03932483121752739,
+        "visual_gradcam_coverage": 0.0233253613114357,
+        "visual_gradcam_peak": 0.09949168562889099,
+        "visual_topk_entropy": 0.03277946636080742,
+        "env_humidity_norm": -0.1918940395116806,
+        "env_temperature_norm": 0.36851009726524353,
+        "env_rainfall_norm": -0.005973663181066513,
+        "env_wetness_norm": 0.000759117363486439,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.03387319669127464,
+        "severity_soil_stress_factor_norm": -0.16794538497924805,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.055545419454574585,
+        "knowledge_text_length_norm": -0.013327624648809433,
+        "knowledge_source_count_norm": 0.014076325111091137,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026226604357361794
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 15,
+      "case_id": "NOVA-RCD-01668",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11048988997936249,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4380832314491272
+        ],
+        [
+          "env_humidity_norm",
+          -0.25193482637405396
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.20244401693344116
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.03536899760365486,
+        "visual_gradcam_coverage": 0.02370893582701683,
+        "visual_gradcam_peak": 0.10185247659683228,
+        "visual_topk_entropy": 0.024744121357798576,
+        "env_humidity_norm": -0.25193482637405396,
+        "env_temperature_norm": 0.4380832314491272,
+        "env_rainfall_norm": -0.005357259884476662,
+        "env_wetness_norm": 0.001822941703721881,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.06074630096554756,
+        "severity_soil_stress_factor_norm": -0.20244401693344116,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05463431403040886,
+        "knowledge_text_length_norm": -0.014646383002400398,
+        "knowledge_source_count_norm": 0.01455196924507618,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.025807127356529236
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 16,
+      "case_id": "NOVA-RCD-00826",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.11041127890348434,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4647774398326874
+        ],
+        [
+          "env_humidity_norm",
+          -0.2713298499584198
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.20516334474086761
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.032583992928266525,
+        "visual_gradcam_coverage": 0.023413171991705894,
+        "visual_gradcam_peak": 0.10090966522693634,
+        "visual_topk_entropy": 0.020634450018405914,
+        "env_humidity_norm": -0.2713298499584198,
+        "env_temperature_norm": 0.4647774398326874,
+        "env_rainfall_norm": -0.007889625616371632,
+        "env_wetness_norm": 0.002003319561481476,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.05925548076629639,
+        "severity_soil_stress_factor_norm": -0.20516334474086761,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05549343302845955,
+        "knowledge_text_length_norm": -0.014133557677268982,
+        "knowledge_source_count_norm": 0.014716999605298042,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.025666970759630203
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 17,
+      "case_id": "NOVA-RCD-04218",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.10997957736253738,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4626384377479553
+        ],
+        [
+          "env_humidity_norm",
+          -0.2840419113636017
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.21862156689167023
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.043169643729925156,
+        "visual_gradcam_coverage": 0.024476155638694763,
+        "visual_gradcam_peak": 0.10685919970273972,
+        "visual_topk_entropy": 0.026544155552983284,
+        "env_humidity_norm": -0.2840419113636017,
+        "env_temperature_norm": 0.4626384377479553,
+        "env_rainfall_norm": -0.004765221383422613,
+        "env_wetness_norm": -0.00021284105605445802,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.08564233779907227,
+        "severity_soil_stress_factor_norm": -0.21862156689167023,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05444719269871712,
+        "knowledge_text_length_norm": -0.012925603426992893,
+        "knowledge_source_count_norm": 0.011179551482200623,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.02582089975476265
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 18,
+      "case_id": "NOVA-RCD-03613",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.10991054028272629,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4971523582935333
+        ],
+        [
+          "env_humidity_norm",
+          -0.3083323836326599
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.23018580675125122
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.04521302133798599,
+        "visual_gradcam_coverage": 0.024327266961336136,
+        "visual_gradcam_peak": 0.10407531261444092,
+        "visual_topk_entropy": 0.035306353121995926,
+        "env_humidity_norm": -0.3083323836326599,
+        "env_temperature_norm": 0.4971523582935333,
+        "env_rainfall_norm": -0.006289901677519083,
+        "env_wetness_norm": 0.001262145466171205,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.08143255114555359,
+        "severity_soil_stress_factor_norm": -0.23018580675125122,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.0547444224357605,
+        "knowledge_text_length_norm": -0.015293566510081291,
+        "knowledge_source_count_norm": 0.014981895685195923,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026108182966709137
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 19,
+      "case_id": "NOVA-RCD-01431",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.10990232229232788,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4403130114078522
+        ],
+        [
+          "env_humidity_norm",
+          -0.26113176345825195
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.20861144363880157
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.0436551608145237,
+        "visual_gradcam_coverage": 0.02421184629201889,
+        "visual_gradcam_peak": 0.10499256104230881,
+        "visual_topk_entropy": 0.030121784657239914,
+        "env_humidity_norm": -0.26113176345825195,
+        "env_temperature_norm": 0.4403130114078522,
+        "env_rainfall_norm": -0.006414317991584539,
+        "env_wetness_norm": 3.958408342441544e-05,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.07498537749052048,
+        "severity_soil_stress_factor_norm": -0.20861144363880157,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.054482538253068924,
+        "knowledge_text_length_norm": -0.013155081309378147,
+        "knowledge_source_count_norm": 0.011503948830068111,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.02588416263461113
+      },
+      "ig_attributions_correct_pred": {}
+    },
+    {
+      "rank": 20,
+      "case_id": "NOVA-RCD-01395",
+      "disease_family": "HEALTHY",
+      "predicted_cause": "insect_vector_proliferation",
+      "predicted_confidence": 0.10990148782730103,
+      "ground_truth_causes": [],
+      "top_contributing_features_incorrect_pred": [
+        [
+          "env_temperature_norm",
+          0.4681481122970581
+        ],
+        [
+          "env_humidity_norm",
+          -0.2960977554321289
+        ],
+        [
+          "severity_soil_stress_factor_norm",
+          -0.245630145072937
+        ]
+      ],
+      "ig_attributions_incorrect_pred": {
+        "visual_vision_confidence": -0.055934421718120575,
+        "visual_gradcam_coverage": 0.025476986542344093,
+        "visual_gradcam_peak": 0.11025922745466232,
+        "visual_topk_entropy": 0.04196329042315483,
+        "env_humidity_norm": -0.2960977554321289,
+        "env_temperature_norm": 0.4681481122970581,
+        "env_rainfall_norm": -0.004233872052282095,
+        "env_wetness_norm": 0.00010423050844110548,
+        "severity_base_vision_score_norm": 0.0,
+        "severity_environmental_risk_factor_norm": 0.11466344445943832,
+        "severity_soil_stress_factor_norm": -0.245630145072937,
+        "severity_final_severity_norm": 0.0,
+        "knowledge_n_chunks_norm": 0.05292891338467598,
+        "knowledge_text_length_norm": -0.014413776807487011,
+        "knowledge_source_count_norm": 0.010475345887243748,
+        "knowledge_keyword_diversity": 0.0,
+        "historical_total_diagnoses_norm": 0.0,
+        "historical_n_frequent_diseases_norm": 0.0,
+        "historical_recency_score": 0.026092978194355965
+      },
+      "ig_attributions_correct_pred": {}
+    }
+  ]
+}

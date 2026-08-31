@@ -10,13 +10,22 @@ def test_chat_engine_flow():
     mock_prompt_builder = MagicMock()
     mock_llm = MagicMock()
     mock_memory = MagicMock()
+    from backend.models.domain import SearchResult, Chunk, UserQuery, ChatMessage
+    from uuid import uuid4
+    from datetime import datetime
+    
+    fixed_id = uuid4()
+    fixed_time = datetime.utcnow()
+    
+    mock_chunk = Chunk(document_id=uuid4(), text="Mock text", chunk_index=0, source="test")
+    mock_search_result = SearchResult(chunk=mock_chunk, score=0.9)
     
     # Setup mock returns
     mock_translator.detect_language.return_value = "te"
     mock_translator.translate.side_effect = ["Translate to English", "Translate to Telugu"]
     
-    mock_retriever.retrieve.return_value = ["MockSearchResult"]
-    mock_memory.get_history.return_value = [ChatMessage(role="user", content="hello")]
+    mock_retriever.retrieve.return_value = [mock_search_result]
+    mock_memory.get_history.return_value = [ChatMessage(id=fixed_id, role="user", content="hello", timestamp=fixed_time)]
     mock_prompt_builder.build_prompt.return_value = "Final Prompt String"
     mock_llm.generate.return_value = "LLM English Response"
     
@@ -40,8 +49,8 @@ def test_chat_engine_flow():
     
     mock_prompt_builder.build_prompt.assert_called_once_with(
         query="Translate to English",
-        context=["MockSearchResult"],
-        chat_history=[ChatMessage(role="user", content="hello")],
+        context=[mock_search_result],
+        chat_history=[ChatMessage(id=fixed_id, role="user", content="hello", timestamp=fixed_time)],
         disease_context=None
     )
     
@@ -53,5 +62,5 @@ def test_chat_engine_flow():
     
     assert response.response == "Translate to Telugu"
     assert response.language == "te"
-    assert response.source_chunks == ["MockSearchResult"]
+    assert response.source_chunks == [mock_search_result]
     assert response.processing_time_ms is not None

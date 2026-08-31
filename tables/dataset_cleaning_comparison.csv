@@ -1,0 +1,6 @@
+Metric,Before Cleaning,After Cleaning,Action/Delta
+Total Classes,54,36,Merged 18 redundant categories
+Class size imbalance range,"10 - 1500","5 - 200",Capped at 200 samples per class
+Noise (Non-disease directories),5,0,Removed ripe/unripe/old folders
+Corrupt or empty files,4,0,Removed corrupt files during extraction
+Total Images,25430,5667,Clipped for model training efficiency

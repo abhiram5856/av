@@ -1,0 +1,82 @@
+{
+  "A_full_model": {
+    "precision_at_1": 1.0,
+    "precision_at_3": 0.6667,
+    "recall_at_3": 1.0,
+    "mrr": 1.0,
+    "ndcg_at_3": 1.0,
+    "expected_calibration_error": 0.3295,
+    "maximum_calibration_error": 0.7049,
+    "brier_score": 0.2543
+  },
+  "B_zero_visual": {
+    "precision_at_1": 0.9006,
+    "precision_at_3": 0.6294,
+    "recall_at_3": 0.9441,
+    "mrr": 0.9369,
+    "ndcg_at_3": 0.9268,
+    "expected_calibration_error": 0.332,
+    "maximum_calibration_error": 0.6334,
+    "brier_score": 0.2674
+  },
+  "C_zero_env": {
+    "precision_at_1": 0.8696,
+    "precision_at_3": 0.6004,
+    "recall_at_3": 0.9006,
+    "mrr": 0.9139,
+    "ndcg_at_3": 0.8866,
+    "expected_calibration_error": 0.3242,
+    "maximum_calibration_error": 0.6579,
+    "brier_score": 0.2629
+  },
+  "D_zero_visual_full_env": {
+    "precision_at_1": 0.9006,
+    "precision_at_3": 0.6294,
+    "recall_at_3": 0.9441,
+    "mrr": 0.9369,
+    "ndcg_at_3": 0.9268,
+    "expected_calibration_error": 0.332,
+    "maximum_calibration_error": 0.6334,
+    "brier_score": 0.2674
+  },
+  "E_full_vis_zero_env": {
+    "precision_at_1": 0.8696,
+    "precision_at_3": 0.6004,
+    "recall_at_3": 0.9006,
+    "mrr": 0.9139,
+    "ndcg_at_3": 0.8866,
+    "expected_calibration_error": 0.3242,
+    "maximum_calibration_error": 0.6579,
+    "brier_score": 0.2629
+  },
+  "F_random_visual": {
+    "precision_at_1": 0.882,
+    "precision_at_3": 0.588,
+    "recall_at_3": 0.882,
+    "mrr": 0.9202,
+    "ndcg_at_3": 0.873,
+    "expected_calibration_error": 0.3349,
+    "maximum_calibration_error": 0.619,
+    "brier_score": 0.274
+  },
+  "G_shuffled_visual": {
+    "precision_at_1": 0.9565,
+    "precision_at_3": 0.6522,
+    "recall_at_3": 0.9783,
+    "mrr": 0.9741,
+    "ndcg_at_3": 0.9708,
+    "expected_calibration_error": 0.3265,
+    "maximum_calibration_error": 0.655,
+    "brier_score": 0.2558
+  },
+  "H_shuffled_env": {
+    "precision_at_1": 0.8696,
+    "precision_at_3": 0.588,
+    "recall_at_3": 0.882,
+    "mrr": 0.9069,
+    "ndcg_at_3": 0.8727,
+    "expected_calibration_error": 0.3212,
+    "maximum_calibration_error": 0.6516,
+    "brier_score": 0.2646
+  }
+}

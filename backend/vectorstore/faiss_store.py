@@ -92,11 +92,30 @@ class FaissVectorStore(BaseVectorStore):
             raise VectorStoreError(f"FAISS search failed: {str(e)}")
             
     def _load_index(self):
-        # Placeholder for loading from disk
-        # In full implementation: self.index = faiss.read_index(self.index_path)
-        pass
-        
+        try:
+            self.index = faiss.read_index(self.index_path)
+            doc_store_path = f"{self.index_path}.pkl"
+            import pickle
+            if os.path.exists(doc_store_path):
+                with open(doc_store_path, "rb") as f:
+                    data = pickle.load(f)
+                    self.doc_store = data.get("doc_store", {})
+                    self._current_id = data.get("current_id", 0)
+            retrieve_logger.info(f"Loaded FAISS index from {self.index_path} with {self.index.ntotal} vectors.")
+        except Exception as e:
+            retrieve_logger.error(f"Failed to load FAISS index: {e}")
+            self.index = faiss.IndexFlatL2(self.vector_dim)
+
     def save_index(self):
-        # Placeholder for saving to disk
-        # In full implementation: faiss.write_index(self.index, self.index_path)
-        pass
+        try:
+            faiss.write_index(self.index, self.index_path)
+            doc_store_path = f"{self.index_path}.pkl"
+            import pickle
+            with open(doc_store_path, "wb") as f:
+                pickle.dump({
+                    "doc_store": self.doc_store,
+                    "current_id": self._current_id
+                }, f)
+            retrieve_logger.info(f"Saved FAISS index to {self.index_path}")
+        except Exception as e:
+            retrieve_logger.error(f"Failed to save FAISS index: {e}")

@@ -51,7 +51,8 @@ class ZenithChatEngine:
             query=english_query,
             context=context_results,
             chat_history=history,
-            disease_context=query.disease_context
+            disease_context=query.disease_context,
+            iot_context=getattr(query, "iot_context", None)
         )
         
         # 5. Generate LLM Response

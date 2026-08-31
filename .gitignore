@@ -46,3 +46,16 @@ backend/data/raw_dataset/
 .vscode/
 .idea/
 .DS_Store
+
+# Large Data & Archives
+plantdoc.zip
+dataset/
+backend/data/processed_field_dataset/
+backend/data/raw_field_data/
+.pytest_cache/
+*.log
+uvicorn_out.txt
+uvicorn_err.txt
+gate0_output.txt
+eval_output.txt
+evaluation_out.txt

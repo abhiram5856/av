@@ -15,7 +15,11 @@ class SentenceTransformerModel(BaseEmbeddingModel):
         self.model_name = model_name or settings.EMBEDDING_MODEL_NAME
         
         # Check for GPU (since user has RTX 4060)
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        import os
+        if os.environ.get("NOVA_FORCE_CPU") == "true":
+            self.device = "cpu"
+        else:
+            self.device = "cuda" if torch.cuda.is_available() else "cpu"
         embed_logger.info(f"Initializing SentenceTransformer: {self.model_name} on {self.device}")
         
         try:

@@ -5,6 +5,7 @@ from backend.core.exceptions import EmbeddingError
 
 @patch('backend.embeddings.local_embeddings.SentenceTransformer')
 @patch('backend.embeddings.local_embeddings.torch.cuda.is_available')
+@patch.dict('os.environ', {}, clear=True)
 def test_embedding_model_init_gpu(mock_cuda, mock_st):
     mock_cuda.return_value = True
     model = SentenceTransformerModel()

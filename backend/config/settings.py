@@ -7,6 +7,12 @@ class Settings(BaseSettings):
     APP_NAME: str = "Zenith AgriBot API"
     APP_VERSION: str = "0.1.0"
     DEBUG_MODE: bool = False
+    
+    # API Keys
+    OPENWEATHER_API_KEY: str = ""
+
+    # Database Config
+    DATABASE_URL: str = "postgresql+asyncpg://nova_admin:nova_secure_pass@localhost:5432/nova_db"
 
     # Paths
     BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

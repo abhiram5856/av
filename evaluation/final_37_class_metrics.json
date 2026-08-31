@@ -1,0 +1,9 @@
+{
+  "Accuracy": 0.6718903036238981,
+  "Macro F1": 0.7510556754006409,
+  "Macro Precision": 0.7687693489652894,
+  "Macro Recall": 0.7720940351547907,
+  "Expected Calibration Error": 0.080385934506761,
+  "Inference Latency ms": 13.014437986517747,
+  "Model Size MB": 6.02366828918457
+}

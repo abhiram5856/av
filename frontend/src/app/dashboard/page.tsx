@@ -1,161 +1,141 @@
 "use client";
 
-import { Camera, CloudSun, TrendingUp, Users, Leaf, Activity } from "lucide-react";
+import { Camera, CloudSun, Clock, Upload, Search, FileText } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { createClient } from "@/utils/supabase/client";
+import { useTranslation } from "@/lib/i18n";
 
 export default function DashboardPage() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  const { t } = useTranslation();
+  const [firstName, setFirstName] = useState("User");
 
-  const item = {
-    hidden: { opacity: 0, scale: 0.95 },
-    show: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 100 } },
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data }) => {
+      if (data.user?.user_metadata?.first_name) {
+        setFirstName(data.user.user_metadata.first_name);
+      }
+    });
+  }, []);
+
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return t("dashboard.greeting.morning");
+    if (hour < 17) return t("dashboard.greeting.afternoon");
+    return t("dashboard.greeting.evening");
   };
 
   return (
-    <div className="relative flex flex-col gap-8 pt-4 pb-20 overflow-hidden">
-      
-      {/* Dynamic Background */}
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-
-      <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="px-2">
-        <h1 className="text-4xl font-extrabold tracking-tight text-foreground">Welcome Back</h1>
-        <p className="text-muted-foreground mt-2 text-lg font-medium flex items-center gap-2">
-          <Activity className="h-5 w-5 text-primary animate-pulse" />
-          All systems nominal. Ready to scan.
-        </p>
-      </motion.div>
-
-      {/* Bento Grid Layout */}
-      <motion.div 
-        variants={container} 
-        initial="hidden" 
-        animate="show" 
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-      >
-        
-        {/* Main Featured Action (Takes up 2 columns on desktop) */}
-        <motion.div variants={item} className="md:col-span-2">
+    <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full">
+      {/* ─── Header ──────────────────────────────────────────────────────── */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-6">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight text-foreground">
+            {getGreeting()}, {firstName}
+          </h1>
+          <p className="text-sm text-muted-foreground mt-1">
+            {t("dashboard.overview")}
+          </p>
+        </div>
+        <div className="flex gap-3">
           <Link
             href="/dashboard/disease"
-            className="group flex flex-col justify-between h-full p-8 rounded-[2rem] glass-panel-hover bg-gradient-to-br from-primary/90 to-emerald-500 overflow-hidden relative"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded-md shadow hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 transition-colors"
           >
-            {/* Background Icon */}
-            <Camera className="absolute -right-8 -bottom-8 h-64 w-64 text-white/10 group-hover:scale-110 transition-transform duration-500" />
-            
-            <div className="mb-12">
-              <div className="inline-flex items-center justify-center p-4 rounded-2xl bg-white/20 backdrop-blur-md mb-6">
-                <ScanLine className="h-10 w-10 text-white" />
-              </div>
-              <h2 className="text-3xl font-extrabold text-white mb-2">Scan Crop</h2>
-              <p className="text-white/90 text-lg font-medium max-w-sm">
-                Detect diseases instantly using your camera and the NOVA XAI engine.
-              </p>
-            </div>
-            
-            <div className="flex items-center text-white font-bold group-hover:translate-x-2 transition-transform">
-              Start Diagnosis &rarr;
-            </div>
+            <Camera className="h-4 w-4" />
+            {t("dashboard.new_diagnosis")}
           </Link>
-        </motion.div>
+        </div>
+      </div>
 
-        {/* Weather Card */}
-        <motion.div variants={item}>
+      {/* ─── Quick Actions ────────────────────────────────────────────────── */}
+      <div className="grid sm:grid-cols-3 gap-4">
+        {[
+          {
+            title: t("dashboard.upload_image"),
+            description: t("dashboard.upload_desc"),
+            icon: Upload,
+            href: "/dashboard/disease",
+          },
+          {
+            title: t("dashboard.view_history"),
+            description: t("dashboard.history_desc"),
+            icon: FileText,
+            href: "/dashboard/history",
+          },
+          {
+            title: t("dashboard.ask_assistant"),
+            description: t("dashboard.assistant_desc"),
+            icon: Search,
+            href: "/dashboard/assistant",
+          },
+        ].map((action) => (
           <Link
-            href="/dashboard/weather"
-            className="group flex flex-col justify-between h-full p-6 rounded-[2rem] glass-panel-hover bg-card"
+            key={action.title}
+            href={action.href}
+            className="group flex flex-col gap-2 p-5 rounded-lg border bg-card hover:bg-accent hover:text-accent-foreground transition-colors"
           >
-            <div>
-              <div className="inline-flex items-center justify-center p-3 rounded-xl bg-orange-500/10 text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors">
-                <CloudSun className="h-8 w-8" />
-              </div>
-              <h2 className="text-xl font-bold text-foreground">Weather</h2>
-              <p className="text-muted-foreground mt-2 font-medium">Check local forecasts and severe alerts.</p>
-            </div>
+            <action.icon className="h-5 w-5 text-muted-foreground group-hover:text-foreground mb-2" />
+            <h3 className="font-medium text-sm">{action.title}</h3>
+            <p className="text-xs text-muted-foreground">{action.description}</p>
           </Link>
-        </motion.div>
+        ))}
+      </div>
 
-        {/* Market Prices Card */}
-        <motion.div variants={item}>
-          <Link
-            href="/dashboard/market"
-            className="group flex flex-col justify-between h-full p-6 rounded-[2rem] glass-panel-hover bg-card"
-          >
-            <div>
-              <div className="inline-flex items-center justify-center p-3 rounded-xl bg-blue-500/10 text-blue-500 mb-4 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                <TrendingUp className="h-8 w-8" />
-              </div>
-              <h2 className="text-xl font-bold text-foreground">Market Prices</h2>
-              <p className="text-muted-foreground mt-2 font-medium">Live crop pricing and trends.</p>
+      {/* ─── Main Content Grid ────────────────────────────────────────────── */}
+      <div className="grid lg:grid-cols-3 gap-6">
+        
+        {/* Recent Activity (Spans 2 cols on lg) */}
+        <div className="lg:col-span-2 flex flex-col gap-4">
+          <h2 className="text-lg font-medium">{t("dashboard.recent_scans")}</h2>
+          <div className="flex-1 rounded-lg border bg-card p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
+            <Clock className="h-8 w-8 text-muted-foreground mb-4" />
+            <h3 className="font-medium mb-1">{t("dashboard.no_recent_scans")}</h3>
+            <p className="text-sm text-muted-foreground mb-4 max-w-sm">
+              {t("dashboard.no_scans_desc")}
+            </p>
+            <Link
+              href="/dashboard/disease"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium border rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              {t("dashboard.start_scan")}
+            </Link>
+          </div>
+        </div>
+
+        {/* Sidebar info (Weather, etc.) */}
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg font-medium">{t("dashboard.local_weather")}</h2>
+              <Link href="/dashboard/weather" className="text-sm text-primary hover:underline">
+                {t("dashboard.details")}
+              </Link>
             </div>
-          </Link>
-        </motion.div>
-
-        {/* Ask Expert Card */}
-        <motion.div variants={item}>
-          <Link
-            href="/dashboard/assistant"
-            className="group flex flex-col justify-between h-full p-6 rounded-[2rem] glass-panel-hover bg-card border-primary/20"
-          >
-            <div>
-              <div className="inline-flex items-center justify-center p-3 rounded-xl bg-primary/10 text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                <Users className="h-8 w-8" />
+            <div className="rounded-lg border bg-card p-5 flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-3xl font-semibold mb-1">28°C</div>
+                  <div className="text-sm font-medium text-muted-foreground">{t("dashboard.clear_sunny")}</div>
+                </div>
+                <CloudSun className="h-10 w-10 text-orange-500" />
               </div>
-              <h2 className="text-xl font-bold text-foreground">NOVA Assistant</h2>
-              <p className="text-muted-foreground mt-2 font-medium">Chat with the multilingual AI agronomy expert.</p>
-            </div>
-          </Link>
-        </motion.div>
-
-        {/* History Card (Takes up 1 col) */}
-        <motion.div variants={item}>
-          <Link
-            href="/dashboard/history"
-            className="group flex flex-col justify-between h-full p-6 rounded-[2rem] glass-panel-hover bg-card"
-          >
-            <div>
-              <div className="inline-flex items-center justify-center p-3 rounded-xl bg-purple-500/10 text-purple-500 mb-4 group-hover:bg-purple-500 group-hover:text-white transition-colors">
-                <Leaf className="h-8 w-8" />
+              <div className="grid grid-cols-2 gap-2 text-sm pt-4 border-t">
+                <div className="flex flex-col">
+                  <span className="text-muted-foreground">{t("dashboard.humidity")}</span>
+                  <span className="font-medium">45%</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-muted-foreground">{t("dashboard.wind")}</span>
+                  <span className="font-medium">12 km/h</span>
+                </div>
               </div>
-              <h2 className="text-xl font-bold text-foreground">History</h2>
-              <p className="text-muted-foreground mt-2 font-medium">Review past crop diagnoses.</p>
             </div>
-          </Link>
-        </motion.div>
-
-      </motion.div>
+          </div>
+        </div>
+        
+      </div>
     </div>
   );
-}
-
-// Ensure ScanLine is imported for the main card
-function ScanLine(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M3 7V5a2 2 0 0 1 2-2h2" />
-      <path d="M17 3h2a2 2 0 0 1 2 2v2" />
-      <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
-      <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
-      <line x1="7" x2="17" y1="12" y2="12" />
-    </svg>
-  )
 }

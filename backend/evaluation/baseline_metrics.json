@@ -1,0 +1,185 @@
+{
+  "accuracy": 0.9175108538350217,
+  "top3_accuracy": 0.9985528219971056,
+  "macro_precision": 0.9126752940697833,
+  "macro_recall": 0.9093855218855219,
+  "macro_f1": 0.9081726733758266,
+  "weighted_f1": 0.9189390577903898,
+  "confidence_analysis": {
+    "mean_confidence": 0.742654025554657,
+    "median_confidence": 0.7990701198577881,
+    "mean_confidence_correct": 0.7660361528396606,
+    "mean_confidence_incorrect": 0.48257967829704285,
+    "num_high_confidence_errors_gt_0.8": 3
+  },
+  "per_class": [
+    {
+      "class": "corn_gray_leaf_spot",
+      "precision": 0.4666666666666667,
+      "recall": 0.6363636363636364,
+      "f1": 0.5384615384615384,
+      "support": 11
+    },
+    {
+      "class": "corn_leaf_blight",
+      "precision": 0.8076923076923077,
+      "recall": 0.7,
+      "f1": 0.75,
+      "support": 30
+    },
+    {
+      "class": "corn_rust_leaf",
+      "precision": 0.8888888888888888,
+      "recall": 0.8888888888888888,
+      "f1": 0.8888888888888888,
+      "support": 18
+    },
+    {
+      "class": "pepper_bell_bacterial_spot",
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 30
+    },
+    {
+      "class": "pepper_bell_healthy",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 32
+    },
+    {
+      "class": "potato_early_blight",
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 30
+    },
+    {
+      "class": "potato_healthy",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class": "potato_late_blight",
+      "precision": 1.0,
+      "recall": 0.9333333333333333,
+      "f1": 0.9655172413793104,
+      "support": 30
+    },
+    {
+      "class": "rice_bacterial_leaf_blight",
+      "precision": 0.6756756756756757,
+      "recall": 0.8333333333333334,
+      "f1": 0.746268656716418,
+      "support": 30
+    },
+    {
+      "class": "rice_brown_spot",
+      "precision": 0.9629629629629629,
+      "recall": 0.8666666666666667,
+      "f1": 0.9122807017543859,
+      "support": 30
+    },
+    {
+      "class": "rice_healthy",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "support": 30
+    },
+    {
+      "class": "rice_leaf_blast",
+      "precision": 0.7428571428571429,
+      "recall": 0.8666666666666667,
+      "f1": 0.8,
+      "support": 30
+    },
+    {
+      "class": "rice_leaf_scald",
+      "precision": 0.88,
+      "recall": 0.7333333333333333,
+      "f1": 0.8,
+      "support": 30
+    },
+    {
+      "class": "rice_sheath_blight",
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888,
+      "support": 30
+    },
+    {
+      "class": "tomato_bacterial_spot",
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 30
+    },
+    {
+      "class": "tomato_early_blight",
+      "precision": 0.9354838709677419,
+      "recall": 0.9666666666666667,
+      "f1": 0.9508196721311475,
+      "support": 30
+    },
+    {
+      "class": "tomato_healthy",
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1": 0.9523809523809523,
+      "support": 30
+    },
+    {
+      "class": "tomato_late_blight",
+      "precision": 0.9333333333333333,
+      "recall": 0.9333333333333333,
+      "f1": 0.9333333333333333,
+      "support": 30
+    },
+    {
+      "class": "tomato_leaf_mold",
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 30
+    },
+    {
+      "class": "tomato_mosaic_virus",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class": "tomato_septoria_leaf_spot",
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9473684210526315,
+      "support": 30
+    },
+    {
+      "class": "tomato_spider_mites_two_spotted_spider_mite",
+      "precision": 1.0,
+      "recall": 0.8666666666666667,
+      "f1": 0.9285714285714286,
+      "support": 30
+    },
+    {
+      "class": "tomato_target_spot",
+      "precision": 0.8285714285714286,
+      "recall": 0.9666666666666667,
+      "f1": 0.8923076923076924,
+      "support": 30
+    },
+    {
+      "class": "tomato_yellow_leaf_curl_virus",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    }
+  ]
+}

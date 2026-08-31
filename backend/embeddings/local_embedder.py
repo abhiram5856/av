@@ -1,9 +1,9 @@
 from typing import List
 from sentence_transformers import SentenceTransformer
-from backend.core.interfaces import BaseEmbedder
+from backend.core.interfaces import BaseEmbeddingModel
 from backend.logging.logger import retrieve_logger
 
-class LocalEmbedder(BaseEmbedder):
+class LocalEmbedder(BaseEmbeddingModel):
     """
     Generates embeddings locally using a fast HuggingFace sentence-transformer model.
     Default model: 'all-MiniLM-L6-v2' (384 dimensions).

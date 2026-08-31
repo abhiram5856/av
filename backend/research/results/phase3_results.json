@@ -1,0 +1,585 @@
+{
+  "summary": {
+    "dataset_size": 300,
+    "timestamp": "2026-07-25 16:03:49 UTC"
+  },
+  "systems_comparison": {
+    "TRACE-RCE": {
+      "precision_at_1": 0.5766666666666667,
+      "precision_at_3": 0.44333333333333336,
+      "recall_at_3": 0.665,
+      "mrr": 0.6841666666666667,
+      "ndcg_at_3": 0.6270816388545309,
+      "expected_calibration_error": 0.14062134570765666,
+      "maximum_calibration_error": 0.19920904872389805,
+      "brier_score": 0.2698490499071926,
+      "mean": 1.3953249999516022,
+      "p50": 0.9244499960914254,
+      "p95": 2.8412050116458003,
+      "p99": 12.402729006134896,
+      "conflict_detection_rate": 0.9966666666666667,
+      "evidence_completeness": 3.7066666666666666,
+      "determinism_rate": 1.0
+    },
+    "Rule-Based": {
+      "precision_at_1": 0.45,
+      "precision_at_3": 0.31999999999999995,
+      "recall_at_3": 0.48,
+      "mrr": 0.5452777777777778,
+      "ndcg_at_3": 0.4691972078914819,
+      "mean": 0.004966666666666667,
+      "p50": 0.0,
+      "p95": 0.01,
+      "p99": 0.01
+    },
+    "Pure-RAG": {
+      "precision_at_1": 0.6933333333333334,
+      "precision_at_3": 0.44555555555555554,
+      "recall_at_3": 0.6683333333333333,
+      "mrr": 0.7522222222222222,
+      "ndcg_at_3": 0.666230369255931,
+      "mean": 0.016266666666666665,
+      "p50": 0.02,
+      "p95": 0.02,
+      "p99": 0.030099999999999908
+    },
+    "LLM-Only": {
+      "precision_at_1": 0.6,
+      "precision_at_3": 0.47333333333333333,
+      "recall_at_3": 0.71,
+      "mrr": 0.6977777777777777,
+      "ndcg_at_3": 0.6682489833127185,
+      "mean": 0.0104,
+      "p50": 0.01,
+      "p95": 0.01,
+      "p99": 0.01009999999999991
+    },
+    "Simple-Fusion": {
+      "precision_at_1": 0.5933333333333334,
+      "precision_at_3": 0.4511111111111111,
+      "recall_at_3": 0.6766666666666666,
+      "mrr": 0.6975,
+      "ndcg_at_3": 0.6401473748183583,
+      "mean": 0.060366666666666666,
+      "p50": 0.06,
+      "p95": 0.09,
+      "p99": 0.13
+    }
+  },
+  "ablation_study": {
+    "full": {
+      "precision_at_1": 0.5766666666666667,
+      "precision_at_3": 0.44333333333333336,
+      "recall_at_3": 0.665
+    },
+    "ablate_visual": {
+      "precision_at_1": 0.39666666666666667,
+      "precision_at_3": 0.2788888888888889,
+      "recall_at_3": 0.41833333333333333
+    },
+    "ablate_environmental": {
+      "precision_at_1": 0.4633333333333333,
+      "precision_at_3": 0.4844444444444444,
+      "recall_at_3": 0.7266666666666667
+    },
+    "ablate_severity": {
+      "precision_at_1": 0.5366666666666666,
+      "precision_at_3": 0.41999999999999993,
+      "recall_at_3": 0.63
+    },
+    "ablate_knowledge": {
+      "precision_at_1": 0.42,
+      "precision_at_3": 0.39777777777777773,
+      "recall_at_3": 0.5966666666666667
+    },
+    "ablate_historical": {
+      "precision_at_1": 0.5733333333333334,
+      "precision_at_3": 0.44333333333333336,
+      "recall_at_3": 0.665
+    }
+  },
+  "robustness_analysis": {
+    "standard": {
+      "count": 150,
+      "precision_at_1": 0.6066666666666667,
+      "precision_at_3": 0.47555555555555545,
+      "recall_at_3": 0.7133333333333334,
+      "avg_latency_ms": 1.471
+    },
+    "missing_weather": {
+      "count": 30,
+      "precision_at_1": 0.7666666666666667,
+      "precision_at_3": 0.4777777777777777,
+      "recall_at_3": 0.7166666666666667,
+      "avg_latency_ms": 2.443
+    },
+    "missing_rag": {
+      "count": 30,
+      "precision_at_1": 0.43333333333333335,
+      "precision_at_3": 0.39999999999999997,
+      "recall_at_3": 0.6,
+      "avg_latency_ms": 1.027
+    },
+    "contradictory_evidence": {
+      "count": 30,
+      "precision_at_1": 0.8,
+      "precision_at_3": 0.45555555555555555,
+      "recall_at_3": 0.6833333333333333,
+      "avg_latency_ms": 1.0216666666666667
+    },
+    "low_confidence": {
+      "count": 30,
+      "precision_at_1": 0.6,
+      "precision_at_3": 0.5111111111111111,
+      "recall_at_3": 0.7666666666666667,
+      "avg_latency_ms": 0.8866666666666667
+    },
+    "ood_disease": {
+      "count": 30,
+      "precision_at_1": 0.13333333333333333,
+      "precision_at_3": 0.21111111111111108,
+      "recall_at_3": 0.31666666666666665,
+      "avg_latency_ms": 1.2226666666666663
+    },
+    "blurry_images": {
+      "count": 70,
+      "precision_at_1": 0.6428571428571429,
+      "precision_at_3": 0.45238095238095233,
+      "recall_at_3": 0.6785714285714286,
+      "avg_latency_ms": 1.6634285714285715
+    },
+    "zero_history": {
+      "count": 210,
+      "precision_at_1": 0.6047619047619047,
+      "precision_at_3": 0.46507936507936504,
+      "recall_at_3": 0.6976190476190476,
+      "avg_latency_ms": 1.5464285714285715
+    }
+  },
+  "error_analysis": {
+    "summary": {
+      "total_failures": 127,
+      "failure_modes_distribution": {
+        "Evidence Ambiguity / Multi-factorial Overlap": {
+          "count": 58,
+          "percentage": 45.67
+        },
+        "Degraded Visual Signal Quality": {
+          "count": 1,
+          "percentage": 0.79
+        },
+        "Missing Environmental Modality": {
+          "count": 7,
+          "percentage": 5.51
+        },
+        "Missing Knowledge Modality": {
+          "count": 17,
+          "percentage": 13.39
+        },
+        "Contradictory Evidence Confounding": {
+          "count": 6,
+          "percentage": 4.72
+        },
+        "Low Vision Model Confidence": {
+          "count": 12,
+          "percentage": 9.45
+        },
+        "Out-Of-Distribution Target Disease": {
+          "count": 26,
+          "percentage": 20.47
+        }
+      },
+      "dominant_modalities_distribution": {
+        "visual": {
+          "count": 76,
+          "percentage": 59.84
+        },
+        "environmental": {
+          "count": 49,
+          "percentage": 38.58
+        },
+        "severity": {
+          "count": 2,
+          "percentage": 1.57
+        }
+      }
+    },
+    "sample_failures": [
+      {
+        "case_id": "CASE-009",
+        "description": "Apple apple fire blight: weather=conducive_fungal, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "rainfall_splash_dispersal",
+        "predicted_top_cas": 0.512,
+        "ground_truth": [
+          "mechanical_damage_entry_point",
+          "high_temperature_stress_bacterial"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.2624,
+        "actual_cause_rank": 2,
+        "actual_cause_contributions": {
+          "visual": {
+            "raw_score": 0.6132,
+            "weighted": 0.2624
+          },
+          "environmental": {
+            "raw_score": 0.5847,
+            "weighted": 0.193
+          },
+          "severity": {
+            "raw_score": 0.3629,
+            "weighted": 0.0665
+          },
+          "knowledge": {
+            "raw_score": 0.5,
+            "weighted": 0.0293
+          },
+          "historical": {
+            "raw_score": 0.0,
+            "weighted": 0.0
+          }
+        },
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'rainfall_splash_dispersal' driven by 'visual' (weighted contribution=0.26). The actual ground truth causes were ['mechanical_damage_entry_point', 'high_temperature_stress_bacterial']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-012",
+        "description": "Tomato tomato nutrient deficiency: weather=conducive_fungal, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "water_stress_overwatering",
+        "predicted_top_cas": 0.3965,
+        "ground_truth": [
+          "nutrient_deficiency",
+          "soil_pH_imbalance"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.2002,
+        "actual_cause_rank": 4,
+        "actual_cause_contributions": {
+          "visual": {
+            "raw_score": 0.468,
+            "weighted": 0.2002
+          },
+          "severity": {
+            "raw_score": 0.2898,
+            "weighted": 0.0531
+          },
+          "environmental": {
+            "raw_score": 0.1598,
+            "weighted": 0.0528
+          },
+          "knowledge": {
+            "raw_score": 0.4286,
+            "weighted": 0.0251
+          },
+          "historical": {
+            "raw_score": 0.0,
+            "weighted": 0.0
+          }
+        },
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'water_stress_overwatering' driven by 'visual' (weighted contribution=0.20). The actual ground truth causes were ['nutrient_deficiency', 'soil_pH_imbalance']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-013",
+        "description": "Corn corn drought stress: weather=conducive_fungal, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "poor_air_circulation",
+        "predicted_top_cas": 0.4662,
+        "ground_truth": [
+          "drought_stress_susceptibility",
+          "nutrient_deficiency"
+        ],
+        "dominant_modality": "environmental",
+        "dominant_contribution": 0.2875,
+        "actual_cause_rank": "unranked (> threshold)",
+        "actual_cause_contributions": {},
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'poor_air_circulation' driven by 'environmental' (weighted contribution=0.29). The actual ground truth causes were ['drought_stress_susceptibility', 'nutrient_deficiency']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-014",
+        "description": "Bean bean soil acidity stress: weather=conducive_fungal, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "poor_air_circulation",
+        "predicted_top_cas": 0.4862,
+        "ground_truth": [
+          "soil_pH_imbalance",
+          "nutrient_deficiency"
+        ],
+        "dominant_modality": "environmental",
+        "dominant_contribution": 0.2875,
+        "actual_cause_rank": "unranked (> threshold)",
+        "actual_cause_contributions": {},
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'poor_air_circulation' driven by 'environmental' (weighted contribution=0.29). The actual ground truth causes were ['soil_pH_imbalance', 'nutrient_deficiency']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-015",
+        "description": "Tomato tomato late blight: weather=conducive_bacterial, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "temperature_optimal_for_fungus",
+        "predicted_top_cas": 0.5214,
+        "ground_truth": [
+          "excessive_leaf_wetness",
+          "high_humidity_conduciveness"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.2951,
+        "actual_cause_rank": 2,
+        "actual_cause_contributions": {
+          "visual": {
+            "raw_score": 0.6264,
+            "weighted": 0.2951
+          },
+          "environmental": {
+            "raw_score": 0.5054,
+            "weighted": 0.1326
+          },
+          "severity": {
+            "raw_score": 0.39,
+            "weighted": 0.0787
+          },
+          "knowledge": {
+            "raw_score": 0.5,
+            "weighted": 0.0323
+          },
+          "historical": {
+            "raw_score": 0.0,
+            "weighted": 0.0
+          }
+        },
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'temperature_optimal_for_fungus' driven by 'visual' (weighted contribution=0.30). The actual ground truth causes were ['excessive_leaf_wetness', 'high_humidity_conduciveness']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-019",
+        "description": "Potato potato late blight: weather=conducive_bacterial, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "temperature_optimal_for_fungus",
+        "predicted_top_cas": 0.5308,
+        "ground_truth": [
+          "excessive_leaf_wetness",
+          "soil_borne_pathogen_carryover"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.2998,
+        "actual_cause_rank": 2,
+        "actual_cause_contributions": {
+          "visual": {
+            "raw_score": 0.6364,
+            "weighted": 0.2998
+          },
+          "environmental": {
+            "raw_score": 0.5054,
+            "weighted": 0.1326
+          },
+          "severity": {
+            "raw_score": 0.51,
+            "weighted": 0.103
+          },
+          "knowledge": {
+            "raw_score": 0.5,
+            "weighted": 0.0323
+          },
+          "historical": {
+            "raw_score": 0.0,
+            "weighted": 0.0
+          }
+        },
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'temperature_optimal_for_fungus' driven by 'visual' (weighted contribution=0.30). The actual ground truth causes were ['excessive_leaf_wetness', 'soil_borne_pathogen_carryover']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-020",
+        "description": "Grape grape black rot: weather=conducive_bacterial, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "temperature_optimal_for_fungus",
+        "predicted_top_cas": 0.5866,
+        "ground_truth": [
+          "excessive_leaf_wetness",
+          "high_humidity_conduciveness"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.3236,
+        "actual_cause_rank": 2,
+        "actual_cause_contributions": {
+          "visual": {
+            "raw_score": 0.687,
+            "weighted": 0.3236
+          },
+          "environmental": {
+            "raw_score": 0.5054,
+            "weighted": 0.1326
+          },
+          "severity": {
+            "raw_score": 0.54,
+            "weighted": 0.109
+          },
+          "knowledge": {
+            "raw_score": 0.3333,
+            "weighted": 0.0215
+          },
+          "historical": {
+            "raw_score": 0.0,
+            "weighted": 0.0
+          }
+        },
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'temperature_optimal_for_fungus' driven by 'visual' (weighted contribution=0.32). The actual ground truth causes were ['excessive_leaf_wetness', 'high_humidity_conduciveness']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-023",
+        "description": "Apple apple fire blight: weather=conducive_bacterial, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "rainfall_splash_dispersal",
+        "predicted_top_cas": 0.4444,
+        "ground_truth": [
+          "mechanical_damage_entry_point",
+          "high_temperature_stress_bacterial"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.2549,
+        "actual_cause_rank": 2,
+        "actual_cause_contributions": {
+          "visual": {
+            "raw_score": 0.5412,
+            "weighted": 0.2549
+          },
+          "environmental": {
+            "raw_score": 0.5804,
+            "weighted": 0.1523
+          },
+          "severity": {
+            "raw_score": 0.2016,
+            "weighted": 0.0407
+          },
+          "knowledge": {
+            "raw_score": 0.5,
+            "weighted": 0.0323
+          },
+          "historical": {
+            "raw_score": 0.0,
+            "weighted": 0.0
+          }
+        },
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'rainfall_splash_dispersal' driven by 'visual' (weighted contribution=0.25). The actual ground truth causes were ['mechanical_damage_entry_point', 'high_temperature_stress_bacterial']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-026",
+        "description": "Tomato tomato nutrient deficiency: weather=conducive_bacterial, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "high_temperature_stress_bacterial",
+        "predicted_top_cas": 0.4023,
+        "ground_truth": [
+          "nutrient_deficiency",
+          "soil_pH_imbalance"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.2577,
+        "actual_cause_rank": 4,
+        "actual_cause_contributions": {
+          "visual": {
+            "raw_score": 0.547,
+            "weighted": 0.2577
+          },
+          "severity": {
+            "raw_score": 0.3767,
+            "weighted": 0.0761
+          },
+          "environmental": {
+            "raw_score": 0.1874,
+            "weighted": 0.0492
+          },
+          "knowledge": {
+            "raw_score": 0.4286,
+            "weighted": 0.0277
+          },
+          "historical": {
+            "raw_score": 0.0,
+            "weighted": 0.0
+          }
+        },
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'high_temperature_stress_bacterial' driven by 'visual' (weighted contribution=0.26). The actual ground truth causes were ['nutrient_deficiency', 'soil_pH_imbalance']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      },
+      {
+        "case_id": "CASE-027",
+        "description": "Corn corn drought stress: weather=conducive_bacterial, quality=excellent, history=none, perturbation=none",
+        "predicted_top": "temperature_optimal_for_fungus",
+        "predicted_top_cas": 0.463,
+        "ground_truth": [
+          "drought_stress_susceptibility",
+          "nutrient_deficiency"
+        ],
+        "dominant_modality": "visual",
+        "dominant_contribution": 0.2821,
+        "actual_cause_rank": "unranked (> threshold)",
+        "actual_cause_contributions": {},
+        "failure_mode": "Evidence Ambiguity / Multi-factorial Overlap",
+        "explanation": "Predicted 'temperature_optimal_for_fungus' driven by 'visual' (weighted contribution=0.28). The actual ground truth causes were ['drought_stress_susceptibility', 'nutrient_deficiency']. Failure class: Evidence Ambiguity / Multi-factorial Overlap."
+      }
+    ]
+  },
+  "statistical_validation": {
+    "bootstrap_ci": {
+      "precision_at_1": {
+        "mean": 0.5766666666666667,
+        "lower": 0.52,
+        "upper": 0.6333333333333333
+      },
+      "recall_at_3": {
+        "mean": 0.665,
+        "lower": 0.7433333333333333,
+        "upper": 0.8366666666666667
+      }
+    },
+    "significance_tests_vs_baselines_pat1": {
+      "Rule-Based": {
+        "mean_difference": 0.12666666666666668,
+        "p_value": 0.0,
+        "cohens_d": 0.25505659275835213
+      },
+      "Pure-RAG": {
+        "mean_difference": -0.11666666666666667,
+        "p_value": 0.0005,
+        "cohens_d": -0.24372502156028095
+      },
+      "LLM-Only": {
+        "mean_difference": -0.023333333333333334,
+        "p_value": 0.5765,
+        "cohens_d": -0.04734664834671766
+      },
+      "Simple-Fusion": {
+        "mean_difference": -0.016666666666666666,
+        "p_value": 0.12,
+        "cohens_d": -0.0337741056573565
+      }
+    },
+    "calibration_curve_bins": [
+      {
+        "bin_range": "[0.0, 0.2]",
+        "avg_confidence": 0.189,
+        "avg_accuracy": 0.0,
+        "sample_size": 4
+      },
+      {
+        "bin_range": "[0.2, 0.4]",
+        "avg_confidence": 0.3112,
+        "avg_accuracy": 0.5104,
+        "sample_size": 431
+      },
+      {
+        "bin_range": "[0.4, 0.6]",
+        "avg_confidence": 0.4909,
+        "avg_accuracy": 0.4121,
+        "sample_size": 398
+      },
+      {
+        "bin_range": "[0.6, 0.8]",
+        "avg_confidence": 0.6283,
+        "avg_accuracy": 0.5172,
+        "sample_size": 29
+      },
+      {
+        "bin_range": "[0.8, 1.0]",
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "sample_size": 0
+      }
+    ]
+  }
+}

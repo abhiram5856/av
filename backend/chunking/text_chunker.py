@@ -63,6 +63,10 @@ class RecursiveCharacterChunker(BaseChunker):
                     end = last_space
                     
             chunks.append(text[start:end])
+            
+            if end == text_len:
+                break
+                
             start = end - self.chunk_overlap
             
             # Prevent infinite loop if overlap is weirdly handled

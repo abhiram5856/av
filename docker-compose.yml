@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: nova-backend:latest
+    container_name: nova-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - NOVA_FORCE_CPU=true
+      - DEBUG_MODE=false
+      - APP_NAME=NOVA-API-Server
+      - LLM_MODEL_NAME=llama3
+      - DATABASE_URL=postgresql+asyncpg://nova_admin:nova_secure_pass@db:5432/nova_db
+    volumes:
+      - backend-data:/app/backend/data
+      - backend-reports:/app/backend/data/reports
+    depends_on:
+      - db
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: nova-frontend:latest
+    container_name: nova-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - API_URL=http://backend:8000
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:15-alpine
+    container_name: nova-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=nova_admin
+      - POSTGRES_PASSWORD=nova_secure_pass
+      - POSTGRES_DB=nova_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nova_admin -d nova_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: nova-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  backend-data:
+  backend-reports:
+  postgres-data:
+  redis-data:

@@ -1,0 +1,25 @@
+{
+  "hardcoded": [
+    "backend\\api\\diagnose.py:212: # NOT a hardcoded constant.",
+    "backend\\research\\trace_rce_v2\\dataset\\feature_extractor.py:196: # All unique keywords in the ontology (hardcoded count: 91 unique keywords)",
+    "backend\\research\\trace_rce_v2\\training\\train.py:93: logger.info(\"Using default hardcoded configuration.\")"
+  ],
+  "placeholder": [
+    "backend\\api\\diagnose.py:258: f\"[DEMO MODE] Returning placeholder result for request {request_id}. \"",
+    "backend\\research\\trace_rce_v2\\ai_context_generator.py:63: confidence_score=vis[\"vision_confidence_placeholder\"],",
+    "backend\\research\\trace_rce_v2\\ai_context_generator.py:64: topk_predictions={meta[\"class_name\"]: vis[\"vision_confidence_placeholder\"], \"healthy\": 1.0 - vis[\"vision_confidence_plac",
+    "backend\\research\\trace_rce_v2\\ai_context_generator.py:68: heatmap_coverage_ratio=vis[\"gradcam_coverage_placeholder\"],",
+    "backend\\research\\trace_rce_v2\\annotation_generator.py:202: # Vision placeholders"
+  ],
+  "np.random.normal(": [
+    "backend\\research\\trace_rce_v2\\annotation_generator.py:189: return round(float(np.clip(np.random.normal(mean, std), r[0], r[1])), 2)",
+    "backend\\research\\trace_rce_v2\\annotation_generator.py:210: w = round(float(np.clip(np.random.normal(base_w, 0.03), 0.1, 1.0)), 2)",
+    "backend\\research\\trace_rce_v3\\evaluation\\run_validation_suite.py:424: v2_ndcg_list = [v2_ndcg + np.random.normal(0, 0.05) for _ in range(50)]",
+    "backend\\research\\trace_rce_v3\\evaluation\\run_validation_suite.py:426: v2_ndcg_list = [0.7196 + np.random.normal(0, 0.05) for _ in range(50)]",
+    "backend\\research\\trace_rce_v3\\evaluation\\run_validation_suite.py:428: v3_ndcg_list = [0.7310 + np.random.normal(0, 0.04) for _ in range(50)]"
+  ],
+  "fake": [
+    "backend\\research\\trace_rce_v3\\experiments\\run_pixel_robustness.py:261: class FakeLoader:",
+    "backend\\research\\trace_rce_v3\\experiments\\run_pixel_robustness.py:268: small_loader = FakeLoader(small_test_batch)"
+  ]
+}

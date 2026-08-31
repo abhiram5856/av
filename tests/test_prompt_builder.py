@@ -8,9 +8,9 @@ def test_prompt_builder_basic():
     prompt = builder.build_prompt("What is NPK?", [], [])
     
     assert "System:" in prompt
-    assert "Zenith AgriBot" in prompt
-    assert "User: What is NPK?" in prompt
-    assert "Assistant:" in prompt
+    assert "NOVA (Neural Optimized Vision Assistant)" in prompt
+    assert "User Query: What is NPK?" in prompt
+    assert "NOVA:" in prompt
     assert "RETRIEVED KNOWLEDGE" not in prompt
 
 def test_prompt_builder_with_context():
@@ -23,7 +23,7 @@ def test_prompt_builder_with_context():
     
     assert "RETRIEVED KNOWLEDGE" in prompt
     assert "[1] NPK stands for Nitrogen, Phosphorus, Potassium." in prompt
-    assert "User: What is NPK?" in prompt
+    assert "User Query: What is NPK?" in prompt
 
 def test_prompt_builder_with_cnn_disease():
     builder = StandardPromptBuilder()
@@ -40,4 +40,4 @@ def test_prompt_builder_with_cnn_disease():
     assert "Tomato Blight" in prompt
     assert "95.0%" in prompt
     assert "Use fungicide" in prompt
-    assert "User: How do I fix this?" in prompt
+    assert "User Query: How do I fix this?" in prompt

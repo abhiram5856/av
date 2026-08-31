@@ -1,0 +1,371 @@
+{
+    "Gaussian Blur": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06094008781558359,
+            "Visual Confidence": 0.8060399842262268,
+            "Conflict Score": 0.0006075623026117683,
+            "CRA": 1.0,
+            "Latency": 2.193080000579357,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.058613502603996406,
+            "Visual Confidence": 0.6269199955463409,
+            "Conflict Score": 0.0013411992089822889,
+            "CRA": 1.0,
+            "Latency": 2.2258699996746145,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.05736847907882293,
+            "Visual Confidence": 0.3582400053739548,
+            "Conflict Score": 0.00246049958281219,
+            "CRA": 1.0,
+            "Latency": 2.228536000184249,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "Motion Blur": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06019784038568179,
+            "Visual Confidence": 0.7612600219249726,
+            "Conflict Score": 0.0008345557784195989,
+            "CRA": 1.0,
+            "Latency": 2.180600001011044,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.05902277448485667,
+            "Visual Confidence": 0.5821399831771851,
+            "Conflict Score": 0.0016068736976012589,
+            "CRA": 1.0,
+            "Latency": 2.2540760011179373,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.056918496236362186,
+            "Visual Confidence": 0.31345999777317046,
+            "Conflict Score": 0.0042250464297831055,
+            "CRA": 1.0,
+            "Latency": 2.2325379989342764,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "Brightness Increase": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.059461742532005035,
+            "Visual Confidence": 0.8060399842262268,
+            "Conflict Score": 0.0004988042986951768,
+            "CRA": 1.0,
+            "Latency": 2.1624820001306944,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.0606178928693358,
+            "Visual Confidence": 0.6269199955463409,
+            "Conflict Score": 0.0011953099304810165,
+            "CRA": 1.0,
+            "Latency": 2.2433419997105375,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.05543162945371684,
+            "Visual Confidence": 0.4478000009059906,
+            "Conflict Score": 0.0017527477443218232,
+            "CRA": 1.0,
+            "Latency": 2.2722099980455823,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "Brightness Decrease": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.05985651182898558,
+            "Visual Confidence": 0.8060399842262268,
+            "Conflict Score": 0.0005716520198620857,
+            "CRA": 1.0,
+            "Latency": 2.2543299989774823,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.0616761796242012,
+            "Visual Confidence": 0.6269199955463409,
+            "Conflict Score": 0.001166714457795024,
+            "CRA": 1.0,
+            "Latency": 2.1420740001485683,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.055798043445948846,
+            "Visual Confidence": 0.4478000009059906,
+            "Conflict Score": 0.0016667860699817539,
+            "CRA": 1.0,
+            "Latency": 2.0985680000740103,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "Contrast Reduction": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.059707353165990865,
+            "Visual Confidence": 0.8060399842262268,
+            "Conflict Score": 0.0005572550382930786,
+            "CRA": 1.0,
+            "Latency": 2.203317998792045,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06106665653641083,
+            "Visual Confidence": 0.6716999959945679,
+            "Conflict Score": 0.0009933443553745746,
+            "CRA": 1.0,
+            "Latency": 2.2522100000060163,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.055048446327472536,
+            "Visual Confidence": 0.4478000009059906,
+            "Conflict Score": 0.0017991820303723217,
+            "CRA": 1.0,
+            "Latency": 2.167671999486629,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "JPEG Compression": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06103079452756545,
+            "Visual Confidence": 0.8508199870586395,
+            "Conflict Score": 0.0004911160340998323,
+            "CRA": 1.0,
+            "Latency": 2.1749859995907173,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.05907358142690105,
+            "Visual Confidence": 0.7612600219249726,
+            "Conflict Score": 0.0007867010508198291,
+            "CRA": 1.0,
+            "Latency": 2.1077399991918355,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.061486813043063214,
+            "Visual Confidence": 0.5821399831771851,
+            "Conflict Score": 0.0015801170980557799,
+            "CRA": 1.0,
+            "Latency": 2.1707560008508153,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "Gaussian Sensor Noise": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06430362803374261,
+            "Visual Confidence": 0.8060399842262268,
+            "Conflict Score": 0.001608025482855738,
+            "CRA": 1.0,
+            "Latency": 2.159924000443425,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06398886915570948,
+            "Visual Confidence": 0.6716999959945679,
+            "Conflict Score": 0.005603962298482658,
+            "CRA": 1.0,
+            "Latency": 2.220830001460854,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06410581088195214,
+            "Visual Confidence": 0.4478000009059906,
+            "Conflict Score": 0.07070859104394915,
+            "CRA": 0.5,
+            "Latency": 2.230057999258861,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "Partial Occlusion": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.060862629124260575,
+            "Visual Confidence": 0.8060399842262268,
+            "Conflict Score": 0.0007130156306084246,
+            "CRA": 1.0,
+            "Latency": 2.1448460008832626,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.0629101994244832,
+            "Visual Confidence": 0.7164800107479096,
+            "Conflict Score": 0.0012137348949909212,
+            "CRA": 1.0,
+            "Latency": 2.2540180006762967,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.06394651727485479,
+            "Visual Confidence": 0.537360029220581,
+            "Conflict Score": 0.0018646949995309115,
+            "CRA": 1.0,
+            "Latency": 2.2535339984460734,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    },
+    "Shadow Simulation": {
+        "Severity 1": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.059461742532005035,
+            "Visual Confidence": 0.8060399842262268,
+            "Conflict Score": 0.0004988042986951768,
+            "CRA": 1.0,
+            "Latency": 2.1571559997391887,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 2": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.05943128515960962,
+            "Visual Confidence": 0.7164800107479096,
+            "Conflict Score": 0.0006421318999491631,
+            "CRA": 1.0,
+            "Latency": 2.3001999990083277,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        },
+        "Severity 3": {
+            "Precision@1": 0.5,
+            "Recall@3": 1.0,
+            "NDCG@3": 0.49839441578296373,
+            "ECE": 0.05604709292952304,
+            "Visual Confidence": 0.537360029220581,
+            "Conflict Score": 0.0013938356610015035,
+            "CRA": 1.0,
+            "Latency": 2.384994000021834,
+            "NDCG_Drop": 0.0,
+            "Wilcoxon_p": NaN,
+            "Effect_Size": 0.0
+        }
+    }
+}

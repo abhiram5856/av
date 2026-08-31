@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Checkpoint file exists",
+      "status": "PASS",
+      "detail": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\models\\weights\\nova_mobilenet_v3_24_classes.pth"
+    },
+    {
+      "check": "State dict is a dict",
+      "status": "PASS",
+      "detail": "OrderedDict"
+    },
+    {
+      "check": "Has MobileNetV3 feature keys",
+      "status": "PASS",
+      "detail": "'features.0.0.weight' found"
+    },
+    {
+      "check": "Has classifier.3.weight key",
+      "status": "PASS",
+      "detail": "'classifier.3.weight' found"
+    },
+    {
+      "check": "Output dimension == 24",
+      "status": "PASS",
+      "detail": "shape=(24, 1024), required out_dim=24"
+    },
+    {
+      "check": "Input features == 1024 (MobileNetV3-Small)",
+      "status": "PASS",
+      "detail": "in_features=1024"
+    },
+    {
+      "check": "Parameter count in expected range (2M-5M)",
+      "status": "PASS",
+      "detail": "total_params=1,554,602"
+    },
+    {
+      "check": "load_state_dict() succeeds",
+      "status": "PASS",
+      "detail": "No errors"
+    },
+    {
+      "check": "Required classes are alphabetically sorted",
+      "status": "PASS",
+      "detail": "(ImageFolder ordering must match)"
+    },
+    {
+      "check": "Cotton classes absent from required list",
+      "status": "PASS",
+      "detail": "cotton_diseased and cotton_healthy must not be present"
+    },
+    {
+      "check": "Output has 24 classes",
+      "status": "PASS",
+      "detail": "logits.shape[1]=24"
+    },
+    {
+      "check": "Softmax sums to ~1.0",
+      "status": "PASS",
+      "detail": "sum=1.000000"
+    },
+    {
+      "check": "Top confidence is a valid float in [0,1]",
+      "status": "PASS",
+      "detail": "top_conf=0.6845"
+    },
+    {
+      "check": "Inference completes in <2s (source: real test sample)",
+      "status": "PASS",
+      "detail": "latency=55.1ms"
+    },
+    {
+      "check": "Accuracy > 30% on field test split",
+      "status": "PASS",
+      "detail": "acc=33.06% (field domain \u2014 lower than lab is expected)"
+    }
+  ],
+  "metrics": {
+    "checkpoint_output_dim": 24,
+    "forward_pass_output_classes": 24,
+    "softmax_sum": 1.0,
+    "sample_top_class_idx": 0,
+    "sample_top_class_name": "corn_gray_leaf_spot",
+    "sample_top_confidence": 0.6845,
+    "inference_latency_ms": 55.1,
+    "image_source": "real test sample",
+    "field_eval": {
+      "num_evaluated": 732,
+      "num_skipped": 117,
+      "accuracy": 0.3306,
+      "macro_f1": 0.0855,
+      "macro_precision": 0.0959,
+      "macro_recall": 0.1381,
+      "note": "Field-domain evaluation on 24-class held-out test split using nova_mobilenet_v3_24_classes.pth"
+    }
+  }
+}

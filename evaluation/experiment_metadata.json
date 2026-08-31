@@ -1,0 +1,55 @@
+{
+  "description": "Experiment provenance registry for AgriVision AI. Each entry documents what checkpoint, dataset, and evaluation produced the cited metric.",
+  "experiments": {
+    "plantdoc_36class_eval": {
+      "status": "HISTORICAL — NOT the 24-class Telangana baseline",
+      "checkpoint": "Unknown (likely nova_mobilenet_v3.pth, now archived)",
+      "dataset": "PlantDoc (36 classes, includes Apple, Grape, Blueberry, Soyabean — NOT Telangana scope)",
+      "test_images": 558,
+      "metrics_file": "evaluation/metrics.json",
+      "reported_metrics": {
+        "accuracy": 0.776,
+        "macro_precision": 0.813,
+        "macro_recall": 0.770,
+        "macro_f1": 0.759
+      },
+      "classification_report": "evaluation/classification_report.json",
+      "note": "This evaluation was on a 36-class PlantDoc test set. It does NOT represent the 24-class Telangana-focused model's performance. DO NOT cite as Telangana baseline."
+    },
+    "claimed_91pct_lab_baseline": {
+      "status": "UNVERIFIED — no raw prediction artifact",
+      "claimed_metrics": {
+        "accuracy": 0.9175,
+        "macro_f1": 0.9082,
+        "macro_precision": 0.9127,
+        "macro_recall": 0.9094,
+        "top3_accuracy": 0.9986
+      },
+      "checkpoint": "Unknown — no artifact links this claim to a specific checkpoint",
+      "note": "This metric appeared in project documentation but cannot be reproduced from existing artifacts. It must NOT be cited in the final report or viva without regenerating predictions from the actual 24-class test set."
+    },
+    "gate0_field_zero_shot_24class": {
+      "status": "VERIFIED — reproducible from gate0_verify_checkpoint.py",
+      "checkpoint": "nova_mobilenet_v3_24_classes.pth",
+      "dataset": "backend/data/processed_field_dataset (field-domain images)",
+      "test_split": "backend/data/field_splits.json",
+      "test_images": 732,
+      "skipped_images": 117,
+      "skip_reason": "Images in classes outside the 24-class active scope",
+      "verified_metrics": {
+        "accuracy": 0.3306,
+        "macro_f1": 0.0855,
+        "macro_precision": 0.0959,
+        "macro_recall": 0.1381
+      },
+      "verification_report": "evaluation/gate0_checkpoint_verification.json",
+      "note": "Zero-shot (no fine-tuning) evaluation of the 24-class lab-trained model on real-world field images. Low F1 is expected and reflects the documented lab-to-field domain gap."
+    }
+  },
+  "reproducibility_commands": {
+    "gate0_verification": "python scripts/gate0_verify_checkpoint.py",
+    "knowledge_base_ingestion": "python scripts/ingest_knowledge_base.py",
+    "note": "Add a full 24-class lab test set evaluation when held-out PlantVillage test images are available."
+  },
+  "last_updated": "2026-08-26"
+}

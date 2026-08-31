@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: novarcd-api
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    plan: starter # A minimum of 512MB RAM is recommended for FastAPI + FAISS
+    region: ohio
+    envVars:
+      - key: DEBUG_MODE
+        value: "false"
+      - key: LLM_MODEL_NAME
+        value: "llama3-70b-8192"
+      - key: NOVA_FORCE_CPU
+        value: "true"
+      - key: DATABASE_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENWEATHER_API_KEY
+        sync: false
+    healthCheckPath: /health
+
+  - type: redis
+    name: novarcd-redis
+    plan: free
+    region: ohio

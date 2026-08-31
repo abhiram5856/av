@@ -1,0 +1,680 @@
+{
+  "corn_gray_leaf_spot": {
+    "visual_concepts_required": [
+      "gray_lesions",
+      "necrotic_centers",
+      "tan_streaks"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.8,
+      "temp_range_c": [
+        25,
+        35
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.1,
+    "treatment": "Apply Azoxystrobin or Propiconazole fungicide at onset. Ensure crop rotation and avoid overhead irrigation.",
+    "telangana_relevance": "Common during Kharif season in humid conditions. Watch during August-September.",
+    "logic_rule_text": "If corn_gray_leaf_spot THEN (Gray/Tan Lesions AND High Humidity AND Prolonged Leaf Wetness)"
+  },
+  "corn_leaf_blight": {
+    "visual_concepts_required": [
+      "water_soaked_lesions",
+      "tan_lesions",
+      "leaf_death"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.7,
+      "temp_range_c": [
+        20,
+        32
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.2,
+    "treatment": "Apply Mancozeb 75WP at 2.5g/L. Remove infected debris. Use resistant hybrids.",
+    "telangana_relevance": "Northern Leaf Blight is prevalent in Telangana's maize-growing districts.",
+    "logic_rule_text": "If corn_leaf_blight THEN (Tan/Water-Soaked Lesions AND Moderate-High Humidity)"
+  },
+  "corn_rust_leaf": {
+    "visual_concepts_required": [
+      "orange_pustules",
+      "rust_colored_spots",
+      "powdery_surface"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.75,
+      "temp_range_c": [
+        16,
+        25
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.0,
+    "treatment": "Apply Propiconazole or Tebuconazole at first sign. Scout regularly during cool humid periods.",
+    "telangana_relevance": "Polysora rust is more common in Telangana than common rust due to warmer temperatures.",
+    "logic_rule_text": "If corn_rust_leaf THEN (Orange Pustules AND Moderate Humidity AND Cool Temperatures)"
+  },
+  "pepper_bell_bacterial_spot": {
+    "visual_concepts_required": [
+      "water_soaked_spots",
+      "yellow_halos",
+      "necrotic_centers"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.8,
+      "temp_range_c": [
+        24,
+        30
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.1,
+    "treatment": "Apply Copper Oxychloride 50WP at 3g/L. Avoid overhead irrigation. Use certified disease-free seeds.",
+    "telangana_relevance": "Bacterial spot caused by Xanthomonas vesicatoria. Common in Telangana chilli-growing areas.",
+    "logic_rule_text": "If pepper_bell_bacterial_spot THEN (Water-Soaked Spots AND Yellow Halos AND High Humidity AND Leaf Wetness)"
+  },
+  "pepper_bell_healthy": {
+    "visual_concepts_required": [
+      "healthy_tissue",
+      "uniform_green",
+      "no_lesions"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        20,
+        35
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 0.0,
+    "treatment": "No treatment required. Maintain balanced nutrition and regular scouting.",
+    "telangana_relevance": "Healthy pepper leaf. Continue current cultivation practices.",
+    "logic_rule_text": "If pepper_bell_healthy THEN (Uniform Green Tissue AND No Disease Signs)"
+  },
+  "potato_early_blight": {
+    "visual_concepts_required": [
+      "concentric_rings",
+      "brown_spots",
+      "target_board_pattern"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.7,
+      "temp_range_c": [
+        24,
+        29
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.0,
+    "treatment": "Apply Chlorothalonil or Mancozeb at 7-10 day intervals. Ensure adequate potassium nutrition.",
+    "telangana_relevance": "Alternaria solani. Common in Mahabubnagar and Nizamabad potato growing regions.",
+    "logic_rule_text": "If potato_early_blight THEN (Concentric Rings AND Brown Spots AND Moderate Humidity AND Warm Temperatures)"
+  },
+  "potato_healthy": {
+    "visual_concepts_required": [
+      "healthy_tissue",
+      "dark_green",
+      "no_lesions"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        15,
+        30
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 0.0,
+    "treatment": "No treatment required. Monitor for early signs of late blight in humid conditions.",
+    "telangana_relevance": "Healthy potato leaf. Continue current cultivation practices.",
+    "logic_rule_text": "If potato_healthy THEN (Dark Green Tissue AND No Disease Signs)"
+  },
+  "potato_late_blight": {
+    "visual_concepts_required": [
+      "water_soaked_spots",
+      "white_mold",
+      "dark_lesions",
+      "rapid_collapse"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.9,
+      "temp_range_c": [
+        10,
+        20
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.5,
+    "treatment": "URGENT: Apply Metalaxyl+Mancozeb immediately. Destroy infected plants. Avoid overhead irrigation.",
+    "telangana_relevance": "Phytophthora infestans. Can cause total crop loss within days. High risk in cool rainy periods.",
+    "logic_rule_text": "If potato_late_blight THEN (Water-Soaked Spots AND White Mold AND Very High Humidity AND Cool Temps AND Leaf Wetness)"
+  },
+  "rice_bacterial_leaf_blight": {
+    "visual_concepts_required": [
+      "water_soaked_margins",
+      "yellow_lesions",
+      "milky_ooze",
+      "wilting"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.8,
+      "temp_range_c": [
+        25,
+        34
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.3,
+    "treatment": "No effective chemical cure. Remove infected plants. Use resistant varieties like IR64. Avoid excess nitrogen.",
+    "telangana_relevance": "Xanthomonas oryzae pv. oryzae. Major threat in Godavari delta and Warangal. Spreads through flood water.",
+    "logic_rule_text": "If rice_bacterial_leaf_blight THEN (Water-Soaked Margins AND Yellow Lesions AND Milky Ooze AND High Humidity)"
+  },
+  "rice_brown_spot": {
+    "visual_concepts_required": [
+      "oval_brown_spots",
+      "yellow_halo",
+      "dark_borders"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.7,
+      "temp_range_c": [
+        25,
+        30
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.0,
+    "treatment": "Apply Propiconazole 25EC at 1ml/L or Tricyclazole 75WP at 0.6g/L. Ensure silicon and potassium nutrition.",
+    "telangana_relevance": "Bipolaris oryzae. Common in nutrient-deficient soils in Telangana. Associated with food security concern Tungro.",
+    "logic_rule_text": "If rice_brown_spot THEN (Oval Brown Spots AND Yellow Halos AND Moderate Humidity)"
+  },
+  "rice_healthy": {
+    "visual_concepts_required": [
+      "healthy_tissue",
+      "bright_green",
+      "no_lesions"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        20,
+        35
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 0.0,
+    "treatment": "No treatment required. Maintain water management and balanced NPK nutrition.",
+    "telangana_relevance": "Healthy rice leaf. Continue current cultivation practices. Scout regularly during humid periods.",
+    "logic_rule_text": "If rice_healthy THEN (Bright Green Tissue AND No Disease Signs)"
+  },
+  "rice_leaf_blast": {
+    "visual_concepts_required": [
+      "diamond_shaped_lesions",
+      "gray_centers",
+      "brown_borders"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.85,
+      "temp_range_c": [
+        24,
+        28
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.4,
+    "treatment": "Apply Tricyclazole 75WP at 0.6g/L or Isoprothiolane 40EC at 1.5ml/L. Avoid excess nitrogen.",
+    "telangana_relevance": "Pyricularia oryzae. Most damaging rice disease in Telangana. Critical during tillering stage.",
+    "logic_rule_text": "If rice_leaf_blast THEN (Diamond-Shaped Lesions AND Gray Centers AND High Humidity AND Moderate Temperatures)"
+  },
+  "rice_leaf_scald": {
+    "visual_concepts_required": [
+      "water_soaked_bands",
+      "zonate_lesions",
+      "brown_bands"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.8,
+      "temp_range_c": [
+        28,
+        35
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 0.9,
+    "treatment": "Apply Propiconazole or Hexaconazole. Avoid high nitrogen application. Improve drainage.",
+    "telangana_relevance": "Monographella albescens. Less common but increasing in Telangana rice fields.",
+    "logic_rule_text": "If rice_leaf_scald THEN (Brown Zonate Bands AND High Humidity AND High Temperature)"
+  },
+  "rice_sheath_blight": {
+    "visual_concepts_required": [
+      "oval_lesions_on_sheath",
+      "gray_centers",
+      "brown_borders",
+      "water_line_lesions"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.85,
+      "temp_range_c": [
+        28,
+        32
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.2,
+    "treatment": "Apply Hexaconazole 5EC at 2ml/L or Propiconazole 25EC at 1ml/L. Reduce planting density.",
+    "telangana_relevance": "Rhizoctonia solani. Second most destructive rice disease in Telangana after blast.",
+    "logic_rule_text": "If rice_sheath_blight THEN (Oval Sheath Lesions AND Gray Centers AND High Humidity AND Dense Canopy)"
+  },
+  "tomato_bacterial_spot": {
+    "visual_concepts_required": [
+      "water_soaked_spots",
+      "angular_lesions",
+      "yellowing"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.8,
+      "temp_range_c": [
+        24,
+        30
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.1,
+    "treatment": "Apply Copper Hydroxide 77WP at 3g/L. Avoid overhead irrigation. Use disease-free transplants.",
+    "telangana_relevance": "Xanthomonas vesicatoria. Common in Ranga Reddy and Medak tomato growing areas.",
+    "logic_rule_text": "If tomato_bacterial_spot THEN (Angular Water-Soaked Lesions AND Yellowing AND High Humidity)"
+  },
+  "tomato_early_blight": {
+    "visual_concepts_required": [
+      "concentric_rings",
+      "dark_brown_spots",
+      "target_pattern"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.7,
+      "temp_range_c": [
+        24,
+        29
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.0,
+    "treatment": "Apply Mancozeb 75WP at 2.5g/L or Chlorothalonil at 3ml/L every 7-10 days.",
+    "telangana_relevance": "Alternaria solani. Very common in Telangana's tomato-growing areas during Kharif.",
+    "logic_rule_text": "If tomato_early_blight THEN (Concentric Brown Rings AND Target Pattern AND Moderate Humidity)"
+  },
+  "tomato_healthy": {
+    "visual_concepts_required": [
+      "healthy_tissue",
+      "dark_green",
+      "no_lesions"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        18,
+        32
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 0.0,
+    "treatment": "No treatment required. Maintain balanced NPK nutrition. Scout weekly.",
+    "telangana_relevance": "Healthy tomato leaf. Continue current cultivation practices.",
+    "logic_rule_text": "If tomato_healthy THEN (Dark Green Tissue AND No Disease Signs)"
+  },
+  "tomato_late_blight": {
+    "visual_concepts_required": [
+      "water_soaked_spots",
+      "white_fungal_growth",
+      "brown_lesions",
+      "rapid_necrosis"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.9,
+      "temp_range_c": [
+        10,
+        20
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.5,
+    "treatment": "URGENT: Apply Metalaxyl+Mancozeb at 3g/L. Destroy infected material. Avoid irrigation at night.",
+    "telangana_relevance": "Phytophthora infestans. Can destroy crop within 5-7 days. High risk in rainy cool nights.",
+    "logic_rule_text": "If tomato_late_blight THEN (Water-Soaked Lesions AND White Mold AND Very High Humidity AND Cool Temperatures)"
+  },
+  "tomato_leaf_mold": {
+    "visual_concepts_required": [
+      "yellow_patches",
+      "olive_green_mold",
+      "leaf_curling"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.85,
+      "temp_range_c": [
+        21,
+        24
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.1,
+    "treatment": "Apply Chlorothalonil or Mancozeb. Improve ventilation in greenhouses. Avoid excessive nitrogen.",
+    "telangana_relevance": "Passalora fulva. Common in protected cultivation/greenhouses in Telangana.",
+    "logic_rule_text": "If tomato_leaf_mold THEN (Yellow Patches AND Olive Mold On Underside AND High Humidity)"
+  },
+  "tomato_mosaic_virus": {
+    "visual_concepts_required": [
+      "mosaic_pattern",
+      "light_dark_green_patches",
+      "leaf_distortion"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        20,
+        35
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.3,
+    "treatment": "No cure. Remove infected plants immediately. Control aphid vectors with Imidacloprid. Use virus-free seeds.",
+    "telangana_relevance": "Tobacco Mosaic Virus spread by contact and tools. Common in intensive tomato cultivation.",
+    "logic_rule_text": "If tomato_mosaic_virus THEN (Mosaic Discoloration AND Leaf Distortion \u00e2\u20ac\u201d spread by contact, not humidity)"
+  },
+  "tomato_septoria_leaf_spot": {
+    "visual_concepts_required": [
+      "small_circular_spots",
+      "white_centers",
+      "dark_borders",
+      "tiny_black_dots"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.75,
+      "temp_range_c": [
+        20,
+        25
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.0,
+    "treatment": "Apply Chlorothalonil 75WP at 3g/L or Mancozeb. Remove lower infected leaves. Avoid wetting foliage.",
+    "telangana_relevance": "Septoria lycopersici. Starts on lower leaves and progresses upward. Common during rainy season.",
+    "logic_rule_text": "If tomato_septoria_leaf_spot THEN (Small Circular Spots AND White Centers AND Dark Borders AND Leaf Wetness)"
+  },
+  "tomato_spider_mites_two_spotted_spider_mite": {
+    "visual_concepts_required": [
+      "fine_webbing",
+      "stippling",
+      "bronze_discoloration",
+      "tiny_mites"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.3,
+      "temp_range_c": [
+        27,
+        40
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.0,
+    "treatment": "Apply Abamectin or Spiromesifen miticide. Increase humidity by irrigation. Avoid dusty conditions.",
+    "telangana_relevance": "Tetranychus urticae. Severe during hot dry summers in Telangana. Not a fungal disease.",
+    "logic_rule_text": "If tomato_spider_mites THEN (Fine Webbing AND Stippling AND Low Humidity AND High Temperatures \u00e2\u20ac\u201d NOT fungal)"
+  },
+  "tomato_target_spot": {
+    "visual_concepts_required": [
+      "concentric_rings",
+      "brown_spots",
+      "target_appearance",
+      "lesion_halos"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.75,
+      "temp_range_c": [
+        23,
+        30
+      ],
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.1,
+    "treatment": "Apply Azoxystrobin or Chlorothalonil. Maintain proper plant spacing for air circulation.",
+    "telangana_relevance": "Corynespora cassiicola. Emerging disease in Telangana's tomato growing areas.",
+    "logic_rule_text": "If tomato_target_spot THEN (Concentric Ring Lesions AND Halos AND High Humidity AND Warm Temperatures)"
+  },
+  "tomato_yellow_leaf_curl_virus": {
+    "visual_concepts_required": [
+      "leaf_curling",
+      "yellowing",
+      "upward_leaf_curl",
+      "small_leaves"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        25,
+        35
+      ],
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.4,
+    "treatment": "No cure. Control whitefly vector with Imidacloprid or Thiamethoxam. Use TYLCV-resistant varieties. Remove infected plants.",
+    "telangana_relevance": "TYLCV is one of the most damaging tomato viruses in Telangana. Spread by Bemisia tabaci whiteflies.",
+    "logic_rule_text": "If tomato_yellow_leaf_curl_virus THEN (Upward Leaf Curl AND Yellowing AND Small Leaves \u00e2\u20ac\u201d spread by whitefly vectors)"
+  },
+  "cotton_bacterial_blight": {
+    "visual_concepts_required": [
+      "angular_water_soaked_spots",
+      "vein_blight",
+      "black_arm"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.85,
+      "temp_range_c": [
+        30,
+        35
+      ]
+    },
+    "telangana_relevance": "Direct Evidence: High temperatures and monsoon humidity in Telangana favor Xanthomonas citri pv. malvacearum.",
+    "treatment": "Apply Copper oxychloride or Streptomycin sulfate. Use resistant varieties.",
+    "logic_rule_text": "If cotton_bacterial_blight THEN (Angular spots AND High Humidity AND High Temps)"
+  },
+  "cotton_grey_mildew": {
+    "visual_concepts_required": [
+      "white_grey_powdery_growth",
+      "angular_pale_spots",
+      "defoliation"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.75,
+      "temp_range_c": [
+        20,
+        30
+      ]
+    },
+    "telangana_relevance": "Direct Evidence: Common in central and southern regions during cool, humid periods.",
+    "treatment": "Apply Carbendazim or Wettable sulfur. Ensure proper spacing for aeration.",
+    "logic_rule_text": "If cotton_grey_mildew THEN (Grey powdery growth AND Moderate temps AND High humidity)"
+  },
+  "cotton_leaf_curl_virus": {
+    "visual_concepts_required": [
+      "upward_downward_leaf_curl",
+      "vein_thickening",
+      "enations"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        25,
+        35
+      ]
+    },
+    "telangana_relevance": "Indirect Agronomic Context: Spread by whiteflies (Bemisia tabaci) which thrive in warm, dry spells.",
+    "treatment": "No cure. Control whitefly vectors with Imidacloprid. Uproot infected plants.",
+    "logic_rule_text": "If cotton_leaf_curl_virus THEN (Leaf curl AND vein thickening -- virus vector)"
+  },
+  "cotton_healthy": {
+    "visual_concepts_required": [
+      "healthy_tissue",
+      "normal_veins"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        21,
+        37
+      ]
+    },
+    "telangana_relevance": "Healthy cotton leaf. Monitor for pests and diseases regularly.",
+    "treatment": "Maintain standard agronomic practices.",
+    "logic_rule_text": "If cotton_healthy THEN (No visible symptoms)"
+  },
+  "groundnut_early_leaf_spot": {
+    "visual_concepts_required": [
+      "circular_brown_spots",
+      "yellow_halo"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.8,
+      "temp_range_c": [
+        25,
+        30
+      ]
+    },
+    "telangana_relevance": "Direct Evidence: Common in Kharif season across Telangana groundnut belts.",
+    "treatment": "Apply Chlorothalonil or Mancozeb. Implement crop rotation.",
+    "logic_rule_text": "If early_leaf_spot THEN (Brown spots with yellow halos AND High humidity)"
+  },
+  "groundnut_late_leaf_spot": {
+    "visual_concepts_required": [
+      "dark_brown_black_spots",
+      "lower_leaf_surface_spores",
+      "defoliation"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.85,
+      "temp_range_c": [
+        20,
+        26
+      ]
+    },
+    "telangana_relevance": "Direct Evidence: Often co-occurs with rust late in the season.",
+    "treatment": "Apply Tebuconazole or Hexaconazole. Avoid continuous groundnut cultivation.",
+    "logic_rule_text": "If late_leaf_spot THEN (Dark spots mostly underneath AND High humidity)"
+  },
+  "groundnut_rust": {
+    "visual_concepts_required": [
+      "orange_red_pustules",
+      "lower_leaf_surface"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.85,
+      "temp_range_c": [
+        20,
+        25
+      ]
+    },
+    "telangana_relevance": "Direct Evidence: Major yield reducer in Telangana when combined with late leaf spot.",
+    "treatment": "Apply Chlorothalonil or Triazole fungicides.",
+    "logic_rule_text": "If rust THEN (Orange pustules AND High humidity AND Cool temps)"
+  },
+  "groundnut_healthy": {
+    "visual_concepts_required": [
+      "healthy_tissue"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        25,
+        30
+      ]
+    },
+    "telangana_relevance": "Healthy groundnut leaf.",
+    "treatment": "Standard nutrient management.",
+    "logic_rule_text": "If healthy THEN (No visible symptoms)"
+  },
+  "chilli_leaf_curl": {
+    "visual_concepts_required": [
+      "upward_curling",
+      "crumpled_leaves",
+      "stunted_growth"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        25,
+        35
+      ]
+    },
+    "telangana_relevance": "Indirect Agronomic Context: Spread by thrips/mites. Thrives in dry, warm conditions common in Khammam/Warangal.",
+    "treatment": "Control vectors (thrips/mites) using Spinosad or Abamectin. Destroy infected plants.",
+    "logic_rule_text": "If chilli_leaf_curl THEN (Curled leaves AND vector presence)"
+  },
+  "chilli_leaf_spot": {
+    "visual_concepts_required": [
+      "circular_spots",
+      "grey_centers",
+      "dark_margins"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.8,
+      "temp_range_c": [
+        22,
+        28
+      ]
+    },
+    "telangana_relevance": "Direct Evidence: Fungal pathogen (Cercospora) favors high humidity.",
+    "treatment": "Apply Copper oxychloride or Mancozeb.",
+    "logic_rule_text": "If leaf_spot THEN (Circular spots with grey centers AND High humidity)"
+  },
+  "chilli_whitefly": {
+    "visual_concepts_required": [
+      "tiny_white_insects",
+      "sooty_mold",
+      "yellowing"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        25,
+        35
+      ]
+    },
+    "telangana_relevance": "Indirect Agronomic Context: Major vector for leaf curl viruses in Telangana.",
+    "treatment": "Apply Neem oil or systemic insecticides like Imidacloprid.",
+    "logic_rule_text": "If whitefly THEN (Visible whiteflies AND warm weather)"
+  },
+  "chilli_yellowish": {
+    "visual_concepts_required": [
+      "yellowing",
+      "chlorosis"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        20,
+        35
+      ]
+    },
+    "telangana_relevance": "Indirect Agronomic Context: Often indicates nutrient deficiency, waterlogging, or early viral infection.",
+    "treatment": "Check soil moisture (avoid waterlogging) and apply micronutrients (Zinc/Iron).",
+    "logic_rule_text": "If yellowish THEN (Yellowing leaves AND potential stress factors)"
+  },
+  "chilli_healthy": {
+    "visual_concepts_required": [
+      "dark_green_tissue",
+      "flat_leaves"
+    ],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "temp_range_c": [
+        20,
+        30
+      ]
+    },
+    "telangana_relevance": "Healthy chilli plant.",
+    "treatment": "Continue regular monitoring.",
+    "logic_rule_text": "If healthy THEN (No symptoms)"
+  }
+}
