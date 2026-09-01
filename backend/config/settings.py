@@ -48,5 +48,10 @@ settings = Settings()
 # Automatically patch standard postgres URLs from Render/Neon to use asyncpg
 if settings.DATABASE_URL.startswith("postgres://"):
     settings.DATABASE_URL = settings.DATABASE_URL.replace("postgres://", "postgresql+asyncpg://", 1)
-elif settings.DATABASE_URL.startswith("postgresql://"):
+elif settings.DATABASE_URL.startswith("postgresql://") and not settings.DATABASE_URL.startswith("postgresql+asyncpg://"):
     settings.DATABASE_URL = settings.DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://", 1)
+
+# asyncpg does not support 'sslmode' or 'channel_binding' in the connection arguments directly.
+settings.DATABASE_URL = settings.DATABASE_URL.replace("sslmode=", "ssl=")
+settings.DATABASE_URL = settings.DATABASE_URL.replace("&channel_binding=require", "")
+settings.DATABASE_URL = settings.DATABASE_URL.replace("?channel_binding=require", "")
