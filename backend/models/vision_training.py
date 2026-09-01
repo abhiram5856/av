@@ -45,7 +45,7 @@ from torch.optim.lr_scheduler import CosineAnnealingLR
 from collections import Counter
 
 from backend.models.class_registry import CLASS_NAMES, NUM_CLASSES, MODEL_CONFIG
-from backend.logging.logger import setup_logger
+from backend.core_logging.logger import setup_logger
 
 logger = setup_logger("nova.vision_training")
 

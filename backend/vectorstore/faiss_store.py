@@ -8,7 +8,7 @@ from backend.core.interfaces import BaseVectorStore
 from backend.models.domain import EmbeddingRecord, SearchResult, Chunk
 from backend.core.exceptions import VectorStoreError
 from backend.config.settings import settings
-from backend.logging.logger import retrieve_logger
+from backend.core_logging.logger import retrieve_logger
 
 class FaissVectorStore(BaseVectorStore):
     """

@@ -30,7 +30,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from backend.core.database import get_db
 from backend.data.crud import get_or_create_user, create_diagnosis
 from backend.auth.security import verify_token
-from backend.logging.logger import api_logger
+from backend.core_logging.logger import api_logger
 
 router = APIRouter()
 

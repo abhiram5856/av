@@ -27,7 +27,7 @@ from backend.embeddings.local_embedder import LocalEmbedder
 from backend.vectorstore.faiss_store import FaissVectorStore
 from backend.retrieval.vector_retriever import VectorRetriever
 from backend.llm.groq_client import GroqClient
-from backend.logging.logger import api_logger
+from backend.core_logging.logger import api_logger
 from backend.core.exceptions import LLMError
 
 router = APIRouter()

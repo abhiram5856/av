@@ -5,7 +5,7 @@ from typing import List
 from backend.core.interfaces import BaseDocumentLoader
 from backend.models.domain import Document
 from backend.core.exceptions import DocumentLoadError
-from backend.logging.logger import doc_logger
+from backend.core_logging.logger import doc_logger
 
 class LocalDocumentLoader(BaseDocumentLoader):
     """

@@ -1,7 +1,7 @@
 import requests
 import asyncio
 from backend.config.settings import settings
-from backend.logging.logger import api_logger
+from backend.core_logging.logger import api_logger
 
 class WeatherService:
     @staticmethod

@@ -2,7 +2,7 @@ from langdetect import detect, DetectorFactory
 from deep_translator import GoogleTranslator
 from backend.core.interfaces import BaseTranslator
 from backend.core.exceptions import TranslationError
-from backend.logging.logger import translate_logger
+from backend.core_logging.logger import translate_logger
 
 # Ensure consistent results from langdetect
 DetectorFactory.seed = 0

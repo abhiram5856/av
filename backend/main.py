@@ -18,7 +18,7 @@ from backend.config.settings import settings
 from backend.api import chat, history, health, config, diagnose, report, iot, predict_risk
 from backend.core.middleware import CorrelationIdMiddleware
 from backend.core.exceptions import ZenithAgriBotError
-from backend.logging.logger import api_logger
+from backend.core_logging.logger import api_logger
 
 
 limiter = Limiter(key_func=get_remote_address)

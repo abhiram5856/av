@@ -1,7 +1,7 @@
 from typing import List
 from sentence_transformers import SentenceTransformer
 from backend.core.interfaces import BaseEmbeddingModel
-from backend.logging.logger import retrieve_logger
+from backend.core_logging.logger import retrieve_logger
 
 class LocalEmbedder(BaseEmbeddingModel):
     """

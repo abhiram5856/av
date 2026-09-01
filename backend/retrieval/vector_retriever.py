@@ -2,7 +2,7 @@ from typing import List
 from backend.core.interfaces import BaseRetriever, BaseEmbeddingModel, BaseVectorStore
 from backend.models.domain import SearchResult
 from backend.core.exceptions import RetrievalError
-from backend.logging.logger import retrieve_logger
+from backend.core_logging.logger import retrieve_logger
 from backend.config.settings import settings
 
 class VectorRetriever(BaseRetriever):

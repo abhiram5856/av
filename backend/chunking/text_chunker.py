@@ -4,7 +4,7 @@ from backend.core.interfaces import BaseChunker
 from backend.models.domain import Document, Chunk
 from backend.core.exceptions import ChunkingError
 from backend.config.settings import settings
-from backend.logging.logger import chunk_logger
+from backend.core_logging.logger import chunk_logger
 
 class RecursiveCharacterChunker(BaseChunker):
     """

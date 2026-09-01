@@ -4,7 +4,7 @@ from typing import Optional
 
 from backend.core.interfaces import BaseTranslator, BaseRetriever, BasePromptBuilder, BaseLLM, BaseMemory
 from backend.models.domain import UserQuery, ChatResponse, ChatMessage
-from backend.logging.logger import setup_logger
+from backend.core_logging.logger import setup_logger
 
 logger = setup_logger("zenith.chat_engine")
 

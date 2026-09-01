@@ -2,7 +2,7 @@ import os
 import requests
 from backend.core.interfaces import BaseLLM
 from backend.core.exceptions import LLMError
-from backend.logging.logger import llm_logger
+from backend.core_logging.logger import llm_logger
 
 class GroqClient(BaseLLM):
     """

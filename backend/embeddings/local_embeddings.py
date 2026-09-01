@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from backend.core.interfaces import BaseEmbeddingModel
 from backend.core.exceptions import EmbeddingError
 from backend.config.settings import settings
-from backend.logging.logger import embed_logger
+from backend.core_logging.logger import embed_logger
 
 class SentenceTransformerModel(BaseEmbeddingModel):
     """
