@@ -23,9 +23,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /root/.local /root/.local
-COPY . .
+COPY . /app/backend
 
-COPY entrypoint.sh .
+WORKDIR /app/backend
 RUN chmod +x entrypoint.sh
 
 ENV PATH=/root/.local/bin:$PATH
