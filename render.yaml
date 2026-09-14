@@ -24,3 +24,4 @@ services:
     name: novarcd-redis
     plan: free
     region: ohio
+    ipAllowList: []
