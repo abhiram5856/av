@@ -1,9 +1,9 @@
-services:
+﻿services:
   - type: web
     name: novarcd-api
     env: docker
     dockerfilePath: backend/Dockerfile
-    plan: starter # A minimum of 512MB RAM is recommended for FastAPI + FAISS
+    plan: free # A minimum of 512MB RAM is recommended for FastAPI + FAISS
     region: ohio
     envVars:
       - key: DEBUG_MODE
@@ -25,3 +25,4 @@ services:
     plan: free
     region: ohio
     ipAllowList: []
+
