@@ -2,13 +2,16 @@ import os
 import sys
 import json
 from fastapi.testclient import TestClient
+from jose import jwt
 
 # Add project root to sys.path
 sys.path.append(r"c:\Users\ABHIRAM MODUKURU\OneDrive\Desktop\AgriVision-AI")
 
 from backend.main import app
-
 client = TestClient(app)
+
+def get_test_token():
+    return jwt.encode({"sub": "test_integration_user"}, "your-super-secret-jwt-token-with-at-least-32-characters-long", algorithm="HS256")
 
 def test_diagnose_endpoint():
     image_path = r"c:\Users\ABHIRAM MODUKURU\OneDrive\Desktop\AgriVision-AI\backend\data\processed_dataset\tomato_late_blight\plantvillagedataset_0.JPG"
@@ -23,33 +26,30 @@ def test_diagnose_endpoint():
             "longitude": 78.4867,
             "user_id": "test_integration_user"
         }
+        headers = {"Authorization": f"Bearer {get_test_token()}"}
         
         print("Sending request to /api/v1/diagnose/")
-        response = client.post("/api/v1/diagnose/", files=files, data=data)
+        response = client.post("/api/v1/diagnose/", files=files, data=data, headers=headers)
         
         print(f"Status Code: {response.status_code}")
         
         if response.status_code == 200:
-            res_json = response.json()
-            print("Response Keys:", res_json.keys())
-            print("\nPrediction:")
-            print(json.dumps(res_json.get("prediction"), indent=2))
+            result = response.json()
+            print("\n=== DIAGNOSIS RESULTS ===")
+            print(f"Diagnosis ID: {result.get('diagnosis_id')}")
+            print(f"Predicted Class: {result.get('disease')}")
+            print(f"Confidence: {result.get('confidence')}")
             
-            print("\nSeverity:")
-            print(json.dumps(res_json.get("severity"), indent=2))
+            rag_context = result.get("rag_context", {})
+            print(f"Treatment: {rag_context.get('treatment')[:100]}...")
             
-            print("\nRoot Cause Analysis (Top Cause):")
-            rca = res_json.get("root_cause_analysis", {})
-            if rca and "ranked_causes" in rca and len(rca["ranked_causes"]) > 0:
-                print(json.dumps(rca["ranked_causes"][0], indent=2))
-            else:
-                print("No ranked causes returned.")
-                print(json.dumps(rca, indent=2))
-                
-            print("\nReasoning Chain:")
-            print(json.dumps(rca.get("reasoning_chain"), indent=2))
+            flags = result.get("flags", [])
+            print(f"Flags: {flags}")
+            
+            print(f"Concern Score: {result.get('concern_score')}")
+            print(f"Has Grad-CAM: {bool(result.get('grad_cam'))}")
         else:
-            print("Error details:", response.text)
+            print(f"Error details: {response.text}")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     test_diagnose_endpoint()

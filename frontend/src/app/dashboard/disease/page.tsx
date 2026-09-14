@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 import {
@@ -27,7 +27,7 @@ import { useAppStore } from "@/lib/store";
 import { API_BASE_URL } from "@/lib/api-client";
 import { CONCERN_MAP, getConcernLevel, type ConcernLevel } from "@/lib/design-tokens";
 
-// ─── Types ──────────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 interface DiagnosisResult {
   disease: string;
@@ -56,7 +56,7 @@ interface DiagnosisResult {
   isLowConfidence: boolean;
 }
 
-// ─── Component ──────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export default function DiseaseDetectionPage() {
   const [file, setFile] = useState<File | null>(null);
@@ -193,8 +193,8 @@ export default function DiseaseDetectionPage() {
         preventative: "Ensure proper sanitation, rotate crops yearly, and use drip irrigation.",
         raw_b64: res.gradcam_heatmap_b64 || visData.heatmap_b64,
         context_hash: res.context_hash,
-        weather_summary: `${envData.temperature || 25}°C avg, ${envData.humidity || 60}% humidity`,
-        weather_temp: `${envData.temperature || 25}°C`,
+        weather_summary: `${envData.temperature || 25}Â°C avg, ${envData.humidity || 60}% humidity`,
+        weather_temp: `${envData.temperature || 25}Â°C`,
         weather_humidity: `${envData.humidity || 60}%`,
         weather_soil_ph: envData.soil_ph ? envData.soil_ph.toString() : "Not available",
         root_causes: [ragData.ranked_causes?.[0]?.cause_label || "Environmental stress"],
@@ -272,7 +272,7 @@ export default function DiseaseDetectionPage() {
 
   return (
     <div className="flex flex-col gap-6 max-w-4xl mx-auto w-full">
-      {/* ─── Header ──────────────────────────────────────────────────────── */}
+      {/* â”€â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="border-b pb-4">
         <h1 className="text-2xl font-semibold tracking-tight text-foreground">
           {t("nav.disease")}
@@ -285,13 +285,13 @@ export default function DiseaseDetectionPage() {
             {weatherLoading ? (
               <span className="flex items-center"><Loader2 className="h-3 w-3 mr-1 animate-spin" /> Locating...</span>
             ) : (
-              <span className="flex items-center"><Thermometer className="h-3 w-3 mr-1" /> {temperature}°C | {humidity}% RH</span>
+              <span className="flex items-center"><Thermometer className="h-3 w-3 mr-1" /> {temperature}Â°C | {humidity}% RH</span>
             )}
           </Badge>
         </div>
       </div>
 
-      {/* ─── Upload Section ──────────────────────────────────────────────── */}
+      {/* â”€â”€â”€ Upload Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {!result && (
         <div className="bg-card rounded-lg border shadow-sm overflow-hidden">
           {!preview ? (
@@ -413,7 +413,7 @@ export default function DiseaseDetectionPage() {
         </div>
       )}
 
-      {/* ─── Results Section ─────────────────────────────────────────────── */}
+      {/* â”€â”€â”€ Results Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {result && (
         <div ref={resultRef} className="mt-8 animate-fade-in">
           
@@ -421,8 +421,8 @@ export default function DiseaseDetectionPage() {
             <div className="mb-6 p-4 rounded-xl bg-red-500/10 border border-red-500/20 flex items-start space-x-3 text-red-600 dark:text-red-400">
               <AlertTriangle className="h-5 w-5 shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold">Low Confidence Warning</p>
-                <p className="text-sm">Model confidence is below 60%. Please consult an agronomist or agricultural expert for verification before taking action.</p>
+                <p className="font-semibold">{t("results.low_confidence_title")}</p>
+                <p className="text-sm">{t("results.low_confidence_desc")}</p>
               </div>
             </div>
           )}
@@ -431,8 +431,8 @@ export default function DiseaseDetectionPage() {
             <div className="mb-6 p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-start space-x-3 text-orange-600 dark:text-orange-400">
               <AlertTriangle className="h-5 w-5 shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold">Visual and environmental evidence are not fully consistent.</p>
-                <p className="text-sm">The detected disease is not typically supported by current environmental conditions. Please verify with an expert.</p>
+                <p className="font-semibold">{t("results.env_conflict_title")}</p>
+                <p className="text-sm">{t("results.env_conflict_desc")}</p>
               </div>
             </div>
           )}
@@ -456,7 +456,7 @@ export default function DiseaseDetectionPage() {
                 </Badge>
                 <h3 className="text-xl font-semibold">{result.disease}</h3>
                 <p className="text-sm text-muted-foreground mt-2 mb-4">
-                  Concern Score combines visual and available environmental evidence. It is a decision-support indicator, not a biological severity percentage.
+                  {t("results.concern_score_desc")}
                 </p>
                 
                 <div className="flex flex-col gap-2">
@@ -558,13 +558,13 @@ export default function DiseaseDetectionPage() {
                 
                 {result.isHealthy ? (
                   <div className="prose prose-sm dark:prose-invert max-w-none">
-                    <p>The crop appears healthy. Maintain standard agricultural practices and monitor local weather conditions.</p>
+                    <p>{t("results.healthy_desc")}</p>
                   </div>
                 ) : (
                   <div className="prose prose-sm dark:prose-invert max-w-none">
                     <p className="whitespace-pre-line">{result.treatment}</p>
                     {result.isLowConfidence && (
-                      <p className="mt-4 text-red-500 font-semibold">Please verify with a specialist.</p>
+                      <p className="mt-4 text-red-500 font-semibold">{t("results.verify_specialist")}</p>
                     )}
                   </div>
                 )}
@@ -577,3 +577,4 @@ export default function DiseaseDetectionPage() {
     </div>
   );
 }
+

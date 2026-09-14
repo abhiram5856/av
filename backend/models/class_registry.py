@@ -90,12 +90,19 @@ IDX_TO_CLASS: Dict[int, str] = {idx: name for idx, name in enumerate(CLASS_NAMES
 # ──────────────────────────────────────────────────────────────────────────────
 
 DISPLAY_NAMES: Dict[str, str] = {
+    "chilli_healthy": "Chilli Healthy",
     "chilli_leaf_curl": "Chilli Leaf Curl",
     "chilli_leaf_spot": "Chilli Leaf Spot",
     "corn_gray_leaf_spot": "Corn Gray Leaf Spot",
     "corn_leaf_blight": "Corn Leaf Blight",
     "corn_rust_leaf": "Corn Rust Leaf",
+    "cotton_bacterial_blight": "Cotton Bacterial Blight",
     "cotton_healthy": "Cotton Healthy",
+    "cotton_leaf_curl_virus": "Cotton Leaf Curl Virus",
+    "groundnut_early_leaf_spot": "Groundnut Early Leaf Spot",
+    "groundnut_healthy": "Groundnut Healthy",
+    "groundnut_late_leaf_spot": "Groundnut Late Leaf Spot",
+    "groundnut_rust": "Groundnut Rust",
     "pepper_bell_bacterial_spot": "Pepper Bell Bacterial Spot",
     "pepper_bell_healthy": "Pepper Bell Healthy",
     "potato_early_blight": "Potato Early Blight",
@@ -125,12 +132,19 @@ DISPLAY_NAMES: Dict[str, str] = {
 
 # True = this class is a disease; False = healthy leaf
 IS_DISEASE: Dict[str, bool] = {
+    "chilli_healthy": False,
     "chilli_leaf_curl": True,
     "chilli_leaf_spot": True,
     "corn_gray_leaf_spot": True,
     "corn_leaf_blight": True,
     "corn_rust_leaf": True,
+    "cotton_bacterial_blight": True,
     "cotton_healthy": False,
+    "cotton_leaf_curl_virus": True,
+    "groundnut_early_leaf_spot": True,
+    "groundnut_healthy": False,
+    "groundnut_late_leaf_spot": True,
+    "groundnut_rust": True,
     "pepper_bell_bacterial_spot": True,
     "pepper_bell_healthy": False,
     "potato_early_blight": True,
@@ -155,12 +169,19 @@ IS_DISEASE: Dict[str, bool] = {
 }
 
 CROP_FAMILY: Dict[str, str] = {
+    "chilli_healthy": "chilli",
     "chilli_leaf_curl": "chilli",
     "chilli_leaf_spot": "chilli",
     "corn_gray_leaf_spot": "corn",
     "corn_leaf_blight": "corn",
     "corn_rust_leaf": "corn",
+    "cotton_bacterial_blight": "cotton",
     "cotton_healthy": "cotton",
+    "cotton_leaf_curl_virus": "cotton",
+    "groundnut_early_leaf_spot": "groundnut",
+    "groundnut_healthy": "groundnut",
+    "groundnut_late_leaf_spot": "groundnut",
+    "groundnut_rust": "groundnut",
     "pepper_bell_bacterial_spot": "pepper",
     "pepper_bell_healthy": "pepper",
     "potato_early_blight": "potato",

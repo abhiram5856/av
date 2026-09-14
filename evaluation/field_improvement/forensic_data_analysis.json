@@ -1,0 +1,45 @@
+{
+  "dataset_locations": {
+    "field_data_dir": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\processed_field_dataset",
+    "field_splits_path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\data\\field_splits.json",
+    "checkpoint_path": "c:\\Users\\ABHIRAM MODUKURU\\OneDrive\\Desktop\\AgriVision-AI\\backend\\models\\weights\\nova_mobilenet_v3_34_classes.pth"
+  },
+  "counts": {
+    "total_field_images": 5661,
+    "trainval_count": 4812,
+    "test_count": 849
+  },
+  "class_distribution": {
+    "trainval": {
+      "cotton_healthy": 362,
+      "rice_leaf_blast": 1499,
+      "rice_brown_spot": 817,
+      "rice_healthy": 1513,
+      "cotton_bacterial_blight": 236,
+      "rice_bacterial_leaf_blight": 385
+    },
+    "test": {
+      "rice_leaf_blast": 239,
+      "rice_brown_spot": 148,
+      "rice_healthy": 251,
+      "rice_bacterial_leaf_blight": 94,
+      "cotton_bacterial_blight": 52,
+      "cotton_healthy": 65
+    }
+  },
+  "image_statistics_sample": {
+    "avg_width": 496.546875,
+    "avg_height": 644.046875,
+    "avg_aspect_ratio": 0.76953125,
+    "avg_brightness": 133.16700589881358,
+    "avg_contrast": 55.74385578650092,
+    "avg_blur_score": 2171.2099912651097
+  },
+  "domain_observations": {
+    "segmented": false,
+    "background_complexity": "High (unsegmented soil, weeds, ambient foliage)",
+    "lighting_variation": "High (sunlight glare, shadow gradients)",
+    "camera_sources": "Multiple smartphone cameras",
+    "class_imbalance": "High (Rice & Cotton diseases predominant in field split)"
+  }
+}

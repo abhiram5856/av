@@ -3,6 +3,8 @@ from typing import List
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
+    model_config = {'extra': 'ignore', 'env_file': '.env', 'env_file_encoding': 'utf-8'}
+
     # App Config
     APP_NAME: str = "Zenith AgriBot API"
     APP_VERSION: str = "0.1.0"
@@ -17,7 +19,7 @@ class Settings(BaseSettings):
     # Paths
     BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     KNOWLEDGE_BASE_DIR: str = os.path.join(BASE_DIR, "..", "knowledge_base")
-    FAISS_INDEX_PATH: str = os.path.join(BASE_DIR, "..", "data", "faiss_index")
+    FAISS_INDEX_PATH: str = os.path.join(BASE_DIR, "data", "faiss_index")
 
     # Embedding Config
     EMBEDDING_MODEL_NAME: str = "sentence-transformers/all-MiniLM-L6-v2"
@@ -36,12 +38,8 @@ class Settings(BaseSettings):
     DEFAULT_LANGUAGE: str = "en"
 
     # Future CNN Integration
-    CNN_MODEL_PATH: str = os.path.join(BASE_DIR, "..", "models", "disease_cnn.pt")
+    CNN_MODEL_PATH: str = os.path.join(BASE_DIR, "models", "weights", "nova_mobilenet_v3_34_classes.pth")
     ENABLE_CNN: bool = False
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
 
 settings = Settings()
 
@@ -55,3 +53,7 @@ elif settings.DATABASE_URL.startswith("postgresql://") and not settings.DATABASE
 settings.DATABASE_URL = settings.DATABASE_URL.replace("sslmode=", "ssl=")
 settings.DATABASE_URL = settings.DATABASE_URL.replace("&channel_binding=require", "")
 settings.DATABASE_URL = settings.DATABASE_URL.replace("?channel_binding=require", "")
+
+
+
+

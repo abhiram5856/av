@@ -1,0 +1,42 @@
+{
+  "baseline": {
+    "field_val_acc": 0.7725788900979326,
+    "field_val_macro_f1": 0.551105783687025,
+    "lab_acc": 0.8188214599824098,
+    "lab_macro_f1": 0.8657040668043062,
+    "field_test_acc": 0.7440401505646174,
+    "field_test_macro_f1": 0.4660466334218938
+  },
+  "exp_A": {
+    "field_val_acc": 0.9434167573449401,
+    "field_val_macro_f1": 0.9388491835318911,
+    "lab_acc": 0.5004397537379067,
+    "lab_macro_f1": 0.13642916974221161
+  },
+  "exp_B": {
+    "field_val_acc": 0.9597388465723613,
+    "field_val_macro_f1": 0.952010416384824,
+    "lab_acc": 0.523306948109059,
+    "lab_macro_f1": 0.15724195992560755
+  },
+  "exp_C": {
+    "field_val_acc": 0.9455930359085963,
+    "field_val_macro_f1": 0.9416176496648945,
+    "lab_acc": 0.5171503957783641,
+    "lab_macro_f1": 0.17116545497009408
+  },
+  "exp_D": {
+    "field_val_acc": 0.9336235038084875,
+    "field_val_macro_f1": 0.9281706537860611,
+    "lab_acc": 0.5083553210202286,
+    "lab_macro_f1": 0.1325143177645336
+  },
+  "exp_E": {
+    "field_val_acc": 0.9499455930359086,
+    "field_val_macro_f1": 0.9492573657107194,
+    "lab_acc": 0.5479331574318381,
+    "lab_macro_f1": 0.25387595582735123
+  },
+  "winning_candidate": "baseline",
+  "promoted": false
+}

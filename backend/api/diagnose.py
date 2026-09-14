@@ -32,14 +32,20 @@ from backend.data.crud import get_or_create_user, create_diagnosis
 from backend.auth.security import verify_token
 from backend.core_logging.logger import api_logger
 
+from pathlib import Path
+
 router = APIRouter()
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+RULES_PATH = BASE_DIR / "knowledge_base" / "agronomic_rules.json"
+TRACE_RCE_CKPT = BASE_DIR / "backend" / "research" / "trace_rce_v3" / "checkpoints" / "best_model.pt"
+
 concern_scorer = MultimodalConcernScorer()
-evidence_engine = MultimodalEvidenceEngine(r"c:\Users\ABHIRAM MODUKURU\OneDrive\Desktop\AgriVision-AI\backend\services\rules.json") # Needs correct rules path, let's just use the current working dir one if it exists or mock it
+evidence_engine = MultimodalEvidenceEngine(str(RULES_PATH))
 image_gate = ImageQualityGate()
 
 root_cause_engine = TRACERootCauseEngineV3(
-    checkpoint_path=r"c:\Users\ABHIRAM MODUKURU\OneDrive\Desktop\AgriVision-AI\backend\research\trace_rce_v3\checkpoints\best_model.pt"
+    checkpoint_path=str(TRACE_RCE_CKPT) if TRACE_RCE_CKPT.exists() else None
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -68,43 +74,47 @@ _MEAN = MODEL_CONFIG["normalize_mean"]
 _STD  = MODEL_CONFIG["normalize_std"]
 _SIZE = MODEL_CONFIG["input_size"][0]  # 224
 
+
+
 tta_transforms = [
     # 1. Standard centre crop
     transforms.Compose([
-        transforms.Resize((_SIZE, _SIZE)),
+        transforms.Resize(256),
+        transforms.CenterCrop(_SIZE),
         transforms.ToTensor(),
         transforms.Normalize(_MEAN, _STD),
     ]),
     # 2. Horizontal flip
     transforms.Compose([
-        transforms.Resize((_SIZE, _SIZE)),
+        transforms.Resize(256),
+        transforms.CenterCrop(_SIZE),
         transforms.RandomHorizontalFlip(p=1.0),
         transforms.ToTensor(),
         transforms.Normalize(_MEAN, _STD),
     ]),
     # 3. Vertical flip
     transforms.Compose([
-        transforms.Resize((_SIZE, _SIZE)),
+        transforms.Resize(256),
+        transforms.CenterCrop(_SIZE),
         transforms.RandomVerticalFlip(p=1.0),
         transforms.ToTensor(),
         transforms.Normalize(_MEAN, _STD),
     ]),
-    # 4. Slightly larger crop — 240→224
+    # 4. Slightly larger crop
     transforms.Compose([
-        transforms.Resize((240, 240)),
-        transforms.CenterCrop((_SIZE, _SIZE)),
+        transforms.Resize(240),
+        transforms.CenterCrop(_SIZE),
         transforms.ToTensor(),
         transforms.Normalize(_MEAN, _STD),
     ]),
-    # 5. Even larger crop — 256→224
+    # 5. Even larger crop
     transforms.Compose([
-        transforms.Resize((256, 256)),
-        transforms.CenterCrop((_SIZE, _SIZE)),
+        transforms.Resize(272),
+        transforms.CenterCrop(_SIZE),
         transforms.ToTensor(),
         transforms.Normalize(_MEAN, _STD),
     ]),
 ]
-
 
 def _build_mobilenet_v3_small(num_classes: int) -> nn.Module:
     """
@@ -318,10 +328,18 @@ async def run_diagnosis(
             precip=12.5, wetness=10.0,
             raw={"temp": temperature, "humidity": humidity},
         )
+        rule = evidence_engine.rules.get(predicted_disease, {})
+        if is_healthy(predicted_disease):
+            treatment_text = rule.get("treatment", "Crop is healthy. Continue standard maintenance.")
+            source_text = "General Agronomy Guidelines"
+        else:
+            treatment_text = rule.get("treatment", "Consult local agricultural extension for specific treatments.")
+            source_text = "AgriVision Plant Pathology Database"
+
         builder.set_knowledge_context(
-            chunk_ids=["chk_icar_tom_p14"],
-            sources=["ICAR Tomato Guide 2024"],
-            text_block="Apply Mancozeb 75 WP at 2.5g/L for Late Blight.",
+            chunk_ids=[f"chk_{predicted_disease}"],
+            sources=[source_text],
+            text_block=treatment_text,
         )
 
         ai_context = builder.build()
@@ -423,7 +441,7 @@ async def run_diagnosis(
             
             "recommendation": {
                 "rag_response": root_cause_result.model_dump(mode="json"),
-                "retrieved_sources": ai_context.knowledge_context.get("sources", [])
+                "retrieved_sources": ai_context.knowledge.document_sources if getattr(ai_context, "knowledge", None) else []
             },
             
             # Legacy fields for backward compatibility
@@ -447,3 +465,4 @@ async def run_diagnosis(
         }
         api_logger.error(f"[MONITOR] {json.dumps(error_payload)}")
         raise HTTPException(status_code=500, detail=str(exc))
+

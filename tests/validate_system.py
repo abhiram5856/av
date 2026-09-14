@@ -8,6 +8,9 @@ import cv2
 from PIL import Image
 from fastapi.testclient import TestClient
 
+import sys
+sys.path.insert(0, '.')
+
 from backend.main import app
 
 def create_noise_image(w=224, h=224):

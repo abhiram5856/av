@@ -1,0 +1,7 @@
+Model/Experiment,Field Val Acc,Field Val Macro F1,Lab Test Acc,Lab Macro F1,Field Test Acc,Field Test Macro F1
+baseline,77.26%,55.11%,81.88%,86.57%,74.40%,46.60%
+exp_A,94.34%,93.88%,50.04%,13.64%,N/A,N/A
+exp_B,95.97%,95.20%,52.33%,15.72%,N/A,N/A
+exp_C,94.56%,94.16%,51.72%,17.12%,N/A,N/A
+exp_D,93.36%,92.82%,50.84%,13.25%,N/A,N/A
+exp_E,94.99%,94.93%,54.79%,25.39%,N/A,N/A

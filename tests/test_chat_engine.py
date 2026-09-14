@@ -51,7 +51,8 @@ def test_chat_engine_flow():
         query="Translate to English",
         context=[mock_search_result],
         chat_history=[ChatMessage(id=fixed_id, role="user", content="hello", timestamp=fixed_time)],
-        disease_context=None
+        disease_context=None,
+        iot_context=None
     )
     
     mock_llm.generate.assert_called_once_with("Final Prompt String")
