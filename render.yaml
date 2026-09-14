@@ -2,6 +2,7 @@
   - type: web
     name: novarcd-api
     env: docker
+    dockerContext: backend
     dockerfilePath: backend/Dockerfile
     plan: free # A minimum of 512MB RAM is recommended for FastAPI + FAISS
     region: ohio
@@ -25,4 +26,5 @@
     plan: free
     region: ohio
     ipAllowList: []
+
 
