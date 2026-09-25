@@ -151,7 +151,7 @@ export default function HardwareDashboard() {
   }, [fetchData]);
 
   if (!sensors) {
-    return <div className="p-8 text-center animate-pulse">Connecting to Field Nodes...</div>;
+    return <div className="p-8 text-center animate-pulse">{t("monitoring.connecting_nodes")}</div>;
   }
 
   return (
@@ -179,7 +179,7 @@ export default function HardwareDashboard() {
             <span className="text-xs text-muted-foreground ml-2">Node: Alpha-1</span>
           </div>
           {sensors?.is_simulated && (
-            <span className="text-[10px] uppercase tracking-widest bg-amber-500/20 text-amber-600 px-2 py-1 rounded-sm">Simulated Data</span>
+            <span className="text-[10px] uppercase tracking-widest bg-amber-500/20 text-amber-600 px-2 py-1 rounded-sm">{t("monitoring.simulated_data")}</span>
           )}
         </div>
       </div>
@@ -193,32 +193,32 @@ export default function HardwareDashboard() {
               <AlertTriangle className="h-5 w-5" /> {t("monitoring.predictive_risk")}
             </h2>
             {risk?.is_heuristic && (
-              <span className="text-[10px] uppercase tracking-widest bg-blue-500/10 text-blue-500 px-2 py-1 rounded-sm border border-blue-500/20">Heuristic</span>
+              <span className="text-[10px] uppercase tracking-widest bg-blue-500/10 text-blue-500 px-2 py-1 rounded-sm border border-blue-500/20">{t("monitoring.heuristic")}</span>
             )}
           </div>
           {risk ? (
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Fungal Risk</p>
+                <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">{t("monitoring.fungal_risk")}</p>
                 <p className={`text-lg font-bold ${risk.fungal_risk !== 'Low' ? 'text-amber-500' : 'text-emerald-500'}`}>
                   {risk.fungal_risk}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">{risk.fungal_risk_reason}</p>
               </div>
               <div className="border-t pt-3">
-                <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Irrigation Need</p>
+                <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">{t("monitoring.irrigation_need")}</p>
                 <p className={`text-lg font-bold ${risk.irrigation_status !== 'Adequate' ? 'text-blue-500' : 'text-emerald-500'}`}>
                   {risk.irrigation_status}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">{risk.irrigation_reason}</p>
               </div>
               <div className="border-t pt-3">
-                <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Overall Health</p>
+                <p className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">{t("monitoring.overall_health")}</p>
                 <p className="text-lg font-bold">{risk.overall_health}</p>
               </div>
             </div>
           ) : (
-            <div className="text-sm text-muted-foreground">Loading predictive risk models...</div>
+            <div className="text-sm text-muted-foreground">{t("monitoring.loading_risk")}</div>
           )}
         </div>
 
@@ -257,13 +257,13 @@ export default function HardwareDashboard() {
                 <Droplets className="h-8 w-8 text-blue-500" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Soil Moisture</p>
+                <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">{t("monitoring.soil_moisture")}</p>
                 <p className="text-3xl font-bold font-mono">{Math.round(sensors.moisture)}%</p>
               </div>
             </div>
             <div className="text-right">
               <span className={`text-xs px-2 py-1 rounded-full ${sensors.moisture > 40 ? 'bg-emerald-500/20 text-emerald-600' : 'bg-red-500/20 text-red-600'}`}>
-                {sensors.moisture > 40 ? 'Optimal' : 'Low'}
+                {sensors.moisture > 40 ? t("monitoring.optimal") : t("monitoring.low")}
               </span>
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function HardwareDashboard() {
                <div className="flex items-center gap-3">
                  <div className="bg-orange-500/20 p-3 rounded-full"><ThermometerSun className="h-6 w-6 text-orange-500" /></div>
                  <div>
-                   <p className="text-sm text-muted-foreground font-medium uppercase">Ambient Temp</p>
+                   <p className="text-sm text-muted-foreground font-medium uppercase">{t("monitoring.ambient_temp")}</p>
                    <p className="text-2xl font-bold font-mono">{sensors.temperature?.toFixed(1) || sensors.temp?.toFixed(1)}°C</p>
                  </div>
                </div>
@@ -283,7 +283,7 @@ export default function HardwareDashboard() {
                <div className="flex items-center gap-3">
                  <div className="bg-indigo-500/20 p-3 rounded-full"><CloudSun className="h-6 w-6 text-indigo-500" /></div>
                  <div>
-                   <p className="text-sm text-muted-foreground font-medium uppercase">Humidity</p>
+                   <p className="text-sm text-muted-foreground font-medium uppercase">{t("monitoring.humidity")}</p>
                    <p className="text-2xl font-bold font-mono">{sensors.humidity?.toFixed(1)}%</p>
                  </div>
                </div>

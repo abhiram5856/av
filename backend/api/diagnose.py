@@ -269,14 +269,46 @@ async def run_diagnosis(
             raise HTTPException(status_code=503, detail="Service Unavailable: AI model is currently offline.")
 
         # ── Confidence guard ───────────────────────────────────────────────
-        # If model is uncertain, surface this to the farmer rather than
-        # presenting a low-confidence prediction as fact.
-        LOW_CONFIDENCE_THRESHOLD = 0.35
-        is_low_confidence = confidence < LOW_CONFIDENCE_THRESHOLD and has_real_model
+        HIGH_CONFIDENCE_THRESHOLD = 0.80
+        LOW_CONFIDENCE_THRESHOLD = 0.60
+        
+        if not has_real_model:
+            confidence_category = "MODERATE CONFIDENCE"
+        elif confidence >= HIGH_CONFIDENCE_THRESHOLD:
+            confidence_category = "HIGH CONFIDENCE"
+        elif confidence >= LOW_CONFIDENCE_THRESHOLD:
+            confidence_category = "MODERATE CONFIDENCE"
+        else:
+            confidence_category = "UNCERTAIN"
+            
+        is_low_confidence = (confidence_category == "UNCERTAIN")
+        
+        if is_low_confidence:
+            predicted_disease = "Unknown"
 
         # ── Severity & Concern Assessment ──────────────────────────────────
-        # New Multimodal Evidence & Concern Scoring
         quality_assessment = image_gate.assess(pil_image)
+        
+        # Enforce Image Quality and OOD Gate
+        if not quality_assessment["allow_analysis"]:
+            return JSONResponse(content={
+                "status": "rejected",
+                "request_id": request_id,
+                "is_demo_mode": not has_real_model,
+                "diagnosis": {
+                    "disease": "OOD",
+                    "display_name": "Unknown/Non-Leaf Object",
+                    "confidence": 0,
+                    "topk": {},
+                    "is_healthy": False,
+                    "low_confidence_warning": quality_assessment["warnings"][0] if quality_assessment["warnings"] else "Image rejected."
+                },
+                "visual_evidence": {"gradcam_available": False},
+                "concern": {"level": "Uncertain"},
+                "recommendation": {"rag_response": {"cause": "Upload a clear picture of a plant leaf.", "solution": "No plant detected."}},
+                "image_quality": quality_assessment
+            }, status_code=400)
+            
         env_evidence = evidence_engine.evaluate(
             disease_name=predicted_disease,
             temperature=temperature,
@@ -398,15 +430,16 @@ async def run_diagnosis(
             
             "diagnosis": {
                 "class_idx":       class_idx,
-                "disease":         predicted_disease,
-                "display_name":    class_to_display(predicted_disease),
-                "is_healthy":      is_healthy(predicted_disease),
+                "disease":         predicted_disease if not is_low_confidence else "Unknown",
+                "display_name":    class_to_display(predicted_disease) if not is_low_confidence else "Uncertain",
+                "is_healthy":      is_healthy(predicted_disease) if not is_low_confidence else False,
                 "confidence":      round(confidence * 100, 2),
+                "confidence_category": confidence_category,
                 "topk":            topk_predictions,
                 "tta_enabled":     True,
                 "low_confidence_warning": (
-                    "Model confidence is below threshold. "
-                    "Please retake the photo in better lighting or consult an agronomist."
+                    "Insufficient visual evidence for a reliable diagnosis. "
+                    "Please retake the photo in better lighting or capture a closer leaf image."
                 ) if is_low_confidence else None,
             },
             

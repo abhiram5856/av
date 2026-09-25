@@ -60,6 +60,23 @@ class ImageQualityGate:
         elif mean_brightness > self.max_bright:
             warnings.append("Image is overexposed/too bright. Avoid direct glare.")
             status = "poor"
+        # OOD Rejection (Plant-color check)
+        hsv = cv2.cvtColor(cv_img, cv2.COLOR_BGR2HSV)
+        # Green range
+        lower_green = np.array([25, 40, 40])
+        upper_green = np.array([90, 255, 255])
+        # Yellow/Brown range (for diseased/dead leaves)
+        lower_yb = np.array([10, 30, 30])
+        upper_yb = np.array([25, 255, 255])
+        
+        mask_green = cv2.inRange(hsv, lower_green, upper_green)
+        mask_yb = cv2.inRange(hsv, lower_yb, upper_yb)
+        plant_ratio = np.count_nonzero(cv2.bitwise_or(mask_green, mask_yb)) / (w * h)
+        
+        if plant_ratio < 0.05:
+            warnings.append("Image does not appear to contain a leaf (OOD). Please upload a plant image.")
+            status = "rejected"
+            allow_analysis = False
             
         return {
             "status": status,

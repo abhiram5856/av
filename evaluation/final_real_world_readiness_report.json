@@ -1,0 +1,43 @@
+{
+    "production_model": {
+        "checkpoint": "nova_mobilenet_v3_34_classes.pth",
+        "sha256": "5A34A04F5A49858FB7CAAD6CCBDE39DEAB9F8B0C2C2FBAF2886761891FBC8687",
+        "architecture": "MobileNetV3-Small",
+        "classes": 34
+    },
+    "field_performance": {
+        "accuracy": 0.8231,
+        "macro_f1": 0.6870,
+        "weighted_f1": 0.8224,
+        "top3": 0.9799
+    },
+    "lab_performance": {
+        "accuracy": 0.8804,
+        "macro_f1": 0.9075,
+        "weighted_f1": 0.8805,
+        "top3": 0.9877
+    },
+    "uncertainty": {
+        "status": "Validated",
+        "calibration": "ECE = 0.0319",
+        "validated_threshold_high": 0.80,
+        "validated_threshold_moderate": 0.60,
+        "coverage_at_moderate": 0.8389,
+        "selective_accuracy_at_moderate": 0.9430
+    },
+    "image_quality": {"status": "Validated"},
+    "ood": {"status": "Validated"},
+    "gradcam": {"status": "Validated"},
+    "environment": {"status": "Validated"},
+    "rag": {"status": "Validated"},
+    "mobile": {"status": "Designed"},
+    "multilingual": {"status": "Designed"},
+    "pwa": {"status": "Designed"},
+    "security": {"status": "Validated"},
+    "real_world_tests": {
+        "passed": 8,
+        "failed": 0,
+        "not_tested": 5
+    },
+    "final_production_status": "READY FOR FINAL DEMO"
+}

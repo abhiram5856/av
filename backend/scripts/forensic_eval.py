@@ -133,44 +133,7 @@ def main():
     print("Evaluating Baseline...")
     base_res = evaluate_model(base_path, device, lab_loader, field_loader)
     
-    print("Evaluating Candidate...")
-    cand_res = evaluate_model(cand_path, device, lab_loader, field_loader) if os.path.exists(cand_path) else {}
-    
-    print("\n================== FINAL COMPARISON ==================")
-    print(f"{'Metric':<25} {'Production':<12} {'Candidate':<12} {'Delta':<12}")
-    
-    def print_metric(name, b_val, c_val, is_pct=True, lower_is_better=False):
-        if is_pct:
-            b_str, c_str = f"{b_val*100:.2f}%", f"{c_val*100:.2f}%"
-            delta = (c_val - b_val)*100
-            delta_str = f"{delta:+.2f}%"
-        else:
-            b_str, c_str = f"{b_val:.4f}", f"{c_val:.4f}"
-            delta = c_val - b_val
-            delta_str = f"{delta:+.4f}"
-            
-        print(f"{name:<25} {b_str:<12} {c_str:<12} {delta_str:<12}")
-
-    print_metric("Field Accuracy", base_res['field_acc'], cand_res.get('field_acc', 0.0))
-    print_metric("Field Macro F1", base_res['field_f1'], cand_res.get('field_f1', 0.0))
-    print_metric("Field Weighted F1", base_res["field_f1_weighted"], cand_res.get("field_f1_weighted", 0.0))
-    print_metric("Field Top-3", base_res.get("top3_acc", 0), cand_res.get("top3_acc", 0.0))
-    print_metric("Lab Accuracy", base_res['lab_acc'], cand_res.get('lab_acc', 0.0))
-    print_metric("Lab Macro F1", base_res['lab_f1'], cand_res.get('lab_f1', 0.0))
-    print_metric("Inference Latency", base_res['lat'], cand_res.get('lat', 0.0), is_pct=False)
-    print_metric("Model Size (MB)", base_res['size'], cand_res.get('size', 0.0), is_pct=False)
-    
-    print("\n--- BASELINE CONFUSIONS ---")
-    print_top_confusions(base_res['field_cm'], 5)
-    
-    print("\n--- CANDIDATE CONFUSIONS ---")
-    print_top_confusions(cand_res['field_cm'], 5)
-    
-    print("\n--- PER-CLASS FIELD METRICS (CANDIDATE vs BASELINE F1) ---")
-    for cls in CLASS_NAMES:
-        b_f1 = base_res['field_report'][cls]['f1-score']
-        c_f1 = cand_res['field_report'][cls]['f1-score']
-        print(f"{cls:40s} Base: {b_f1*100:5.1f}% -> Cand: {c_f1*100:5.1f}%  Diff: {(c_f1-b_f1)*100:+5.1f}%")
-        
-if __name__ == '__main__':
+    print("    print('Field Acc:', base_res['field_acc'], 'Macro F1:', base_res['field_f1'], 'Weighted:', base_res['field_f1_weighted'], 'Top3:', base_res['top3_acc'])
+    print('Lab Acc:', base_res['lab_acc'], 'Macro F1:', base_res['lab_f1'])
+if __name__=='__main__':
     main()

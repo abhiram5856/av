@@ -46,9 +46,9 @@ export default function SettingsPage() {
                 onChange={(e) => setTheme(e.target.value)}
                 className="h-10 px-3 rounded-md border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary w-full sm:w-48"
               >
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="system">System Default</option>
+                <option value="light">{t("settings.theme_light")}</option>
+                <option value="dark">{t("settings.theme_dark")}</option>
+                <option value="system">{t("settings.theme_system")}</option>
               </select>
             </div>
             

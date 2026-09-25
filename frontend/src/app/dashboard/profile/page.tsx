@@ -5,8 +5,10 @@ import { User, Mail, Calendar, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { createClient } from "@/utils/supabase/client";
 import { signOutAction } from "@/app/actions/auth";
+import { useTranslation } from "@/lib/i18n";
 
 export default function ProfilePage() {
+  const { t } = useTranslation();
   const [user, setUser] = useState<{
     email: string;
     firstName: string;
@@ -30,16 +32,16 @@ export default function ProfilePage() {
 
   const fullName = user
     ? `${user.firstName} ${user.lastName}`.trim()
-    : "Loading...";
+    : t("profile.loading");
 
   return (
     <div className="flex flex-col gap-6 max-w-2xl mx-auto w-full">
       <div className="border-b pb-4 mb-2">
         <h1 className="text-2xl font-semibold tracking-tight text-foreground">
-          Profile Settings
+          {t("profile.title")}
         </h1>
         <p className="text-sm text-muted-foreground mt-1">
-          Manage your account information and preferences.
+          {t("profile.subtitle")}
         </p>
       </div>
 
@@ -47,17 +49,17 @@ export default function ProfilePage() {
         
         {/* Profile Info Form (Read-only for now) */}
         <div className="space-y-4">
-          <h2 className="text-lg font-medium">Personal Information</h2>
+          <h2 className="text-lg font-medium">{t("profile.personal_info")}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Full Name</label>
+              <label className="text-sm font-medium text-foreground">{t("profile.full_name")}</label>
               <div className="flex items-center p-2.5 border rounded-md bg-muted/30">
                 <User className="h-4 w-4 mr-3 text-muted-foreground" />
                 <span className="text-sm">{fullName}</span>
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Email Address</label>
+              <label className="text-sm font-medium text-foreground">{t("profile.email")}</label>
               <div className="flex items-center p-2.5 border rounded-md bg-muted/30">
                 <Mail className="h-4 w-4 mr-3 text-muted-foreground" />
                 <span className="text-sm">{user?.email || "—"}</span>
@@ -65,7 +67,7 @@ export default function ProfilePage() {
             </div>
           </div>
           <div className="space-y-2">
-             <label className="text-sm font-medium text-foreground">Account Created</label>
+             <label className="text-sm font-medium text-foreground">{t("profile.account_created")}</label>
               <div className="flex items-center p-2.5 border rounded-md bg-muted/30 max-w-sm">
                 <Calendar className="h-4 w-4 mr-3 text-muted-foreground" />
                 <span className="text-sm">
@@ -82,7 +84,7 @@ export default function ProfilePage() {
         </div>
 
         <div className="pt-6 border-t">
-           <h2 className="text-lg font-medium text-destructive mb-4">Danger Zone</h2>
+           <h2 className="text-lg font-medium text-destructive mb-4">{t("profile.danger_zone")}</h2>
            <form action={signOutAction}>
              <Button
                type="submit"
@@ -90,7 +92,7 @@ export default function ProfilePage() {
                className="w-full sm:w-auto"
              >
                <LogOut className="h-4 w-4 mr-2" />
-               Sign Out
+               {t("profile.sign_out")}
              </Button>
            </form>
         </div>

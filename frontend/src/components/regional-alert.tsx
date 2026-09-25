@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AlertOctagon, X, MapPin } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 
 export function RegionalAlert() {
+  const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
   const pathname = usePathname();
 
@@ -43,14 +45,14 @@ export function RegionalAlert() {
               </div>
               <div>
                 <h4 className="font-semibold text-orange-500 flex items-center gap-1">
-                  Regional Outbreak Alert
+                  {t("regional.outbreak_title")}
                 </h4>
-                <p className="text-sm font-medium mt-1">Late Blight detected nearby</p>
+                <p className="text-sm font-medium mt-1">{t("regional.late_blight_detected")}</p>
                 <p className="text-xs text-muted-foreground mt-1 flex items-center">
-                  <MapPin className="h-3 w-3 mr-1" /> 4.2 km from your current location
+                  <MapPin className="h-3 w-3 mr-1" /> {t("regional.distance")}
                 </p>
                 <div className="mt-3 text-xs bg-orange-500/10 text-orange-600 p-2 rounded border border-orange-500/20">
-                  <span className="font-semibold">Recommended Action:</span> Apply preventative fungicide within 24 hours.
+                  <span className="font-semibold">{t("regional.recommended_action")}</span> {t("regional.fungicide_advice")}
                 </div>
               </div>
             </div>

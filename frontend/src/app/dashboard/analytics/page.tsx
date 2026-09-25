@@ -135,7 +135,7 @@ export default function AnalyticsPage() {
           <Card className="shadow-sm">
             <CardHeader>
               <CardTitle>{t("analytics.distribution")}</CardTitle>
-              <CardDescription>Breakdown of diagnosed plant conditions</CardDescription>
+              <CardDescription>{t("analytics.distribution_desc")}</CardDescription>
             </CardHeader>
             <CardContent className="h-[300px] flex justify-center items-center">
               <ResponsiveContainer width="100%" height="100%">
@@ -164,7 +164,7 @@ export default function AnalyticsPage() {
           <Card className="shadow-sm">
             <CardHeader>
               <CardTitle>{t("analytics.timeline")}</CardTitle>
-              <CardDescription>Average concern score progression</CardDescription>
+              <CardDescription>{t("analytics.timeline_desc")}</CardDescription>
             </CardHeader>
             <CardContent className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">

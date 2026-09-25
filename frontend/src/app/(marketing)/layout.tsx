@@ -25,12 +25,12 @@ export default function MarketingLayout({ children }: { children: ReactNode }) {
           </nav>
           <div className="flex items-center gap-3">
             <Link
-              href="/login"
+              href={process.env.NEXT_PUBLIC_DEMO_MODE === 'true' ? "/dashboard/disease" : "/login"}
               className="text-sm font-medium hover:text-primary transition-colors hidden sm:block"
             >
               Log in
             </Link>
-            <Link href="/signup" className={buttonVariants({ size: "sm", className: "rounded-xl" })}>
+            <Link href={process.env.NEXT_PUBLIC_DEMO_MODE === 'true' ? "/dashboard/disease" : "/signup"} className={buttonVariants({ size: "sm", className: "rounded-xl" })}>
               Get Started
             </Link>
           </div>

@@ -52,6 +52,7 @@ export function AppNavbar() {
             { href: "/dashboard/weather", label: t("nav.weather") },
             { href: "/dashboard/hardware", label: t("nav.monitoring") },
             { href: "/dashboard/analytics", label: t("nav.analytics") },
+            { href: "/dashboard/intelligence", label: t("nav.intelligence") },
             { href: "/dashboard/assistant", label: t("nav.assistant") },
             { href: "/dashboard/history", label: t("nav.history") },
           ].map(({ href, label }) => (

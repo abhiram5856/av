@@ -1,20 +1,24 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath("."))
-
 import json
 import time
 import random
+import psutil
+import gc
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader, ConcatDataset
+from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
 from torchvision import models, transforms
 from PIL import Image
+import traceback
 
-from backend.models.class_registry import CLASS_NAMES, NUM_CLASSES, MODEL_CONFIG, CLASS_TO_IDX, IDX_TO_CLASS
-from experiments.run_field_experiments import FieldImageDataset, LabImageDataset, evaluate_dataset, get_eval_transform, resolve_class_name
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(REPO_ROOT)
+
+from backend.models.class_registry import NUM_CLASSES, CLASS_TO_IDX, MODEL_CONFIG
+from backend.api.diagnose import tta_transforms
 
 SEED = 42
 torch.manual_seed(SEED)
@@ -22,144 +26,313 @@ np.random.seed(SEED)
 random.seed(SEED)
 if torch.cuda.is_available():
     torch.cuda.manual_seed_all(SEED)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
 
-BASE_DIR = os.path.normpath(r"c:\Users\ABHIRAM MODUKURU\OneDrive\Desktop\AgriVision-AI")
-WEIGHTS_DIR = os.path.join(BASE_DIR, "backend", "models", "weights")
-CHECKPOINT_PATH = os.path.join(WEIGHTS_DIR, MODEL_CONFIG["checkpoint_filename"])
-FIELD_DATA_DIR = os.path.join(BASE_DIR, "backend", "data", "processed_field_dataset")
-FIELD_SPLITS_PATH = os.path.join(BASE_DIR, "backend", "data", "field_splits.json")
-LAB_TRAIN_SPLIT_PATH = os.path.join(BASE_DIR, "evaluation", "clean_train_split.json")
-LAB_TEST_SPLIT_PATH = os.path.join(BASE_DIR, "evaluation", "clean_test_split.json")
-OUT_DIR = os.path.join(BASE_DIR, "evaluation", "field_improvement")
-os.makedirs(OUT_DIR, exist_ok=True)
+def print_memory_usage(prefix=""):
+    cpu_mem = psutil.virtual_memory()
+    gpu_mem = torch.cuda.memory_allocated() / (1024**3) if torch.cuda.is_available() else 0
+    gpu_res = torch.cuda.memory_reserved() / (1024**3) if torch.cuda.is_available() else 0
+    print(f"[{prefix}] CPU RAM: {cpu_mem.percent}% ({cpu_mem.used / (1024**3):.1f}GB / {cpu_mem.total / (1024**3):.1f}GB) | GPU Alloc: {gpu_mem:.2f}GB | GPU Res: {gpu_res:.2f}GB")
+    sys.stdout.flush()
 
-def train_joint_mixed_domain():
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Executing Joint Mixed Lab + Field Co-Training on device: {device}")
+class LazyImageDataset(Dataset):
+    def __init__(self, paths, transform=None):
+        self.samples = []
+        for p in paths:
+            cls_name = os.path.basename(os.path.dirname(p))
+            if cls_name in CLASS_TO_IDX:
+                if not os.path.isabs(p):
+                    p_field = os.path.join(REPO_ROOT, "backend", "data", "processed_field_dataset", p)
+                    p_lab = os.path.join(REPO_ROOT, p)
+                    if os.path.exists(p_field): p = p_field
+                    elif os.path.exists(p_lab): p = p_lab
+                if os.path.exists(p):
+                    self.samples.append((p, CLASS_TO_IDX[cls_name]))
+        self.transform = transform
+        
+    def __len__(self): return len(self.samples)
+    
+    def __getitem__(self, idx):
+        path, label = self.samples[idx]
+        with Image.open(path) as img:
+            img = img.convert('RGB')
+            if self.transform:
+                img = self.transform(img)
+        return img, label
 
-    # Load field train/val split
-    with open(FIELD_SPLITS_PATH, 'r') as f:
-        field_splits = json.load(f)
-    trainval_list = field_splits["trainval"]
-    test_list = field_splits["test"]
+def get_tta_eval(model, loader, device):
+    all_targets, all_preds = [], []
+    model.eval()
+    with torch.inference_mode():
+        for path, target in loader.dataset.samples:
+            all_targets.append(target)
+            with Image.open(path) as img:
+                img = img.convert('RGB')
+                tta_outs = []
+                for t in tta_transforms:
+                    tensor = t(img).unsqueeze(0).to(device, non_blocking=True)
+                    tta_outs.append(torch.nn.functional.softmax(model(tensor), dim=1))
+                
+            avg = torch.stack(tta_outs).mean(dim=0)
+            all_preds.append(torch.argmax(avg, dim=1).item())
+            
+    from sklearn.metrics import accuracy_score, f1_score
+    acc = accuracy_score(all_targets, all_preds)
+    mac = f1_score(all_targets, all_preds, average='macro', zero_division=0)
+    return acc, mac
 
-    random.seed(SEED)
-    shuffled_tv = list(trainval_list)
-    random.shuffle(shuffled_tv)
-    split_idx = int(0.8 * len(shuffled_tv))
-    field_train_list = shuffled_tv[:split_idx]
-    field_val_list = shuffled_tv[split_idx:]
+def train():
+    if not torch.cuda.is_available():
+        print("CUDA is NOT available. Halting as per instructions.")
+        return
+        
+    device = torch.device('cuda')
+    print(f"Using device: {device}")
+    
+    FIELD_SPLITS_PATH = os.path.join(REPO_ROOT, "backend", "data", "field_splits.json")
+    LAB_TRAIN_PATH = os.path.join(REPO_ROOT, "evaluation", "clean_train_split.json")
+    LAB_TEST_PATH = os.path.join(REPO_ROOT, "evaluation", "clean_test_split.json")
+    
+    with open(FIELD_SPLITS_PATH) as f: field_splits = json.load(f)
+    trainval_list = field_splits['trainval']
+    field_test_list = field_splits['test']
 
-    # Load lab train split & lab test split
-    with open(LAB_TRAIN_SPLIT_PATH, 'r') as f:
-        lab_train_dict = json.load(f)
-    with open(LAB_TEST_SPLIT_PATH, 'r') as f:
-        lab_test_dict = json.load(f)
+    # Deterministic split 80/20 for field train/val
+    trainval_list = sorted(list(set(trainval_list)))
+    random.shuffle(trainval_list)
+    split_idx = int(0.8 * len(trainval_list))
+    field_train_list = trainval_list[:split_idx]
+    field_val_list = trainval_list[split_idx:]
 
-    # Setup transforms
-    mean, std = MODEL_CONFIG["normalize_mean"], MODEL_CONFIG["normalize_std"]
-    size = MODEL_CONFIG["input_size"][0]
+    lab_train_list = []
+    with open(LAB_TRAIN_PATH) as f:
+        lab_data = json.load(f)
+        if isinstance(lab_data, dict):
+            for v in lab_data.values(): lab_train_list.extend(v)
+        else: lab_train_list = [i['path'] for i in lab_data]
+
+    lab_test_list = []
+    with open(LAB_TEST_PATH) as f:
+        lab_test_data = json.load(f)
+        if isinstance(lab_test_data, dict):
+            for v in lab_test_data.values(): lab_test_list.extend(v)
+        else: lab_test_list = [i['path'] for i in lab_test_data]
 
     train_tf = transforms.Compose([
-        transforms.RandomResizedCrop(size, scale=(0.8, 1.0)),
+        transforms.Resize(256),
+        transforms.RandomResizedCrop(224, scale=(0.8, 1.0)),
         transforms.RandomHorizontalFlip(),
         transforms.RandomRotation(15),
         transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
         transforms.ToTensor(),
-        transforms.Normalize(mean, std)
+        transforms.Normalize(mean=MODEL_CONFIG['normalize_mean'], std=MODEL_CONFIG['normalize_std'])
+    ])
+    
+    eval_tf = transforms.Compose([
+        transforms.Resize(256),
+        transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=MODEL_CONFIG['normalize_mean'], std=MODEL_CONFIG['normalize_std'])
     ])
 
-    eval_tf = get_eval_transform()
+    field_train_ds = LazyImageDataset(field_train_list, train_tf)
+    lab_train_ds = LazyImageDataset(lab_train_list, train_tf)
+    
+    # Controlled Sampling - We assign weights so Field samples are equally represented
+    # but don't overwhelm. Lab: 1.0 weight, Field: (len(lab) / len(field)) weight * 0.5
+    # Actually, simpler: Just concatenate, but use a proper dataset. Let's just concat for now.
+    from torch.utils.data import ConcatDataset
+    joint_ds = ConcatDataset([lab_train_ds, field_train_ds])
+    
+    field_val_ds = LazyImageDataset(field_val_list, eval_tf)
+    field_test_ds = LazyImageDataset(field_test_list, eval_tf)
+    lab_test_ds = LazyImageDataset(lab_test_list, eval_tf)
 
-    # Create datasets
-    field_train_ds = FieldImageDataset(field_train_list, transform=train_tf)
-    lab_train_ds = LabImageDataset(lab_train_dict, transform=train_tf)
+    batch_size = 8
+    gradient_accumulation = 4
+    
+    train_loader = DataLoader(joint_ds, batch_size=batch_size, shuffle=True, pin_memory=True, num_workers=0)
+    field_val_loader = DataLoader(field_val_ds, batch_size=batch_size, shuffle=False, pin_memory=True, num_workers=0)
+    lab_val_loader = DataLoader(lab_train_ds, batch_size=batch_size, shuffle=False, pin_memory=True, num_workers=0) # Just for quick eval, we'll use a subset if needed
 
-    # Combine Lab Train + Field Train datasets
-    joint_train_ds = ConcatDataset([lab_train_ds, field_train_ds])
-    print(f"Joint Dataset Sizes: Lab Train={len(lab_train_ds)}, Field Train={len(field_train_ds)}, Total Joint Train={len(joint_train_ds)}")
+    print(f"\n--- SETUP ---")
+    print(f"Device: {device}")
+    print(f"Batch Size: {batch_size}")
+    print(f"Gradient Accumulation: {gradient_accumulation}")
+    print(f"Effective Batch: {batch_size * gradient_accumulation}")
+    print(f"Train Dataset: {len(joint_ds)} (Lab: {len(lab_train_ds)}, Field: {len(field_train_ds)})")
+    print(f"Val Dataset: Field: {len(field_val_ds)}")
+    print(f"Test Dataset: Field: {len(field_test_ds)}, Lab: {len(lab_test_ds)}")
+    print_memory_usage("INIT")
 
-    joint_loader = DataLoader(joint_train_ds, batch_size=32, shuffle=True, num_workers=2)
-
-    val_dataset = FieldImageDataset(field_val_list, transform=eval_tf)
-    test_dataset = FieldImageDataset(test_list, transform=eval_tf)
-    lab_test_dataset = LabImageDataset(lab_test_dict, transform=eval_tf)
-
-    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False, num_workers=2)
-    test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False, num_workers=2)
-    lab_test_loader = DataLoader(lab_test_dataset, batch_size=32, shuffle=False, num_workers=2)
-
-    # Load base model checkpoint
     model = models.mobilenet_v3_small(weights=None)
-    in_features = model.classifier[3].in_features
-    model.classifier[3] = nn.Linear(in_features, NUM_CLASSES)
-    model.load_state_dict(torch.load(CHECKPOINT_PATH, map_location=device))
+    model.classifier[3] = nn.Linear(model.classifier[3].in_features, NUM_CLASSES)
+    production_path = os.path.join(REPO_ROOT, "backend", "models", "weights", "nova_mobilenet_v3_34_classes.pth")
+    model.load_state_dict(torch.load(production_path, map_location=device, weights_only=True))
     model.to(device)
 
+    for param in model.features[:-3].parameters():
+        param.requires_grad = False
+
+    optimizer = optim.AdamW(model.parameters(), lr=1e-5)
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.AdamW(model.parameters(), lr=1e-4, weight_decay=1e-4)
+    scaler = torch.amp.GradScaler('cuda')
 
-    epochs = 5
-    best_joint_score = 0.0
-    best_joint_ckpt = os.path.join(OUT_DIR, "mixed_joint_best.pth")
+    # SMOKE TEST
+    print("\n--- RUNNING SMOKE TEST ---")
+    model.train()
+    optimizer.zero_grad(set_to_none=True)
+    for i, (x, y) in enumerate(train_loader):
+        if i >= 2: break
+        x, y = x.to(device, non_blocking=True), y.to(device, non_blocking=True)
+        with torch.autocast(device_type='cuda', dtype=torch.float16):
+            out = model(x)
+            loss = criterion(out, y)
+        scaler.scale(loss).backward()
+    scaler.step(optimizer)
+    scaler.update()
+    optimizer.zero_grad(set_to_none=True)
+    print("Smoke test passed successfully!")
+    print_memory_usage("SMOKE")
 
-    for epoch in range(epochs):
+    best_val_acc = 0
+    
+    candidate_path = os.path.join(REPO_ROOT, "backend", "models", "weights", "candidate_field_domain_finetuned.pth")
+
+    for epoch in range(10):
+        print(f"\n--- EPOCH {epoch+1}/10 ---")
         model.train()
-        running_loss = 0.0
-        for imgs, targets in joint_loader:
-            imgs, targets = imgs.to(device), targets.to(device)
-            optimizer.zero_grad()
-            outputs = model(imgs)
-            loss = criterion(outputs, targets)
-            loss.backward()
-            optimizer.step()
-            running_loss += loss.item() * imgs.size(0)
+        optimizer.zero_grad(set_to_none=True)
+        
+        train_losses = []
+        for i, (x, y) in enumerate(train_loader):
+            x, y = x.to(device, non_blocking=True), y.to(device, non_blocking=True)
+            
+            with torch.autocast(device_type='cuda', dtype=torch.float16):
+                out = model(x)
+                loss = criterion(out, y)
+                loss = loss / gradient_accumulation
+                
+            scaler.scale(loss).backward()
+            
+            if (i + 1) % gradient_accumulation == 0 or (i + 1) == len(train_loader):
+                scaler.step(optimizer)
+                scaler.update()
+                optimizer.zero_grad(set_to_none=True)
+                
+            train_losses.append(loss.item() * gradient_accumulation)
+            
+            if i % 100 == 0:
+                print_memory_usage(f"E{epoch+1} B{i}")
+                
+            # Memory safety GC
+            del x, y, out, loss
+            
+        gc.collect()
+        torch.cuda.empty_cache()
 
-        # Evaluate on both Field Val AND Lab Test
-        field_val_res = evaluate_dataset(model, val_loader, device=device)
-        lab_test_res = evaluate_dataset(model, lab_test_loader, device=device)
+        model.eval()
+        from sklearn.metrics import accuracy_score, f1_score
+        
+        # Field Val
+        val_preds, val_targs = [], []
+        with torch.inference_mode():
+            for x, y in field_val_loader:
+                x = x.to(device, non_blocking=True)
+                with torch.autocast(device_type='cuda', dtype=torch.float16):
+                    out = model(x)
+                val_preds.extend(torch.argmax(out, dim=1).cpu().numpy())
+                val_targs.extend(y.numpy())
+        f_v_acc = accuracy_score(val_targs, val_preds)
+        f_v_mac = f1_score(val_targs, val_preds, average='macro', zero_division=0)
+        
+        print(f"Epoch {epoch+1} | Train Loss: {np.mean(train_losses):.4f} | Field Val Acc: {f_v_acc:.4f} | Field Val MacF1: {f_v_mac:.4f}")
+        print_memory_usage(f"E{epoch+1} END")
+        
+        # Save epoch checkpoint
+        torch.save(model.state_dict(), os.path.join(REPO_ROOT, f"candidate_epoch_{epoch+1:02d}.pth"))
+        
+        if f_v_acc > best_val_acc:
+            best_val_acc = f_v_acc
+            torch.save(model.state_dict(), candidate_path)
+            print("-> Saved new best candidate!")
 
-        field_acc = field_val_res["accuracy"]
-        lab_acc = lab_test_res["accuracy"]
-        joint_score = (field_acc + lab_acc) / 2.0
+    print("\n--- FINAL TTA EVALUATION ---")
+    
+    prod_model = models.mobilenet_v3_small(weights=None)
+    prod_model.classifier[3] = nn.Linear(prod_model.classifier[3].in_features, NUM_CLASSES)
+    prod_model.load_state_dict(torch.load(production_path, map_location=device, weights_only=True))
+    prod_model.to(device)
+    
+    p_f_acc, p_f_mac = get_tta_eval(prod_model, DataLoader(field_test_ds), device)
+    p_l_acc, p_l_mac = get_tta_eval(prod_model, DataLoader(lab_test_ds), device)
+    
+    print(f"PRODUCTION - Field TTA Acc: {p_f_acc:.4f}, Macro: {p_f_mac:.4f}")
+    print(f"PRODUCTION - Lab TTA Acc: {p_l_acc:.4f}, Macro: {p_l_mac:.4f}")
 
-        print(f"Epoch {epoch+1}/{epochs}: Loss={running_loss/len(joint_train_ds):.4f} | Field Val Acc={field_acc*100:.2f}% | Lab Test Acc={lab_acc*100:.2f}% | Joint Score={joint_score*100:.2f}%")
+    if os.path.exists(candidate_path):
+        cand_model = models.mobilenet_v3_small(weights=None)
+        cand_model.classifier[3] = nn.Linear(cand_model.classifier[3].in_features, NUM_CLASSES)
+        cand_model.load_state_dict(torch.load(candidate_path, map_location=device, weights_only=True))
+        cand_model.to(device)
+        
+        c_f_acc, c_f_mac = get_tta_eval(cand_model, DataLoader(field_test_ds), device)
+        c_l_acc, c_l_mac = get_tta_eval(cand_model, DataLoader(lab_test_ds), device)
+        
+        print(f"CANDIDATE - Field TTA Acc: {c_f_acc:.4f}, Macro: {c_f_mac:.4f}")
+        print(f"CANDIDATE - Lab TTA Acc: {c_l_acc:.4f}, Macro: {c_l_mac:.4f}")
+        
+        if c_f_mac >= 0.707 and c_f_acc >= 0.70 and c_l_acc >= 0.85 and c_l_mac >= 0.85 and (c_f_mac > p_f_mac or c_f_acc > p_f_acc):
+            print("DECISION: SAFE TO PROMOTE CANDIDATE")
+        else:
+            print("DECISION: KEEP CURRENT PRODUCTION")
+            
+        report_md = f"""# Field-Domain Fine-Tuning Final Report
 
-        if joint_score > best_joint_score:
-            best_joint_score = joint_score
-            torch.save(model.state_dict(), best_joint_ckpt)
+## Hardware / Settings
+- Device: CUDA
+- GPU: {torch.cuda.get_device_name(0)}
+- Batch Size: {batch_size} (Physical) x {gradient_accumulation} (Accumulation) = {batch_size * gradient_accumulation} (Effective)
+- AMP Enabled: True
+- Dataset Memory Strategy: Lazy Load (`Image.open` in `__getitem__` inside a context manager)
 
-    # Evaluate best joint checkpoint
-    best_joint_model = models.mobilenet_v3_small(weights=None)
-    best_joint_model.classifier[3] = nn.Linear(in_features, NUM_CLASSES)
-    best_joint_model.load_state_dict(torch.load(best_joint_ckpt, map_location=device))
-    best_joint_model.to(device)
+## Dataset Distribution
+- Field Train: {len(field_train_ds)}
+- Field Val: {len(field_val_ds)}
+- Field Test: {len(field_test_ds)}
+- Lab Train: {len(lab_train_ds)}
+- Lab Val/Test: {len(lab_test_ds)}
 
-    final_field_test_res = evaluate_dataset(best_joint_model, test_loader, device=device)
-    final_lab_test_res = evaluate_dataset(best_joint_model, lab_test_loader, device=device)
+## Production Baseline (5-View TTA)
+- Field Accuracy: {p_f_acc:.4f}
+- Field Macro F1: {p_f_mac:.4f}
+- Lab Accuracy: {p_l_acc:.4f}
+- Lab Macro F1: {p_l_mac:.4f}
 
-    print("\n--- JOINT MIXED-DOMAIN EVALUATION RESULTS ---")
-    print(f"Final Field Test Acc: {final_field_test_res['accuracy']*100:.2f}% (Macro F1: {final_field_test_res['macro_f1']*100:.2f}%)")
-    print(f"Final Lab Test Acc:   {final_lab_test_res['accuracy']*100:.2f}% (Macro F1: {final_lab_test_res['macro_f1']*100:.2f}%)")
+## Candidate (5-View TTA)
+- Field Accuracy: {c_f_acc:.4f}
+- Field Macro F1: {c_f_mac:.4f}
+- Lab Accuracy: {c_l_acc:.4f}
+- Lab Macro F1: {c_l_mac:.4f}
 
-    # If joint model preserves lab acc >= 80% AND improves field test accuracy, promote checkpoint!
-    if final_lab_test_res["accuracy"] >= 0.80 and final_field_test_res["accuracy"] >= 0.7440:
-        print(f"\nSUCCESS! Promoting Joint Mixed-Domain Checkpoint to Production: {CHECKPOINT_PATH}")
-        torch.save(best_joint_model.state_dict(), CHECKPOINT_PATH)
-        promoted = True
+## Decision
+"""
+        if c_f_mac >= 0.707 and c_f_acc >= 0.70 and c_l_acc >= 0.85 and c_l_mac >= 0.85 and (c_f_mac > p_f_mac or c_f_acc > p_f_acc):
+            report_md += "**SAFE TO PROMOTE CANDIDATE**"
+        else:
+            report_md += "**KEEP CURRENT PRODUCTION**"
+            
+        with open(os.path.join(REPO_ROOT, "evaluation", "field_domain_finetuning_final.md"), "w") as f:
+            f.write(report_md)
+            
     else:
-        print("\nJoint model did not outperform baseline on both targets simultaneously.")
-        promoted = False
+        print("Candidate not found.")
 
-    joint_record = {
-        "field_test_accuracy": final_field_test_res["accuracy"],
-        "field_test_macro_f1": final_field_test_res["macro_f1"],
-        "lab_test_accuracy": final_lab_test_res["accuracy"],
-        "lab_test_macro_f1": final_lab_test_res["macro_f1"],
-        "promoted_to_production": promoted
-    }
-    with open(os.path.join(OUT_DIR, "mixed_joint_results.json"), 'w') as f:
-        json.dump(joint_record, f, indent=2)
-
-if __name__ == "__main__":
-    train_joint_mixed_domain()
+if __name__ == '__main__':
+    try:
+        train()
+    except Exception as e:
+        with open('crash_log.txt', 'w') as f:
+            f.write(traceback.format_exc())
+        raise

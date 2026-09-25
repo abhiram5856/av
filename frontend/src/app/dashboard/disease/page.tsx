@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import {
@@ -69,12 +69,16 @@ export default function DiseaseDetectionPage() {
   // Live Weather States
   const [latitude, setLatitude] = useState<string>("17.3850"); // Default Hyderabad
   const [longitude, setLongitude] = useState<string>("78.4867");
+  const [locationSource, setLocationSource] = useState<"live" | "demo">("demo");
   const [temperature, setTemperature] = useState<string>("25.0");
   const [humidity, setHumidity] = useState<string>("60.0");
+  const [weatherSource, setWeatherSource] = useState<"live" | "demo">("demo");
+  const [weatherTimestamp, setWeatherTimestamp] = useState<string | null>(null);
   const [growthStage, setGrowthStage] = useState<string>("Unknown");
   const [weatherLoading, setWeatherLoading] = useState(true);
   
   const { t } = useTranslation();
+  const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === 'true';
   const language = useAppStore((state) => state.language);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const resultRef = useRef<HTMLDivElement>(null);
@@ -90,15 +94,45 @@ export default function DiseaseDetectionPage() {
 
   // Fetch Live Weather on Mount
   useEffect(() => {
-    const fetchWeather = async (lat: number, lon: number) => {
+    const fetchWeather = async (lat: number, lon: number, isLiveLocation: boolean) => {
+      // Very basic caching using sessionStorage
+      const cacheKey = `weather_${lat.toFixed(2)}_${lon.toFixed(2)}`;
+      const cached = sessionStorage.getItem(cacheKey);
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          // 30 min cache
+          if (Date.now() - parsed.timestamp < 30 * 60 * 1000) {
+            setLatitude(lat.toString());
+            setLongitude(lon.toString());
+            setLocationSource(isLiveLocation ? "live" : "demo");
+            setTemperature(parsed.temperature);
+            setHumidity(parsed.humidity);
+            setWeatherSource(isLiveLocation ? "live" : "demo");
+            setWeatherTimestamp(new Date(parsed.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+            setWeatherLoading(false);
+            return;
+          }
+        } catch (e) {
+          // ignore cache errors
+        }
+      }
+
       try {
         setLatitude(lat.toString());
         setLongitude(lon.toString());
+        setLocationSource(isLiveLocation ? "live" : "demo");
         const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m`);
         const data = await res.json();
         if (data.current) {
-          setTemperature(data.current.temperature_2m.toString());
-          setHumidity(data.current.relative_humidity_2m.toString());
+          const temp = data.current.temperature_2m.toString();
+          const hum = data.current.relative_humidity_2m.toString();
+          setTemperature(temp);
+          setHumidity(hum);
+          setWeatherSource(isLiveLocation ? "live" : "demo");
+          const now = Date.now();
+          setWeatherTimestamp(new Date(now).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+          sessionStorage.setItem(cacheKey, JSON.stringify({ temperature: temp, humidity: hum, timestamp: now }));
         }
       } catch (err) {
         console.error("Failed to fetch live weather", err);
@@ -109,15 +143,14 @@ export default function DiseaseDetectionPage() {
 
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
-        (position) => fetchWeather(position.coords.latitude, position.coords.longitude),
+        (position) => fetchWeather(position.coords.latitude, position.coords.longitude, true),
         (error) => {
           console.warn("Geolocation denied or failed, using defaults.", error);
-          setWeatherLoading(false);
+          fetchWeather(17.385, 78.4867, false);
         }
       );
     } else {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- geolocation unavailable: sets loading=false once, no cascading renders
-      setWeatherLoading(false);
+      fetchWeather(17.385, 78.4867, false);
     }
   }, []);
 
@@ -274,20 +307,43 @@ export default function DiseaseDetectionPage() {
     <div className="flex flex-col gap-6 max-w-4xl mx-auto w-full">
       {/* â”€â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="border-b pb-4">
-        <h1 className="text-2xl font-semibold tracking-tight text-foreground">
-          {t("nav.disease")}
-        </h1>
+        <div className="flex items-center gap-2">
+          <h1 className="text-2xl font-semibold tracking-tight text-foreground">
+            {t("nav.disease")}
+          </h1>
+          {isDemoMode && (
+            <Badge variant="destructive" className="ml-2 animate-pulse">
+              {t("demo_mode")}
+            </Badge>
+          )}
+        </div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-1 gap-2">
           <p className="text-sm text-muted-foreground">
-            Upload a clear photo of the affected plant leaf for analysis.
+            {t("disease.upload_hint")}
           </p>
-          <Badge variant="outline" className="text-xs bg-muted/30">
-            {weatherLoading ? (
-              <span className="flex items-center"><Loader2 className="h-3 w-3 mr-1 animate-spin" /> Locating...</span>
-            ) : (
-              <span className="flex items-center"><Thermometer className="h-3 w-3 mr-1" /> {temperature}Â°C | {humidity}% RH</span>
-            )}
-          </Badge>
+          <div className="flex gap-2 flex-wrap">
+            <Badge variant="outline" className="text-xs bg-muted/30">
+              {locationSource === "live" ? (
+                <span className="flex items-center text-emerald-600 dark:text-emerald-400">{t("location.live")}</span>
+              ) : (
+                <span className="flex items-center text-orange-600 dark:text-orange-400">{t("location.demo")}</span>
+              )}
+            </Badge>
+            <Badge variant="outline" className="text-xs bg-muted/30">
+              {weatherLoading ? (
+                <span className="flex items-center"><Loader2 className="h-3 w-3 mr-1 animate-spin" /> {t("disease.locating")}</span>
+              ) : (
+                <span className="flex items-center" title={`${t("weather.updated")} ${weatherTimestamp || 'unknown'}`}>
+                  <Thermometer className="h-3 w-3 mr-1" /> {temperature}Â°C | {humidity}% RH
+                  {weatherSource === "live" ? (
+                    <span className="ml-2 text-emerald-600 dark:text-emerald-400">({t("weather.live")})</span>
+                  ) : (
+                    <span className="ml-2 text-orange-600 dark:text-orange-400">({t("weather.demo")})</span>
+                  )}
+                </span>
+              )}
+            </Badge>
+          </div>
         </div>
       </div>
 
@@ -364,7 +420,7 @@ export default function DiseaseDetectionPage() {
                 {analyzing && (
                   <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm">
                     <Loader2 className="h-8 w-8 text-primary animate-spin mb-4" />
-                    <span className="font-medium">Analyzing image...</span>
+                    <span className="font-medium">{t("disease.analyzing_image")}</span>
                   </div>
                 )}
               </div>
@@ -381,7 +437,7 @@ export default function DiseaseDetectionPage() {
                   onClick={resetForm}
                   disabled={analyzing}
                 >
-                  <X className="mr-2 h-4 w-4" /> Change Image
+                  <X className="mr-2 h-4 w-4" /> {t("disease.change_image")}
                 </Button>
               </div>
 
@@ -397,7 +453,7 @@ export default function DiseaseDetectionPage() {
                     {t("disease.analyzing")}
                   </>
                 ) : (
-                  t("disease.upload")
+                  t("disease.analyze")
                 )}
               </Button>
 
@@ -461,14 +517,14 @@ export default function DiseaseDetectionPage() {
                 
                 <div className="flex flex-col gap-2">
                   <Button variant="outline" className="w-full justify-center" onClick={handleDownloadPDF}>
-                    <FileDown className="mr-2 h-4 w-4" /> Download Report
+                    <FileDown className="mr-2 h-4 w-4" /> {t("disease.download_report")}
                   </Button>
                 </div>
               </div>
 
               <div className="glass-panel p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-semibold flex items-center"><Camera className="mr-2 h-4 w-4" /> Visual Attention Evidence</h3>
+                  <h3 className="font-semibold flex items-center"><Camera className="mr-2 h-4 w-4" /> {t("disease.visual_attention")}</h3>
                   <Button variant="ghost" size="sm" onClick={() => setShowHeatmap(!showHeatmap)}>
                     {showHeatmap ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </Button>
@@ -480,11 +536,11 @@ export default function DiseaseDetectionPage() {
                     <img src={preview!} alt="Original" className="w-full h-full object-cover" />
                   )}
                   <div className="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-xs text-white">
-                    Model Confidence: {result.confidence}%
+                    {t("disease.model_confidence")}: {result.confidence}%
                   </div>
                 </div>
                 <div className="mt-4 flex justify-between text-sm">
-                  <span className="text-muted-foreground">Visual Evidence Level:</span>
+                  <span className="text-muted-foreground">{t("disease.visual_evidence_level")}:</span>
                   <span className="font-medium">{result.visualEvidenceLevel}</span>
                 </div>
               </div>
@@ -496,35 +552,35 @@ export default function DiseaseDetectionPage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 <div className="glass-panel p-4 flex flex-col items-center justify-center text-center">
                   <Thermometer className="h-5 w-5 mb-2 text-orange-500" />
-                  <span className="text-sm text-muted-foreground">Temp (Simulated)</span>
+                  <span className="text-sm text-muted-foreground">{t("disease.temp_simulated")}</span>
                   <span className="font-medium mt-1">{result.weather_temp}</span>
                 </div>
                 <div className="glass-panel p-4 flex flex-col items-center justify-center text-center">
                   <Droplets className="h-5 w-5 mb-2 text-blue-500" />
-                  <span className="text-sm text-muted-foreground">Humidity (Simulated)</span>
+                  <span className="text-sm text-muted-foreground">{t("disease.humidity_simulated")}</span>
                   <span className="font-medium mt-1">{result.weather_humidity}</span>
                 </div>
                 <div className="glass-panel p-4 flex flex-col items-center justify-center text-center">
                   <CloudRain className="h-5 w-5 mb-2 text-cyan-500" />
-                  <span className="text-sm text-muted-foreground">Soil Moisture</span>
-                  <span className="font-medium mt-1">Not available</span>
+                  <span className="text-sm text-muted-foreground">{t("disease.soil_moisture")}</span>
+                  <span className="font-medium mt-1">{t("disease.not_available")}</span>
                 </div>
                 <div className="glass-panel p-4 flex flex-col items-center justify-center text-center">
                   <Wind className="h-5 w-5 mb-2 text-emerald-500" />
-                  <span className="text-sm text-muted-foreground">Soil pH</span>
+                  <span className="text-sm text-muted-foreground">{t("disease.soil_ph")}</span>
                   <span className="font-medium mt-1">{result.weather_soil_ph}</span>
                 </div>
               </div>
 
               <div className="glass-panel p-6">
-                <h3 className="font-semibold flex items-center mb-4 text-lg">Context Summary</h3>
+                <h3 className="font-semibold flex items-center mb-4 text-lg">{t("disease.context_summary")}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-muted-foreground block mb-1">Environmental Compatibility:</span>
+                    <span className="text-muted-foreground block mb-1">{t("disease.env_compatibility")}:</span>
                     <Badge variant="secondary">{result.environmentalCompat}</Badge>
                   </div>
                   <div>
-                    <span className="text-muted-foreground block mb-1">Growth Stage:</span>
+                    <span className="text-muted-foreground block mb-1">{t("disease.growth_stage")}:</span>
                     <Badge variant="secondary">{result.growthStageSelected}</Badge>
                   </div>
                 </div>
@@ -532,7 +588,7 @@ export default function DiseaseDetectionPage() {
                 <div className="mt-6 space-y-4">
                   {result.contributingFactors.length > 0 && (
                     <div>
-                      <h4 className="font-medium text-emerald-600 dark:text-emerald-400 mb-2 flex items-center"><AlertTriangle className="h-4 w-4 mr-1" /> Contributing Factors</h4>
+                      <h4 className="font-medium text-emerald-600 dark:text-emerald-400 mb-2 flex items-center"><AlertTriangle className="h-4 w-4 mr-1" /> {t("disease.contributing_factors")}</h4>
                       <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
                         {result.contributingFactors.map((f, i) => <li key={i}>{f}</li>)}
                       </ul>
@@ -541,7 +597,7 @@ export default function DiseaseDetectionPage() {
                   
                   {result.limitingFactors.length > 0 && (
                     <div className="mt-4 pt-4 border-t border-border">
-                      <h4 className="font-medium text-orange-600 dark:text-orange-400 mb-2 flex items-center"><X className="h-4 w-4 mr-1" /> Limiting Factors</h4>
+                      <h4 className="font-medium text-orange-600 dark:text-orange-400 mb-2 flex items-center"><X className="h-4 w-4 mr-1" /> {t("disease.limiting_factors")}</h4>
                       <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
                         {result.limitingFactors.map((f, i) => <li key={i}>{f}</li>)}
                       </ul>
@@ -554,7 +610,7 @@ export default function DiseaseDetectionPage() {
                 <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
                   <FileText className="h-32 w-32" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">AI Agronomist Recommendation</h3>
+                <h3 className="text-lg font-bold mb-4">{t("disease.ai_recommendation")}</h3>
                 
                 {result.isHealthy ? (
                   <div className="prose prose-sm dark:prose-invert max-w-none">
