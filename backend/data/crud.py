@@ -37,6 +37,8 @@ async def create_diagnosis(
         temperature=diagnosis_data.get("temperature"),
         humidity=diagnosis_data.get("humidity"),
         ph_level=diagnosis_data.get("ph_level"),
+        latitude=diagnosis_data.get("latitude"),
+        longitude=diagnosis_data.get("longitude"),
         gradcam_heatmap=diagnosis_data.get("gradcam_heatmap"),
         root_cause_json=diagnosis_data.get("root_cause_json")
     )

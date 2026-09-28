@@ -1,28 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { 
   Users, Activity, Database, AlertTriangle, ShieldCheck, 
-  MapPin, Settings, Server, ChevronRight
+  Settings, Server, ChevronRight, BarChart2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
-
-const MOCK_REGIONS = [
-  { region: "North Zone", scans: 1240, highRisk: 420 },
-  { region: "South Zone", scans: 3100, highRisk: 150 },
-  { region: "East Zone", scans: 850, highRisk: 300 },
-  { region: "West Zone", scans: 2200, highRisk: 890 },
-];
 
 export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading global stats
-    const timer = setTimeout(() => setLoading(false), 1000);
+    // Replace with real admin stats API when available
+    const timer = setTimeout(() => setLoading(false), 300);
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,7 +31,7 @@ export default function AdminDashboard() {
       {/* Sidebar */}
       <aside className="w-64 border-r bg-card/50 backdrop-blur-xl hidden md:flex flex-col">
         <div className="p-6 border-b">
-          <h2 className="text-xl font-bold text-gradient flex items-center gap-2">
+          <h2 className="text-xl font-bold flex items-center gap-2">
             <ShieldCheck className="text-primary h-6 w-6" /> NOVA Admin
           </h2>
         </div>
@@ -72,10 +63,7 @@ export default function AdminDashboard() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-8 overflow-y-auto relative">
-        {/* Background Blob */}
-        <div className="absolute top-[-20%] right-[-10%] w-[50vw] h-[50vw] bg-primary/5 shape-blob-2 mix-blend-multiply blur-3xl opacity-50 z-[-1] pointer-events-none" />
-
+      <main className="flex-1 p-8 overflow-y-auto">
         <div className="max-w-6xl mx-auto space-y-8">
           
           <header className="flex items-center justify-between">
@@ -88,64 +76,39 @@ export default function AdminDashboard() {
             </Button>
           </header>
 
-          {/* KPI Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <Card className="glass-panel">
-              <CardContent className="p-6">
-                <p className="text-sm font-medium text-muted-foreground mb-1">Total Active Farmers</p>
-                <p className="text-3xl font-bold">14,209</p>
-                <p className="text-xs text-emerald-500 mt-2 flex items-center">+12% this month</p>
-              </CardContent>
-            </Card>
-            <Card className="glass-panel">
-              <CardContent className="p-6">
-                <p className="text-sm font-medium text-muted-foreground mb-1">Total Scans Analyzed</p>
-                <p className="text-3xl font-bold">142,850</p>
-                <p className="text-xs text-emerald-500 mt-2 flex items-center">+5.2k today</p>
-              </CardContent>
-            </Card>
-            <Card className="glass-panel border-orange-500/20">
-              <CardContent className="p-6">
-                <p className="text-sm font-medium text-muted-foreground mb-1">Critical Outbreaks</p>
-                <p className="text-3xl font-bold text-orange-500">24</p>
-                <p className="text-xs text-orange-500 mt-2 flex items-center">Active regional alerts</p>
-              </CardContent>
-            </Card>
-            <Card className="glass-panel">
-              <CardContent className="p-6">
-                <p className="text-sm font-medium text-muted-foreground mb-1">Avg Model Confidence</p>
-                <p className="text-3xl font-bold">94.2%</p>
-                <p className="text-xs text-emerald-500 mt-2 flex items-center">Stable</p>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Platform Status — no fabricated KPIs */}
+          <Card className="border-border/50">
+            <CardContent className="p-8 flex flex-col items-center justify-center text-center gap-3 min-h-[160px]">
+              <BarChart2 className="h-10 w-10 text-muted-foreground/40" />
+              <p className="font-semibold text-muted-foreground">Platform analytics not yet available.</p>
+              <p className="text-sm text-muted-foreground/70">
+                Real-time statistics will appear here once the admin analytics API is connected.
+              </p>
+            </CardContent>
+          </Card>
 
-          {/* Regional Risk Map (Chart) */}
+          {/* Regional Risk — removed MOCK_REGIONS */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <Card className="lg:col-span-2 glass-panel">
+            <Card className="lg:col-span-2 border-border/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-primary" /> Regional Risk Distribution
+                <CardTitle className="flex items-center gap-2 text-base">
+                  Regional Risk Distribution
                 </CardTitle>
               </CardHeader>
-              <CardContent className="h-[300px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={MOCK_REGIONS} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                    <CartesianGrid strokeDasharray="3 3" opacity={0.2} vertical={false} />
-                    <XAxis dataKey="region" tick={{fontSize: 12}} />
-                    <YAxis tick={{fontSize: 12}} />
-                    <Tooltip cursor={{fill: 'transparent'}} />
-                    <Bar dataKey="scans" name="Total Scans" fill="#3b82f6" radius={[4, 4, 0, 0]} />
-                    <Bar dataKey="highRisk" name="High Risk Scans" fill="#f97316" radius={[4, 4, 0, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
+              <CardContent className="flex flex-col items-center justify-center min-h-[240px] gap-3 text-center">
+                <p className="text-sm font-medium text-muted-foreground">
+                  Regional analytics are not available yet.
+                </p>
+                <p className="text-xs text-muted-foreground/70">
+                  More recorded observations are needed to display this view.
+                </p>
               </CardContent>
             </Card>
 
             {/* RAG System Status */}
-            <Card className="glass-panel">
+            <Card className="border-border/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-base">
                   <Database className="h-5 w-5 text-purple-500" /> RAG Knowledge Base
                 </CardTitle>
               </CardHeader>

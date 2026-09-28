@@ -59,3 +59,13 @@ uvicorn_err.txt
 gate0_output.txt
 eval_output.txt
 evaluation_out.txt
+
+# New ignores to prevent large pushes
+*.zip
+*.sst
+backend/data/external_field_clean/
+backend/data/agrivision.db
+docs/
+evaluation/
+backend/data/external_field/
+frontend/public/models/

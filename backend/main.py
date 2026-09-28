@@ -15,13 +15,13 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from backend.config.settings import settings
-from backend.api import chat, history, health, config, diagnose, report, iot, predict_risk
+from backend.api import chat, history, health, config, diagnose, report, iot, predict_risk, intelligence, alerts
 from backend.core.middleware import CorrelationIdMiddleware
 from backend.core.exceptions import ZenithAgriBotError
 from backend.core_logging.logger import api_logger
 
 
-limiter = Limiter(key_func=get_remote_address)
+from backend.core.limiter import limiter
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
@@ -31,6 +31,18 @@ app.state.limiter = limiter
 
 # Rate limiter exception handler
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+from backend.core.database import engine, Base
+import backend.models.db_models
+
+@app.on_event("startup")
+async def on_startup():
+    try:
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
+        api_logger.info("Database initialized successfully.")
+    except Exception as e:
+        api_logger.error(f"Database initialization error: {e}")
 
 # Custom Global Exception Handler for ZenithAgriBotError hierarchy
 @app.exception_handler(ZenithAgriBotError)
@@ -80,6 +92,7 @@ app.add_middleware(CorrelationIdMiddleware)
 
 # Include routers
 app.include_router(chat.router, prefix="/api/v1/chat", tags=["Chat"])
+app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
 app.include_router(history.router, prefix="/api/v1/history", tags=["History"])
 app.include_router(health.router, prefix="", tags=["Health"])
 app.include_router(config.router, prefix="/api/v1/config", tags=["Config"])
@@ -87,4 +100,5 @@ app.include_router(diagnose.router, prefix="/api/v1/diagnose", tags=["Diagnosis"
 app.include_router(report.router, prefix="/api/v1", tags=["Report"])
 app.include_router(iot.router, prefix="/api/v1/iot", tags=["IoT"])
 app.include_router(predict_risk.router, prefix="/api/v1/predict-risk", tags=["Predictive Risk"])
-
+app.include_router(intelligence.router, prefix="/api/v1/intelligence", tags=["Intelligence"])
+app.include_router(alerts.router, prefix="/api/v1/alerts", tags=["Alerts"])

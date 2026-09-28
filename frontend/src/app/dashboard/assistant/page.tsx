@@ -54,7 +54,7 @@ export default function AssistantPage() {
 
     try {
       const currentLanguage = useAppStore.getState().language;
-      const data = await fetchFromAPI("/api/chat", {
+      const data = await fetchFromAPI("/api/v1/chat", {
         method: "POST",
         body: JSON.stringify({ query: input, language: currentLanguage }),
       });

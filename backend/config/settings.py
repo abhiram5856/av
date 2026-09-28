@@ -2,8 +2,16 @@ import os
 from typing import List
 from pydantic_settings import BaseSettings
 
+_BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_DB_PATH: str = os.path.join(_BASE_DIR, 'data', 'agrivision.db').replace('\\', '/')
+_DEFAULT_DB: str = f"sqlite+aiosqlite:///{_DB_PATH}"
+
 class Settings(BaseSettings):
-    model_config = {'extra': 'ignore', 'env_file': '.env', 'env_file_encoding': 'utf-8'}
+    model_config = {
+        'extra': 'ignore', 
+        'env_file': (os.path.join(_BASE_DIR, '.env'), '.env'), 
+        'env_file_encoding': 'utf-8'
+    }
 
     # App Config
     APP_NAME: str = "Zenith AgriBot API"
@@ -13,8 +21,8 @@ class Settings(BaseSettings):
     # API Keys
     OPENWEATHER_API_KEY: str = ""
 
-    # Database Config
-    DATABASE_URL: str = "postgresql+asyncpg://nova_admin:nova_secure_pass@localhost:5432/nova_db"
+    # Database Config - defaults to resilient local SQLite; override with PostgreSQL in production
+    DATABASE_URL: str = _DEFAULT_DB
 
     # Paths
     BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

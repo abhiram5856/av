@@ -1,6 +1,6 @@
 import { AppNavbar } from "@/components/app-navbar";
 import { BottomNav } from "@/components/bottom-nav";
-import { RegionalAlert } from "@/components/regional-alert";
+import { Header } from "@/components/header";
 
 export default function DashboardLayout({
   children,
@@ -14,7 +14,6 @@ export default function DashboardLayout({
         {children}
       </main>
       <BottomNav />
-      <RegionalAlert />
     </div>
   );
 }

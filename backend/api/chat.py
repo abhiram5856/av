@@ -158,6 +158,7 @@ ANSWER:"""
     return prompt
 
 
+@router.post("", response_model=ChatResponse)
 @router.post("/", response_model=ChatResponse)
 async def process_chat(request: ChatRequest):
     t_start = time.perf_counter()

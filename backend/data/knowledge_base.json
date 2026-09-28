@@ -1,0 +1,1818 @@
+{
+  "schema_version": "2.0.0",
+  "generated_by": "AgriVision-AI Knowledge Quality Pass",
+  "note": "Fields marked NOT_AVAILABLE indicate genuine absence of source-backed evidence. Do NOT infer or fabricate.",
+  "diseases": {
+    "chilli_healthy": {
+      "canonical_class": "chilli_healthy",
+      "crop": "Chilli",
+      "disease_name": "Healthy Chilli",
+      "common_names": ["healthy chilli leaf"],
+      "scientific_name": null,
+      "disease_type": "healthy",
+      "pathogen_or_cause": null,
+      "primary_plant_parts_affected": [],
+      "leaf_symptoms": "No visible symptoms. Leaves are dark green, flat, and turgid with no lesions, curl, or discoloration.",
+      "stem_symptoms": null,
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": null,
+      "advanced_symptoms": null,
+      "visual_appearance": "Uniform dark green color, intact leaf margins, no lesions or mottling.",
+      "distinctive_symptom_pattern": null,
+      "lookalike_conditions": ["chilli_leaf_curl", "chilli_leaf_spot"],
+      "visual_differentiation": "Healthy leaves lack any curl, lesions, spots, or yellowing.",
+      "disease_cycle_summary": null,
+      "spread_mechanism": null,
+      "favorable_environmental_conditions": null,
+      "monitoring_guidance": "Inspect weekly for early signs of leaf curl (viral) or circular spots (fungal). Scout lower canopy first.",
+      "prevention": "Use certified virus-free seeds. Control thrips and aphid vectors. Apply balanced fertilization. Avoid water stress. Maintain proper spacing for airflow.",
+      "cultural_management": "Remove volunteer chilli plants. Maintain field hygiene. Avoid waterlogging.",
+      "sanitation": "Remove crop debris after harvest. Practice crop rotation with non-solanaceous crops.",
+      "water_irrigation_management": "Avoid overhead irrigation where possible. Maintain soil moisture without waterlogging.",
+      "crop_rotation": "Rotate with cereals or legumes. Avoid planting chilli after tomato, pepper, or potato (solanaceous family).",
+      "resistant_varieties": "NOT_AVAILABLE — consult ICAR-IIVR or state KVK for current resistant variety recommendations.",
+      "biological_control": null,
+      "chemical_control": null,
+      "expert_escalation_conditions": null,
+      "knowledge_completeness": "MEDIUM",
+      "knowledge_notes": "Healthy class — monitoring and prevention are primary knowledge domains.",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR (Indian Institute of Vegetable Research)",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "chilli_leaf_curl": {
+      "canonical_class": "chilli_leaf_curl",
+      "crop": "Chilli",
+      "disease_name": "Chilli Leaf Curl",
+      "common_names": ["Chilli Leaf Curl Disease", "Chilli Curl Virus"],
+      "scientific_name": "Chilli Leaf Curl Virus (ChiLCV) — a Begomovirus; also associated with Chilli Veinal Mottle Virus (ChiVMV)",
+      "disease_type": "viral",
+      "pathogen_or_cause": "Begomovirus (predominantly Chilli Leaf Curl Virus, ChiLCV); transmitted by whitefly (Bemisia tabaci)",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Growing tips"],
+      "leaf_symptoms": "Marked upward or downward curling and rolling of leaves. Leaves become leathery, distorted, and wrinkled. Older leaves show crinkling with interveinal mottling. Leaf size is reduced.",
+      "stem_symptoms": "Shortening of internodes; stunted plant growth. Tip curl in growing shoots.",
+      "fruit_pod_tuber_symptoms": "Fruits are small, distorted, and misshapen. Yield is significantly reduced.",
+      "early_symptoms": "Youngest leaves curl upward or inward. Mild mottling or yellowing at leaf margins.",
+      "advanced_symptoms": "Severe curling of most leaves. Interveinal clearing. Stunted plant. Premature leaf fall.",
+      "visual_appearance": "Affected leaves are curled, cupped, and chlorotic. Plant appears bushy but stunted.",
+      "distinctive_symptom_pattern": "Upward/downward curling combined with interveinal mottling and leaf distortion; characteristic of Begomovirus infection. Whiteflies may be visible on the lower leaf surface.",
+      "lookalike_conditions": ["chilli_leaf_spot", "Herbicide injury (causes similar curl)", "Nutrient deficiency (zinc deficiency can cause curl)"],
+      "visual_differentiation": "Curl virus causes distinctive puckering and interveinal mottling alongside curling. Leaf spot produces discrete circular lesions without curling.",
+      "disease_cycle_summary": "ChiLCV overwinters in alternate hosts. Whiteflies (Bemisia tabaci) acquire the virus from infected plants and transmit it to healthy chilli within minutes of feeding. The disease spreads rapidly in warm, dry conditions when whitefly populations are high.",
+      "spread_mechanism": "Exclusively vector-transmitted through whitefly Bemisia tabaci (persistent, circulative manner). Not mechanically transmitted or soil-borne.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (25–35°C) favor whitefly population build-up and virus spread.",
+        "humidity_context": "Low relative humidity (40–60%) is associated with high whitefly activity and disease spread.",
+        "rainfall_wetness_context": "Dry conditions favor whitefly multiplication. Monsoon rains reduce whitefly activity.",
+        "soil_context": "NOT_AVAILABLE — no specific soil factor established for this viral disease."
+      },
+      "growth_stage_context": "Most damaging at seedling and early vegetative stages. Plants infected before flowering suffer severe yield loss.",
+      "monitoring_guidance": "Monitor for whitefly populations weekly. Use yellow sticky traps (1 per 250 m²). Inspect growing tips and underside of young leaves. Scout field borders first as whiteflies colonize edges.",
+      "prevention": "Use virus-free certified seeds. Use healthy nursery transplants. Raise nursery under 50-mesh nylon net to exclude whitefly. Remove weed hosts (e.g., Solanum nigrum) from field borders. Avoid growing chilli near tomato or other solanaceous crops to reduce whitefly buildup.",
+      "cultural_management": "Remove and destroy heavily infected plants immediately. Intercrop with maize or sorghum rows as wind barriers to reduce whitefly movement. Reflective mulches (silver polyethylene) reduce whitefly landing.",
+      "sanitation": "Uproot and destroy crop debris after harvest. Remove alternate host weeds. Do not carry infected plant material between fields.",
+      "water_irrigation_management": "Maintain plant vigor with adequate irrigation. Avoid water stress, which can worsen susceptibility.",
+      "crop_rotation": "Avoid successive chilli or solanaceous crops in the same field.",
+      "resistant_varieties": "Some tolerant varieties exist. Consult ICAR-IIVR or state agricultural universities for current resistant variety recommendations for your region.",
+      "biological_control": "Encourage natural enemies of whitefly (e.g., Encarsia formosa parasitoid, Chrysoperla eggs). Release 50,000 Chrysoperla eggs/ha at early infestation stage where commercially available.",
+      "chemical_control": "Use only products currently registered/labeled for whitefly control on chilli in your region. Systemic insecticides targeting Bemisia tabaci are commonly used in India — consult local agricultural extension or product label for current registered options and rates. Avoid overuse of any single class of insecticide to prevent resistance.",
+      "expert_escalation_conditions": "If more than 30–40% plants show symptoms, and whitefly control is not reducing spread, contact plant pathologist or agricultural extension officer. Entire field may need replanting with resistant variety.",
+      "knowledge_completeness": "HIGH",
+      "knowledge_notes": "Predominantly managed through vector control, not fungicide. Specific chemical names excluded to avoid hallucination of rates/registration.",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR (Indian Institute of Vegetable Research)",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI/Plantwise PlantwisePlus",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ANGRAU (Acharya N G Ranga Agricultural University)",
+          "url": "https://www.angrau.ac.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "chilli_leaf_spot": {
+      "canonical_class": "chilli_leaf_spot",
+      "crop": "Chilli",
+      "disease_name": "Chilli Leaf Spot (Cercospora Leaf Spot / Anthracnose Leaf Spot)",
+      "common_names": ["Chilli Leaf Spot", "Cercospora Leaf Spot of Chilli"],
+      "scientific_name": "Cercospora capsici (Heald & F.A. Wolf) — Cercospora leaf spot; Colletotrichum spp. can also cause fruit/leaf spots",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Cercospora capsici (primary fungal cause of Cercospora leaf spot in chilli)",
+      "primary_plant_parts_affected": ["Leaves", "Petioles", "Fruits (in advanced stages)"],
+      "leaf_symptoms": "Circular to irregular water-soaked lesions that turn brown with pale gray or white necrotic centers. Lesions typically have a yellow halo. Multiple lesions coalesce to form larger irregular blighted areas. Affected leaves turn yellow and drop prematurely.",
+      "stem_symptoms": "Stem lesions possible on petioles causing defoliation.",
+      "fruit_pod_tuber_symptoms": "In severe cases, dark sunken lesions may appear on fruits.",
+      "early_symptoms": "Small water-soaked circular spots (2–5 mm) on leaf surface, initially pale green.",
+      "advanced_symptoms": "Spots enlarge to 1–2 cm, turn brown with gray-white centers. Mass defoliation. Lower canopy affected first.",
+      "visual_appearance": "Brown circular spots with pale gray centers and prominent yellow chlorotic halos on leaves. Concentric ring patterns may be visible.",
+      "distinctive_symptom_pattern": "Circular lesions with gray-white powdery centers (due to fungal sporulation) and yellow halo; predominantly on lower/older leaves.",
+      "lookalike_conditions": ["Phytophthora leaf spot (larger, water-soaked, margin less distinct)", "Chilli bacterial spot (angular lesions constrained by veins)", "Chilli anthracnose (sunken spots, more on fruit)"],
+      "visual_differentiation": "Cercospora leaf spot produces circular gray-centered lesions with yellow halos. Bacterial spot produces angular water-soaked lesions limited by leaf veins.",
+      "disease_cycle_summary": "Cercospora capsici survives in infected crop debris and soil. Spores (conidia) are dispersed by wind and rain splash. Infection is favored by warm, humid conditions. Multiple infection cycles can occur in one season.",
+      "spread_mechanism": "Wind dispersal and rain splash of fungal spores (conidia).",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Optimal temperature range 25–30°C for disease development. ICAR sources document significant infection at these warm temperatures.",
+        "humidity_context": "High relative humidity (>80%) and prolonged leaf wetness (>6 hours) facilitate spore germination and infection.",
+        "rainfall_wetness_context": "Frequent rainfall and overhead irrigation promote rain splash dispersal of spores. Disease is severe in humid tropical regions during wet season.",
+        "soil_context": "NOT_AVAILABLE — no specific soil factor established beyond general crop hygiene."
+      },
+      "growth_stage_context": "Disease most common at vegetative and flowering stages. Lower canopy leaves affected earliest due to higher humidity near ground.",
+      "monitoring_guidance": "Inspect lower canopy leaves weekly. Count lesion number on 10 randomly selected plants. High incidence warrants intervention. Scout after prolonged wet or humid weather.",
+      "prevention": "Use certified disease-free seeds. Treat seeds with hot water (52°C for 30 minutes) or recommended fungicide before planting. Space plants adequately (60 × 45 cm) for airflow. Avoid overhead irrigation.",
+      "cultural_management": "Remove and destroy infected leaves and crop debris. Avoid working in the field when leaves are wet (to prevent mechanical spread). Use drip irrigation over overhead spray.",
+      "sanitation": "Deep plough and destroy crop debris after harvest. Avoid leaving infected chilli plants in field.",
+      "water_irrigation_management": "Use drip or furrow irrigation rather than overhead sprinkler. Irrigate in the morning to allow leaves to dry during the day.",
+      "crop_rotation": "Rotate with cereals or legumes for at least 2 seasons to reduce soil inoculum. Avoid consecutive chilli/capsicum crops.",
+      "resistant_varieties": "Some tolerant varieties have been identified at ICAR-IIVR. Consult current state KVK recommendations for varieties available in your region.",
+      "biological_control": "NOT_AVAILABLE — no commercially validated biocontrol agent for Cercospora on chilli documented in reviewed Indian sources.",
+      "chemical_control": "Use only products currently registered/labeled for Cercospora leaf spot on chilli in your region and follow product label guidance. Copper-based fungicides and mancozeb-based products are commonly referenced in Indian extension literature; however, specific rates and intervals must follow current product labels and local extension recommendation.",
+      "expert_escalation_conditions": "If defoliation exceeds 40–50% or lesions appear on fruits, contact agricultural extension immediately. Repeated fungicide failure warrants resistance testing.",
+      "knowledge_completeness": "HIGH",
+      "knowledge_notes": "Specific chemical rates excluded to avoid hallucination. Indian extension sources confirm warm humid conditions as primary risk factor.",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR (Indian Institute of Vegetable Research)",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "TNAU Agritech Portal",
+          "url": "https://agritech.tnau.ac.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "corn_gray_leaf_spot": {
+      "canonical_class": "corn_gray_leaf_spot",
+      "crop": "Maize (Corn)",
+      "disease_name": "Gray Leaf Spot of Maize",
+      "common_names": ["Maize Gray Leaf Spot", "Cercospora Leaf Spot of Maize"],
+      "scientific_name": "Cercospora zeina and Cercospora zeae-maydis",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Cercospora zeina (predominant in sub-Saharan Africa and parts of Asia) and Cercospora zeae-maydis",
+      "primary_plant_parts_affected": ["Leaves", "Leaf sheaths"],
+      "leaf_symptoms": "Rectangular to elongated gray-tan lesions bounded by leaf veins on both sides, giving a rectangular appearance unique among maize diseases. Lesions are initially tan-brown, becoming grayish-white to pale tan as they age. Lesions may coalesce to cause blighting of entire leaves.",
+      "stem_symptoms": "Leaf sheaths may also be affected with irregular tan lesions.",
+      "fruit_pod_tuber_symptoms": "Husk and ear leaves may show lesions in severe cases.",
+      "early_symptoms": "Small, yellowish-tan water-soaked rectangular spots (2–4 mm wide, up to 50 mm long) on lower leaves.",
+      "advanced_symptoms": "Lesions expand lengthwise, turn pale gray, and are bounded by veins on either side. Mass leaf blighting causes early senescence. Lower leaves affected first.",
+      "visual_appearance": "Distinctive rectangular or oblong pale gray lesions aligned with leaf venation. Lesions have parallel edges due to vein restriction.",
+      "distinctive_symptom_pattern": "Rectangular gray lesions with parallel edges (constrained by leaf veins) are pathognomonic for Gray Leaf Spot.",
+      "lookalike_conditions": ["Northern Corn Leaf Blight (larger cigar-shaped elliptical lesions, not vein-constrained)", "Southern Corn Leaf Blight (smaller elongated lesions)", "Eyespot (smaller circular lesions with yellow halo)"],
+      "visual_differentiation": "GLS lesions are strictly rectangular/vein-constrained and gray-tan. NCLB lesions are cigar-shaped, tan-brown, not constrained by veins.",
+      "disease_cycle_summary": "C. zeina survives on infected crop debris in soil. Conidia are released under high humidity and spread via wind/rain splash to lower canopy leaves. Disease progresses upward. Favorable conditions allow rapid multiplication through multiple cycles.",
+      "spread_mechanism": "Wind and rain splash of conidia from infected crop residue.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Optimal development between 25–30°C. Disease is severe in warm humid areas.",
+        "humidity_context": "Prolonged high relative humidity (>90%) and leaf wetness (>11 hours) are strongly associated with infection. Dew formation is critical.",
+        "rainfall_wetness_context": "Frequent rainfall and high dew periods support epidemic development. Conservation tillage that leaves crop residue is a major risk factor.",
+        "soil_context": "NOT_AVAILABLE — no specific soil association documented; conservation tillage practice is the key risk factor."
+      },
+      "growth_stage_context": "Most damaging when infection occurs before tasseling (VT/R1). Lower canopy leaves infected at vegetative stage; progresses to ear leaves affecting grain fill.",
+      "monitoring_guidance": "Scout at VT/R1 stage for lesions on lower leaf canopy. Assess percentage leaf area affected on ear leaf and two leaves above/below.",
+      "prevention": "Plant resistant/tolerant hybrids (primary management strategy). Rotate crops with non-host (soybean, wheat). Avoid conservation tillage on high-risk fields or implement residue management. Improve plant spacing and row orientation for better airflow.",
+      "cultural_management": "Bury or remove crop residue. Practice crop rotation. Plant resistant hybrids.",
+      "sanitation": "Deep ploughing to bury residue. Avoid leaving large amounts of maize debris on the soil surface.",
+      "water_irrigation_management": "Avoid excessive irrigation that creates high humidity conditions near the canopy.",
+      "crop_rotation": "Rotate with non-grass crops (soybean, cotton, legumes) to reduce residue-borne inoculum.",
+      "resistant_varieties": "Resistant hybrids are the most effective management approach. Consult ICAR-IIMR, state agricultural universities or seed company for current GLS-resistant maize hybrids recommended for your region.",
+      "biological_control": "NOT_AVAILABLE — no commercially established biocontrol for GLS documented in reviewed sources.",
+      "chemical_control": "Use only products currently registered/labeled for Gray Leaf Spot on maize in your region. Foliar fungicides (triazoles, strobilurins) are used in severe cases — consult local agricultural extension for registered options, rates, and application timing.",
+      "expert_escalation_conditions": "If disease progresses above the ear leaf before grain fill (R2–R3), yield loss may be severe. Contact extension officer for economic threshold assessment.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "CIMMYT (International Maize and Wheat Improvement Center)",
+          "url": "https://www.cimmyt.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIMR (Indian Institute of Maize Research)",
+          "url": "https://iimr.icar.gov.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "corn_leaf_blight": {
+      "canonical_class": "corn_leaf_blight",
+      "crop": "Maize (Corn)",
+      "disease_name": "Northern Corn Leaf Blight (NCLB)",
+      "common_names": ["Turcicum Blight", "Northern Leaf Blight", "Helminthosporium Leaf Blight"],
+      "scientific_name": "Exserohilum turcicum (Pass.) K.J. Leonard & Suggs (formerly Helminthosporium turcicum)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Exserohilum turcicum",
+      "primary_plant_parts_affected": ["Leaves", "Husks", "Leaf sheaths"],
+      "leaf_symptoms": "Large, cigar-shaped (elliptical) tan-brown lesions 2.5–15 cm long with regular tan or grayish coloring. Lesions have wavy, irregular margins (not vein-constrained). Sporulation produces an olive-green to grayish mass of conidia on lesion surface under humid conditions.",
+      "stem_symptoms": "Husk and sheath lesions possible in severe infections.",
+      "fruit_pod_tuber_symptoms": "Husk leaves may show lesions in severe cases.",
+      "early_symptoms": "Small, elliptical pale green to grayish water-soaked lesions on lower leaves.",
+      "advanced_symptoms": "Large cigar-shaped lesions (up to 15 cm). Lesions coalesce causing complete leaf blight. Disease progresses from lower to upper canopy.",
+      "visual_appearance": "Long tan-brown cigar-shaped lesions on both leaf surfaces. Lesions do not respect vein boundaries (distinguishing from Gray Leaf Spot).",
+      "distinctive_symptom_pattern": "Cigar-shaped (fusiform) large tan lesions on maize leaves — a key diagnostic feature. Olive-gray sporulation visible in humid conditions.",
+      "lookalike_conditions": ["Gray Leaf Spot (rectangular, vein-constrained, smaller)", "Southern Corn Leaf Blight (smaller, more elongated lesions)"],
+      "visual_differentiation": "NCLB lesions are large, cigar-shaped, and NOT bounded by veins; GLS lesions are rectangular and constrained by veins.",
+      "disease_cycle_summary": "E. turcicum overwinters in crop residue. Conidia released under moisture conditions are dispersed by wind. Infection requires 6–18 hours of continuous leaf wetness. Disease progresses from lower to upper canopy.",
+      "spread_mechanism": "Wind dispersal of conidia from infected crop residue.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Cool to moderate temperatures (18–27°C) favor infection. Optimal sporulation at 18–22°C.",
+        "humidity_context": "High relative humidity and prolonged leaf wetness are critical. Minimum 6 hours of leaf wetness for infection.",
+        "rainfall_wetness_context": "Rain and dew are critical drivers. Cool nights that maintain dew promote rapid disease development.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Most damaging when infection occurs before tasseling. Ear leaf infection during grain fill is most economically significant.",
+      "monitoring_guidance": "Scout at V6–V8 and VT/R1. Assess lesion area on ear leaf and surrounding leaves. Economic threshold typically 5% leaf area infected on ear leaf at tasseling.",
+      "prevention": "Plant resistant hybrids (primary strategy). Practice crop rotation with non-host crops. Incorporate residue through tillage where appropriate.",
+      "cultural_management": "Crop rotation reduces inoculum. Bury residue. Choose hybrids with NCLB resistance.",
+      "sanitation": "Deep plough to incorporate debris. Remove infected plants in small plots.",
+      "water_irrigation_management": "Avoid excessive moisture through correct irrigation management.",
+      "crop_rotation": "Rotate with soybean, legumes, or cotton to reduce residue-borne inoculum.",
+      "resistant_varieties": "NCLB-resistant maize hybrids are available. Consult ICAR-IIMR or seed companies for current resistant hybrid recommendations in your area.",
+      "biological_control": "NOT_AVAILABLE — no established commercial biocontrol in reviewed Indian sources.",
+      "chemical_control": "Use only products currently registered/labeled for NCLB on maize in your region. Consult local extension for registered foliar fungicide options and application timing.",
+      "expert_escalation_conditions": "If more than 50% of leaf area above the ear is blighted before grain fill, contact extension officer for yield loss assessment.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIMR (Indian Institute of Maize Research)",
+          "url": "https://iimr.icar.gov.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CIMMYT",
+          "url": "https://www.cimmyt.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "corn_rust_leaf": {
+      "canonical_class": "corn_rust_leaf",
+      "crop": "Maize (Corn)",
+      "disease_name": "Common Rust of Maize",
+      "common_names": ["Common Corn Rust", "Maize Rust"],
+      "scientific_name": "Puccinia sorghi Schwein.",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Puccinia sorghi Schwein.",
+      "primary_plant_parts_affected": ["Leaves", "Leaf sheaths", "Husks"],
+      "leaf_symptoms": "Cinnamon-brown to brick-red oval to elongated pustules (uredia) scattered on both upper and lower leaf surfaces. Pustules are 1–4 mm in diameter and rupture the epidermis, releasing powdery reddish-brown urediniospores. Later in season, pustules may turn dark brown-black (telia).",
+      "stem_symptoms": "Leaf sheaths and husks may be affected.",
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": "Small pale chlorotic flecks visible before pustule eruption. Then small raised powdery cinnamon pustules appear.",
+      "advanced_symptoms": "Dense pustules cover large portions of leaf. Leaf tissue around pustules may become chlorotic. Premature senescence.",
+      "visual_appearance": "Brick-red raised powdery pustules on both leaf surfaces. When numerous, leaves appear rusty or orange-brown.",
+      "distinctive_symptom_pattern": "Powdery reddish-brown pustules on both leaf surfaces — characteristic of rust infections. Pustules erupt through leaf epidermis.",
+      "lookalike_conditions": ["Southern Rust (Puccinia polysora — pustules mainly on upper leaf surface, orange, smaller, more densely packed)", "Common bunt (different crop stage and appearance)"],
+      "visual_differentiation": "Common rust: pustules on both surfaces, brick-red color. Southern rust: pustules predominantly on upper surface, more orange-colored, very dense.",
+      "disease_cycle_summary": "Puccinia sorghi requires two hosts: maize (uredial/telial stage) and Oxalis spp. (aecial stage). In tropical regions, urediniospores cycle continuously on maize without the alternate host. Spread by wind over long distances.",
+      "spread_mechanism": "Airborne dispersal of urediniospores over long distances.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Optimal temperature for infection is 15–20°C with mild conditions. Temperatures above 30°C slow development.",
+        "humidity_context": "High relative humidity and free moisture on leaf surface (dew, rain) for 6–12 hours are required for spore germination.",
+        "rainfall_wetness_context": "Frequent rain events and dew promote infection. Disease more severe in elevated or highland areas with cooler temperatures.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Most damaging if infection occurs at tasseling (VT) or early grain fill (R1). Late season infection is generally less economically important.",
+      "monitoring_guidance": "Scout for early pustules on ear leaves and lower leaves at V8–VT. Economic threshold varies by hybrid resistance and stage — consult local extension.",
+      "prevention": "Plant resistant hybrids (most effective strategy). Avoid planting susceptible hybrids in areas with historically high rust pressure.",
+      "cultural_management": "Early planting to reduce coincidence with disease-favorable conditions. Resistant hybrids are primary management.",
+      "sanitation": "NOT_APPLICABLE — rust dispersal is airborne and long-distance; field sanitation has limited impact on common rust.",
+      "water_irrigation_management": "Avoid irrigation methods that keep canopy wet for extended periods.",
+      "crop_rotation": "NOT_APPLICABLE for common rust — inoculum arrives by wind from external sources.",
+      "resistant_varieties": "Resistant hybrids are the primary management strategy. Consult ICAR-IIMR or regional seed companies for current rust-resistant maize hybrids.",
+      "biological_control": "NOT_AVAILABLE.",
+      "chemical_control": "Use only products currently registered/labeled for maize rust in your region. Foliar fungicide application at early tasseling may be warranted on susceptible hybrids — consult local extension for registered options and economic threshold guidance.",
+      "expert_escalation_conditions": "If pustule coverage exceeds 25% of ear leaf area at tasseling, consult extension for fungicide decision guidance.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIMR",
+          "url": "https://iimr.icar.gov.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CIMMYT",
+          "url": "https://www.cimmyt.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "cotton_bacterial_blight": {
+      "canonical_class": "cotton_bacterial_blight",
+      "crop": "Cotton",
+      "disease_name": "Cotton Bacterial Blight (Angular Leaf Spot)",
+      "common_names": ["Angular Leaf Spot", "Cotton Blight", "Blackarm"],
+      "scientific_name": "Xanthomonas citri pv. malvacearum (Smith) Dye (formerly Xanthomonas campestris pv. malvacearum)",
+      "disease_type": "bacterial",
+      "pathogen_or_cause": "Xanthomonas citri pv. malvacearum",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Bolls", "Seedlings"],
+      "leaf_symptoms": "Water-soaked angular lesions constrained by leaf veins. Lesions turn dark brown to black (giving 'blackarm' appearance on stems). Under humid conditions, bacterial ooze may be visible. Older lesions dry out and become papery.",
+      "stem_symptoms": "Dark angular, water-soaked lesions on stems and petioles progressing to blackening ('blackarm'). Infected stems may crack and ooze bacterial exudate.",
+      "fruit_pod_tuber_symptoms": "Dark, sunken lesions on bolls. Infected bolls may not open; internal lint is stained. Boll rot can result from secondary infections.",
+      "early_symptoms": "Small water-soaked translucent spots on seedling cotyledons or true leaves, angular and constrained by veins.",
+      "advanced_symptoms": "Large necrotic angular dark lesions on leaves. Premature defoliation. Blackened stems. Boll infection.",
+      "visual_appearance": "Dark brown to black angular leaf lesions with a water-soaked margin. Angular vein-bounded pattern is distinctive.",
+      "distinctive_symptom_pattern": "Angular (vein-bounded) water-soaked lesions that turn black. Blackening of stems/petioles ('blackarm') is highly distinctive.",
+      "lookalike_conditions": ["Fusarium wilt (vascular, wilting pattern different)", "Alternaria leaf spot (circular, not angular)"],
+      "visual_differentiation": "Angular blackened lesions bounded by leaf veins; 'blackarm' on stems are diagnostic. Fungal spots are circular/irregular, not angular.",
+      "disease_cycle_summary": "Pathogen survives in infected seed and crop debris. Spread by rain splash, wind, irrigation, and infected seed. Infection occurs through stomata and wounds during wet weather.",
+      "spread_mechanism": "Rain splash, contaminated seed, irrigation water, farm equipment, and insects.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (25–35°C) combined with wet conditions promote infection.",
+        "humidity_context": "High humidity (>80%) and free moisture on leaves are required for infection and spread.",
+        "rainfall_wetness_context": "Periods of frequent rain especially at seedling stage are most dangerous. Thunderstorms create wounds that allow entry.",
+        "soil_context": "NOT_AVAILABLE — no specific soil association documented."
+      },
+      "growth_stage_context": "Seedling stage is most vulnerable. Infection at flowering/boll development causes significant yield loss through boll rot.",
+      "monitoring_guidance": "Inspect seedlings and leaf canopy weekly after rains. Blackarm symptoms on stems require immediate action. Monitor seed sources for bacterial contamination.",
+      "prevention": "Use certified disease-free or treated seeds. Practice crop rotation. Avoid working in fields when plants are wet. Remove infected plant debris after harvest.",
+      "cultural_management": "Remove and destroy infected plant material. Avoid overhead irrigation. Space plants correctly for canopy airflow.",
+      "sanitation": "Deep ploughing of infected debris. Do not save seed from infected crops. Disinfect farm tools.",
+      "water_irrigation_management": "Use furrow or drip irrigation. Avoid flood irrigation that spreads contaminated water. Avoid overhead irrigation.",
+      "crop_rotation": "Rotate with cereals or other non-host crops for at least 2 seasons.",
+      "resistant_varieties": "Resistant cotton varieties have been developed. Consult ICAR-CICR (Central Institute for Cotton Research) or state agricultural universities for current resistant variety recommendations.",
+      "biological_control": "NOT_AVAILABLE in reviewed sources.",
+      "chemical_control": "Use only products currently registered/labeled for cotton bacterial blight in your region. Copper-based bactericides are commonly referenced — consult local agricultural extension for registered options, rates, and timing.",
+      "expert_escalation_conditions": "Blackarm on stems combined with boll infection warrants immediate expert consultation. Affected seed lots should not be used for planting.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-CICR (Central Institute for Cotton Research)",
+          "url": "https://www.cicr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "cotton_healthy": {
+      "canonical_class": "cotton_healthy",
+      "crop": "Cotton",
+      "disease_name": "Healthy Cotton",
+      "common_names": ["healthy cotton leaf"],
+      "scientific_name": null,
+      "disease_type": "healthy",
+      "pathogen_or_cause": null,
+      "primary_plant_parts_affected": [],
+      "leaf_symptoms": "No visible symptoms. Leaves are dark green, firm, and structurally intact.",
+      "stem_symptoms": null,
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": null,
+      "advanced_symptoms": null,
+      "visual_appearance": "Uniform deep green leaves with intact lobed structure.",
+      "distinctive_symptom_pattern": null,
+      "lookalike_conditions": ["cotton_bacterial_blight", "cotton_leaf_curl_virus"],
+      "visual_differentiation": "Healthy cotton leaves show no angular spots, no curling, and no blackening.",
+      "disease_cycle_summary": null,
+      "spread_mechanism": null,
+      "favorable_environmental_conditions": null,
+      "monitoring_guidance": "Scout weekly for early symptoms of leaf curl virus (upward curling, vein thickening) and bacterial blight (angular spots). Monitor whitefly and sucking pest populations regularly.",
+      "prevention": "Use certified disease-free planting material. Control whitefly populations to prevent Cotton Leaf Curl Virus (CLCuV). Maintain balanced fertilization and proper irrigation.",
+      "cultural_management": "Maintain field hygiene. Remove and destroy host weeds. Ensure proper crop spacing.",
+      "sanitation": "Remove cotton crop debris after harvest. Deep plough to bury residue.",
+      "water_irrigation_management": "Avoid waterlogging. Cotton is sensitive to both drought and excess moisture.",
+      "crop_rotation": "Rotate with wheat, sorghum, or legumes.",
+      "resistant_varieties": "NOT_AVAILABLE for general advice — consult ICAR-CICR for current recommendations.",
+      "biological_control": null,
+      "chemical_control": null,
+      "expert_escalation_conditions": null,
+      "knowledge_completeness": "MEDIUM",
+      "source_references": [
+        {
+          "organization": "ICAR-CICR",
+          "url": "https://www.cicr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "cotton_leaf_curl_virus": {
+      "canonical_class": "cotton_leaf_curl_virus",
+      "crop": "Cotton",
+      "disease_name": "Cotton Leaf Curl Disease (CLCuD)",
+      "common_names": ["Cotton Leaf Curl", "CLCuD"],
+      "scientific_name": "Cotton Leaf Curl Virus (CLCuV) — a complex of Begomoviruses; most damaging is Cotton Leaf Curl Kokhran Virus (CLCuKoV) associated with CLCuMuB betasatellite",
+      "disease_type": "viral",
+      "pathogen_or_cause": "Cotton Leaf Curl Virus complex (CLCuV), transmitted by whitefly Bemisia tabaci (Genn.)",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Growing tips", "Bolls"],
+      "leaf_symptoms": "Upward curling of leaves (primary diagnostic feature). Thickening, darkening, and enation (outgrowths) on underside of leaf veins. Leaf becomes cup-shaped with curled margins. Vein swelling and leaf thickening are characteristic.",
+      "stem_symptoms": "Stem enations and curling. Internodes shorten. Plant is stunted.",
+      "fruit_pod_tuber_symptoms": "Fewer and smaller bolls. Boll quality is poor.",
+      "early_symptoms": "Upward curling of young leaves. Mild darkening and thickening of leaf veins.",
+      "advanced_symptoms": "Severe upward curling of most leaves. Pronounced vein thickening and enation on lower surface. Severe stunting. Drastically reduced boll production.",
+      "visual_appearance": "Upward-curled, cup-shaped leaves with prominent thickened/enated veins on underside. Dark green leaves.",
+      "distinctive_symptom_pattern": "Upward leaf curl PLUS dark enations (raised ridges/warts) on the underside of leaf veins is pathognomonic for CLCuD. Distinguished from nutritional curl by these vein enations.",
+      "lookalike_conditions": ["Physiological leaf curl (from water stress — no enations)", "Zinc deficiency (different pattern, no enations)", "Aphid/thrips feeding damage (without enations)"],
+      "visual_differentiation": "CLCuD: upward curl WITH distinct vein thickening and enations on underside. Physiological curl from stress: no enations, leaf returns to normal when stress relieved.",
+      "disease_cycle_summary": "CLCuV survives in infected plants and weed hosts. Whitefly (Bemisia tabaci) transmits the virus persistently (circulative manner). The virus cannot be transmitted by seed, mechanical contact, or other means. Whitefly population explosions in hot dry conditions drive epidemic spread.",
+      "spread_mechanism": "Exclusively vector-transmitted by whitefly Bemisia tabaci. Persistent, circulative transmission — whitefly acquires virus in 24–48 hours of feeding and can transmit for its lifetime.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "High temperatures (30–40°C) favor whitefly population growth and virus spread. CLCuD epidemics are most severe in hot dry conditions.",
+        "humidity_context": "Low-moderate humidity favors whitefly multiplication. High humidity reduces whitefly activity.",
+        "rainfall_wetness_context": "Dry weather periods favor whitefly build-up and CLCuD spread.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Plants are susceptible throughout vegetative stages. Infection before 60 days of growth causes severe yield loss. Late infections (after bolls are set) cause less yield loss.",
+      "monitoring_guidance": "Monitor whitefly populations using yellow sticky traps (2 per acre). Inspect growing tips and undersides of young leaves. Scout border rows first as whitefly colonizes edges first.",
+      "prevention": "Plant resistant varieties (most important strategy). Use CLCuV-resistant cotton varieties recommended for your region. Raise nursery under net protection. Remove and destroy weed hosts (e.g., Malvaceous weeds). Control whitefly with reflective mulches. Avoid off-season cotton cultivation that maintains whitefly populations year-round.",
+      "cultural_management": "Rogue out severely infected plants early. Remove alternate host weeds around field. Avoid planting near other CLCuD-infected crops.",
+      "sanitation": "Remove and destroy crop debris after harvest. Uproot ratoon cotton.",
+      "water_irrigation_management": "Maintain plant vigor with adequate irrigation to avoid stress that may increase susceptibility.",
+      "crop_rotation": "Avoid continuous cotton. Rotate with non-host crops.",
+      "resistant_varieties": "Several CLCuD-resistant and tolerant cotton varieties have been developed in India. Consult ICAR-CICR, Punjab Agricultural University (PAU), or local KVK for current resistant variety recommendations for your location.",
+      "biological_control": "Encourage natural enemies of whitefly. Neem-based products have been used as a component of IPM for whitefly management — consult product label and local extension.",
+      "chemical_control": "Use only products currently registered/labeled for whitefly control on cotton in your region. Systemic insecticides are used for whitefly management — consult local agricultural extension or product label for registered options and rates. Rotate insecticide classes to prevent resistance.",
+      "expert_escalation_conditions": "If more than 20% plants show severe symptoms within 60 days of sowing, consult agricultural extension immediately. Widespread CLCuD may indicate a new, more virulent virus strain.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-CICR (Central Institute for Cotton Research)",
+          "url": "https://www.cicr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "Punjab Agricultural University",
+          "url": "https://www.pau.edu/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "groundnut_early_leaf_spot": {
+      "canonical_class": "groundnut_early_leaf_spot",
+      "crop": "Groundnut (Peanut)",
+      "disease_name": "Early Leaf Spot of Groundnut",
+      "common_names": ["Cercospora Leaf Spot", "Early Leaf Spot"],
+      "scientific_name": "Cercosporidium personatum (Berk. & M.A. Curtis) Deighton (teleomorph: Mycosphaerella berkeleyi)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Cercospora arachidicola S.Hori (Early Leaf Spot) — Note: Cercosporidium personatum causes Late Leaf Spot; these are often confused but symptom distinction is possible",
+      "primary_plant_parts_affected": ["Leaves", "Petioles", "Stems", "Pods"],
+      "leaf_symptoms": "Circular brown spots with a distinctive yellow halo on the UPPER leaf surface. Spots are dark brown to black (darker on upper surface). Gray-white sporulation may appear on the lower leaf surface. Spots typically 1–10 mm diameter.",
+      "stem_symptoms": "Spots on stems and petioles causing defoliation in severe cases.",
+      "fruit_pod_tuber_symptoms": "Spot-like lesions on pods in severe cases.",
+      "early_symptoms": "Small pale yellowish spots (2–4 mm) on upper leaf surface.",
+      "advanced_symptoms": "Spots enlarge and turn dark brown with prominent yellow halos. Mass defoliation from lower canopy upward. Stems appear bare.",
+      "visual_appearance": "Dark brown circular spots WITH YELLOW HALOS on the upper leaf surface — the yellow halo is a distinguishing feature from Late Leaf Spot.",
+      "distinctive_symptom_pattern": "Dark brown spots with YELLOW HALOS on upper leaf surface; sporulation predominantly on LOWER surface.",
+      "lookalike_conditions": ["groundnut_late_leaf_spot (similar spots but without prominent yellow halo; sporulation predominantly on lower surface in Late)", "groundnut_rust (orange pustules, different appearance)"],
+      "visual_differentiation": "Early Leaf Spot: dark brown spots WITH yellow halo (upper surface). Late Leaf Spot: dark/black spots WITHOUT prominent yellow halo, sporulation on lower surface, appears later in season.",
+      "disease_cycle_summary": "Fungus survives in infected crop debris and volunteer plants. Spores spread by wind and rain splash. Multiple infection cycles per season under humid conditions.",
+      "spread_mechanism": "Wind and rain splash of conidia.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Temperature range 25–30°C is most favorable. Infection impaired at temperatures above 33°C or below 15°C.",
+        "humidity_context": "High relative humidity (>80%) and leaf wetness are required. Disease develops faster with dew or rain.",
+        "rainfall_wetness_context": "Prolonged wet spells (particularly during rainy season in Kharif crop) promote rapid disease spread.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Disease appears from 30–35 days after sowing, with maximum severity from 60–80 DAS. Can cause 50–70% yield loss if not managed.",
+      "monitoring_guidance": "Begin scouting at 30 DAS. Record incidence (% plants infected) and severity (% leaf area affected). Threshold may be set at 5–10% incidence — consult local extension for spray threshold.",
+      "prevention": "Use disease-free certified seed. Plant disease-tolerant varieties. Avoid water stress during critical growth stages. Proper spacing for airflow.",
+      "cultural_management": "Remove and destroy infected debris after harvest. Practice crop rotation.",
+      "sanitation": "Deep ploughing to bury infected crop debris. Remove volunteer groundnut plants.",
+      "water_irrigation_management": "Avoid excessive irrigation that creates prolonged high humidity. Irrigate in the morning.",
+      "crop_rotation": "Rotate with cereals or other non-host crops for 1–2 seasons.",
+      "resistant_varieties": "Several varieties with partial resistance are available. Consult ICRISAT or state agricultural universities (ANGRAU, TNAU) for current resistant variety recommendations for your region.",
+      "biological_control": "NOT_AVAILABLE from reviewed Indian sources for practical commercial use.",
+      "chemical_control": "Use only products currently registered/labeled for groundnut leaf spot in your region. Chlorothalonil, mancozeb-based products, and carbendazim are commonly referenced in Indian extension literature — consult local agricultural extension for current registered options, rates, and spray intervals.",
+      "expert_escalation_conditions": "If defoliation exceeds 40–50% by 70–80 DAS, contact agricultural extension officer for guidance.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICRISAT (International Crops Research Institute for the Semi-Arid Tropics)",
+          "url": "https://www.icrisat.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-NRCG (National Research Centre for Groundnut)",
+          "url": "https://www.nrcg.res.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "TNAU Agritech Portal",
+          "url": "https://agritech.tnau.ac.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "groundnut_healthy": {
+      "canonical_class": "groundnut_healthy",
+      "crop": "Groundnut (Peanut)",
+      "disease_name": "Healthy Groundnut",
+      "common_names": ["healthy groundnut leaf"],
+      "scientific_name": null,
+      "disease_type": "healthy",
+      "pathogen_or_cause": null,
+      "primary_plant_parts_affected": [],
+      "leaf_symptoms": "Leaves are green, pinnately compound, with four leaflets. Margins are entire with no lesions, spots, or pustules.",
+      "stem_symptoms": null,
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": null,
+      "advanced_symptoms": null,
+      "visual_appearance": "Uniform green pinnate leaves with no visible spots, pustules, or yellowing.",
+      "distinctive_symptom_pattern": null,
+      "lookalike_conditions": ["groundnut_early_leaf_spot", "groundnut_late_leaf_spot", "groundnut_rust"],
+      "visual_differentiation": "Healthy groundnut leaves have no circular spots, no orange pustules, and no yellowing of leaf tissue.",
+      "disease_cycle_summary": null,
+      "spread_mechanism": null,
+      "favorable_environmental_conditions": null,
+      "monitoring_guidance": "Scout weekly from 30 DAS. Check for first appearance of leaf spots on lower leaves. Monitor for rust pustules (orange) on underside of leaves.",
+      "prevention": "Use certified disease-free seed. Choose tolerant varieties. Maintain correct plant spacing. Practice crop rotation.",
+      "cultural_management": "Maintain field hygiene. Remove weeds. Avoid waterlogging.",
+      "sanitation": "Remove crop debris after harvest. Deep plough infected debris.",
+      "water_irrigation_management": "Avoid waterlogging. Maintain adequate moisture during peg development and pod fill.",
+      "crop_rotation": "Rotate with cereals (rice, sorghum, maize) to break disease cycle.",
+      "resistant_varieties": "NOT_AVAILABLE for general advice — consult ICRISAT or ICAR-NRCG.",
+      "biological_control": null,
+      "chemical_control": null,
+      "expert_escalation_conditions": null,
+      "knowledge_completeness": "MEDIUM",
+      "source_references": [
+        {
+          "organization": "ICRISAT",
+          "url": "https://www.icrisat.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "groundnut_late_leaf_spot": {
+      "canonical_class": "groundnut_late_leaf_spot",
+      "crop": "Groundnut (Peanut)",
+      "disease_name": "Late Leaf Spot of Groundnut",
+      "common_names": ["Peanut Late Leaf Spot", "Phaeoisariopsis Leaf Spot"],
+      "scientific_name": "Cercosporidium personatum (Berk. & M.A. Curtis) Deighton (anamorphic; teleomorph: Mycosphaerella berkeleyi W.A. Jenkins)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Cercosporidium personatum",
+      "primary_plant_parts_affected": ["Leaves", "Petioles", "Stems"],
+      "leaf_symptoms": "Dark brown to black circular spots on the LOWER leaf surface. Spots are smaller and darker than Early Leaf Spot and lack the prominent yellow halo. Sporulation (dark tufts) is visible on the lower leaf surface. Upper surface shows dark spots without distinct halo.",
+      "stem_symptoms": "Lesions on stems and petioles leading to defoliation.",
+      "fruit_pod_tuber_symptoms": "Pod lesions possible in severe infections.",
+      "early_symptoms": "Dark spots appear later in the crop season (60–80+ DAS). Initially similar to early leaf spot but darker.",
+      "advanced_symptoms": "Dense black spots without yellow halos. Rapid defoliation. Premature drying.",
+      "visual_appearance": "Dark/black circular spots, primarily on LOWER leaf surface, with dark sporulation (tufts or powdery mass). NO prominent yellow halo.",
+      "distinctive_symptom_pattern": "Black spots with sporulation predominantly on LOWER leaf surface; appears later in the season than Early Leaf Spot.",
+      "lookalike_conditions": ["groundnut_early_leaf_spot (similar but with prominent yellow halo)", "groundnut_rust (orange pustules)"],
+      "visual_differentiation": "Late Leaf Spot: darker (black) spots, lower surface sporulation, no yellow halo, appears later (>60 DAS). Early Leaf Spot: brown spots with yellow halo, appears earlier (30–35 DAS).",
+      "disease_cycle_summary": "Fungus survives in crop debris. Spores spread by wind and rain. Disease typically appears after Early Leaf Spot. Often co-occurs with Early Leaf Spot causing combined damage.",
+      "spread_mechanism": "Wind and rain splash dispersal of conidia.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Temperatures of 20–30°C support disease development.",
+        "humidity_context": "Prolonged leaf wetness and high humidity (>80%) facilitate infection. Rain splash critical for spore dispersal.",
+        "rainfall_wetness_context": "Wet and humid conditions from 60 DAS onward promote rapid disease progression.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Typically appears at 60–80 DAS and can cause severe defoliation from 70–90 DAS affecting pod development and kernel fill.",
+      "monitoring_guidance": "Begin scouting at 60 DAS. Both Early and Late Leaf Spot may be present simultaneously. Assess severity on middle canopy leaves.",
+      "prevention": "Use tolerant varieties. Practice crop rotation. Properly space plants. Monitor from 30 DAS for early intervention.",
+      "cultural_management": "Remove and destroy crop debris after harvest. Rotate crops.",
+      "sanitation": "Deep ploughing to bury infected debris.",
+      "water_irrigation_management": "Same as for Early Leaf Spot — avoid prolonged canopy wetness.",
+      "crop_rotation": "Rotate with non-host cereals or legumes.",
+      "resistant_varieties": "Tolerant varieties available. Consult ICRISAT or ICAR-NRCG for recommendations.",
+      "biological_control": "NOT_AVAILABLE from reviewed sources for commercial use.",
+      "chemical_control": "Same principles as Early Leaf Spot. Consult local extension for registered fungicide options.",
+      "expert_escalation_conditions": "If defoliation exceeds 50% before crop maturity, contact extension officer.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICRISAT",
+          "url": "https://www.icrisat.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-NRCG",
+          "url": "https://www.nrcg.res.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "groundnut_rust": {
+      "canonical_class": "groundnut_rust",
+      "crop": "Groundnut (Peanut)",
+      "disease_name": "Groundnut Rust",
+      "common_names": ["Peanut Rust"],
+      "scientific_name": "Puccinia arachidis Speg.",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Puccinia arachidis Speg.",
+      "primary_plant_parts_affected": ["Leaves", "Petioles", "Stems"],
+      "leaf_symptoms": "Orange to cinnamon-brown uredinia (pustules) predominantly on the LOWER leaf surface. Pustules are small (0.5–2 mm), round to elongated, and rupture the epidermis, releasing powdery orange-brown urediniospores. Upper leaf surface shows chlorotic (yellow) spots corresponding to pustules below.",
+      "stem_symptoms": "Pustules on stems and petioles in severe infections.",
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": "Pale yellow-green flecks on upper leaf surface. Orange pustules erupt on lower surface.",
+      "advanced_symptoms": "Dense orange pustules on lower leaf surface. Premature yellowing and defoliation.",
+      "visual_appearance": "Tiny orange-brown raised pustules predominantly on lower leaf surface; upper surface shows yellow spots. Powdery orange mass released when pustule is rubbed.",
+      "distinctive_symptom_pattern": "Orange powdery pustules predominantly on LOWER LEAF SURFACE, with corresponding chlorotic spots on upper surface. Powder-orange spore mass is diagnostic.",
+      "lookalike_conditions": ["groundnut_early_leaf_spot (circular brown spots, not orange pustules)", "groundnut_late_leaf_spot"],
+      "visual_differentiation": "Rust has characteristic orange powdery pustules on leaf undersurface. Leaf spots (early/late) produce discrete circular brown-black lesions without orange spore mass.",
+      "disease_cycle_summary": "Puccinia arachidis survives in infected crop debris and alternate/volunteer hosts. Urediniospores are wind-dispersed and can cause multiple infection cycles during a single season. In India, disease is most severe in the humid Kharif season.",
+      "spread_mechanism": "Wind dispersal of urediniospores. Long-distance spread possible.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Optimal temperature for infection is 20–25°C. Temperatures above 30°C reduce infection rates.",
+        "humidity_context": "High humidity and free moisture (rain, dew) required for spore germination. Minimum 6–10 hours of leaf wetness.",
+        "rainfall_wetness_context": "Rainy season (Kharif) with high humidity drives epidemic development in India.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Disease commonly appears from 45–50 DAS in susceptible varieties. Most damaging during pod development (70–100 DAS). Can cause 50–70% yield loss.",
+      "monitoring_guidance": "Scout from 40–45 DAS. Inspect lower surface of middle-canopy leaves. Record pustule count per leaf. Spray threshold varies — consult local extension.",
+      "prevention": "Plant rust-tolerant/resistant varieties (primary strategy). Practice crop rotation. Ensure proper plant spacing.",
+      "cultural_management": "Use resistant varieties. Timely sowing to avoid peak rust season.",
+      "sanitation": "Remove and destroy infected crop residue. Deep ploughing after harvest.",
+      "water_irrigation_management": "Avoid prolonged wet conditions by using appropriate irrigation methods.",
+      "crop_rotation": "Rotate with cereals to reduce inoculum build-up.",
+      "resistant_varieties": "Several rust-tolerant/resistant varieties have been developed at ICRISAT and Indian universities. Consult ICRISAT, ICAR-NRCG, or local KVK for current recommendations.",
+      "biological_control": "NOT_AVAILABLE from reviewed sources.",
+      "chemical_control": "Use only products currently registered/labeled for groundnut rust in your region. Systemic fungicides are used for rust management — consult local agricultural extension for registered options and timing.",
+      "expert_escalation_conditions": "Severe rust incidence (>50% leaf area affected) before pod maturity warrants expert consultation.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICRISAT",
+          "url": "https://www.icrisat.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-NRCG",
+          "url": "https://www.nrcg.res.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "pepper_bell_bacterial_spot": {
+      "canonical_class": "pepper_bell_bacterial_spot",
+      "crop": "Bell Pepper (Capsicum)",
+      "disease_name": "Bacterial Spot of Pepper",
+      "common_names": ["Pepper Bacterial Spot", "Bacterial Spot"],
+      "scientific_name": "Xanthomonas campestris pv. vesicatoria (Doidge) Dye (and related Xanthomonas species including X. euvesicatoria, X. vesicatoria, X. perforans, X. gardneri)",
+      "disease_type": "bacterial",
+      "pathogen_or_cause": "Xanthomonas euvesicatoria / Xanthomonas campestris pv. vesicatoria complex",
+      "primary_plant_parts_affected": ["Leaves", "Fruits", "Stems"],
+      "leaf_symptoms": "Small (2–5 mm), water-soaked, angular to circular spots on leaf that turn brown to dark brown with yellow halos. Spots may coalesce. In severe cases, large sections of leaf become necrotic and leaves fall prematurely.",
+      "stem_symptoms": "Dark elongated lesions on stems and petioles.",
+      "fruit_pod_tuber_symptoms": "Raised, corky or wart-like spots on fruit surface that are initially water-soaked. Fruit lesions provide entry for secondary organisms causing fruit rot.",
+      "early_symptoms": "Small water-soaked spots with angular outline on leaves.",
+      "advanced_symptoms": "Large, necrotic angular spots with yellow halos. Premature leaf drop. Fruit spot and rot.",
+      "visual_appearance": "Angular to circular brown spots with yellow halos on leaves. Wart-like raised spots on fruits.",
+      "distinctive_symptom_pattern": "Angular or circular brown lesions with YELLOW HALOS on leaves; corky raised lesions on fruits are characteristic of bacterial spot.",
+      "lookalike_conditions": ["Anthracnose on pepper (circular sunken spots on fruit, usually without yellow halo on leaves)", "Phytophthora blight (more extensive water-soaked symptoms)", "pepper_bell_healthy"],
+      "visual_differentiation": "Bacterial spot: angular-to-circular lesions with yellow halos on leaves AND distinctive fruit lesions. Fungal spots generally lack the angular pattern and yellow halo.",
+      "disease_cycle_summary": "Bacteria survive in infected seed, plant debris, and soil. Infection occurs through wounds and natural openings. Rain splash and wind are primary spread mechanisms.",
+      "spread_mechanism": "Rain splash, contaminated seed, infected transplants, farm equipment, and workers moving through wet fields.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (24–30°C) favor bacterial growth and disease development.",
+        "humidity_context": "High humidity and rain splash are essential for spread. Free moisture required for infection.",
+        "rainfall_wetness_context": "Frequent rain events facilitate bacteria-laden rain splash. Overhead irrigation exacerbates the disease.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "All stages susceptible. Early transplant infection causes severe defoliation. Fruit stage infection causes significant market quality loss.",
+      "monitoring_guidance": "Inspect transplants before field planting. Scout weekly for leaf spots. Increased scouting after rain events.",
+      "prevention": "Use certified disease-free (pathogen-tested) seed. Treat seeds with hot water (50°C for 25 minutes) or bleach solution before planting. Grow disease-free transplants. Avoid overhead irrigation. Rotate crops with non-solanaceous plants.",
+      "cultural_management": "Remove and destroy infected plant material. Avoid working in wet fields. Disinfect tools between plants.",
+      "sanitation": "Destroy infected crop debris. Do not save seed from infected plants.",
+      "water_irrigation_management": "Use drip irrigation. Avoid overhead irrigation. Irrigate in morning so leaves dry quickly.",
+      "crop_rotation": "Rotate with non-solanaceous crops (cereals, legumes) for at least 2–3 years.",
+      "resistant_varieties": "Some resistant varieties exist. Consult ICAR vegetable research stations or seed companies for current recommendations for your region.",
+      "biological_control": "NOT_AVAILABLE from reviewed sources for commercial pepper use in India.",
+      "chemical_control": "Use only products currently registered/labeled for pepper bacterial spot in your region. Copper-based bactericides are commonly referenced — consult local extension for registered options.",
+      "expert_escalation_conditions": "If defoliation is extensive or fruit spots are severe, consult agricultural extension. Copper-resistant strains have been documented in some regions.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "pepper_bell_healthy": {
+      "canonical_class": "pepper_bell_healthy",
+      "crop": "Bell Pepper (Capsicum)",
+      "disease_name": "Healthy Bell Pepper",
+      "common_names": ["healthy bell pepper leaf"],
+      "scientific_name": null,
+      "disease_type": "healthy",
+      "pathogen_or_cause": null,
+      "primary_plant_parts_affected": [],
+      "leaf_symptoms": "Leaves are bright green, smooth, with intact margins. No visible spots, lesions, or discoloration.",
+      "stem_symptoms": null,
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": null,
+      "advanced_symptoms": null,
+      "visual_appearance": "Smooth bright green leaves with no visible damage.",
+      "distinctive_symptom_pattern": null,
+      "lookalike_conditions": ["pepper_bell_bacterial_spot"],
+      "visual_differentiation": "Healthy leaves show no angular lesions, no yellow halos, and no curling.",
+      "monitoring_guidance": "Scout weekly for bacterial spot symptoms, particularly after rains. Monitor for whiteflies and aphids (virus vectors).",
+      "prevention": "Use certified disease-free seeds and transplants. Avoid overhead irrigation. Rotate crops with non-solanaceous plants.",
+      "cultural_management": "Maintain field hygiene. Remove weeds.",
+      "sanitation": "Remove crop debris after harvest.",
+      "water_irrigation_management": "Use drip irrigation. Avoid waterlogging.",
+      "crop_rotation": "Rotate with cereals or legumes.",
+      "resistant_varieties": "NOT_AVAILABLE for general advice — consult ICAR.",
+      "biological_control": null,
+      "chemical_control": null,
+      "expert_escalation_conditions": null,
+      "knowledge_completeness": "MEDIUM",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "potato_early_blight": {
+      "canonical_class": "potato_early_blight",
+      "crop": "Potato",
+      "disease_name": "Early Blight of Potato",
+      "common_names": ["Target Spot", "Alternaria Blight"],
+      "scientific_name": "Alternaria solani (Ellis & G. Martin) L.R. Jones & Grout",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Alternaria solani",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Tubers"],
+      "leaf_symptoms": "Circular to oval, dark brown lesions with distinctive concentric rings creating a 'target-board' or 'bull's-eye' pattern. Lesions often have a YELLOW HALO. Older (lower) leaves are affected first. Lesions can enlarge to 1–2 cm. Severely infected leaves turn yellow and drop.",
+      "stem_symptoms": "Dark brown elongated lesions on stems near soil.",
+      "fruit_pod_tuber_symptoms": "Shallow circular dark brown sunken lesions on tubers, particularly at stem end. Tuber lesions may have a corky dry rot.",
+      "early_symptoms": "Small dark circular spots (2–4 mm) on lower/older leaves with faint concentric rings.",
+      "advanced_symptoms": "Large target-pattern lesions (1–2+ cm), yellow halo, premature defoliation from lower canopy upward.",
+      "visual_appearance": "Brown circular lesions with prominent concentric ring pattern (target board) and yellow halo on older leaves.",
+      "distinctive_symptom_pattern": "CONCENTRIC RING PATTERN within brown necrotic lesion on older leaves — pathognomonic for Early Blight.",
+      "lookalike_conditions": ["potato_late_blight (water-soaked, rapidly expanding lesions, no concentric rings, affects younger leaves)", "Cercospora leaf spot (similar but different crop)", "Potassium deficiency (leaf edge burn, no lesions)"],
+      "visual_differentiation": "Early Blight: concentric rings, older leaves affected first, brown lesions with yellow halo. Late Blight: irregular water-soaked dark lesions, white sporulation on underside in humid conditions, rapid expansion, no concentric rings.",
+      "disease_cycle_summary": "A. solani overwinters in infected crop debris and contaminated seed tubers. Conidia dispersed by wind and rain splash. Multiple infection cycles per season.",
+      "spread_mechanism": "Wind and rain splash of conidia from crop debris.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (24–29°C) favor disease development. Unlike Late Blight, Early Blight develops in warmer conditions.",
+        "humidity_context": "High relative humidity (>90%) and leaf wetness periods (>3–6 hours) facilitate infection.",
+        "rainfall_wetness_context": "Alternating wet and dry periods can accelerate disease as rain splashes spores and dry conditions stress plants (stressed plants are more susceptible).",
+        "soil_context": "Soil nutrient deficiency (particularly nitrogen) increases plant susceptibility."
+      },
+      "growth_stage_context": "Disease appears from mid-season (at flowering) when lower leaves begin to senesce. Plants stressed by nutrient deficiency, drought, or other factors are more susceptible.",
+      "monitoring_guidance": "Scout from flowering onwards. Record % plants showing symptoms and % leaf area affected on lower canopy.",
+      "prevention": "Use certified disease-free seed tubers. Select healthy, disease-free planting material. Practice crop rotation with non-solanaceous crops. Plant tolerant varieties. Maintain adequate plant nutrition.",
+      "cultural_management": "Remove infected lower leaves where practical. Avoid plant stress. Use balanced fertilization.",
+      "sanitation": "Remove and destroy infected crop debris after harvest. Avoid dumping infected material in or near fields.",
+      "water_irrigation_management": "Avoid overhead irrigation. Use drip or furrow irrigation. Irrigate in morning.",
+      "crop_rotation": "Rotate with non-solanaceous crops (cereals, pulses) for 2–3 years.",
+      "resistant_varieties": "Tolerant varieties available. Consult ICAR-CPRI (Central Potato Research Institute) for current recommendations for your agro-climatic zone.",
+      "biological_control": "NOT_AVAILABLE from reviewed sources for commercial use in India.",
+      "chemical_control": "Use only products currently registered/labeled for potato early blight in your region. Consult ICAR-CPRI or local extension for registered fungicide options and recommended spray schedule.",
+      "expert_escalation_conditions": "If early blight appears before flowering or spreads rapidly despite management, consult agricultural extension.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-CPRI (Central Potato Research Institute)",
+          "url": "https://www.cpri.res.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "potato_healthy": {
+      "canonical_class": "potato_healthy",
+      "crop": "Potato",
+      "disease_name": "Healthy Potato",
+      "common_names": ["healthy potato leaf"],
+      "scientific_name": null,
+      "disease_type": "healthy",
+      "pathogen_or_cause": null,
+      "primary_plant_parts_affected": [],
+      "leaf_symptoms": "Compound leaves with 3–5 leaflets. Dark green color, no lesions, no water-soaked areas.",
+      "stem_symptoms": null,
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": null,
+      "advanced_symptoms": null,
+      "visual_appearance": "Dark green compound leaves, structurally intact.",
+      "distinctive_symptom_pattern": null,
+      "lookalike_conditions": ["potato_early_blight", "potato_late_blight"],
+      "visual_differentiation": "Healthy potato lacks any circular lesions, water-soaked areas, or white sporulation on underside.",
+      "monitoring_guidance": "Scout weekly from tuber initiation. Late Blight monitoring is critical — check leaf undersides for white sporulation after cool humid periods.",
+      "prevention": "Use certified disease-free seed tubers. Apply seed treatment. Ensure proper spacing and hilling.",
+      "cultural_management": "Maintain balanced nutrition. Avoid water stress.",
+      "sanitation": "Destroy volunteer potato plants and infected debris from previous season.",
+      "water_irrigation_management": "Use drip or furrow irrigation. Avoid overhead spray.",
+      "crop_rotation": "Rotate with non-solanaceous crops.",
+      "resistant_varieties": "NOT_AVAILABLE for general advice — consult ICAR-CPRI.",
+      "biological_control": null,
+      "chemical_control": null,
+      "expert_escalation_conditions": null,
+      "knowledge_completeness": "MEDIUM",
+      "source_references": [
+        {
+          "organization": "ICAR-CPRI",
+          "url": "https://www.cpri.res.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "potato_late_blight": {
+      "canonical_class": "potato_late_blight",
+      "crop": "Potato",
+      "disease_name": "Late Blight of Potato",
+      "common_names": ["Potato Late Blight", "Blight"],
+      "scientific_name": "Phytophthora infestans (Mont.) de Bary",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Phytophthora infestans (oomycete — not a true fungus, but managed similarly)",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Tubers"],
+      "leaf_symptoms": "Irregular water-soaked, dark-green to brown-black lesions that enlarge rapidly, often with a water-soaked margin at the edge. Characteristic WHITE COTTONY SPORULATION (sporangiophores) visible on the underside of lesions in humid conditions. Lesions appear greasy and water-soaked initially.",
+      "stem_symptoms": "Dark brown, water-soaked lesions on stems that can girdle and kill the plant.",
+      "fruit_pod_tuber_symptoms": "Tubers show reddish-brown irregular dry rot extending from the surface inward. Tuber blight can cause complete tuber loss.",
+      "early_symptoms": "Small pale green to dark water-soaked spots at leaf margin or tip, often with water-soaked border, rapidly expanding.",
+      "advanced_symptoms": "Large dark brown-black necrotic areas covering most of the leaf. White sporulation on leaf underside in humid conditions. Rapid plant collapse.",
+      "visual_appearance": "Irregular, rapidly expanding dark brown to black lesions, often starting at leaf margins or tips. White sporulation on underside in humid conditions.",
+      "distinctive_symptom_pattern": "Rapidly expanding dark water-soaked lesions with WHITE COTTONY SPORULATION on LEAF UNDERSIDE (under humid conditions) — a key diagnostic feature.",
+      "lookalike_conditions": ["potato_early_blight (concentric rings, older leaves, slower progression)", "Frost damage (affects entire plant, no sporulation)"],
+      "visual_differentiation": "Late Blight: rapidly expanding water-soaked dark lesions, white sporulation on underside in humidity, affects young leaves and stems. Early Blight: concentric rings on older leaves, no rapid expansion, no white underside sporulation.",
+      "disease_cycle_summary": "P. infestans survives in infected tubers (cull piles, volunteer plants). Under cool humid conditions, sporangia are produced and dispersed by wind and rain to form infections rapidly. Disease can destroy a field in 7–10 days under epidemic conditions.",
+      "spread_mechanism": "Airborne sporangia from infected plants and tuber cull piles; rain splash and wind.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Cool temperatures (10–20°C) are optimal for infection. Disease most severe in cool humid highland areas. Temperatures above 30°C arrest sporulation.",
+        "humidity_context": "High relative humidity (>90%) for at least 12 hours triggers sporulation and infection. Continuous humid periods are critical.",
+        "rainfall_wetness_context": "Prolonged rain periods and high leaf wetness are required. Wallin and Dutch rules (% hours of leaf wetness > threshold) are used as forecasting tools.",
+        "soil_context": "Infected soil can harbor P. infestans from previous season's infected tubers."
+      },
+      "growth_stage_context": "Most devastating during tuber bulking and maturation. Early infection (tuber initiation) can destroy entire crop. Late infection can reduce tuber quality.",
+      "monitoring_guidance": "Use Wallin Disease Severity Value (DSV) or similar forecasting model if available. Scout DAILY during cool humid weather. Check leaf undersides. Risk periods: after rain, with temperatures below 20°C, and RH >90%.",
+      "prevention": "Plant certified disease-free seed tubers. Use resistant varieties. Destroy cull piles and volunteer plants. Separate clean seed from stored infected tubers. Haulm (vine) destruction before harvest reduces tuber infection.",
+      "cultural_management": "Destroy infected plant material immediately. Remove and destroy infected volunteer potato plants. Ensure proper earthing up.",
+      "sanitation": "Destroy infected tubers and crop residue. Remove volunteer potato plants within and around fields.",
+      "water_irrigation_management": "Avoid overhead irrigation. Use drip or furrow. Do not irrigate during cool humid evenings that prolong leaf wetness.",
+      "crop_rotation": "Rotate with non-solanaceous crops. Avoid growing tomato in the same field immediately after potato.",
+      "resistant_varieties": "Resistant varieties are available and are the most effective long-term strategy. Consult ICAR-CPRI for current resistant variety recommendations for your region and growing season.",
+      "biological_control": "NOT_AVAILABLE — biological control for Late Blight is not practically established in Indian extension literature.",
+      "chemical_control": "Use only products currently registered/labeled for potato late blight in your region. Protectant and systemic fungicides are used — consult ICAR-CPRI or local extension for registered options, timing, and anti-resistance rotation strategies. Preventive application before symptoms appear is key.",
+      "expert_escalation_conditions": "Immediate expert consultation required if Late Blight is confirmed. Disease can destroy entire fields within 7–10 days without intervention. Contact extension officer for emergency spray guidance.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-CPRI (Central Potato Research Institute)",
+          "url": "https://www.cpri.res.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "FAO (Food and Agriculture Organization of the United Nations)",
+          "url": "https://www.fao.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "rice_bacterial_leaf_blight": {
+      "canonical_class": "rice_bacterial_leaf_blight",
+      "crop": "Rice (Paddy)",
+      "disease_name": "Bacterial Leaf Blight of Rice",
+      "common_names": ["Kresek", "Rice BLB"],
+      "scientific_name": "Xanthomonas oryzae pv. oryzae (Ishiyama) Swings et al.",
+      "disease_type": "bacterial",
+      "pathogen_or_cause": "Xanthomonas oryzae pv. oryzae (Xoo)",
+      "primary_plant_parts_affected": ["Leaves", "Stems (Kresek phase)"],
+      "leaf_symptoms": "Water-soaked, translucent lesions starting from leaf margins or tips. Lesions enlarge along the leaf margin with a wavy irregular yellow border. Leaves turn yellow-straw colored from tip downward. On drying, bacterial exudate may form 'dew drops' on lesion margins in humid conditions.",
+      "stem_symptoms": "In severe Kresek phase (seedling systemic infection): entire plant wilts and dies. The pathogen enters through root wounds during transplanting.",
+      "fruit_pod_tuber_symptoms": "Panicle infection can cause empty grains.",
+      "early_symptoms": "Water-soaked translucent streaks along leaf margin or tip.",
+      "advanced_symptoms": "Yellow-straw colored lesions spreading from tip and margins. Entire leaf turns yellow. Grain filling affected.",
+      "visual_appearance": "Yellow to straw-colored leaf margins spreading from tip. Wavy irregular lesion border. 'Dew drop' bacterial ooze on leaf surface (visible early morning in humid conditions).",
+      "distinctive_symptom_pattern": "Straw-yellow lesions extending from the LEAF TIP and MARGINS downward with wavy edges, and bacterial ooze/droplets in humid conditions.",
+      "lookalike_conditions": ["Rice brown spot (circular lesions on leaf)", "Nitrogen deficiency (yellowing from tip — no water-soaked margin, no bacterial ooze)", "Sheath blight (different pattern — from lower node upward)"],
+      "visual_differentiation": "BLB: lesions starting at tip/margin with wavy edge, bacterial ooze, straw-yellow color. Nitrogen deficiency: uniform yellowing from tip, no water-soaked margins. Brown spot: circular discrete lesions scattered on leaf.",
+      "disease_cycle_summary": "Xoo survives in soil, infected stubble, and seeds (less important). Bacteria enter through hydathodes (natural openings at leaf margins) or wounds. Heavy rains and flooding spread bacteria rapidly. Insect feeding wounds also provide entry.",
+      "spread_mechanism": "Rain splash, flood/irrigation water, wind, infected seed, and insects.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (25–34°C) with optimal at 26–30°C. High temperature combined with high humidity is most favorable.",
+        "humidity_context": "High humidity (>80%) and free moisture on leaves are required. Morning dew and rain are critical.",
+        "rainfall_wetness_context": "Flooding, heavy rain, and cyclonic conditions dramatically increase disease spread and severity. Flood water carries bacteria across fields.",
+        "soil_context": "High soil nitrogen (excessive urea application) increases plant susceptibility by promoting dense succulent growth."
+      },
+      "growth_stage_context": "Most damaging from tillering to heading stages. Kresek phase affects seedlings. Late infection at heading reduces grain fill.",
+      "monitoring_guidance": "Scout from 30 DAS (transplanted) or 45 DAS (direct seeded). Look for tip blight and margin blight. Record percent affected tillers. Check flooded fields immediately after flood events.",
+      "prevention": "Use resistant rice varieties (most effective strategy). Use certified disease-free seeds. Treat seeds with plant growth regulators or recommended bactericides where registered. Avoid excessive nitrogen fertilization (particularly urea). Drain fields after rain events.",
+      "cultural_management": "Remove infected plants in Kresek phase. Avoid transplanting into floodwater. Avoid mechanical damage during transplanting.",
+      "sanitation": "Remove and burn infected stubble. Drain fields to prevent water-borne spread.",
+      "water_irrigation_management": "Avoid continuous flooding when disease risk is high. Drain fields after rain to remove bacteria-laden water. Avoid sharing irrigation water between infected and healthy fields.",
+      "crop_rotation": "NOT_APPLICABLE in most rice systems — manage through variety resistance and water management.",
+      "resistant_varieties": "Multiple BLB-resistant varieties are available in India. Consult ICAR-IIRR or IRRI for varieties with resistance genes (Xa genes, e.g., Xa21, Xa13) suited to your region. State agricultural universities maintain variety recommendations.",
+      "biological_control": "NOT_AVAILABLE for commercial use in reviewed Indian extension literature.",
+      "chemical_control": "Use only products currently registered/labeled for Rice BLB in your region. Some copper-based and other bactericides are used in severe cases — consult local extension for registered options. Note: chemical control has limited efficacy once disease is established.",
+      "expert_escalation_conditions": "Kresek phase (systemic wilt of seedlings) requires immediate expert consultation. Widespread BLB in transplanted fields after flooding warrants urgent field assessment.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "IRRI (International Rice Research Institute)",
+          "url": "https://www.irri.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIRR (Indian Institute of Rice Research)",
+          "url": "https://www.iirr.icar.gov.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "rice_brown_spot": {
+      "canonical_class": "rice_brown_spot",
+      "crop": "Rice (Paddy)",
+      "disease_name": "Brown Spot of Rice",
+      "common_names": ["Helminthosporium Leaf Spot", "Brown Spot"],
+      "scientific_name": "Cochliobolus miyabeanus (S. Ito & Kurib.) Drechsler ex Dastur (anamorph: Bipolaris oryzae)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Bipolaris oryzae (Breda de Haan) Shoemaker (teleomorph: Cochliobolus miyabeanus)",
+      "primary_plant_parts_affected": ["Leaves", "Glumes", "Coleoptile", "Seeds"],
+      "leaf_symptoms": "Oval to circular brown spots (1–5 mm) with gray-white centers and brown borders. Spots have a pale yellow halo in susceptible varieties. Spots scattered over the leaf lamina, not concentrated at margins or tip. In severe cases, spots coalesce and cause large necrotic areas.",
+      "stem_symptoms": "Lesions on glumes (grain covering) cause 'glume discoloration' and grain sterility.",
+      "fruit_pod_tuber_symptoms": "Glume lesions (chalkiness, discoloration). Infected grain may be sterile or discolored.",
+      "early_symptoms": "Small oval to circular brown dots (1–2 mm) scattered on leaf surface.",
+      "advanced_symptoms": "Numerous spots (>100/leaf) coalescing to large necrotic patches. Premature leaf drying.",
+      "visual_appearance": "Oval/circular brown spots with gray-white centers and distinct brown borders; yellow halo in susceptible varieties. Scattered distribution across leaf lamina.",
+      "distinctive_symptom_pattern": "Scattered oval/circular brown spots with gray-white centers and brown borders — NOT at margins/tips. Contrast with BLB (margin-based) and blast (diamond-shaped).",
+      "lookalike_conditions": ["Rice leaf blast (diamond/spindle-shaped lesions, gray centers, elongated)", "Narrow brown leaf spot (narrower lesions confined to narrow streaks)"],
+      "visual_differentiation": "Brown spot: oval/circular spots scattered on leaf. Blast: diamond-shaped (spindle-shaped) gray lesions with dark borders, not circular. BLB: margin/tip lesions with straw-yellow color.",
+      "disease_cycle_summary": "Fungus survives in infected seed and crop residue. Spores are wind-dispersed. Disease commonly associated with nutritionally stressed (particularly silica, potassium, manganese) or waterlogged plants.",
+      "spread_mechanism": "Wind and rain splash of conidia from infected crop residue and seed.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (25–30°C) with high humidity. Disease severe in areas with nutritional stress.",
+        "humidity_context": "High humidity and leaf wetness (>8 hours) required for spore germination and infection.",
+        "rainfall_wetness_context": "Frequent rains favor spore dispersal. Waterlogged conditions increase plant nutritional stress and susceptibility.",
+        "soil_context": "Low soil fertility — particularly silicon, potassium, and manganese deficiency — dramatically increases susceptibility. Well-known to be a disease associated with nutrient-stressed plants."
+      },
+      "growth_stage_context": "Can occur from seedling to maturity. Most damaging during booting and heading when grain is filling. Severe at later stages in nutrient-poor soils.",
+      "monitoring_guidance": "Scout for spots from 30 DAS. Count spots per leaf on 10 plants. Apply disease severity scale (% leaf area affected). Check soil fertility records.",
+      "prevention": "Use certified disease-free seed. Treat seeds with recommended fungicide/hot water (52°C for 10 minutes). Optimize soil nutrition — apply recommended silicon, potassium, and nitrogen rates. Avoid water stress and waterlogging. Plant tolerant varieties.",
+      "cultural_management": "Correct soil nutrient deficiencies. Avoid high nitrogen with low potassium/silicon.",
+      "sanitation": "Remove infected crop residue. Use healthy seed.",
+      "water_irrigation_management": "Avoid waterlogging and prolonged flooding. Maintain proper drainage.",
+      "crop_rotation": "NOT_APPLICABLE for most lowland rice systems. Management is primarily through nutrition and variety.",
+      "resistant_varieties": "Varieties with partial resistance available. Consult ICAR-IIRR or IRRI for current recommendations.",
+      "biological_control": "NOT_AVAILABLE for commercial use in reviewed sources.",
+      "chemical_control": "Use only products currently registered/labeled for rice brown spot in your region. Seed treatment and foliar fungicides at boot stage may be warranted — consult local extension.",
+      "expert_escalation_conditions": "Brown spot along with poor grain fill (empty panicles) warrants soil testing and expert consultation on nutrient management.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "IRRI",
+          "url": "https://www.irri.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIRR",
+          "url": "https://www.iirr.icar.gov.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "rice_healthy": {
+      "canonical_class": "rice_healthy",
+      "crop": "Rice (Paddy)",
+      "disease_name": "Healthy Rice",
+      "common_names": ["healthy rice leaf"],
+      "scientific_name": null,
+      "disease_type": "healthy",
+      "pathogen_or_cause": null,
+      "primary_plant_parts_affected": [],
+      "leaf_symptoms": "Leaves are flat, dark green, linear with a distinct midrib. No lesions, spots, or water-soaked areas visible.",
+      "stem_symptoms": null,
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": null,
+      "advanced_symptoms": null,
+      "visual_appearance": "Flat dark green linear leaves with intact margins and no visible spots.",
+      "distinctive_symptom_pattern": null,
+      "lookalike_conditions": ["rice_bacterial_leaf_blight", "rice_brown_spot", "rice_leaf_blast"],
+      "visual_differentiation": "Healthy rice leaves show no circular spots, no water-soaked margin lesions, and no diamond-shaped blast lesions.",
+      "monitoring_guidance": "Scout weekly. Priority diseases to watch: leaf blast, bacterial leaf blight, sheath blight. Inspect leaf sheaths for sheath blight symptoms.",
+      "prevention": "Use certified disease-free seeds. Treat seeds before planting. Apply balanced nutrition. Use recommended plant spacing.",
+      "cultural_management": "Field hygiene. Remove weeds. Proper water management.",
+      "sanitation": "Burn or deep-plough infected crop residue.",
+      "water_irrigation_management": "Maintain alternate wet and dry irrigation where appropriate. Avoid prolonged flooding under blast pressure.",
+      "crop_rotation": "Where possible, rotate with legumes or other non-rice crops.",
+      "resistant_varieties": "NOT_AVAILABLE for general advice — consult ICAR-IIRR or IRRI.",
+      "biological_control": null,
+      "chemical_control": null,
+      "expert_escalation_conditions": null,
+      "knowledge_completeness": "MEDIUM",
+      "source_references": [
+        {
+          "organization": "IRRI",
+          "url": "https://www.irri.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "rice_leaf_blast": {
+      "canonical_class": "rice_leaf_blast",
+      "crop": "Rice (Paddy)",
+      "disease_name": "Rice Leaf Blast",
+      "common_names": ["Blast", "Rotten Neck", "Leaf Blast"],
+      "scientific_name": "Magnaporthe oryzae B.C. Couch (anamorph: Pyricularia oryzae Cavara)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Magnaporthe oryzae (Pyricularia oryzae)",
+      "primary_plant_parts_affected": ["Leaves", "Nodes", "Panicle neck", "Grains"],
+      "leaf_symptoms": "Diamond-shaped (spindle-shaped) to irregular lesions with gray-white centers and dark brown to reddish-brown borders. Lesions may have yellow halos in susceptible varieties. Leaf blast lesions are typically 1–3 cm long and 0.3–0.5 cm wide. In acute phase: small water-soaked spots that expand rapidly into spindle-shaped lesions.",
+      "stem_symptoms": "Node blast: dark brown to black discoloration of nodes. Neck blast: infection at panicle neck causing 'rotten neck' — panicle breaks at infected node and hangs down (gray-white).",
+      "fruit_pod_tuber_symptoms": "Panicle and grain infection causing empty or poorly filled grains.",
+      "early_symptoms": "Small, water-soaked, whitish spots (1–2 mm) on leaves under acute infection conditions.",
+      "advanced_symptoms": "Numerous diamond-shaped gray lesions with dark borders coalescing to kill leaf. Neck blast causes white panicles (resembling deadheart from stem borers).",
+      "visual_appearance": "DIAMOND-SHAPED (spindle-shaped) gray lesions with brown borders; may have yellow halo. Lesions aligned along leaf axis.",
+      "distinctive_symptom_pattern": "Diamond/spindle-shaped gray lesions with DARK REDDISH-BROWN MARGINS — highly distinctive for rice blast. 'Rotten neck' (hanging empty panicle) at reproductive stage.",
+      "lookalike_conditions": ["rice_brown_spot (circular, not diamond-shaped)", "Brown leaf spot (oval, no distinct diamond-shape)", "Narrow brown leaf spot (narrower streaks)"],
+      "visual_differentiation": "Blast: diamond-shaped gray lesions with dark borders, aligned along leaf. Brown spot: oval/circular spots, scattered, not diamond-shaped.",
+      "disease_cycle_summary": "M. oryzae survives in infected crop residue, seeds, and weedy hosts. Spores (conidia) are dispersed at night under high humidity. Infection requires 8–24 hours of continuous leaf wetness. Disease can cycle many times in a season.",
+      "spread_mechanism": "Wind-dispersed conidia released at night under high humidity and dew conditions.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Cool to moderate temperatures (20–28°C) favor infection. Optimal: 24–28°C. Temperatures above 32°C reduce sporulation.",
+        "humidity_context": "High relative humidity (>90%) for 6–12 hours and dew formation are critical for spore germination. Dew periods at night are especially important.",
+        "rainfall_wetness_context": "Cool, rainy weather with extended night dew is the classic blast epidemic condition. High altitude, upland, and rainfed environments are most at risk.",
+        "soil_context": "Excessive or imbalanced nitrogen (especially urea) promotes succulent growth highly susceptible to blast. Silicon deficiency significantly increases susceptibility."
+      },
+      "growth_stage_context": "Leaf blast: most damaging from tillering to panicle initiation. Neck blast: most devastating at heading/flowering (Z65–Z75). A single neck blast infection on a tiller causes complete yield loss of that tiller.",
+      "monitoring_guidance": "Scout from tillering. Use blast forecasting models based on temperature and humidity if available. Inspect leaf blade for diamond-shaped lesions. At heading, inspect panicle necks for dark lesions.",
+      "prevention": "Plant resistant/tolerant varieties (primary management). Use certified disease-free seeds. Treat seeds with recommended seed treatment. Avoid excessive nitrogen; split nitrogen application; increase potassium. Apply silicon through silicate fertilizers where soil silicon is deficient. Avoid over-irrigating during dew-favorable nights.",
+      "cultural_management": "Reduce nitrogen at risk periods (panicle initiation). Alter planting date to avoid peak blast risk period in your area. Drain fields temporarily to reduce humidity.",
+      "sanitation": "Destroy infected crop residue. Use certified blast-free seed.",
+      "water_irrigation_management": "Maintain thin flood during risk periods to moderate temperature. Alternating wet-dry irrigation can reduce blast pressure in some conditions.",
+      "crop_rotation": "NOT_APPLICABLE for lowland rice. Upland rice rotation with non-grass crops may help reduce inoculum.",
+      "resistant_varieties": "Blast-resistant varieties are a key management strategy. Rice blast is highly racially diverse — varieties resistant in one area may not be resistant in another. Consult ICAR-IIRR, IRRI, or state agricultural universities for current variety recommendations for your specific region.",
+      "biological_control": "Some Trichoderma and Pseudomonas-based biocontrol products are in experimental and commercial use in India — consult ICAR-IIRR and local extension for registered products.",
+      "chemical_control": "Use only products currently registered/labeled for rice blast in your region. Systemic fungicides (e.g., tricyclazole class) are registered for blast in India — consult ICAR-IIRR or local extension for current registered options, rates, and timing. Preventive application is critical at panicle initiation.",
+      "expert_escalation_conditions": "Neck blast confirmed or suspected at heading warrants IMMEDIATE expert consultation. Preventive fungicide at PI stage is critical in blast-endemic areas.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "IRRI",
+          "url": "https://www.irri.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIRR",
+          "url": "https://www.iirr.icar.gov.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "TNAU Agritech Portal",
+          "url": "https://agritech.tnau.ac.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "rice_leaf_scald": {
+      "canonical_class": "rice_leaf_scald",
+      "crop": "Rice (Paddy)",
+      "disease_name": "Rice Leaf Scald",
+      "common_names": ["Leaf Scald", "Rice Leaf Scald Disease"],
+      "scientific_name": "Microdochium oryzae (Hashioka & Yokogi) Samuels & I.C. Hallett (formerly Helminthosporium oryzae var. minor; Gerlachia oryzae)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Microdochium oryzae",
+      "primary_plant_parts_affected": ["Leaves", "Leaf sheaths"],
+      "leaf_symptoms": "Characteristic zonate (banded) lesions with alternating light tan/straw and dark brown-reddish bands, running ACROSS the leaf width rather than as discrete spots. Lesions typically start from the leaf tip and progress downward. The banded pattern gives a 'scalded' appearance.",
+      "stem_symptoms": "Sheath lesions possible.",
+      "fruit_pod_tuber_symptoms": "Grain discoloration possible in severe cases.",
+      "early_symptoms": "Light tan banded lesions starting at the leaf tip.",
+      "advanced_symptoms": "Large zonate lesions with alternating tan and dark bands killing the leaf blade from tip downward.",
+      "visual_appearance": "Zonate (alternating light and dark bands) lesions running transversely across the leaf blade from tip.",
+      "distinctive_symptom_pattern": "BANDED/ZONATE pattern on leaf — alternating light tan and dark brown bands running across the leaf width. This distinguishes leaf scald from brown spot (circular spots) and blast (diamond shapes).",
+      "lookalike_conditions": ["rice_brown_spot (circular spots, not banded)", "rice_leaf_blast (diamond-shaped lesions)", "Physiological leaf scorch (tip burn from K deficiency or salinity — no banding)"],
+      "visual_differentiation": "Leaf scald: banded/zonate pattern transverse to leaf. Brown spot: circular scattered spots. Blast: diamond-shaped lesions.",
+      "disease_cycle_summary": "M. oryzae survives in infected crop residue and soil. Disease is commonly found in areas with high nitrogen, high humidity, and warm conditions. Often a secondary/opportunistic pathogen.",
+      "spread_mechanism": "Wind and rain splash of conidia from infected debris.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (25–30°C) in combination with high humidity.",
+        "humidity_context": "High humidity and prolonged leaf wetness.",
+        "rainfall_wetness_context": "Rainy conditions and high humidity promote disease.",
+        "soil_context": "NOT_AVAILABLE — however, excessive nitrogen application has been associated with increased susceptibility in literature."
+      },
+      "growth_stage_context": "Disease more common from tillering to maturity stages.",
+      "monitoring_guidance": "Scout from tillering. Look for banded zonate lesions starting at leaf tips.",
+      "prevention": "Use balanced fertilization (avoid excessive nitrogen). Plant tolerant varieties. Practice good water management.",
+      "cultural_management": "Balanced nitrogen management. Remove infected crop residue.",
+      "sanitation": "Remove infected crop debris after harvest.",
+      "water_irrigation_management": "Avoid waterlogging.",
+      "crop_rotation": "Rotation with legumes where possible.",
+      "resistant_varieties": "NOT_AVAILABLE — consult ICAR-IIRR or local extension.",
+      "biological_control": "NOT_AVAILABLE.",
+      "chemical_control": "Use only products registered/labeled for rice leaf scald in your region. Consult local extension.",
+      "expert_escalation_conditions": "If symptoms spread rapidly, contact extension officer.",
+      "knowledge_completeness": "MEDIUM",
+      "knowledge_notes": "Rice leaf scald is less extensively documented in Indian extension literature compared to blast or BLB. Evidence cited from IRRI and peer-reviewed literature.",
+      "source_references": [
+        {
+          "organization": "IRRI",
+          "url": "https://www.irri.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "rice_sheath_blight": {
+      "canonical_class": "rice_sheath_blight",
+      "crop": "Rice (Paddy)",
+      "disease_name": "Rice Sheath Blight",
+      "common_names": ["Sheath Blight", "Rhizoctonia Sheath Blight"],
+      "scientific_name": "Rhizoctonia solani Kühn AG-1 IA (teleomorph: Thanatephorus cucumeris)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Rhizoctonia solani Kühn (Anastomosis Group AG-1 IA)",
+      "primary_plant_parts_affected": ["Leaf sheaths", "Leaves", "Stems"],
+      "leaf_symptoms": "Upper leaf blade lesions appear as irregular water-soaked greenish-gray to straw-colored patches with dark brown to purple borders. Lesions on leaves arise from infection spreading up from infected sheath.",
+      "stem_symptoms": "Leaf sheath lesions are the primary diagnostic feature: elliptical or irregular lesions on lower leaf sheaths near water line, with grayish-green centers, dark brown borders, and sometimes a white mycelium visible. Sclerotia (small brown fungal bodies) visible at lesion surface.",
+      "fruit_pod_tuber_symptoms": "Panicle sheaths may be affected in severe infections.",
+      "early_symptoms": "Elliptical, water-soaked greenish-gray spots on leaf sheath at or just above the water line.",
+      "advanced_symptoms": "Lesions enlarge and coalesce, covering large portions of sheath and moving upward to upper sheaths and blades. Sclerotia (round, brown, 2–5 mm fungal bodies) visible on infected sheaths.",
+      "visual_appearance": "Elliptical gray-straw patches with dark brown borders on leaf sheaths, starting at water line and progressing upward. Brown sclerotia at lesion surface.",
+      "distinctive_symptom_pattern": "Elliptical sheath lesions starting AT OR ABOVE WATERLINE progressing upward, with brown SCLEROTIA (small tan-brown round bodies) at lesion surface — diagnostic.",
+      "lookalike_conditions": ["rice_bacterial_leaf_blight (affects margins/tips of leaf lamina, not sheath near waterline)", "Sheath rot (different organism, lesions further up sheath, often with grain discoloration)"],
+      "visual_differentiation": "Sheath Blight: elliptical sheath lesions at waterline progressing upward, sclerotia present. BLB: tip/margin lesions on leaf lamina, straw color, bacterial ooze.",
+      "disease_cycle_summary": "R. solani survives as sclerotia in soil and infected crop debris. Sclerotia float on water and infect sheaths at the waterline. Under humid conditions, mycelium spreads rapidly from plant to plant.",
+      "spread_mechanism": "Floating sclerotia in water, wind-blown mycelium fragments. Spreads plant-to-plant through direct contact of infected and healthy tillers.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (28–32°C) are optimal. Disease severe in hot humid growing environments.",
+        "humidity_context": "High humidity (>90%) strongly favors rapid disease development. Humidity near the water surface is particularly important.",
+        "rainfall_wetness_context": "Warm humid conditions, standing water, and dense planting drive epidemic development.",
+        "soil_context": "High soil nitrogen (especially excessive urea) dramatically increases sheath blight severity by promoting dense, humid canopies."
+      },
+      "growth_stage_context": "Most damaging from active tillering to grain fill. Dense plant populations at high nitrogen inputs dramatically increase severity.",
+      "monitoring_guidance": "Scout from active tillering onwards. Examine lower leaf sheaths at water level. Record % plants infected and lesion height relative to flag leaf. Sheath blight severity index is used in research.",
+      "prevention": "Reduce plant density (wider row/plant spacing — critical in direct seeded rice). Avoid excessive nitrogen (split applications, avoid late urea). Choose partially resistant varieties. Seed treatment where appropriate.",
+      "cultural_management": "Reduce plant density. Balanced nitrogen management. Avoid high-density seeding. Collect and remove floating sclerotia from irrigation inlet water.",
+      "sanitation": "Remove crop residue and burn. Deep plough to bury sclerotia. Drain and dry field between crop seasons.",
+      "water_irrigation_management": "Drain field periodically (intermittent flooding) to reduce humidity near crop base and expose sclerotia to desiccation.",
+      "crop_rotation": "Rotation helps reduce sclerotia in soil over time. Consult local extension for appropriate rotation crops.",
+      "resistant_varieties": "No completely resistant variety is available, but varieties with partial resistance exist. Consult ICAR-IIRR or state agricultural universities for current recommendations.",
+      "biological_control": "Trichoderma harzianum and Pseudomonas fluorescens products are used in India as biocontrol agents for sheath blight in integration with fungicide management — consult ICAR-IIRR for registered products and protocols.",
+      "chemical_control": "Use only products currently registered/labeled for rice sheath blight in your region. Consult ICAR-IIRR or local extension for registered fungicide options, rates, and application timing at panicle initiation.",
+      "expert_escalation_conditions": "If sheath blight lesions reach flag leaf before heading, yield loss may be >20%. Consult extension officer for management adjustment.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "IRRI",
+          "url": "https://www.irri.org/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIRR",
+          "url": "https://www.iirr.icar.gov.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_bacterial_spot": {
+      "canonical_class": "tomato_bacterial_spot",
+      "crop": "Tomato",
+      "disease_name": "Bacterial Spot of Tomato",
+      "common_names": ["Tomato Bacterial Spot"],
+      "scientific_name": "Xanthomonas vesicatoria and related Xanthomonas species (X. euvesicatoria, X. perforans, X. gardneri)",
+      "disease_type": "bacterial",
+      "pathogen_or_cause": "Xanthomonas vesicatoria and related Xanthomonas spp.",
+      "primary_plant_parts_affected": ["Leaves", "Fruits", "Stems"],
+      "leaf_symptoms": "Small (1–3 mm), water-soaked angular to circular spots that turn dark brown with a yellow halo. Lesions may have a water-soaked margin. Spots may have scab-like raised centers. Severe infection leads to defoliation.",
+      "stem_symptoms": "Dark elongated stem lesions. Petiole lesions cause premature defoliation.",
+      "fruit_pod_tuber_symptoms": "Raised, water-soaked spots on fruits turning dark and scab-like with corky centers. Fruit lesions cause unmarketable quality.",
+      "early_symptoms": "Small water-soaked spots on leaves and fruit.",
+      "advanced_symptoms": "Numerous necrotic spots, severe defoliation, scab-like fruit lesions.",
+      "visual_appearance": "Angular-to-circular brown spots with yellow halos on leaves; scab-like spots on fruits.",
+      "distinctive_symptom_pattern": "Water-soaked, angular leaf spots with yellow halos; corky/scabby fruit lesions.",
+      "lookalike_conditions": ["tomato_early_blight (concentric rings, larger, older leaves)", "tomato_septoria_leaf_spot (circular, dark borders, white centers)", "tomato_target_spot (larger, concentric)"],
+      "visual_differentiation": "Bacterial spot: water-soaked angular spots with yellow halo, fruit lesions. Early blight: concentric rings on older leaves. Septoria: circular spots with tiny dark pycnidia in center.",
+      "disease_cycle_summary": "Bacteria survive on infected seed, plant debris. Spread by rain splash, wind, workers, and tools. Infection through stomata and wounds during wet, warm conditions.",
+      "spread_mechanism": "Rain splash, contaminated seed, infected transplants, tools, workers in wet fields.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (25–30°C) are most favorable.",
+        "humidity_context": "High humidity and free moisture on leaf surface required.",
+        "rainfall_wetness_context": "Frequent rain and overhead irrigation promote rapid spread.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "All stages susceptible. Most economically damaging at fruiting stage.",
+      "monitoring_guidance": "Scout weekly. Increase monitoring after rain events.",
+      "prevention": "Use disease-free certified seed (pathogen-tested). Hot water seed treatment (50°C for 25 min). Use disease-free transplants. Drip irrigation. Crop rotation.",
+      "cultural_management": "Avoid working in fields when plants are wet. Remove infected plant material.",
+      "sanitation": "Destroy infected crop debris. Do not save seed from infected crops.",
+      "water_irrigation_management": "Drip irrigation preferred. Avoid overhead irrigation.",
+      "crop_rotation": "Rotate with non-solanaceous crops for 2–3 years.",
+      "resistant_varieties": "Some tolerant varieties available. Consult ICAR-IIVR or state agricultural universities.",
+      "biological_control": "NOT_AVAILABLE for commercial use in reviewed Indian sources.",
+      "chemical_control": "Use only products registered/labeled for tomato bacterial spot in your region. Copper-based bactericides commonly used — consult local extension.",
+      "expert_escalation_conditions": "Rapid defoliation or widespread fruit spotting warrants expert consultation.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_early_blight": {
+      "canonical_class": "tomato_early_blight",
+      "crop": "Tomato",
+      "disease_name": "Early Blight of Tomato",
+      "common_names": ["Target Spot (Tomato)", "Alternaria Leaf Blight"],
+      "scientific_name": "Alternaria solani (Ellis & G. Martin) L.R. Jones & Grout; also Alternaria tomatophila E.G. Simmons",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Alternaria solani (and A. tomatophila)",
+      "primary_plant_parts_affected": ["Leaves (older/lower)", "Stems", "Fruits"],
+      "leaf_symptoms": "Dark brown to black circular lesions with CONCENTRIC RINGS forming a target-board ('bull's-eye') pattern. Lesions have prominent yellow CHLOROTIC HALOS. OLDER/LOWER leaves affected first. Lesions typically 0.5–2 cm.",
+      "stem_symptoms": "Dark elongated lesions on stems near soil level (collar rot) and at petiole attachment.",
+      "fruit_pod_tuber_symptoms": "Dark, sunken, leathery, target-patterned lesions at stem end or on other parts of fruit. Fruit lesions have concentric rings and may have velvety dark sporulation.",
+      "early_symptoms": "Small (2–4 mm) dark spots on oldest/lowest leaves.",
+      "advanced_symptoms": "Large target-patterned necrotic lesions with yellow halos. Premature defoliation from lower canopy upward.",
+      "visual_appearance": "Circular dark brown lesions with concentric rings and yellow chlorotic halos, predominantly on older lower leaves.",
+      "distinctive_symptom_pattern": "CONCENTRIC RING/TARGET pattern within dark brown lesion on OLDER leaves — classic for Alternaria early blight.",
+      "lookalike_conditions": ["tomato_late_blight (rapidly expanding, no concentric rings, white sporulation on underside)", "tomato_septoria_leaf_spot (smaller, circular, white center with tiny pycnidia)", "tomato_target_spot (Corynespora — similar but may have more distinct yellow halo and sporulation)", "tomato_bacterial_spot (water-soaked, angular, no concentric rings)"],
+      "visual_differentiation": "Early Blight: concentric rings, yellow halo, older leaves. Late Blight: rapidly expanding water-soaked dark lesion, white sporulation underside, affects younger/upper leaves. Septoria: tiny circular spots with white centers and dark pycnidia.",
+      "disease_cycle_summary": "Alternaria solani survives in crop residue and contaminated seed. Conidia dispersed by wind and rain splash. Multiple infection cycles occur. Plants under nutrient stress or physiological senescence are more susceptible.",
+      "spread_mechanism": "Wind and rain splash of conidia.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (24–29°C) are most favorable. Unlike Late Blight, Early Blight prefers warmer conditions.",
+        "humidity_context": "High humidity and prolonged leaf wetness (>2–3 hours) facilitate infection.",
+        "rainfall_wetness_context": "Alternating wet and dry weather can accelerate disease cycles. Rain splash disperses conidia.",
+        "soil_context": "Low nitrogen or potassium increases plant susceptibility. Older senescing tissue is more susceptible."
+      },
+      "growth_stage_context": "Most damaging from flowering onwards as lower leaves begin to senesce. Premature defoliation affects fruit set and quality.",
+      "monitoring_guidance": "Scout from transplanting. Focus on older lower leaves. Record % incidence and severity.",
+      "prevention": "Use certified disease-free seeds (treated). Practice crop rotation (2–3 years) with non-solanaceous crops. Remove infected lower leaves. Maintain balanced plant nutrition (avoid N and K deficiency). Proper plant spacing.",
+      "cultural_management": "Remove and destroy infected leaves and crop debris. Stake plants for good airflow. Avoid water stress.",
+      "sanitation": "Remove and destroy crop residue. Deep ploughing.",
+      "water_irrigation_management": "Drip irrigation. Avoid overhead irrigation. Irrigate in the morning.",
+      "crop_rotation": "Rotate with cereals or legumes for 2–3 years.",
+      "resistant_varieties": "Some partially resistant varieties available. Consult ICAR-IIVR for current recommendations.",
+      "biological_control": "NOT_AVAILABLE for commercial use from reviewed Indian sources.",
+      "chemical_control": "Use only products currently registered/labeled for tomato early blight in your region. Consult local extension for registered fungicide options and spray schedule.",
+      "expert_escalation_conditions": "Severe defoliation before fruiting stage warrants expert consultation.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "TNAU Agritech Portal",
+          "url": "https://agritech.tnau.ac.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_healthy": {
+      "canonical_class": "tomato_healthy",
+      "crop": "Tomato",
+      "disease_name": "Healthy Tomato",
+      "common_names": ["healthy tomato leaf"],
+      "scientific_name": null,
+      "disease_type": "healthy",
+      "pathogen_or_cause": null,
+      "primary_plant_parts_affected": [],
+      "leaf_symptoms": "Compound pinnate leaves, deep green, no lesions, no mottling, no curling.",
+      "stem_symptoms": null,
+      "fruit_pod_tuber_symptoms": null,
+      "early_symptoms": null,
+      "advanced_symptoms": null,
+      "visual_appearance": "Deep green compound leaves with no visible spots, lesions, or discoloration.",
+      "distinctive_symptom_pattern": null,
+      "lookalike_conditions": ["tomato_early_blight", "tomato_late_blight", "tomato_septoria_leaf_spot", "tomato_yellow_leaf_curl_virus"],
+      "visual_differentiation": "Healthy tomato leaves show no spots, no yellowing from tip/margin, no curling, and no mottling.",
+      "monitoring_guidance": "Scout weekly. Monitor older leaves for early blight. Check undersides for late blight sporulation after cool humid nights. Monitor for TYLCV curl symptoms and whiteflies.",
+      "prevention": "Use certified disease-free seeds and transplants. Practice crop rotation. Maintain balanced nutrition. Control whitefly and other sucking pests.",
+      "cultural_management": "Maintain field hygiene. Stake plants for airflow.",
+      "sanitation": "Remove and destroy infected crop debris after harvest.",
+      "water_irrigation_management": "Drip irrigation preferred. Avoid overhead irrigation.",
+      "crop_rotation": "Rotate with non-solanaceous crops for 2–3 years.",
+      "resistant_varieties": "NOT_AVAILABLE for general advice — consult ICAR-IIVR.",
+      "biological_control": null,
+      "chemical_control": null,
+      "expert_escalation_conditions": null,
+      "knowledge_completeness": "MEDIUM",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_late_blight": {
+      "canonical_class": "tomato_late_blight",
+      "crop": "Tomato",
+      "disease_name": "Late Blight of Tomato",
+      "common_names": ["Tomato Late Blight"],
+      "scientific_name": "Phytophthora infestans (Mont.) de Bary",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Phytophthora infestans (oomycete)",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Fruits"],
+      "leaf_symptoms": "Irregular dark brown-black water-soaked lesions, often starting from leaf margins, expanding rapidly. White cottony sporulation (sporangiophores) visible on the UNDERSIDE of lesions under humid conditions. Lesions appear greasy and water-soaked initially. Entire leaves may be killed within days under epidemic conditions.",
+      "stem_symptoms": "Dark brown-black elongated lesions on stems. Stems may be girdled causing collapse.",
+      "fruit_pod_tuber_symptoms": "Greenish-brown water-soaked lesions on fruit, becoming brown, firm, and greasy. White sporulation visible in humid conditions on fruit lesions.",
+      "early_symptoms": "Pale to dark green water-soaked spots at leaf margins or tips.",
+      "advanced_symptoms": "Rapidly expanding dark brown-black lesions with white sporulation on underside. Rapid defoliation and plant collapse.",
+      "visual_appearance": "Dark brown-black irregular lesions, rapidly expanding, with white cottony sporulation on leaf undersides in humid conditions.",
+      "distinctive_symptom_pattern": "Rapidly expanding dark water-soaked lesions + WHITE COTTONY SPORULATION on leaf underside — pathognomonic for late blight.",
+      "lookalike_conditions": ["tomato_early_blight (slower, concentric rings, older leaves, no white sporulation)", "Bacterial speck/spot (smaller, angular lesions)", "Frost damage"],
+      "visual_differentiation": "Late Blight: rapid dark water-soaked expansion, white underside sporulation in humidity. Early Blight: concentric rings on older leaves, slower progression.",
+      "disease_cycle_summary": "P. infestans survives in infected tomato/potato volunteers. Sporangia wind-dispersed; infection in cool humid conditions. Can destroy field in 7–10 days under epidemic conditions.",
+      "spread_mechanism": "Airborne sporangia; rain splash.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Cool temperatures (10–20°C) are optimal. Disease arrested at temperatures above 30°C.",
+        "humidity_context": "High relative humidity (>90%) for 10–12+ hours required for sporulation and infection.",
+        "rainfall_wetness_context": "Prolonged cool, wet, humid nights and days drive rapid epidemics.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "All stages susceptible. Fruiting stage infection causes most economic damage through fruit rot.",
+      "monitoring_guidance": "Scout DAILY during cool humid weather. Check leaf undersides for white sporulation. Alert for geographic spread from potato fields.",
+      "prevention": "Avoid planting tomato near potato. Use certified disease-free transplants. Resistant varieties. Preventive fungicide application in late blight-endemic areas before symptoms appear.",
+      "cultural_management": "Remove and destroy infected plant material IMMEDIATELY. Do not compost infected material.",
+      "sanitation": "Destroy infected plants. Remove volunteer tomato/potato plants in field and surrounding area.",
+      "water_irrigation_management": "Drip irrigation. Avoid overhead irrigation. Do not irrigate in evening under cool humid conditions.",
+      "crop_rotation": "Rotate with non-solanaceous crops. Avoid tomato after potato in same field.",
+      "resistant_varieties": "Late blight resistant tomato varieties available. Consult ICAR-IIVR for current recommendations.",
+      "biological_control": "NOT_AVAILABLE for commercial practical use from reviewed Indian sources.",
+      "chemical_control": "Use only products registered/labeled for tomato late blight in your region. Preventive application is essential — consult ICAR-IIVR or local extension for registered options.",
+      "expert_escalation_conditions": "IMMEDIATE expert consultation required on confirmed late blight. Emergency spray intervention critical.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_leaf_mold": {
+      "canonical_class": "tomato_leaf_mold",
+      "crop": "Tomato",
+      "disease_name": "Tomato Leaf Mold",
+      "common_names": ["Cladosporium Leaf Mold", "Tomato Leaf Mold"],
+      "scientific_name": "Passalora fulva (Cooke) U. Braun & Crous (formerly Fulvia fulva; Cladosporium fulvum)",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Passalora fulva (Cladosporium fulvum)",
+      "primary_plant_parts_affected": ["Leaves (predominantly lower surface)"],
+      "leaf_symptoms": "Pale green to yellow diffuse spots on UPPER leaf surface corresponding to characteristic OLIVE-GREEN to BROWNISH VELVETY SPORULATION (conidia masses) on the LOWER leaf surface. Spots are not sharply defined on upper surface. Lower surface sporulation is the most distinctive feature.",
+      "stem_symptoms": "Not typically affected.",
+      "fruit_pod_tuber_symptoms": "Occasionally infects blossoms and fruits, causing dark greenish-brown sporulation on fruit.",
+      "early_symptoms": "Pale green-yellow patches on upper leaf surface.",
+      "advanced_symptoms": "Extensive pale yellow upper leaf blotches with dense olive-green velvet sporulation on undersides. Severely affected leaves may wither.",
+      "visual_appearance": "Olive-green to brownish velvety sporulation on leaf undersides; corresponding pale yellow patches on upper surface.",
+      "distinctive_symptom_pattern": "VELVETY OLIVE-GREEN/BROWN SPORULATION on LEAF UNDERSIDE with corresponding pale yellow patches on upper surface — highly distinctive.",
+      "lookalike_conditions": ["tomato_late_blight (white sporulation, rapidly expanding dark lesions)", "Downy mildew of other crops (not tomato — different pathogen)"],
+      "visual_differentiation": "Leaf mold: olive-green velvety underside sporulation, pale upper patches. Late Blight: white sporulation on underside, dark rapidly-expanding lesions.",
+      "disease_cycle_summary": "Fungus survives as conidia and stromata in plant debris and infected seed. Disease thrives in protected cultivation (greenhouses, polyhouses) and in humid outdoor conditions. Conidia wind-dispersed.",
+      "spread_mechanism": "Wind and air currents dispersing conidia within crops. Most severe in protected cultivation environments.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Moderate temperatures (20–25°C) are optimal for leaf mold development.",
+        "humidity_context": "Very high relative humidity (>85%) is required. Disease is particularly severe in protected cultivation where humidity remains high.",
+        "rainfall_wetness_context": "Free moisture not required — high relative humidity alone is sufficient for spore germination. Most severe in humid growing environments.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Can occur at any stage, but often more severe as crop matures and canopy becomes dense. Worse in protected cultivation.",
+      "monitoring_guidance": "Inspect UNDERSIDE of leaves weekly. Monitor humidity in protected structures. Ensure adequate ventilation in polyhouses.",
+      "prevention": "Maintain relative humidity below 85% in protected structures through ventilation. Increase air circulation in open field through proper plant spacing. Remove infected leaves. Use resistant varieties.",
+      "cultural_management": "Remove infected leaves promptly. Prune for better airflow. Ventilate protected structures.",
+      "sanitation": "Remove and destroy infected plant material. Clean greenhouse between crops.",
+      "water_irrigation_management": "Drip irrigation. Avoid overhead systems that raise humidity.",
+      "crop_rotation": "Relevant in greenhouse — rotate or sterilize growing medium.",
+      "resistant_varieties": "Several Cf resistance gene-based resistant tomato varieties are commercially available. Consult seed companies or ICAR-IIVR for current resistant variety recommendations.",
+      "biological_control": "NOT_AVAILABLE for commercial use in reviewed Indian extension sources.",
+      "chemical_control": "Use only products registered/labeled for tomato leaf mold in your region. Consult local extension for registered fungicide options.",
+      "expert_escalation_conditions": "Severe outbreak in protected cultivation warrants expert consultation on humidity management and fungicide resistance status.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_mosaic_virus": {
+      "canonical_class": "tomato_mosaic_virus",
+      "crop": "Tomato",
+      "disease_name": "Tomato Mosaic Virus (ToMV)",
+      "common_names": ["Tomato Mosaic", "TMV on Tomato"],
+      "scientific_name": "Tomato mosaic virus (ToMV) — formerly grouped with Tobacco mosaic virus (TMV); now classified separately",
+      "disease_type": "viral",
+      "pathogen_or_cause": "Tomato mosaic virus (ToMV), a Tobamovirus. Tobacco mosaic virus (TMV) also infects tomato.",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Fruits"],
+      "leaf_symptoms": "Characteristic mosaic pattern — alternating light green, yellow, and dark green patches on leaf surface. Leaf distortion and curling may occur. Interveinal chlorosis, fern-leaf symptom (in severe cases leaf blades are greatly reduced). Mottling and blistering.",
+      "stem_symptoms": "Necrotic streaks on stems in some strains.",
+      "fruit_pod_tuber_symptoms": "Internal browning of fruit, discoloration, and uneven ripening. 'Bronze' coloration of fruits in some strains.",
+      "early_symptoms": "Young leaves show mosaic (mottled) green-yellow pattern and mild curling.",
+      "advanced_symptoms": "Severe mosaic and distortion. Fern-leaf (severe leaf reduction). Stunting.",
+      "visual_appearance": "Alternating light/dark green mottled (mosaic) pattern on leaves. Leaves may be distorted or fern-like.",
+      "distinctive_symptom_pattern": "MOSAIC (alternating light/dark green patches) on leaves, combined with leaf distortion — characteristic of tobamovirus infection.",
+      "lookalike_conditions": ["tomato_yellow_leaf_curl_virus (upward leaf curl with chlorosis, not true mosaic pattern)", "Herbicide injury (uniform chlorosis, not mosaic)"],
+      "visual_differentiation": "Mosaic virus: alternating light/dark green mottling (mosaic) on leaves. TYLCV: upward leaf curl with yellowing and small leaves.",
+      "disease_cycle_summary": "ToMV persists in soil and crop debris for extended periods. Transmitted mechanically through contact (workers, tools, mechanical handling). No insect vector. Also seed-transmitted. Very stable in the environment.",
+      "spread_mechanism": "Mechanical transmission through contact (worker hands, tools, clothing, water). Also seed-borne. NOT insect-transmitted (no vector).",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Virus persists and spreads mechanically regardless of temperature. Symptom expression may be masked at high temperatures (>32°C).",
+        "humidity_context": "NOT_AVAILABLE — disease is mechanically transmitted and not primarily driven by humidity.",
+        "rainfall_wetness_context": "NOT_AVAILABLE.",
+        "soil_context": "NOT_AVAILABLE — virus can persist in soil and plant debris."
+      },
+      "growth_stage_context": "Infection at seedling or transplant stage causes most severe impact on yield.",
+      "monitoring_guidance": "Inspect seedlings and transplants before purchase. Scout for mosaic patterns. Remove symptomatic plants early.",
+      "prevention": "Use certified ToMV/TMV-free seeds or treated seeds. Use resistant varieties (Tm gene resistance). Disinfect tools and hands with soap/water or disinfectant between plants. Do not handle plants after handling tobacco products (tobacco is a source of TMV). Raise nursery in protected area.",
+      "cultural_management": "Remove and destroy infected plants immediately. Do not compost infected material. Wash hands thoroughly before handling tomato plants. Disinfect tools between rows.",
+      "sanitation": "Destroy infected plant residue. Sterilize greenhouse growing media.",
+      "water_irrigation_management": "NOT_APPLICABLE for this virus transmission.",
+      "crop_rotation": "Rotate with non-solanaceous crops to reduce soil-borne inoculum.",
+      "resistant_varieties": "Varieties with Tm-2a gene resistance to ToMV are commercially available. Consult ICAR-IIVR or seed companies for currently available resistant varieties.",
+      "biological_control": "NOT_AVAILABLE.",
+      "chemical_control": "No chemical treatment available for viral diseases. Chemical management is NOT applicable for this disease.",
+      "expert_escalation_conditions": "If infection rate in nursery exceeds 5–10%, replace entire seedling batch with certified disease-free plants.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_septoria_leaf_spot": {
+      "canonical_class": "tomato_septoria_leaf_spot",
+      "crop": "Tomato",
+      "disease_name": "Septoria Leaf Spot of Tomato",
+      "common_names": ["Septoria Leaf Spot"],
+      "scientific_name": "Septoria lycopersici Speg.",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Septoria lycopersici Speg.",
+      "primary_plant_parts_affected": ["Leaves (lower/older first)", "Stems", "Calyces"],
+      "leaf_symptoms": "Numerous SMALL (1.5–4 mm) circular spots with WHITE to GRAY CENTERS and DARK BROWN borders. TINY DARK PYCNIDIA (fungal fruiting bodies) visible in the center of lesions (visible to naked eye or with hand lens). Yellow halo may be present. Lower/older leaves affected first.",
+      "stem_symptoms": "Dark lesions on stems possible. Calyx lesions possible.",
+      "fruit_pod_tuber_symptoms": "Fruit not commonly affected but calyx infection can occur.",
+      "early_symptoms": "Small water-soaked spots on lower leaves.",
+      "advanced_symptoms": "Numerous small spots on all lower-canopy leaves, causing mass yellowing and premature defoliation.",
+      "visual_appearance": "Many small circular spots with white-gray centers and dark borders; tiny dark dots (pycnidia) visible in lesion center.",
+      "distinctive_symptom_pattern": "MANY SMALL CIRCULAR SPOTS with WHITE/GRAY CENTERS, DARK BORDERS, and TINY PYCNIDIA in center — highly distinctive for Septoria.",
+      "lookalike_conditions": ["tomato_early_blight (larger, concentric ring lesions, no pycnidia)", "tomato_bacterial_spot (angular, water-soaked, no pycnidia)", "tomato_target_spot (larger, more diffuse target pattern)"],
+      "visual_differentiation": "Septoria: MANY SMALL spots with WHITE centers and visible PYCNIDIA. Early Blight: LARGER spots with CONCENTRIC RINGS, no pycnidia. Bacterial spot: angular lesions with yellow halo, no pycnidia.",
+      "disease_cycle_summary": "S. lycopersici survives in infected crop debris and seed. Conidia from pycnidia are released during rain and splash to lower leaves. Multiple infection cycles per season.",
+      "spread_mechanism": "Rain splash of conidia from pycnidia; infected crop debris.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Cool to moderate temperatures (20–25°C) favor disease development.",
+        "humidity_context": "High humidity and prolonged leaf wetness (>3 hours) required for infection.",
+        "rainfall_wetness_context": "Frequent rain splash is critical for conidia dispersal from pycnidia. Disease severe in wet growing seasons.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Disease commonly appears from transplanting onwards on lower leaves. Particularly severe when lower canopy is moist.",
+      "monitoring_guidance": "Scout lower canopy leaves from transplanting. Use hand lens to confirm pycnidia presence.",
+      "prevention": "Crop rotation (2–3 years) with non-solanaceous crops. Remove infected lower leaves. Proper plant spacing. Use disease-free seed. Stake plants for better airflow.",
+      "cultural_management": "Remove infected lower leaves. Stake plants. Avoid working in wet fields.",
+      "sanitation": "Destroy infected plant debris. Deep ploughing.",
+      "water_irrigation_management": "Drip irrigation. Avoid overhead irrigation.",
+      "crop_rotation": "Essential — rotate 2–3 years with non-solanaceous crops.",
+      "resistant_varieties": "NOT_AVAILABLE — no commercially resistant variety widely documented in reviewed Indian sources.",
+      "biological_control": "NOT_AVAILABLE.",
+      "chemical_control": "Use only products registered/labeled for Septoria leaf spot of tomato in your region. Consult local extension for registered fungicide options.",
+      "expert_escalation_conditions": "Severe early defoliation before fruiting warrants expert consultation.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_spider_mites_two_spotted_spider_mite": {
+      "canonical_class": "tomato_spider_mites_two_spotted_spider_mite",
+      "crop": "Tomato",
+      "disease_name": "Two-Spotted Spider Mite Infestation",
+      "common_names": ["Red Spider Mite", "Two-spotted Mite", "Spider Mite"],
+      "scientific_name": "Tetranychus urticae Koch",
+      "disease_type": "insect/pest-associated",
+      "pathogen_or_cause": "Tetranychus urticae Koch (Two-Spotted Spider Mite) — an arachnid pest, not a fungus or virus",
+      "primary_plant_parts_affected": ["Leaves (underside)", "Stems"],
+      "leaf_symptoms": "Tiny yellow stippling (pinpoint chlorotic spots) on upper leaf surface caused by mite feeding. As infestation progresses, leaves develop a bronzed, dried, or dusty appearance. Fine webbing (silk strands) on leaf underside and between leaves at high mite densities. Tiny moving red/green dots visible on leaf underside.",
+      "stem_symptoms": "Fine webbing on stems at high infestation levels.",
+      "fruit_pod_tuber_symptoms": "Silver-gray scarring or bronzing of fruit surface in heavy infestations.",
+      "early_symptoms": "Tiny yellow stipples on upper leaf surface (difficult to see without magnification). Slight bronzing.",
+      "advanced_symptoms": "Severe bronzing and drying of leaves. Dense white webbing on undersides. Defoliation in very severe cases.",
+      "visual_appearance": "Yellow stippled/bronzed upper leaf surface. Fine white webbing on leaf underside. Tiny red/green dots (mites) visible with magnification on leaf underside.",
+      "distinctive_symptom_pattern": "Fine WEBBING on leaf underside with YELLOW STIPPLING on upper surface and visible tiny moving MITES — characteristic of spider mite infestation.",
+      "lookalike_conditions": ["Zinc deficiency (interveinal chlorosis, no webbing)", "Thrips damage (silvering, no webbing)", "Drought stress (wilting, no webbing or stippling)"],
+      "visual_differentiation": "Spider mites: visible webbing + stippling + tiny mites visible on underside. Fungal/bacterial diseases: no webbing. Drought: general wilting, no stippling or webbing.",
+      "disease_cycle_summary": "Tetranychus urticae overwinters as adult females. Under hot dry conditions, mite populations can double every 5–7 days. Each female lays 100+ eggs. Multiple generations per season. Natural enemies (predatory mites, lacewings) provide significant biological control when not disrupted by pesticides.",
+      "spread_mechanism": "Wind, workers, equipment, and plant-to-plant contact spread mites. Incoming infected transplants or plant material.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Hot, dry conditions (27–35°C) favor rapid population explosion. Development arrested at high humidity.",
+        "humidity_context": "LOW humidity (<50%) strongly favors mite population growth. High humidity (>80%) slows mite development.",
+        "rainfall_wetness_context": "Dry conditions favor mite outbreaks. Rain and misting suppress mite populations mechanically.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Can occur at any stage. Most damaging at flowering and fruit development. Hot dry periods during summer crops are high-risk.",
+      "monitoring_guidance": "Use 10X hand lens to inspect underside of leaves at regular intervals. Count mites per leaf. Economic threshold varies — consult local extension guidance.",
+      "prevention": "Monitor regularly, particularly during hot dry periods. Maintain field hygiene. Avoid broad-spectrum pesticides that kill natural enemies (predatory mites). Use reflective mulches to deter mite colonization. Maintain adequate plant moisture (drought stress increases susceptibility).",
+      "cultural_management": "Use water sprays to knock mites off plants during early infestation. Avoid dusty field conditions. Remove heavily infested plant parts.",
+      "sanitation": "Remove and destroy heavily infested plant debris. Remove volunteer tomato plants.",
+      "water_irrigation_management": "Maintain adequate soil moisture. Drip irrigation. Overhead irrigation can physically dislodge mites — balance against disease risk.",
+      "crop_rotation": "NOT_SPECIFICALLY_APPLICABLE for mite management.",
+      "resistant_varieties": "NOT_AVAILABLE from reviewed sources for commercial tomato spider mite resistance.",
+      "biological_control": "Predatory mites (Phytoseiidae family: Phytoseiulus persimilis, Neoseiulus californicus) are effective biological control agents in both protected and open field cultivation. Encourage natural predators by avoiding broad-spectrum pesticides.",
+      "chemical_control": "Use only products currently registered/labeled for two-spotted spider mite on tomato in your region. Rotate miticide classes to prevent resistance development. Avoid broad-spectrum insecticides that kill natural predators. Consult local extension for registered miticide options.",
+      "expert_escalation_conditions": "Rapid population explosion or miticide failure (resistance) warrants expert consultation. If webbing covers >25% of plant canopy, urgent management is needed.",
+      "knowledge_completeness": "HIGH",
+      "knowledge_notes": "This is a pest/arthropod infestation — NOT a fungal, bacterial, or viral disease. Chemical control uses miticides, not fungicides.",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "TNAU Agritech Portal",
+          "url": "https://agritech.tnau.ac.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_target_spot": {
+      "canonical_class": "tomato_target_spot",
+      "crop": "Tomato",
+      "disease_name": "Target Spot of Tomato (Corynespora)",
+      "common_names": ["Target Spot", "Corynespora Leaf Spot"],
+      "scientific_name": "Corynespora cassiicola (Berk. & M.A. Curtis) C.T. Wei",
+      "disease_type": "fungal",
+      "pathogen_or_cause": "Corynespora cassiicola",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Fruits"],
+      "leaf_symptoms": "Dark brown lesions (5–20 mm) with visible CONCENTRIC RINGS (target pattern) but typically larger than early blight lesions and with a more prominent yellow halo. Lesions may appear anywhere on leaves (not restricted to older leaves as strongly as early blight). Small water-soaked spots progressing to dark brown.",
+      "stem_symptoms": "Dark elongated lesions on stems.",
+      "fruit_pod_tuber_symptoms": "Dark, slightly sunken lesions on fruit.",
+      "early_symptoms": "Small (2–5 mm) dark brown spots on leaves.",
+      "advanced_symptoms": "Larger target-pattern lesions with yellow halos. Defoliation.",
+      "visual_appearance": "Dark brown to black circular lesions with concentric banding and yellow halos, similar to early blight but often larger and with more diffuse pattern.",
+      "distinctive_symptom_pattern": "Target/concentric-ring pattern, but generally larger and less strictly on older leaves compared to early blight. Occurs in warm humid conditions.",
+      "lookalike_conditions": ["tomato_early_blight (smaller lesions, strictly on older leaves, same concentric ring pattern)", "tomato_late_blight (no rings, rapidly expanding, white sporulation)", "tomato_septoria_leaf_spot (tiny spots, white centers, pycnidia)"],
+      "visual_differentiation": "Target spot: large concentric ring lesions, can affect all leaf ages. Early blight: similar but strictly on older/lower leaves, smaller. These two are most commonly confused.",
+      "disease_cycle_summary": "C. cassiicola survives in plant debris and infected seed. Spores are wind and rain splash dispersed. Disease favored by warm humid conditions. Wide host range.",
+      "spread_mechanism": "Wind and rain splash dispersal of conidia.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm conditions (24–32°C) favor disease development.",
+        "humidity_context": "High humidity and prolonged leaf wetness.",
+        "rainfall_wetness_context": "Warm, wet conditions accelerate development.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "More commonly seen from flowering stage onwards.",
+      "monitoring_guidance": "Inspect all leaf canopy levels. Cannot distinguish reliably from early blight without laboratory confirmation.",
+      "prevention": "Same practices as for early blight: crop rotation, certified seed, plant spacing, drip irrigation.",
+      "cultural_management": "Remove infected leaves. Improve canopy airflow.",
+      "sanitation": "Remove crop debris.",
+      "water_irrigation_management": "Drip irrigation. Avoid overhead spray.",
+      "crop_rotation": "Rotate with non-host crops.",
+      "resistant_varieties": "NOT_AVAILABLE — consult ICAR-IIVR.",
+      "biological_control": "NOT_AVAILABLE.",
+      "chemical_control": "Use only products registered/labeled for this disease on tomato in your region. Consult local extension.",
+      "expert_escalation_conditions": "Severe defoliation warrants expert consultation. Laboratory confirmation recommended to distinguish from early blight.",
+      "knowledge_completeness": "MEDIUM",
+      "knowledge_notes": "Target spot and early blight are frequently confused. Laboratory confirmation (microscopy/PCR) recommended for definitive diagnosis.",
+      "source_references": [
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    },
+
+    "tomato_yellow_leaf_curl_virus": {
+      "canonical_class": "tomato_yellow_leaf_curl_virus",
+      "crop": "Tomato",
+      "disease_name": "Tomato Yellow Leaf Curl Virus (TYLCV)",
+      "common_names": ["TYLCV", "Tomato Leaf Curl", "Yellow Leaf Curl"],
+      "scientific_name": "Tomato yellow leaf curl virus (TYLCV) — a monopartite Begomovirus",
+      "disease_type": "viral",
+      "pathogen_or_cause": "Tomato yellow leaf curl virus (TYLCV), transmitted by whitefly Bemisia tabaci (Genn.)",
+      "primary_plant_parts_affected": ["Leaves", "Stems", "Growing tips"],
+      "leaf_symptoms": "Characteristic UPWARD CURLING and CUPPING of young leaves with YELLOWING of leaf margins and interveinal areas. Leaves are small, crinkled, and cupped (inward curling). The yellowing and curl are most pronounced on young/newly emerging leaves.",
+      "stem_symptoms": "Shortened internodes. Upright ('erect') growth habit. Stunted plant.",
+      "fruit_pod_tuber_symptoms": "Fewer fruits. Fruits may be smaller. Fruit set drastically reduced in early-infected plants.",
+      "early_symptoms": "Young leaves show yellowing of margins and interveinal areas with slight upward curling.",
+      "advanced_symptoms": "Severe leaf curl with pronounced cupping. All young leaves are yellow-margined and curled. Stunted plant with bushy appearance due to shortened internodes. Near-total yield loss if infected before flowering.",
+      "visual_appearance": "Young leaves curled upward with prominent yellowing at margins and between veins. Small, deformed, cupped leaves on stunted plant.",
+      "distinctive_symptom_pattern": "UPWARD CUPPING of young leaves with YELLOW MARGINS and interveinal chlorosis, combined with plant STUNTING — pathognomonic for TYLCV. Compare: tomato mosaic virus shows mosaic on older leaves without upward cup-curl.",
+      "lookalike_conditions": ["tomato_mosaic_virus (mosaic pattern on leaves — not the same as cup-curl with yellowing)", "Tomato big bud phytoplasma (different symptoms)", "Nutritional disorders (no distinct cup curl)"],
+      "visual_differentiation": "TYLCV: young leaves cup-curled upward with yellow margins and interveinal chlorosis. Mosaic virus: mottled/mosaic pattern on leaves without pronounced cup-curl. TYLCV affects young leaves; mosaic typically affects older leaves first.",
+      "disease_cycle_summary": "TYLCV is transmitted exclusively by whitefly Bemisia tabaci in a persistent circulative manner. The virus cannot be transmitted mechanically or by seed. Whitefly acquires the virus in as little as 15–30 minutes of feeding and transmits it for its lifetime.",
+      "spread_mechanism": "Exclusively by whitefly Bemisia tabaci — persistent, circulative, non-propagative transmission. Whitefly can transmit for its entire lifespan after a brief acquisition access period.",
+      "favorable_environmental_conditions": {
+        "temperature_context": "Warm temperatures (27–35°C) favor whitefly population growth and rapid TYLCV spread.",
+        "humidity_context": "Low-moderate humidity favors whitefly multiplication and TYLCV spread.",
+        "rainfall_wetness_context": "Hot, dry periods coincide with high whitefly populations and TYLCV epidemics.",
+        "soil_context": "NOT_AVAILABLE."
+      },
+      "growth_stage_context": "Seedling and early vegetative stages are most vulnerable. Plants infected before flowering suffer near-complete yield loss. Infections after fruit set are less damaging.",
+      "monitoring_guidance": "Monitor whitefly populations using yellow sticky traps (2 per acre) from seedling stage. Inspect growing tips for curl symptoms weekly. Scout border rows first.",
+      "prevention": "Use certified TYLCV-free, virus-tested transplants. Raise nursery under 50-mesh nylon insect-proof net. Use TYLCV-resistant varieties (primary management strategy). Remove and destroy TYLCV-infected plants immediately. Remove alternate host weeds (Solanum nigrum, Datura, etc.). Avoid tomato planting near cucurbit or other whitefly host crops.",
+      "cultural_management": "Rogue out infected plants early. Remove weed hosts in and around field. Use reflective mulches (silver) to reduce whitefly landing.",
+      "sanitation": "Remove infected crop debris. Remove volunteer tomato plants. Destroy alternate host weeds.",
+      "water_irrigation_management": "Maintain plant vigor. Avoid water stress which may increase plant susceptibility.",
+      "crop_rotation": "Avoid continuous tomato. Rotate with cereals/legumes.",
+      "resistant_varieties": "TYLCV-resistant tomato varieties are commercially available in India and are the primary management strategy. Consult ICAR-IIVR, state KVK, or seed companies for current resistant variety recommendations for your region.",
+      "biological_control": "Encourage Encarsia formosa and other whitefly parasitoids. Neem-based products used as part of IPM for whitefly management — consult product label and local extension.",
+      "chemical_control": "No chemical treatment is effective against the virus. Whitefly vector control reduces spread. Use only products currently registered/labeled for whitefly control on tomato in your region. Consult local agricultural extension for registered insecticide options and rates for vector management. Avoid overusing any single class to prevent resistance.",
+      "expert_escalation_conditions": "If >20% of plants are infected before flowering, contact extension officer. Consider crop destruction and replanting with resistant variety if infection is widespread before fruit set.",
+      "knowledge_completeness": "HIGH",
+      "source_references": [
+        {
+          "organization": "ICAR-IIVR",
+          "url": "https://www.iivr.org.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "CABI Plantwise",
+          "url": "https://plantwiseplusknowledge.net/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        },
+        {
+          "organization": "TNAU Agritech Portal",
+          "url": "https://agritech.tnau.ac.in/",
+          "date_accessed": "2024",
+          "confidence_in_source": "High"
+        }
+      ]
+    }
+  }
+}

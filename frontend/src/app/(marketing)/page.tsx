@@ -1,85 +1,114 @@
 "use client";
 
 import Link from "next/link";
-import { Camera, ImagePlus, ArrowRight, Leaf, ScanLine, CheckCircle } from "lucide-react";
+import { Camera, ArrowRight, ScanLine, CheckCircle, BarChart3, Sprout, ShieldCheck } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/lib/i18n";
+import { useAppStore } from "@/lib/store";
+import { Globe } from "lucide-react";
 
 export default function MarketingPage() {
-  return (
-    <div>
-      {/* ─── Hero Section (Farmer-Friendly) ─────────────────────────── */}
-      <section className="relative min-h-[90vh] flex items-center justify-center px-4 pt-20 pb-24 overflow-hidden bg-green-900">
-        
-        {/* Simple Background */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40">
-          <div className="absolute inset-0 bg-black/60 z-10" />
-        </div>
+  const { t } = useTranslation();
+  const { language, setLanguage } = useAppStore();
 
-        {/* Hero Content */}
-        <div className="relative z-20 max-w-3xl mx-auto text-center mt-12 sm:mt-0">
+  return (
+    <div className="bg-white min-h-screen text-slate-900 overflow-x-hidden font-sans relative">
+      
+      {/* Language Switcher */}
+      <div className="absolute top-6 right-6 z-50 flex items-center gap-2 bg-white px-3 py-1.5 rounded-sm border border-slate-200 shadow-sm">
+        <Globe className="h-4 w-4 text-slate-500" />
+        <select 
+          value={language}
+          onChange={(e) => setLanguage(e.target.value as "en" | "te" | "hi")}
+          className="bg-transparent text-sm font-medium text-slate-700 focus:outline-none cursor-pointer"
+        >
+          <option value="en">English</option>
+          <option value="te">తెలుగు</option>
+          <option value="hi">हिंदी</option>
+        </select>
+      </div>
+
+      {/* ─── Minimal Hero Section ─────────────────────────── */}
+      <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 px-6">
+        <div className="max-w-5xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ duration: 0.5 }}
           >
-            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white leading-tight mb-6 drop-shadow-2xl">
-              Got a sick plant?
+            <div className="inline-flex items-center gap-2 mb-6">
+              <Sprout className="h-5 w-5 text-green-700" />
+              <span className="text-sm font-semibold text-green-700 tracking-wide uppercase">{t("marketing.subtitle")}</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+              {t("marketing.headline_1")} <br className="hidden md:block"/> <span className="text-green-700">{t("marketing.headline_2")}</span>
             </h1>
-            <p className="text-xl sm:text-3xl text-zinc-100 leading-snug mb-12 max-w-2xl mx-auto drop-shadow-md font-medium">
-              Take a photo of the leaf. We will tell you exactly what's wrong and how to fix it immediately.
+            
+            <p className="text-lg md:text-xl text-slate-600 max-w-2xl font-normal mb-12">
+              {t("marketing.desc")}
             </p>
-            <div className="flex flex-col items-center justify-center gap-6">
+
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              {/* Farmer Path */}
               <Link
                 href="/dashboard/disease"
-                className={buttonVariants({
-                  size: "lg",
-                  className: "w-full sm:w-auto h-20 px-12 rounded-full text-2xl font-bold gap-3 shadow-2xl hover:scale-105 transition-transform bg-green-500 text-white hover:bg-green-400 border-4 border-green-600",
-                })}
+                className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-green-700 text-white font-semibold text-base hover:bg-green-800 transition-colors rounded-sm"
               >
-                <Camera className="h-8 w-8" />
-                Tap to Check Leaf
+                <Camera className="h-5 w-5" />
+                {t("marketing.btn_farmer")}
+              </Link>
+
+              {/* Agritech Path */}
+              <Link
+                href="/login"
+                className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-slate-100 text-slate-900 font-semibold text-base hover:bg-slate-200 transition-colors border border-slate-200 rounded-sm"
+              >
+                <BarChart3 className="h-5 w-5 text-slate-500" />
+                {t("marketing.btn_agritech")}
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ─── How It Works (Ultra Simple) ────────────────────────────── */}
-      <section id="how-it-works" className="px-6 py-24 bg-white relative z-20 text-slate-900">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold tracking-tight mb-4 text-green-800">
-              How it works
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-12">
+      {/* ─── Value Proposition Cards ────────────────────────────── */}
+      <section className="px-6 py-24 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                num: "1",
-                icon: Camera,
-                title: "Take a Photo",
-                desc: "Point your phone camera at the sick leaf.",
-              },
-              {
-                num: "2",
                 icon: ScanLine,
-                title: "Wait 2 Seconds",
-                desc: "Our system identifies the disease automatically.",
+                title: t("marketing.val1_title"),
+                desc: t("marketing.val1_desc"),
+                color: "text-emerald-600",
+                bg: "bg-emerald-50"
               },
               {
-                num: "3",
-                icon: CheckCircle,
-                title: "Get the Solution",
-                desc: "Read exact instructions on what to spray or do next.",
+                icon: ShieldCheck,
+                title: t("marketing.val2_title"),
+                desc: t("marketing.val2_desc"),
+                color: "text-blue-600",
+                bg: "bg-blue-50"
               },
-            ].map(({ num, icon: Icon, title, desc }) => (
-              <div key={num} className="flex flex-col items-center text-center p-8 rounded-3xl bg-slate-50 border-2 border-slate-200 shadow-sm">
-                <div className="h-24 w-24 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-700 shadow-inner">
-                  <Icon className="h-12 w-12" />
+              {
+                icon: BarChart3,
+                title: t("marketing.val3_title"),
+                desc: t("marketing.val3_desc"),
+                color: "text-amber-600",
+                bg: "bg-amber-50"
+              },
+            ].map(({ icon: Icon, title, desc, color, bg }, i) => (
+              <div 
+                key={i} 
+                className="p-8 bg-white border border-slate-200 rounded-sm"
+              >
+                <div className={`h-12 w-12 rounded-sm ${bg} flex items-center justify-center mb-6 border border-slate-100`}>
+                  <Icon className={`h-6 w-6 ${color}`} />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-slate-800">{title}</h3>
-                <p className="text-xl text-slate-600 leading-relaxed font-medium">
+                <h3 className="text-xl font-bold mb-3 text-slate-900">{title}</h3>
+                <p className="text-slate-600 font-normal leading-relaxed">
                   {desc}
                 </p>
               </div>
@@ -89,29 +118,19 @@ export default function MarketingPage() {
       </section>
 
       {/* ─── Bottom CTA ─────────────────────────────────────────────────── */}
-      <section className="px-6 py-24 bg-green-800 relative z-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-8 text-white">
-            Ready to save your harvest?
+      <section className="px-6 py-24 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-white">
+            {t("marketing.cta")}
           </h2>
-          <Link
-            href="/dashboard/disease"
-            className={buttonVariants({
-              size: "lg",
-              className: "w-full sm:w-auto h-20 px-12 rounded-full text-2xl font-bold gap-3 shadow-2xl hover:scale-105 transition-transform bg-white text-green-800 hover:bg-slate-100",
-            })}
-          >
-            Start Now — It's Free
-            <ArrowRight className="h-6 w-6" />
-          </Link>
-          
-          <div className="mt-16 pt-8 border-t border-green-700/50">
-            <p className="text-green-100 text-lg">
-              Are you an agricultural company or farm manager? <br/>
-              <Link href="/dashboard" className="text-white font-bold underline hover:text-green-300 mt-2 inline-block">
-                Enter the Corporate Dashboard
-              </Link>
-            </p>
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <Link
+              href="/dashboard/disease"
+              className="px-8 py-4 bg-white text-slate-900 font-semibold text-base hover:bg-slate-100 transition-colors rounded-sm flex items-center gap-2"
+            >
+              {t("marketing.cta_btn")}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>

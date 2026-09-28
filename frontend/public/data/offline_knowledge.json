@@ -1,0 +1,308 @@
+{
+  "chilli_healthy": {
+    "disease_type": "healthy",
+    "symptoms": "No visible symptoms. Leaves are dark green, flat, and turgid with no lesions, curl, or discoloration.",
+    "prevention": "Use certified virus-free seeds. Control thrips and aphid vectors. Apply balanced fertilization. Avoid water stress. Maintain proper spacing for airflow.",
+    "chemical_control": null,
+    "treatment": "Unavailable",
+    "distinctive_pattern": null,
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "chilli_leaf_curl": {
+    "disease_type": "viral",
+    "symptoms": "Marked upward or downward curling and rolling of leaves. Leaves become leathery, distorted, and wrinkled. Older leaves show crinkling with interveinal mottling. Leaf size is reduced.",
+    "prevention": "Use virus-free certified seeds. Use healthy nursery transplants. Raise nursery under 50-mesh nylon net to exclude whitefly. Remove weed hosts (e.g., Solanum nigrum) from field borders. Avoid growing chilli near tomato or other solanaceous crops to reduce whitefly buildup.",
+    "chemical_control": "Use only products currently registered/labeled for whitefly control on chilli in your region. Systemic insecticides targeting Bemisia tabaci are commonly used in India \u00e2\u20ac\u201d consult local agricultural extension or product label for current registered options and rates. Avoid overuse of any single class of insecticide to prevent resistance.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Upward/downward curling combined with interveinal mottling and leaf distortion; characteristic of Begomovirus infection. Whiteflies may be visible on the lower leaf surface.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "chilli_leaf_spot": {
+    "disease_type": "fungal",
+    "symptoms": "Circular to irregular water-soaked lesions that turn brown with pale gray or white necrotic centers. Lesions typically have a yellow halo. Multiple lesions coalesce to form larger irregular blighted areas. Affected leaves turn yellow and drop prematurely.",
+    "prevention": "Use certified disease-free seeds. Treat seeds with hot water (52\u00c2\u00b0C for 30 minutes) or recommended fungicide before planting. Space plants adequately (60 \u00c3\u2014 45 cm) for airflow. Avoid overhead irrigation.",
+    "chemical_control": "Use only products currently registered/labeled for Cercospora leaf spot on chilli in your region and follow product label guidance. Copper-based fungicides and mancozeb-based products are commonly referenced in Indian extension literature; however, specific rates and intervals must follow current product labels and local extension recommendation.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Circular lesions with gray-white powdery centers (due to fungal sporulation) and yellow halo; predominantly on lower/older leaves.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "corn_gray_leaf_spot": {
+    "disease_type": "fungal",
+    "symptoms": "Rectangular to elongated gray-tan lesions bounded by leaf veins on both sides, giving a rectangular appearance unique among maize diseases. Lesions are initially tan-brown, becoming grayish-white to pale tan as they age. Lesions may coalesce to cause blighting of entire leaves.",
+    "prevention": "Plant resistant/tolerant hybrids (primary management strategy). Rotate crops with non-host (soybean, wheat). Avoid conservation tillage on high-risk fields or implement residue management. Improve plant spacing and row orientation for better airflow.",
+    "chemical_control": "Use only products currently registered/labeled for Gray Leaf Spot on maize in your region. Foliar fungicides (triazoles, strobilurins) are used in severe cases \u00e2\u20ac\u201d consult local agricultural extension for registered options, rates, and application timing.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Rectangular gray lesions with parallel edges (constrained by leaf veins) are pathognomonic for Gray Leaf Spot.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "corn_leaf_blight": {
+    "disease_type": "fungal",
+    "symptoms": "Large, cigar-shaped (elliptical) tan-brown lesions 2.5\u00e2\u20ac\u201c15 cm long with regular tan or grayish coloring. Lesions have wavy, irregular margins (not vein-constrained). Sporulation produces an olive-green to grayish mass of conidia on lesion surface under humid conditions.",
+    "prevention": "Plant resistant hybrids (primary strategy). Practice crop rotation with non-host crops. Incorporate residue through tillage where appropriate.",
+    "chemical_control": "Use only products currently registered/labeled for NCLB on maize in your region. Consult local extension for registered foliar fungicide options and application timing.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Cigar-shaped (fusiform) large tan lesions on maize leaves \u00e2\u20ac\u201d a key diagnostic feature. Olive-gray sporulation visible in humid conditions.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "corn_rust_leaf": {
+    "disease_type": "fungal",
+    "symptoms": "Cinnamon-brown to brick-red oval to elongated pustules (uredia) scattered on both upper and lower leaf surfaces. Pustules are 1\u00e2\u20ac\u201c4 mm in diameter and rupture the epidermis, releasing powdery reddish-brown urediniospores. Later in season, pustules may turn dark brown-black (telia).",
+    "prevention": "Plant resistant hybrids (most effective strategy). Avoid planting susceptible hybrids in areas with historically high rust pressure.",
+    "chemical_control": "Use only products currently registered/labeled for maize rust in your region. Foliar fungicide application at early tasseling may be warranted on susceptible hybrids \u00e2\u20ac\u201d consult local extension for registered options and economic threshold guidance.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Powdery reddish-brown pustules on both leaf surfaces \u00e2\u20ac\u201d characteristic of rust infections. Pustules erupt through leaf epidermis.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "cotton_bacterial_blight": {
+    "disease_type": "bacterial",
+    "symptoms": "Water-soaked angular lesions constrained by leaf veins. Lesions turn dark brown to black (giving 'blackarm' appearance on stems). Under humid conditions, bacterial ooze may be visible. Older lesions dry out and become papery.",
+    "prevention": "Use certified disease-free or treated seeds. Practice crop rotation. Avoid working in fields when plants are wet. Remove infected plant debris after harvest.",
+    "chemical_control": "Use only products currently registered/labeled for cotton bacterial blight in your region. Copper-based bactericides are commonly referenced \u00e2\u20ac\u201d consult local agricultural extension for registered options, rates, and timing.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Angular (vein-bounded) water-soaked lesions that turn black. Blackening of stems/petioles ('blackarm') is highly distinctive.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "cotton_healthy": {
+    "disease_type": "healthy",
+    "symptoms": "No visible symptoms. Leaves are dark green, firm, and structurally intact.",
+    "prevention": "Use certified disease-free planting material. Control whitefly populations to prevent Cotton Leaf Curl Virus (CLCuV). Maintain balanced fertilization and proper irrigation.",
+    "chemical_control": null,
+    "treatment": "Unavailable",
+    "distinctive_pattern": null,
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "cotton_leaf_curl_virus": {
+    "disease_type": "viral",
+    "symptoms": "Upward curling of leaves (primary diagnostic feature). Thickening, darkening, and enation (outgrowths) on underside of leaf veins. Leaf becomes cup-shaped with curled margins. Vein swelling and leaf thickening are characteristic.",
+    "prevention": "Plant resistant varieties (most important strategy). Use CLCuV-resistant cotton varieties recommended for your region. Raise nursery under net protection. Remove and destroy weed hosts (e.g., Malvaceous weeds). Control whitefly with reflective mulches. Avoid off-season cotton cultivation that maintains whitefly populations year-round.",
+    "chemical_control": "Use only products currently registered/labeled for whitefly control on cotton in your region. Systemic insecticides are used for whitefly management \u00e2\u20ac\u201d consult local agricultural extension or product label for registered options and rates. Rotate insecticide classes to prevent resistance.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Upward leaf curl PLUS dark enations (raised ridges/warts) on the underside of leaf veins is pathognomonic for CLCuD. Distinguished from nutritional curl by these vein enations.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "groundnut_early_leaf_spot": {
+    "disease_type": "fungal",
+    "symptoms": "Circular brown spots with a distinctive yellow halo on the UPPER leaf surface. Spots are dark brown to black (darker on upper surface). Gray-white sporulation may appear on the lower leaf surface. Spots typically 1\u00e2\u20ac\u201c10 mm diameter.",
+    "prevention": "Use disease-free certified seed. Plant disease-tolerant varieties. Avoid water stress during critical growth stages. Proper spacing for airflow.",
+    "chemical_control": "Use only products currently registered/labeled for groundnut leaf spot in your region. Chlorothalonil, mancozeb-based products, and carbendazim are commonly referenced in Indian extension literature \u00e2\u20ac\u201d consult local agricultural extension for current registered options, rates, and spray intervals.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Dark brown spots with YELLOW HALOS on upper leaf surface; sporulation predominantly on LOWER surface.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "groundnut_healthy": {
+    "disease_type": "healthy",
+    "symptoms": "Leaves are green, pinnately compound, with four leaflets. Margins are entire with no lesions, spots, or pustules.",
+    "prevention": "Use certified disease-free seed. Choose tolerant varieties. Maintain correct plant spacing. Practice crop rotation.",
+    "chemical_control": null,
+    "treatment": "Unavailable",
+    "distinctive_pattern": null,
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "groundnut_late_leaf_spot": {
+    "disease_type": "fungal",
+    "symptoms": "Dark brown to black circular spots on the LOWER leaf surface. Spots are smaller and darker than Early Leaf Spot and lack the prominent yellow halo. Sporulation (dark tufts) is visible on the lower leaf surface. Upper surface shows dark spots without distinct halo.",
+    "prevention": "Use tolerant varieties. Practice crop rotation. Properly space plants. Monitor from 30 DAS for early intervention.",
+    "chemical_control": "Same principles as Early Leaf Spot. Consult local extension for registered fungicide options.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Black spots with sporulation predominantly on LOWER leaf surface; appears later in the season than Early Leaf Spot.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "groundnut_rust": {
+    "disease_type": "fungal",
+    "symptoms": "Orange to cinnamon-brown uredinia (pustules) predominantly on the LOWER leaf surface. Pustules are small (0.5\u00e2\u20ac\u201c2 mm), round to elongated, and rupture the epidermis, releasing powdery orange-brown urediniospores. Upper leaf surface shows chlorotic (yellow) spots corresponding to pustules below.",
+    "prevention": "Plant rust-tolerant/resistant varieties (primary strategy). Practice crop rotation. Ensure proper plant spacing.",
+    "chemical_control": "Use only products currently registered/labeled for groundnut rust in your region. Systemic fungicides are used for rust management \u00e2\u20ac\u201d consult local agricultural extension for registered options and timing.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Orange powdery pustules predominantly on LOWER LEAF SURFACE, with corresponding chlorotic spots on upper surface. Powder-orange spore mass is diagnostic.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "pepper_bell_bacterial_spot": {
+    "disease_type": "bacterial",
+    "symptoms": "Small (2\u00e2\u20ac\u201c5 mm), water-soaked, angular to circular spots on leaf that turn brown to dark brown with yellow halos. Spots may coalesce. In severe cases, large sections of leaf become necrotic and leaves fall prematurely.",
+    "prevention": "Use certified disease-free (pathogen-tested) seed. Treat seeds with hot water (50\u00c2\u00b0C for 25 minutes) or bleach solution before planting. Grow disease-free transplants. Avoid overhead irrigation. Rotate crops with non-solanaceous plants.",
+    "chemical_control": "Use only products currently registered/labeled for pepper bacterial spot in your region. Copper-based bactericides are commonly referenced \u00e2\u20ac\u201d consult local extension for registered options.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Angular or circular brown lesions with YELLOW HALOS on leaves; corky raised lesions on fruits are characteristic of bacterial spot.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "pepper_bell_healthy": {
+    "disease_type": "healthy",
+    "symptoms": "Leaves are bright green, smooth, with intact margins. No visible spots, lesions, or discoloration.",
+    "prevention": "Use certified disease-free seeds and transplants. Avoid overhead irrigation. Rotate crops with non-solanaceous plants.",
+    "chemical_control": null,
+    "treatment": "Unavailable",
+    "distinctive_pattern": null,
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "potato_early_blight": {
+    "disease_type": "fungal",
+    "symptoms": "Circular to oval, dark brown lesions with distinctive concentric rings creating a 'target-board' or 'bull's-eye' pattern. Lesions often have a YELLOW HALO. Older (lower) leaves are affected first. Lesions can enlarge to 1\u00e2\u20ac\u201c2 cm. Severely infected leaves turn yellow and drop.",
+    "prevention": "Use certified disease-free seed tubers. Select healthy, disease-free planting material. Practice crop rotation with non-solanaceous crops. Plant tolerant varieties. Maintain adequate plant nutrition.",
+    "chemical_control": "Use only products currently registered/labeled for potato early blight in your region. Consult ICAR-CPRI or local extension for registered fungicide options and recommended spray schedule.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "CONCENTRIC RING PATTERN within brown necrotic lesion on older leaves \u00e2\u20ac\u201d pathognomonic for Early Blight.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "potato_healthy": {
+    "disease_type": "healthy",
+    "symptoms": "Compound leaves with 3\u00e2\u20ac\u201c5 leaflets. Dark green color, no lesions, no water-soaked areas.",
+    "prevention": "Use certified disease-free seed tubers. Apply seed treatment. Ensure proper spacing and hilling.",
+    "chemical_control": null,
+    "treatment": "Unavailable",
+    "distinctive_pattern": null,
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "potato_late_blight": {
+    "disease_type": "fungal",
+    "symptoms": "Irregular water-soaked, dark-green to brown-black lesions that enlarge rapidly, often with a water-soaked margin at the edge. Characteristic WHITE COTTONY SPORULATION (sporangiophores) visible on the underside of lesions in humid conditions. Lesions appear greasy and water-soaked initially.",
+    "prevention": "Plant certified disease-free seed tubers. Use resistant varieties. Destroy cull piles and volunteer plants. Separate clean seed from stored infected tubers. Haulm (vine) destruction before harvest reduces tuber infection.",
+    "chemical_control": "Use only products currently registered/labeled for potato late blight in your region. Protectant and systemic fungicides are used \u00e2\u20ac\u201d consult ICAR-CPRI or local extension for registered options, timing, and anti-resistance rotation strategies. Preventive application before symptoms appear is key.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Rapidly expanding dark water-soaked lesions with WHITE COTTONY SPORULATION on LEAF UNDERSIDE (under humid conditions) \u00e2\u20ac\u201d a key diagnostic feature.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "rice_bacterial_leaf_blight": {
+    "disease_type": "bacterial",
+    "symptoms": "Water-soaked, translucent lesions starting from leaf margins or tips. Lesions enlarge along the leaf margin with a wavy irregular yellow border. Leaves turn yellow-straw colored from tip downward. On drying, bacterial exudate may form 'dew drops' on lesion margins in humid conditions.",
+    "prevention": "Use resistant rice varieties (most effective strategy). Use certified disease-free seeds. Treat seeds with plant growth regulators or recommended bactericides where registered. Avoid excessive nitrogen fertilization (particularly urea). Drain fields after rain events.",
+    "chemical_control": "Use only products currently registered/labeled for Rice BLB in your region. Some copper-based and other bactericides are used in severe cases \u00e2\u20ac\u201d consult local extension for registered options. Note: chemical control has limited efficacy once disease is established.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Straw-yellow lesions extending from the LEAF TIP and MARGINS downward with wavy edges, and bacterial ooze/droplets in humid conditions.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "rice_brown_spot": {
+    "disease_type": "fungal",
+    "symptoms": "Oval to circular brown spots (1\u00e2\u20ac\u201c5 mm) with gray-white centers and brown borders. Spots have a pale yellow halo in susceptible varieties. Spots scattered over the leaf lamina, not concentrated at margins or tip. In severe cases, spots coalesce and cause large necrotic areas.",
+    "prevention": "Use certified disease-free seed. Treat seeds with recommended fungicide/hot water (52\u00c2\u00b0C for 10 minutes). Optimize soil nutrition \u00e2\u20ac\u201d apply recommended silicon, potassium, and nitrogen rates. Avoid water stress and waterlogging. Plant tolerant varieties.",
+    "chemical_control": "Use only products currently registered/labeled for rice brown spot in your region. Seed treatment and foliar fungicides at boot stage may be warranted \u00e2\u20ac\u201d consult local extension.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Scattered oval/circular brown spots with gray-white centers and brown borders \u00e2\u20ac\u201d NOT at margins/tips. Contrast with BLB (margin-based) and blast (diamond-shaped).",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "rice_healthy": {
+    "disease_type": "healthy",
+    "symptoms": "Leaves are flat, dark green, linear with a distinct midrib. No lesions, spots, or water-soaked areas visible.",
+    "prevention": "Use certified disease-free seeds. Treat seeds before planting. Apply balanced nutrition. Use recommended plant spacing.",
+    "chemical_control": null,
+    "treatment": "Unavailable",
+    "distinctive_pattern": null,
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "rice_leaf_blast": {
+    "disease_type": "fungal",
+    "symptoms": "Diamond-shaped (spindle-shaped) to irregular lesions with gray-white centers and dark brown to reddish-brown borders. Lesions may have yellow halos in susceptible varieties. Leaf blast lesions are typically 1\u00e2\u20ac\u201c3 cm long and 0.3\u00e2\u20ac\u201c0.5 cm wide. In acute phase: small water-soaked spots that expand rapidly into spindle-shaped lesions.",
+    "prevention": "Plant resistant/tolerant varieties (primary management). Use certified disease-free seeds. Treat seeds with recommended seed treatment. Avoid excessive nitrogen; split nitrogen application; increase potassium. Apply silicon through silicate fertilizers where soil silicon is deficient. Avoid over-irrigating during dew-favorable nights.",
+    "chemical_control": "Use only products currently registered/labeled for rice blast in your region. Systemic fungicides (e.g., tricyclazole class) are registered for blast in India \u00e2\u20ac\u201d consult ICAR-IIRR or local extension for current registered options, rates, and timing. Preventive application is critical at panicle initiation.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Diamond/spindle-shaped gray lesions with DARK REDDISH-BROWN MARGINS \u00e2\u20ac\u201d highly distinctive for rice blast. 'Rotten neck' (hanging empty panicle) at reproductive stage.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "rice_leaf_scald": {
+    "disease_type": "fungal",
+    "symptoms": "Characteristic zonate (banded) lesions with alternating light tan/straw and dark brown-reddish bands, running ACROSS the leaf width rather than as discrete spots. Lesions typically start from the leaf tip and progress downward. The banded pattern gives a 'scalded' appearance.",
+    "prevention": "Use balanced fertilization (avoid excessive nitrogen). Plant tolerant varieties. Practice good water management.",
+    "chemical_control": "Use only products registered/labeled for rice leaf scald in your region. Consult local extension.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "BANDED/ZONATE pattern on leaf \u00e2\u20ac\u201d alternating light tan and dark brown bands running across the leaf width. This distinguishes leaf scald from brown spot (circular spots) and blast (diamond shapes).",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "rice_sheath_blight": {
+    "disease_type": "fungal",
+    "symptoms": "Upper leaf blade lesions appear as irregular water-soaked greenish-gray to straw-colored patches with dark brown to purple borders. Lesions on leaves arise from infection spreading up from infected sheath.",
+    "prevention": "Reduce plant density (wider row/plant spacing \u00e2\u20ac\u201d critical in direct seeded rice). Avoid excessive nitrogen (split applications, avoid late urea). Choose partially resistant varieties. Seed treatment where appropriate.",
+    "chemical_control": "Use only products currently registered/labeled for rice sheath blight in your region. Consult ICAR-IIRR or local extension for registered fungicide options, rates, and application timing at panicle initiation.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Elliptical sheath lesions starting AT OR ABOVE WATERLINE progressing upward, with brown SCLEROTIA (small tan-brown round bodies) at lesion surface \u00e2\u20ac\u201d diagnostic.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_bacterial_spot": {
+    "disease_type": "bacterial",
+    "symptoms": "Small (1\u00e2\u20ac\u201c3 mm), water-soaked angular to circular spots that turn dark brown with a yellow halo. Lesions may have a water-soaked margin. Spots may have scab-like raised centers. Severe infection leads to defoliation.",
+    "prevention": "Use disease-free certified seed (pathogen-tested). Hot water seed treatment (50\u00c2\u00b0C for 25 min). Use disease-free transplants. Drip irrigation. Crop rotation.",
+    "chemical_control": "Use only products registered/labeled for tomato bacterial spot in your region. Copper-based bactericides commonly used \u00e2\u20ac\u201d consult local extension.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Water-soaked, angular leaf spots with yellow halos; corky/scabby fruit lesions.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_early_blight": {
+    "disease_type": "fungal",
+    "symptoms": "Dark brown to black circular lesions with CONCENTRIC RINGS forming a target-board ('bull's-eye') pattern. Lesions have prominent yellow CHLOROTIC HALOS. OLDER/LOWER leaves affected first. Lesions typically 0.5\u00e2\u20ac\u201c2 cm.",
+    "prevention": "Use certified disease-free seeds (treated). Practice crop rotation (2\u00e2\u20ac\u201c3 years) with non-solanaceous crops. Remove infected lower leaves. Maintain balanced plant nutrition (avoid N and K deficiency). Proper plant spacing.",
+    "chemical_control": "Use only products currently registered/labeled for tomato early blight in your region. Consult local extension for registered fungicide options and spray schedule.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "CONCENTRIC RING/TARGET pattern within dark brown lesion on OLDER leaves \u00e2\u20ac\u201d classic for Alternaria early blight.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_healthy": {
+    "disease_type": "healthy",
+    "symptoms": "Compound pinnate leaves, deep green, no lesions, no mottling, no curling.",
+    "prevention": "Use certified disease-free seeds and transplants. Practice crop rotation. Maintain balanced nutrition. Control whitefly and other sucking pests.",
+    "chemical_control": null,
+    "treatment": "Unavailable",
+    "distinctive_pattern": null,
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_late_blight": {
+    "disease_type": "fungal",
+    "symptoms": "Irregular dark brown-black water-soaked lesions, often starting from leaf margins, expanding rapidly. White cottony sporulation (sporangiophores) visible on the UNDERSIDE of lesions under humid conditions. Lesions appear greasy and water-soaked initially. Entire leaves may be killed within days under epidemic conditions.",
+    "prevention": "Avoid planting tomato near potato. Use certified disease-free transplants. Resistant varieties. Preventive fungicide application in late blight-endemic areas before symptoms appear.",
+    "chemical_control": "Use only products registered/labeled for tomato late blight in your region. Preventive application is essential \u00e2\u20ac\u201d consult ICAR-IIVR or local extension for registered options.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Rapidly expanding dark water-soaked lesions + WHITE COTTONY SPORULATION on leaf underside \u00e2\u20ac\u201d pathognomonic for late blight.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_leaf_mold": {
+    "disease_type": "fungal",
+    "symptoms": "Pale green to yellow diffuse spots on UPPER leaf surface corresponding to characteristic OLIVE-GREEN to BROWNISH VELVETY SPORULATION (conidia masses) on the LOWER leaf surface. Spots are not sharply defined on upper surface. Lower surface sporulation is the most distinctive feature.",
+    "prevention": "Maintain relative humidity below 85% in protected structures through ventilation. Increase air circulation in open field through proper plant spacing. Remove infected leaves. Use resistant varieties.",
+    "chemical_control": "Use only products registered/labeled for tomato leaf mold in your region. Consult local extension for registered fungicide options.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "VELVETY OLIVE-GREEN/BROWN SPORULATION on LEAF UNDERSIDE with corresponding pale yellow patches on upper surface \u00e2\u20ac\u201d highly distinctive.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_mosaic_virus": {
+    "disease_type": "viral",
+    "symptoms": "Characteristic mosaic pattern \u00e2\u20ac\u201d alternating light green, yellow, and dark green patches on leaf surface. Leaf distortion and curling may occur. Interveinal chlorosis, fern-leaf symptom (in severe cases leaf blades are greatly reduced). Mottling and blistering.",
+    "prevention": "Use certified ToMV/TMV-free seeds or treated seeds. Use resistant varieties (Tm gene resistance). Disinfect tools and hands with soap/water or disinfectant between plants. Do not handle plants after handling tobacco products (tobacco is a source of TMV). Raise nursery in protected area.",
+    "chemical_control": "No chemical treatment available for viral diseases. Chemical management is NOT applicable for this disease.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "MOSAIC (alternating light/dark green patches) on leaves, combined with leaf distortion \u00e2\u20ac\u201d characteristic of tobamovirus infection.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_septoria_leaf_spot": {
+    "disease_type": "fungal",
+    "symptoms": "Numerous SMALL (1.5\u00e2\u20ac\u201c4 mm) circular spots with WHITE to GRAY CENTERS and DARK BROWN borders. TINY DARK PYCNIDIA (fungal fruiting bodies) visible in the center of lesions (visible to naked eye or with hand lens). Yellow halo may be present. Lower/older leaves affected first.",
+    "prevention": "Crop rotation (2\u00e2\u20ac\u201c3 years) with non-solanaceous crops. Remove infected lower leaves. Proper plant spacing. Use disease-free seed. Stake plants for better airflow.",
+    "chemical_control": "Use only products registered/labeled for Septoria leaf spot of tomato in your region. Consult local extension for registered fungicide options.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "MANY SMALL CIRCULAR SPOTS with WHITE/GRAY CENTERS, DARK BORDERS, and TINY PYCNIDIA in center \u00e2\u20ac\u201d highly distinctive for Septoria.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_spider_mites_two_spotted_spider_mite": {
+    "disease_type": "insect/pest-associated",
+    "symptoms": "Tiny yellow stippling (pinpoint chlorotic spots) on upper leaf surface caused by mite feeding. As infestation progresses, leaves develop a bronzed, dried, or dusty appearance. Fine webbing (silk strands) on leaf underside and between leaves at high mite densities. Tiny moving red/green dots visible on leaf underside.",
+    "prevention": "Monitor regularly, particularly during hot dry periods. Maintain field hygiene. Avoid broad-spectrum pesticides that kill natural enemies (predatory mites). Use reflective mulches to deter mite colonization. Maintain adequate plant moisture (drought stress increases susceptibility).",
+    "chemical_control": "Use only products currently registered/labeled for two-spotted spider mite on tomato in your region. Rotate miticide classes to prevent resistance development. Avoid broad-spectrum insecticides that kill natural predators. Consult local extension for registered miticide options.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Fine WEBBING on leaf underside with YELLOW STIPPLING on upper surface and visible tiny moving MITES \u00e2\u20ac\u201d characteristic of spider mite infestation.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_target_spot": {
+    "disease_type": "fungal",
+    "symptoms": "Dark brown lesions (5\u00e2\u20ac\u201c20 mm) with visible CONCENTRIC RINGS (target pattern) but typically larger than early blight lesions and with a more prominent yellow halo. Lesions may appear anywhere on leaves (not restricted to older leaves as strongly as early blight). Small water-soaked spots progressing to dark brown.",
+    "prevention": "Same practices as for early blight: crop rotation, certified seed, plant spacing, drip irrigation.",
+    "chemical_control": "Use only products registered/labeled for this disease on tomato in your region. Consult local extension.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "Target/concentric-ring pattern, but generally larger and less strictly on older leaves compared to early blight. Occurs in warm humid conditions.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  },
+  "tomato_yellow_leaf_curl_virus": {
+    "disease_type": "viral",
+    "symptoms": "Characteristic UPWARD CURLING and CUPPING of young leaves with YELLOWING of leaf margins and interveinal areas. Leaves are small, crinkled, and cupped (inward curling). The yellowing and curl are most pronounced on young/newly emerging leaves.",
+    "prevention": "Use certified TYLCV-free, virus-tested transplants. Raise nursery under 50-mesh nylon insect-proof net. Use TYLCV-resistant varieties (primary management strategy). Remove and destroy TYLCV-infected plants immediately. Remove alternate host weeds (Solanum nigrum, Datura, etc.). Avoid tomato planting near cucurbit or other whitefly host crops.",
+    "chemical_control": "No chemical treatment is effective against the virus. Whitefly vector control reduces spread. Use only products currently registered/labeled for whitefly control on tomato in your region. Consult local agricultural extension for registered insecticide options and rates for vector management. Avoid overusing any single class to prevent resistance.",
+    "treatment": "Unavailable",
+    "distinctive_pattern": "UPWARD CUPPING of young leaves with YELLOW MARGINS and interveinal chlorosis, combined with plant STUNTING \u00e2\u20ac\u201d pathognomonic for TYLCV. Compare: tomato mosaic virus shows mosaic on older leaves without upward cup-curl.",
+    "expert_review": "Consult local agronomist if symptoms persist."
+  }
+}

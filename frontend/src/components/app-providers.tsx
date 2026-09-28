@@ -3,6 +3,7 @@
 import { useAppStore } from "@/lib/store";
 import { I18nProvider } from "@/lib/i18n";
 import { ThemeProvider } from "@/components/theme-provider";
+import { MotionConfig } from "framer-motion";
 import { useEffect } from "react";
 
 export function AppProviders({ children }: { children: React.ReactNode }) {
@@ -25,7 +26,9 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
         enableSystem
         disableTransitionOnChange
       >
-        {children}
+        <MotionConfig reducedMotion="user">
+          {children}
+        </MotionConfig>
       </ThemeProvider>
     </I18nProvider>
   );

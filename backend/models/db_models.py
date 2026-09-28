@@ -34,6 +34,10 @@ class DiagnosisHistory(Base):
     humidity = Column(Float, nullable=True)
     ph_level = Column(Float, nullable=True)
     
+    # Location
+    latitude = Column(Float, nullable=True)
+    longitude = Column(Float, nullable=True)
+    
     # Complex/Metadata
     # We store GradCAM heatmaps as Base64 strings or URLs if uploaded to cloud storage
     gradcam_heatmap = Column(String, nullable=True) 

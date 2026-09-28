@@ -44,14 +44,8 @@ export default function AnalyticsPage() {
         setDiagnoses(data);
       } catch (err: unknown) {
         const message = err instanceof Error ? err.message : "An unknown error occurred";
-        setError(message + " - Showing offline demo data.");
-        setDiagnoses([
-          { id: "1", disease_name: "early_blight", confidence: 0.92, concern_level: "High Concern", concern_score: 85, created_at: new Date(Date.now() - 86400000 * 1).toISOString() },
-          { id: "2", disease_name: "healthy", confidence: 0.98, concern_level: "Low Concern", concern_score: 10, created_at: new Date(Date.now() - 86400000 * 2).toISOString() },
-          { id: "3", disease_name: "late_blight", confidence: 0.88, concern_level: "Critical Attention Required", concern_score: 95, created_at: new Date(Date.now() - 86400000 * 3).toISOString() },
-          { id: "4", disease_name: "early_blight", confidence: 0.85, concern_level: "Moderate Concern", concern_score: 55, created_at: new Date(Date.now() - 86400000 * 4).toISOString() },
-          { id: "5", disease_name: "powdery_mildew", confidence: 0.90, concern_level: "High Concern", concern_score: 75, created_at: new Date(Date.now() - 86400000 * 5).toISOString() },
-        ]);
+        setError("Failed to load analytics: " + message);
+        setDiagnoses([]);
       } finally {
         setLoading(false);
       }

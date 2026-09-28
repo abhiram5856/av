@@ -7,24 +7,45 @@ import {
 } from "recharts";
 import { AlertTriangle, Filter, Map, Activity, BarChart3, Database, Info, Calendar } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
-import { generateIntelligenceData, IntelligenceObservation } from "@/lib/mock-intelligence-data";
+import { fetchFromAPI } from "@/lib/api-client";
+import dynamic from "next/dynamic";
+
+const IntelligenceMap = dynamic(() => import("@/components/map-component"), {
+  ssr: false,
+  loading: () => <div className="h-[400px] w-full bg-slate-100 animate-pulse rounded-md" />
+});
 
 export default function IntelligenceDashboard() {
   const { t } = useTranslation();
-  const [data, setData] = useState<IntelligenceObservation[]>([]);
+  const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   const [selectedCrop, setSelectedCrop] = useState<string>("All");
   const [selectedDisease, setSelectedDisease] = useState<string>("All");
-  const isDemo = process.env.NEXT_PUBLIC_DEMO_MODE === 'true';
+
+  const [alerts, setAlerts] = useState<any[]>([]);
 
   useEffect(() => {
-    // Simulate fetching data
-    setTimeout(() => {
-      const generated = generateIntelligenceData(3000);
-      setData(generated);
-      setLoading(false);
-    }, 1000);
+    async function loadData() {
+      try {
+        const response = await fetchFromAPI("/api/v1/intelligence/");
+        
+        if (!response.observations || response.observations.length === 0) {
+          setData([]);
+          setAlerts([]);
+        } else {
+          setData(response.observations);
+          setAlerts(response.alerts || []);
+        }
+      } catch (err) {
+        console.error("Failed to fetch intelligence data", err);
+        setData([]);
+        setAlerts([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadData();
   }, []);
 
   // Filtered Data
@@ -65,7 +86,7 @@ export default function IntelligenceDashboard() {
   const envData = useMemo(() => {
     const bins: Record<string, { temp: string, count: number }> = {};
     filteredData.forEach(d => {
-      if (d.isHealthy) return; // Only map diseases
+      if (d.isHealthy || d.temperature == null || d.humidity == null) return;
       const tBin = Math.floor(d.temperature / 5) * 5;
       const hBin = Math.floor(d.humidity / 10) * 10;
       const key = `${tBin}-${hBin}`;
@@ -113,7 +134,7 @@ export default function IntelligenceDashboard() {
   const insights = useMemo(() => {
     const msgs = [];
     if (hotspots.length > 0) {
-      msgs.push(`High simulated observation concentration: ${hotspots[0].disease} in ${hotspots[0].region} (${hotspots[0].count} cases).`);
+      msgs.push(`High observation concentration: ${hotspots[0].disease} in ${hotspots[0].region} (${hotspots[0].count} cases).`);
     }
     if (envData.length > 0) {
       msgs.push(`Recorded environmental pattern: High observation frequency under ${envData[0].temp}.`);
@@ -129,26 +150,21 @@ export default function IntelligenceDashboard() {
     return <div className="p-12 text-center animate-pulse text-muted-foreground">Loading R&D Intelligence Data...</div>;
   }
 
+  if (!data || data.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] text-center p-8 bg-card rounded-lg border shadow-sm">
+        <Database className="h-16 w-16 text-muted-foreground mb-4 opacity-50" />
+        <h2 className="text-2xl font-bold mb-2">Insufficient observations</h2>
+        <p className="text-muted-foreground max-w-md">
+          There is not enough field data to generate intelligence analytics. As farmers upload diagnoses, aggregated insights will appear here.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-6 w-full pb-20 lg:pb-8">
       
-      {/* SIMULATED DATA PROMINENT HEADER */}
-      {isDemo && (
-        <div className="bg-amber-500/15 border-l-4 border-amber-500 p-4 rounded-r-xl shadow-sm">
-          <div className="flex items-start gap-3">
-            <AlertTriangle className="h-6 w-6 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
-            <div>
-              <h2 className="text-lg font-bold text-amber-800 dark:text-amber-400 tracking-tight">
-                {t("intelligence.demo_analytics")}
-              </h2>
-              <p className="text-amber-700/80 dark:text-amber-200/80 text-sm mt-1 leading-relaxed max-w-4xl">
-                {t("intelligence.data_disclaimer")}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b pb-4 border-border/50 gap-4 mt-2">
         <div>
@@ -183,6 +199,22 @@ export default function IntelligenceDashboard() {
         </div>
       </div>
 
+      {/* Backend Alerts */}
+      {alerts.length > 0 && (
+        <div className="space-y-4">
+          {alerts.map(alert => (
+            <div key={alert.id} className={`p-4 rounded-xl border flex items-start space-x-3 ${alert.severity === 'critical' ? 'bg-red-500/10 border-red-500/20 text-red-600 dark:text-red-400' : 'bg-orange-500/10 border-orange-500/20 text-orange-600 dark:text-orange-400'}`}>
+              <AlertTriangle className="h-5 w-5 shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-lg">{alert.title}</p>
+                <p className="text-sm mt-1">{alert.description}</p>
+                <p className="text-xs mt-2 opacity-70">Detected: {new Date(alert.timestamp).toLocaleString()}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* KPI Overview */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {[
@@ -209,38 +241,10 @@ export default function IntelligenceDashboard() {
             <h2 className="text-lg font-semibold flex items-center gap-2">
               <Map className="h-5 w-5 text-primary" /> {t("intelligence.geographic_heatmap")}
             </h2>
-            {isDemo && <span className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground">{t("intelligence.simulated_source")}</span>}
           </div>
-          <p className="text-xs text-muted-foreground mb-4">{t("intelligence.simulated_distribution")} based on recorded coordinates.</p>
-          <div className="h-[300px] w-full bg-slate-100 dark:bg-slate-900/50 rounded-xl border border-border/50 relative overflow-hidden">
-             <ResponsiveContainer width="100%" height="100%">
-               <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-                 <XAxis type="number" dataKey="longitude" domain={['auto', 'auto']} name="Longitude" hide />
-                 <YAxis type="number" dataKey="latitude" domain={['auto', 'auto']} name="Latitude" hide />
-                 <ZAxis type="number" dataKey="concernScore" range={[20, 400]} />
-                 <Tooltip 
-                   cursor={{ strokeDasharray: '3 3' }} 
-                   content={({ active, payload }) => {
-                     if (active && payload && payload.length) {
-                       const d = payload[0].payload;
-                       return (
-                         <div className="bg-background border shadow-lg p-3 rounded-lg text-sm">
-                           <p className="font-bold text-foreground">{d.region}</p>
-                           <p className="text-muted-foreground">{d.crop} - {d.disease}</p>
-                           <div className="flex justify-between items-center mt-2 pt-2 border-t border-border/50 text-xs">
-                             <span className="text-muted-foreground">Confidence:</span>
-                             <span className="font-semibold text-foreground">{d.confidence}%</span>
-                           </div>
-                           {isDemo && <p className="text-[10px] text-amber-600 mt-1 italic">{t("intelligence.simulated_source")}</p>}
-                         </div>
-                       );
-                     }
-                     return null;
-                   }}
-                 />
-                 <Scatter name="Observations" data={filteredData} fill="#ef4444" opacity={0.6} />
-               </ScatterChart>
-             </ResponsiveContainer>
+          <p className="text-xs text-muted-foreground mb-4">Distribution based on recorded coordinates.</p>
+          <div className="h-[400px] w-full mt-4">
+             <IntelligenceMap data={filteredData} />
           </div>
         </div>
 
@@ -269,12 +273,6 @@ export default function IntelligenceDashboard() {
                <span className="font-semibold text-foreground">{uniqueCrops.length}</span>
              </div>
           </div>
-          {isDemo && (
-             <div className="mt-4 p-3 bg-blue-500/10 border border-blue-500/20 text-blue-700 dark:text-blue-400 text-xs rounded-lg flex items-start gap-2">
-               <Info className="h-4 w-4 shrink-0 mt-0.5" />
-               <p>{t("intelligence.demo_dataset_notice")}</p>
-             </div>
-          )}
         </div>
 
       </div>
@@ -288,7 +286,7 @@ export default function IntelligenceDashboard() {
               <Activity className="h-5 w-5 text-indigo-500" /> {t("intelligence.disease_trends")}
             </h2>
           </div>
-          <p className="text-xs text-muted-foreground mb-4">Simulated monthly observations</p>
+          <p className="text-xs text-muted-foreground mb-4">Monthly observations</p>
           <div className="h-[250px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={trendData} margin={{ top: 5, right: 5, bottom: 5, left: -20 }}>

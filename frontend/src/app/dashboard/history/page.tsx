@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Clock, ArrowRight, Activity, Thermometer, Droplets, FlaskConical, AlertTriangle } from "lucide-react";
+import { Clock, ArrowRight, Activity, Thermometer, Droplets, FlaskConical, AlertTriangle, LineChart as LineChartIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { fetchFromAPI } from "@/lib/api-client";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n";
+import { LineChart, Line, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer } from "recharts";
 
 // Match the python Pydantic Schema we created in history.py
 interface DiagnosisResponse {
@@ -34,12 +35,8 @@ export default function HistoryPage() {
         setDiagnoses(data);
       } catch (err: unknown) {
         const message = err instanceof Error ? err.message : "An unknown error occurred";
-        setError(message + " - Showing offline demo data.");
-        setDiagnoses([
-          { id: "1", disease_name: "early_blight", confidence: 0.92, concern_level: "High Concern", temperature: 28, humidity: 65, ph_level: 6.5, created_at: new Date(Date.now() - 3600000 * 2).toISOString() },
-          { id: "2", disease_name: "healthy", confidence: 0.98, concern_level: "Low Concern", temperature: 26, humidity: 60, ph_level: 6.8, created_at: new Date(Date.now() - 86400000 * 1).toISOString() },
-          { id: "3", disease_name: "late_blight", confidence: 0.88, concern_level: "Critical Attention Required", temperature: 30, humidity: 75, ph_level: 6.2, created_at: new Date(Date.now() - 86400000 * 2).toISOString() },
-        ]);
+        setError("Failed to load history: " + message);
+        setDiagnoses([]);
       } finally {
         setLoading(false);
       }
@@ -89,9 +86,67 @@ export default function HistoryPage() {
         </div>
       )}
 
+      {/* ─── Empty State ──────────────────────────────────────────────────── */}
+      {!loading && !error && diagnoses.length === 0 && (
+        <div className="flex flex-col items-center justify-center p-12 text-center bg-card border rounded-lg shadow-sm">
+          <Activity className="h-16 w-16 text-muted-foreground mb-4 opacity-30" />
+          <h2 className="text-xl font-semibold mb-2">No diagnoses yet.</h2>
+          <p className="text-muted-foreground mb-6 max-w-sm">
+            Your saved plant assessments will appear here. Start by analyzing a new plant photo.
+          </p>
+          <Link href="/dashboard/disease">
+            <Button variant="default">Diagnose a Plant</Button>
+          </Link>
+        </div>
+      )}
+
       {/* ─── Data List ──────────────────────────────────────────────────── */}
       {!loading && diagnoses.length > 0 && (
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="space-y-6">
+          {/* Farm Health Timeline */}
+          <Card className="border-border/40 shadow-sm">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg flex items-center gap-2">
+                <LineChartIcon className="h-5 w-5 text-green-600" />
+                Farm Health Timeline
+              </CardTitle>
+              <CardDescription>Concern levels of your recent scans</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="h-48 w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={diagnoses.slice().reverse().map(d => ({
+                    date: new Date(d.created_at).toLocaleDateString(),
+                    concern: d.disease_name.toLowerCase().includes('healthy') ? 0 : d.confidence * 100,
+                    name: d.disease_name
+                  }))}>
+                    <XAxis dataKey="date" tick={{fontSize: 12}} hide />
+                    <YAxis domain={[0, 100]} hide />
+                    <RechartsTooltip 
+                      content={({ active, payload }) => {
+                        if (active && payload && payload.length) {
+                          const d = payload[0].payload;
+                          return (
+                            <div className="bg-background border shadow-sm p-2 rounded text-sm">
+                              <p className="font-bold">{d.date}</p>
+                              <p className="capitalize">{d.name.replace(/_/g, " ")}</p>
+                              <p className="text-xs text-muted-foreground mt-1">
+                                {d.concern === 0 ? "Healthy" : `Concern: ${d.concern.toFixed(0)}%`}
+                              </p>
+                            </div>
+                          );
+                        }
+                        return null;
+                      }}
+                    />
+                    <Line type="monotone" dataKey="concern" stroke="#16a34a" strokeWidth={3} dot={{r: 4, fill: "#16a34a"}} activeDot={{r: 6}} />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="grid gap-4 md:grid-cols-2">
           {diagnoses.map((item) => (
             <Card key={item.id} className="overflow-hidden hover:border-primary/50 transition-colors">
               <CardHeader className="pb-3 bg-muted/30">
@@ -140,6 +195,7 @@ export default function HistoryPage() {
               </CardContent>
             </Card>
           ))}
+        </div>
         </div>
       )}
 

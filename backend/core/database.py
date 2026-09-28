@@ -3,14 +3,15 @@ from sqlalchemy.orm import declarative_base
 from backend.config.settings import settings
 
 # Create the async engine
-engine = create_async_engine(
-    settings.DATABASE_URL,
-    echo=settings.DEBUG_MODE,
-    future=True,
-    # connection pool settings to handle production load
-    pool_size=5,
-    max_overflow=10
-)
+engine_kwargs = {
+    "echo": settings.DEBUG_MODE,
+    "future": True,
+}
+if not settings.DATABASE_URL.startswith("sqlite"):
+    engine_kwargs["pool_size"] = 5
+    engine_kwargs["max_overflow"] = 10
+
+engine = create_async_engine(settings.DATABASE_URL, **engine_kwargs)
 
 # Create an async session factory
 AsyncSessionLocal = async_sessionmaker(

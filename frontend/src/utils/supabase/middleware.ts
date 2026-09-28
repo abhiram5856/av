@@ -38,18 +38,15 @@ export async function updateSession(request: NextRequest) {
     !user &&
     request.nextUrl.pathname.startsWith("/dashboard")
   ) {
-    if (process.env.NEXT_PUBLIC_DEMO_MODE === 'true') {
-      return supabaseResponse;
-    }
     // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.redirect(url);
   }
 
-  // If user is logged in (or demo mode is on) and trying to access login/signup pages, redirect to dashboard
+  // If user is logged in and trying to access login/signup pages, redirect to dashboard
   if (
-    (user || process.env.NEXT_PUBLIC_DEMO_MODE === 'true') &&
+    user &&
     (request.nextUrl.pathname.startsWith("/login") ||
       request.nextUrl.pathname.startsWith("/signup"))
   ) {

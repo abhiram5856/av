@@ -9,6 +9,8 @@ import { useTranslation } from "@/lib/i18n";
 export default function DashboardPage() {
   const { t } = useTranslation();
   const [firstName, setFirstName] = useState("User");
+  const [weather, setWeather] = useState<{temp: number, condition: string, humidity: number, wind: number} | null>(null);
+  const [weatherStatus, setWeatherStatus] = useState<"loading" | "unavailable" | "loaded">("loading");
 
   useEffect(() => {
     const supabase = createClient();
@@ -17,6 +19,37 @@ export default function DashboardPage() {
         setFirstName(data.user.user_metadata.first_name);
       }
     });
+
+    if (!("geolocation" in navigator)) {
+      setWeatherStatus("unavailable");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        try {
+          const res = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m&timezone=auto`
+          );
+          if (!res.ok) throw new Error("Weather API error");
+          const data = await res.json();
+          const current = data.current;
+          setWeather({
+            temp: current.temperature_2m,
+            condition: "Live from Open-Meteo",
+            humidity: current.relative_humidity_2m,
+            wind: current.wind_speed_10m,
+          });
+          setWeatherStatus("loaded");
+        } catch {
+          setWeatherStatus("unavailable");
+        }
+      },
+      () => {
+        setWeatherStatus("unavailable");
+      }
+    );
   }, []);
 
   const getGreeting = () => {
@@ -114,23 +147,37 @@ export default function DashboardPage() {
               </Link>
             </div>
             <div className="rounded-lg border bg-card p-5 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-3xl font-semibold mb-1">28°C</div>
-                  <div className="text-sm font-medium text-muted-foreground">{t("dashboard.clear_sunny")}</div>
+              {weatherStatus === "loading" && (
+                <div className="text-sm text-muted-foreground animate-pulse py-2">
+                  Locating...
                 </div>
-                <CloudSun className="h-10 w-10 text-orange-500" />
-              </div>
-              <div className="grid grid-cols-2 gap-2 text-sm pt-4 border-t">
-                <div className="flex flex-col">
-                  <span className="text-muted-foreground">{t("dashboard.humidity")}</span>
-                  <span className="font-medium">45%</span>
+              )}
+              {weatherStatus === "unavailable" && (
+                <div className="text-sm text-muted-foreground py-2">
+                  Location access required for local weather.
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-muted-foreground">{t("dashboard.wind")}</span>
-                  <span className="font-medium">12 km/h</span>
-                </div>
-              </div>
+              )}
+              {weatherStatus === "loaded" && weather && (
+                <>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-3xl font-semibold mb-1">{weather.temp}°C</div>
+                      <div className="text-sm font-medium text-muted-foreground">{weather.condition}</div>
+                    </div>
+                    <CloudSun className="h-10 w-10 text-orange-500" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-sm pt-4 border-t">
+                    <div className="flex flex-col">
+                      <span className="text-muted-foreground">{t("dashboard.humidity")}</span>
+                      <span className="font-medium">{weather.humidity}%</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-muted-foreground">{t("dashboard.wind")}</span>
+                      <span className="font-medium">{weather.wind} km/h</span>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

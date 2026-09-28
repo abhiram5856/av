@@ -3,7 +3,8 @@ import base64
 import uuid
 import cv2
 import numpy as np
-from fastapi import APIRouter, File, UploadFile, Form, HTTPException
+from typing import Optional
+from fastapi import APIRouter, File, UploadFile, Form, HTTPException, Request
 from fastapi.responses import JSONResponse
 import torch
 import torch.nn as nn
@@ -13,6 +14,8 @@ from PIL import Image
 import io
 import time
 import json
+
+from backend.services.knowledge_engine import knowledge_engine
 
 from backend.models.class_registry import (
     CLASS_NAMES, NUM_CLASSES, MODEL_CONFIG,
@@ -30,6 +33,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from backend.core.database import get_db
 from backend.data.crud import get_or_create_user, create_diagnosis
 from backend.auth.security import verify_token
+from backend.core.limiter import limiter
 from backend.core_logging.logger import api_logger
 
 from pathlib import Path
@@ -178,12 +182,15 @@ def _image_to_base64(img_array: np.ndarray) -> str:
 # Diagnosis endpoint
 # ─────────────────────────────────────────────────────────────────────────────
 
+@router.post("")
 @router.post("/")
+@limiter.limit("5/minute")
 async def run_diagnosis(
-    image:     UploadFile = File(...),
-    ph_level:  float = Form(6.5),
-    latitude:  float = Form(17.3850),
-    longitude: float = Form(78.4867),
+    request: Request,
+    image:        UploadFile = File(...),
+    ph_level:     Optional[float] = Form(None),    # null = not measured; do NOT default to 6.5
+    latitude:     Optional[float] = Form(None),    # null = location unavailable
+    longitude:    Optional[float] = Form(None),    # null = location unavailable
     growth_stage: str = Form("Unknown"),
     user_id:   str = Depends(verify_token),
     db:        AsyncSession = Depends(get_db),
@@ -191,34 +198,68 @@ async def run_diagnosis(
     request_id = f"req_{uuid.uuid4()}"
     t_start    = time.perf_counter()
 
-    # ── Live Weather ───────────────────────────────────────────────────────
-    weather_data = await WeatherService.fetch_current_weather(latitude, longitude)
-    temperature  = weather_data["temperature"]
-    humidity     = weather_data["humidity"]
+    # ── Live Weather — only if real coordinates were provided ──────────────
+    # Do NOT fetch weather for fabricated/default coordinates.
+    if latitude is not None and longitude is not None:
+        weather_data = await WeatherService.fetch_current_weather(latitude, longitude)
+        temperature  = weather_data["temperature"]
+        humidity     = weather_data["humidity"]
+        weather_available = True
+    else:
+        temperature = None
+        humidity    = None
+        weather_available = False
 
     inference_time = 0.0
     gradcam_time   = 0.0
     rag_time       = 0.001
 
-    # ── Mobile Safety Guardrails ─────────────────────────────────────────
+    # ── Mobile Safety Guardrails & Upload Security ─────────────────────────────────────────
     # 1. Size limit (10 MB)
     MAX_SIZE = 10 * 1024 * 1024
     
     # 2. MIME type check
     if image.content_type not in ["image/jpeg", "image/png", "image/webp"]:
-        raise HTTPException(status_code=400, detail="Invalid file type. Please upload a JPEG or PNG image.")
+        raise HTTPException(
+            status_code=415, 
+            detail={"code": "UNSUPPORTED_IMAGE", "message": "Invalid file type. Please upload a JPEG, PNG, or WEBP image.", "retryable": False}
+        )
 
     try:
         contents  = await image.read()
         if len(contents) > MAX_SIZE:
-            raise HTTPException(status_code=413, detail="File too large. Maximum size is 10MB.")
+            raise HTTPException(
+                status_code=413, 
+                detail={"code": "IMAGE_TOO_LARGE", "message": "File too large. Maximum size is 10MB.", "retryable": False}
+            )
             
         try:
+            # Protect against decompression bombs
+            Image.MAX_IMAGE_PIXELS = 89478485  # Default limit (approx 9000x9000)
+            pil_image = Image.open(io.BytesIO(contents))
+            pil_image.verify()  # Fast fail for malformed images
+            
+            # Reopen after verify since verify leaves file pointer at end
             pil_image = Image.open(io.BytesIO(contents)).convert("RGB")
+            
+        except Image.DecompressionBombError:
+            raise HTTPException(
+                status_code=413, 
+                detail={"code": "IMAGE_DIMENSIONS_TOO_LARGE", "message": "Image dimensions exceed the safety limit.", "retryable": False}
+            )
         except Exception as e:
-            raise HTTPException(status_code=400, detail="Corrupted image file. Please upload a valid image.")
+            api_logger.error(f"Image parsing failed: {e}")
+            raise HTTPException(
+                status_code=400, 
+                detail={"code": "INVALID_IMAGE", "message": "Corrupted or malformed image file. Please upload a valid image.", "retryable": False}
+            )
             
         width, height = pil_image.size
+        if width > 8000 or height > 8000:
+            raise HTTPException(
+                status_code=413, 
+                detail={"code": "IMAGE_DIMENSIONS_TOO_LARGE", "message": "Image dimensions exceed the 8000x8000 limit.", "retryable": False}
+            )
 
         has_real_model = load_ai_pipeline()
 
@@ -262,9 +303,14 @@ async def run_diagnosis(
             heatmap_color    = cv2.applyColorMap(heatmap_uint8, cv2.COLORMAP_JET)
             superimposed_img = heatmap_color * 0.4 + cv_img * 0.6
             heatmap_b64      = _image_to_base64(superimposed_img)
+            
+            # Check for background attention
+            bg_attention_ratio = _cam.check_background_attention(heatmap, np.array(pil_image))
+            
             gradcam_time     = time.perf_counter() - t_cam_start
 
         else:
+            bg_attention_ratio = 0.0
             api_logger.error(f"Model weights missing. Cannot process request {request_id}")
             raise HTTPException(status_code=503, detail="Service Unavailable: AI model is currently offline.")
 
@@ -420,73 +466,126 @@ async def run_diagnosis(
             api_logger.warning(f"Database persistence skipped/failed: {db_exc}. Continuing diagnosis response.")
 
 
+        # ── Knowledge Engine ─────────────────────────────────────────
+        farmer_support = knowledge_engine.format_farmer_support(
+            predicted_disease, is_low_confidence=is_low_confidence
+        )
+        disease_summary = knowledge_engine.get_disease_summary(predicted_disease)
+        env_knowledge   = knowledge_engine.get_environmental_context(predicted_disease)
+        lookalikes      = knowledge_engine.get_lookalikes(predicted_disease)
+        chem_guidance   = knowledge_engine.get_chemical_control(predicted_disease)
+        action_priority = (
+            "LOW" if is_healthy(predicted_disease)
+            else ("MONITOR" if is_low_confidence else "ATTENTION")
+        )
+
         # ── Response ───────────────────────────────────────────────────────
-        return JSONResponse(content={
-            "status":          "success",
-            "request_id":      request_id,
-            "context_hash":    ai_context.get_content_hash(),
-            "is_demo_mode":    not has_real_model,
-            "is_low_confidence": is_low_confidence,
-            
-            "diagnosis": {
-                "class_idx":       class_idx,
-                "disease":         predicted_disease if not is_low_confidence else "Unknown",
-                "display_name":    class_to_display(predicted_disease) if not is_low_confidence else "Uncertain",
-                "is_healthy":      is_healthy(predicted_disease) if not is_low_confidence else False,
-                "confidence":      round(confidence * 100, 2),
+        response_payload = {
+            "status": "success",
+            "request_id": request_id,
+            "is_demo_mode": not has_real_model,
+
+            # ── LAYER 1: VISION ──────────────────────────────────────────────
+            "VISION": {
+                "prediction": predicted_disease if not is_low_confidence else "Unknown",
+                "display_name": class_to_display(predicted_disease) if not is_low_confidence else "Uncertain",
+                "is_healthy": is_healthy(predicted_disease) if not is_low_confidence else False,
+                "confidence": round(confidence * 100, 2),
                 "confidence_category": confidence_category,
-                "topk":            topk_predictions,
-                "tta_enabled":     True,
+                "topk_predictions": topk_predictions,
+                "visual_evidence": {
+                    "gradcam_available": True,
+                    "attention_indicator": lesion_ratio,
+                    "background_attention_ratio": round(bg_attention_ratio, 2),
+                    "heatmap_b64": heatmap_b64,
+                    "leaf_region_estimate": "whole leaf" if lesion_ratio > 0.5 else "localized regions",
+                    "symptom_region_estimate": "Detected regions of visual interest on the leaf",
+                    "localization_confidence": "Low" if lesion_ratio < 0.1 else ("Warning: Background focus" if bg_attention_ratio > 0.4 else "Moderate"),
+                    "localization_note": "Grad-CAM shows model attention region only. This is NOT equivalent to ground-truth lesion segmentation.",
+                    "quality_warning": "Model attention is heavily focused on the background (e.g., soil or hands) rather than the plant." if bg_attention_ratio > 0.4 else None
+                },
+                "disease_summary": disease_summary,
+                "differential_conditions": lookalikes,
                 "low_confidence_warning": (
                     "Insufficient visual evidence for a reliable diagnosis. "
-                    "Please retake the photo in better lighting or capture a closer leaf image."
+                    "Please retake the photo using the rescan instructions below."
                 ) if is_low_confidence else None,
+                "tta_enabled": True,
             },
-            
-            "visual_evidence": {
-                "gradcam_available": True,
-                "evidence_level": concern_result.get("visual_evidence_level", "Unknown"),
-                "attention_indicator": lesion_ratio,
-                "heatmap_b64": heatmap_b64
-            },
-            
-            "environment": {
+
+            # ── LAYER 2: ENVIRONMENT ──────────────────────────────────────────
+            "ENVIRONMENT": {
                 "temperature": temperature,
                 "humidity": humidity,
-                "soil_moisture": None,
-                "soil_ph": ph_level,
+                "weather_source": "LIVE" if weather_available else "UNAVAILABLE",
+                "soil_ph": ph_level,  # null when not measured — do not substitute 6.5
+                "soil_ph_source": "USER_PROVIDED" if ph_level is not None else "NOT_MEASURED",
                 "compatibility": env_evidence.get("overall_compatibility", "Insufficient Evidence"),
-                "available_evidence": env_evidence.get("factors", [])
+                "explanation": (
+                    "Current conditions are consistent with conditions associated with disease development. "
+                    "This does not by itself establish the diagnosis."
+                ) if env_evidence.get("overall_compatibility") == "Supportive" else (
+                    "No major environmental conflict detected."
+                ),
+                "disease_environmental_context": env_knowledge,
             },
-            
-            "growth_stage": {
-                "selected_stage": growth_stage,
-                "vulnerability": concern_result.get("growth_stage_vulnerability", "Unknown")
+
+            # ── LAYER 3: IOT ──────────────────────────────────────────────────
+            "IOT": {
+                "observations": [],
+                "status": "UNAVAILABLE",
+                "note": "No IoT sensor data available for this request."
             },
-            
-            "concern": {
-                "score": concern_result.get("score", 0),
-                "level": concern_result.get("level", "Unknown"),
-                "contributing_factors": concern_result.get("contributing_factors", []),
-                "limiting_factors": concern_result.get("limiting_factors", []),
-                "evidence_quality": concern_result.get("evidence_quality", "Good")
+
+            # ── LAYER 4: KNOWLEDGE ────────────────────────────────────────────
+            "KNOWLEDGE": {
+                "disease_specific_knowledge": disease_summary,
+                "prevention": knowledge_engine.get_prevention_guidance(predicted_disease),
+                "current_management": knowledge_engine.get_current_management(predicted_disease),
+                "chemical_control": chem_guidance,
+                "monitoring_guidance": knowledge_engine.get_monitoring_guidance(predicted_disease),
+                "source_references": farmer_support.get("sources", []),
+                "knowledge_completeness": knowledge_engine.get_knowledge_completeness_score(predicted_disease),
             },
-            
-            "recommendation": {
-                "rag_response": root_cause_result.model_dump(mode="json"),
-                "retrieved_sources": ai_context.knowledge.document_sources if getattr(ai_context, "knowledge", None) else []
+
+            # ── LAYER 5: DECISION ────────────────────────────────────────────
+            "DECISION": {
+                "action_priority": action_priority,
+                "what_to_do_now": farmer_support.get("what_to_do_now"),
+                "monitor": farmer_support.get("monitor"),
+                "prevention": farmer_support.get("prevention"),
+                "expert_review": farmer_support.get("expert_review"),
+                "rescan_instructions": farmer_support.get("rescan_instructions"),
+                "disclaimer": "This is an agricultural decision-support tool. It does not replace expert agronomic diagnosis.",
             },
-            
-            # Legacy fields for backward compatibility
+
+            # ── Legacy fields for backward compatibility ───────────────────────
             "prediction": {
                 "disease": predicted_disease,
                 "confidence": round(confidence * 100, 2),
                 "display_name": class_to_display(predicted_disease)
             },
-            "root_cause_analysis": root_cause_result.model_dump(mode="json"),
             "gradcam_heatmap_b64": heatmap_b64,
             "ai_context": ai_context.to_dict(),
+        }
+
+        # Save to database
+        await get_or_create_user(db, user_id=user_id)
+        await create_diagnosis(db, user_id=user_id, diagnosis_data={
+            "disease_name": predicted_disease,
+            "confidence": float(confidence),
+            "concern_level": action_priority,
+            "concern_score": 100.0 if action_priority == "ATTENTION" else (50.0 if action_priority == "MONITOR" else 10.0),
+            "temperature": temperature,
+            "humidity": humidity,
+            "ph_level": ph_level,
+            "latitude": latitude,
+            "longitude": longitude,
+            "gradcam_heatmap": heatmap_b64,
+            "root_cause_json": None
         })
+        
+        return JSONResponse(content=response_payload)
 
     except Exception as exc:
         import traceback

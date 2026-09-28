@@ -17,15 +17,43 @@ export default function SignupPage() {
   const handleGoogleLogin = async () => {
     setIsGoogleLoading(true);
     setError(null);
-    const supabase = createClient();
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
+    try {
+      const supabase = createClient();
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+          skipBrowserRedirect: true,
+        }
+      });
+
+      if (error) {
+        setError(error.message);
+        setIsGoogleLoading(false);
+        return;
       }
-    });
-    if (error) {
-      setError(error.message);
+
+      if (data?.url) {
+        // Probe the URL to verify Google provider is active before redirecting
+        try {
+          const probe = await fetch(data.url, { method: 'GET' });
+          if (!probe.ok) {
+            const errData = await probe.json().catch(() => null);
+            if (errData?.msg?.includes('provider is not enabled') || probe.status === 400) {
+              setError("Google sign-in is not enabled in your Supabase project. Please configure Google OAuth in the Supabase Dashboard (Auth -> Providers -> Google) or sign up using Email & Password below.");
+              setIsGoogleLoading(false);
+              return;
+            }
+          }
+        } catch {
+          // If network probe fails, fallback to direct redirect
+        }
+
+        window.location.href = data.url;
+      }
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Failed to initiate Google sign in";
+      setError(message);
       setIsGoogleLoading(false);
     }
   };

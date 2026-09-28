@@ -86,8 +86,13 @@ export default function HardwareDashboard() {
 
   const fetchData = useCallback(async () => {
     try {
-      // Provide dummy auth headers since verify_token is used in backend
-      const headers = { Authorization: "Bearer dummy_token" };
+      // Fetch the real Supabase session token
+      const { createClient } = await import('@/utils/supabase/client');
+      const supabase = createClient();
+      const { data: { session } } = await supabase.auth.getSession();
+      const headers: HeadersInit = session?.access_token
+        ? { Authorization: `Bearer ${session.access_token}`, 'Bypass-Tunnel-Reminder': 'true' }
+        : { 'Bypass-Tunnel-Reminder': 'true' };
       
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
@@ -115,31 +120,10 @@ export default function HardwareDashboard() {
       setStatus(t("monitoring.status.connected"));
     } catch (e) {
       console.error(e);
-      setStatus(t("monitoring.status.offline"));
-      
-      // Provide dummy data to prevent infinite loading screen
-      setSensors({
-        is_simulated: true,
-        moisture: 45.2,
-        temperature: 28.5,
-        humidity: 62.1,
-      });
-      setHistory(
-        Array.from({ length: 24 }).map((_, i) => ({
-          time: `${i}:00`,
-          moisture: 40 + Math.random() * 10,
-          humidity: 60 + Math.random() * 5,
-          temp: 25 + Math.random() * 5,
-        }))
-      );
-      setRisk({
-        is_heuristic: true,
-        fungal_risk: "Moderate",
-        fungal_risk_reason: "Humidity levels are slightly elevated.",
-        irrigation_status: "Adequate",
-        irrigation_reason: "Soil moisture is above 40%.",
-        overall_health: "Good",
-      });
+      setStatus("No sensors connected");
+      setSensors(null);
+      setHistory([]);
+      setRisk(null);
     }
   }, [t]);
 
@@ -151,7 +135,15 @@ export default function HardwareDashboard() {
   }, [fetchData]);
 
   if (!sensors) {
-    return <div className="p-8 text-center animate-pulse">{t("monitoring.connecting_nodes")}</div>;
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] text-center p-8">
+        <Wifi className="h-16 w-16 text-muted-foreground mb-4 opacity-50" />
+        <h2 className="text-2xl font-bold mb-2">No sensors connected</h2>
+        <p className="text-muted-foreground max-w-md">
+          Connect a compatible field sensor to view live measurements (e.g., air temperature, soil moisture, humidity).
+        </p>
+      </div>
+    );
   }
 
   return (
@@ -178,9 +170,7 @@ export default function HardwareDashboard() {
             <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">{status}</span>
             <span className="text-xs text-muted-foreground ml-2">Node: Alpha-1</span>
           </div>
-          {sensors?.is_simulated && (
-            <span className="text-[10px] uppercase tracking-widest bg-amber-500/20 text-amber-600 px-2 py-1 rounded-sm">{t("monitoring.simulated_data")}</span>
-          )}
+          {/* removed simulated tag */}
         </div>
       </div>
 
